@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F16B0FE71D4FA578004F2777 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16B0FE61D4FA578004F2777 /* AppDelegate.swift */; };
+		F16B0FE91D4FA578004F2777 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16B0FE81D4FA578004F2777 /* ViewController.swift */; };
+		F16B0FEC1D4FA578004F2777 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F16B0FEA1D4FA578004F2777 /* Main.storyboard */; };
+		F16B0FEE1D4FA578004F2777 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F16B0FED1D4FA578004F2777 /* Assets.xcassets */; };
+		F16B0FF11D4FA578004F2777 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F16B0FEF1D4FA578004F2777 /* LaunchScreen.storyboard */; };
+		F16B0FFC1D4FA578004F2777 /* Vimy_Ridge_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16B0FFB1D4FA578004F2777 /* Vimy_Ridge_ProjectTests.swift */; };
+		F16B10071D4FA578004F2777 /* Vimy_Ridge_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16B10061D4FA578004F2777 /* Vimy_Ridge_ProjectUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F16B0FF81D4FA578004F2777 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F16B0FDB1D4FA578004F2777 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F16B0FE21D4FA578004F2777;
+			remoteInfo = "Vimy Ridge Project";
+		};
+		F16B10031D4FA578004F2777 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F16B0FDB1D4FA578004F2777 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F16B0FE21D4FA578004F2777;
+			remoteInfo = "Vimy Ridge Project";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F16B0FE31D4FA578004F2777 /* Vimy Ridge Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vimy Ridge Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F16B0FE61D4FA578004F2777 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F16B0FE81D4FA578004F2777 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F16B0FEB1D4FA578004F2777 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F16B0FED1D4FA578004F2777 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F16B0FF01D4FA578004F2777 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F16B0FF21D4FA578004F2777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F16B0FF71D4FA578004F2777 /* Vimy Ridge ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vimy Ridge ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F16B0FFB1D4FA578004F2777 /* Vimy_Ridge_ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vimy_Ridge_ProjectTests.swift; sourceTree = "<group>"; };
+		F16B0FFD1D4FA578004F2777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F16B10021D4FA578004F2777 /* Vimy Ridge ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vimy Ridge ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F16B10061D4FA578004F2777 /* Vimy_Ridge_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vimy_Ridge_ProjectUITests.swift; sourceTree = "<group>"; };
+		F16B10081D4FA578004F2777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F16B0FE01D4FA578004F2777 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16B0FF41D4FA578004F2777 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16B0FFF1D4FA578004F2777 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F16B0FDA1D4FA578004F2777 = {
+			isa = PBXGroup;
+			children = (
+				F16B0FE51D4FA578004F2777 /* Vimy Ridge Project */,
+				F16B0FFA1D4FA578004F2777 /* Vimy Ridge ProjectTests */,
+				F16B10051D4FA578004F2777 /* Vimy Ridge ProjectUITests */,
+				F16B0FE41D4FA578004F2777 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F16B0FE41D4FA578004F2777 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F16B0FE31D4FA578004F2777 /* Vimy Ridge Project.app */,
+				F16B0FF71D4FA578004F2777 /* Vimy Ridge ProjectTests.xctest */,
+				F16B10021D4FA578004F2777 /* Vimy Ridge ProjectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F16B0FE51D4FA578004F2777 /* Vimy Ridge Project */ = {
+			isa = PBXGroup;
+			children = (
+				F16B0FE61D4FA578004F2777 /* AppDelegate.swift */,
+				F16B0FE81D4FA578004F2777 /* ViewController.swift */,
+				F16B0FEA1D4FA578004F2777 /* Main.storyboard */,
+				F16B0FED1D4FA578004F2777 /* Assets.xcassets */,
+				F16B0FEF1D4FA578004F2777 /* LaunchScreen.storyboard */,
+				F16B0FF21D4FA578004F2777 /* Info.plist */,
+			);
+			path = "Vimy Ridge Project";
+			sourceTree = "<group>";
+		};
+		F16B0FFA1D4FA578004F2777 /* Vimy Ridge ProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				F16B0FFB1D4FA578004F2777 /* Vimy_Ridge_ProjectTests.swift */,
+				F16B0FFD1D4FA578004F2777 /* Info.plist */,
+			);
+			path = "Vimy Ridge ProjectTests";
+			sourceTree = "<group>";
+		};
+		F16B10051D4FA578004F2777 /* Vimy Ridge ProjectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F16B10061D4FA578004F2777 /* Vimy_Ridge_ProjectUITests.swift */,
+				F16B10081D4FA578004F2777 /* Info.plist */,
+			);
+			path = "Vimy Ridge ProjectUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F16B0FE21D4FA578004F2777 /* Vimy Ridge Project */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F16B100B1D4FA578004F2777 /* Build configuration list for PBXNativeTarget "Vimy Ridge Project" */;
+			buildPhases = (
+				F16B0FDF1D4FA578004F2777 /* Sources */,
+				F16B0FE01D4FA578004F2777 /* Frameworks */,
+				F16B0FE11D4FA578004F2777 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Vimy Ridge Project";
+			productName = "Vimy Ridge Project";
+			productReference = F16B0FE31D4FA578004F2777 /* Vimy Ridge Project.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F16B0FF61D4FA578004F2777 /* Vimy Ridge ProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F16B100E1D4FA578004F2777 /* Build configuration list for PBXNativeTarget "Vimy Ridge ProjectTests" */;
+			buildPhases = (
+				F16B0FF31D4FA578004F2777 /* Sources */,
+				F16B0FF41D4FA578004F2777 /* Frameworks */,
+				F16B0FF51D4FA578004F2777 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F16B0FF91D4FA578004F2777 /* PBXTargetDependency */,
+			);
+			name = "Vimy Ridge ProjectTests";
+			productName = "Vimy Ridge ProjectTests";
+			productReference = F16B0FF71D4FA578004F2777 /* Vimy Ridge ProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F16B10011D4FA578004F2777 /* Vimy Ridge ProjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F16B10111D4FA578004F2777 /* Build configuration list for PBXNativeTarget "Vimy Ridge ProjectUITests" */;
+			buildPhases = (
+				F16B0FFE1D4FA578004F2777 /* Sources */,
+				F16B0FFF1D4FA578004F2777 /* Frameworks */,
+				F16B10001D4FA578004F2777 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F16B10041D4FA578004F2777 /* PBXTargetDependency */,
+			);
+			name = "Vimy Ridge ProjectUITests";
+			productName = "Vimy Ridge ProjectUITests";
+			productReference = F16B10021D4FA578004F2777 /* Vimy Ridge ProjectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F16B0FDB1D4FA578004F2777 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Mason Black";
+				TargetAttributes = {
+					F16B0FE21D4FA578004F2777 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					F16B0FF61D4FA578004F2777 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = F16B0FE21D4FA578004F2777;
+					};
+					F16B10011D4FA578004F2777 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = F16B0FE21D4FA578004F2777;
+					};
+				};
+			};
+			buildConfigurationList = F16B0FDE1D4FA578004F2777 /* Build configuration list for PBXProject "Vimy Ridge Project" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F16B0FDA1D4FA578004F2777;
+			productRefGroup = F16B0FE41D4FA578004F2777 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F16B0FE21D4FA578004F2777 /* Vimy Ridge Project */,
+				F16B0FF61D4FA578004F2777 /* Vimy Ridge ProjectTests */,
+				F16B10011D4FA578004F2777 /* Vimy Ridge ProjectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F16B0FE11D4FA578004F2777 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F16B0FF11D4FA578004F2777 /* LaunchScreen.storyboard in Resources */,
+				F16B0FEE1D4FA578004F2777 /* Assets.xcassets in Resources */,
+				F16B0FEC1D4FA578004F2777 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16B0FF51D4FA578004F2777 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16B10001D4FA578004F2777 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F16B0FDF1D4FA578004F2777 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F16B0FE91D4FA578004F2777 /* ViewController.swift in Sources */,
+				F16B0FE71D4FA578004F2777 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16B0FF31D4FA578004F2777 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F16B0FFC1D4FA578004F2777 /* Vimy_Ridge_ProjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16B0FFE1D4FA578004F2777 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F16B10071D4FA578004F2777 /* Vimy_Ridge_ProjectUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F16B0FF91D4FA578004F2777 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F16B0FE21D4FA578004F2777 /* Vimy Ridge Project */;
+			targetProxy = F16B0FF81D4FA578004F2777 /* PBXContainerItemProxy */;
+		};
+		F16B10041D4FA578004F2777 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F16B0FE21D4FA578004F2777 /* Vimy Ridge Project */;
+			targetProxy = F16B10031D4FA578004F2777 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F16B0FEA1D4FA578004F2777 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F16B0FEB1D4FA578004F2777 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F16B0FEF1D4FA578004F2777 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F16B0FF01D4FA578004F2777 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F16B10091D4FA578004F2777 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		F16B100A1D4FA578004F2777 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F16B100C1D4FA578004F2777 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Vimy Ridge Project/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UCDSB.Vimy-Ridge-Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F16B100D1D4FA578004F2777 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Vimy Ridge Project/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UCDSB.Vimy-Ridge-Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F16B100F1D4FA578004F2777 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Vimy Ridge ProjectTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UCDSB.Vimy-Ridge-ProjectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vimy Ridge Project.app/Vimy Ridge Project";
+			};
+			name = Debug;
+		};
+		F16B10101D4FA578004F2777 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Vimy Ridge ProjectTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UCDSB.Vimy-Ridge-ProjectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vimy Ridge Project.app/Vimy Ridge Project";
+			};
+			name = Release;
+		};
+		F16B10121D4FA578004F2777 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Vimy Ridge ProjectUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UCDSB.Vimy-Ridge-ProjectUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Vimy Ridge Project";
+			};
+			name = Debug;
+		};
+		F16B10131D4FA578004F2777 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Vimy Ridge ProjectUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UCDSB.Vimy-Ridge-ProjectUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Vimy Ridge Project";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F16B0FDE1D4FA578004F2777 /* Build configuration list for PBXProject "Vimy Ridge Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F16B10091D4FA578004F2777 /* Debug */,
+				F16B100A1D4FA578004F2777 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F16B100B1D4FA578004F2777 /* Build configuration list for PBXNativeTarget "Vimy Ridge Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F16B100C1D4FA578004F2777 /* Debug */,
+				F16B100D1D4FA578004F2777 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F16B100E1D4FA578004F2777 /* Build configuration list for PBXNativeTarget "Vimy Ridge ProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F16B100F1D4FA578004F2777 /* Debug */,
+				F16B10101D4FA578004F2777 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F16B10111D4FA578004F2777 /* Build configuration list for PBXNativeTarget "Vimy Ridge ProjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F16B10121D4FA578004F2777 /* Debug */,
+				F16B10131D4FA578004F2777 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F16B0FDB1D4FA578004F2777 /* Project object */;
+}
