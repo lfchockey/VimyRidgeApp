@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>British War Medal</key>
+	<dict>
+		<key>imageName</key>
+		<string>British War Medal.png</string>
+		<key>website</key>
+		<string></string>
+		<key>medalDescription</key>
+		<string></string>
+	</dict>
+	<key>The Territorial Force War Medal, 1914-1919</key>
+	<dict>
+		<key>website</key>
+		<string>http://www.footballandthefirstworldwar.org/territorial-force-war-medal-1914-1919-2/</string>
+		<key>medalDescription</key>
+		<string>The Territorial Force War Medal was instituted on 26 April 1920 and was awarded to members of the British Territorial Force and Territorial Force Nursing Services who had served in an  operational theatre of war between 5 August 1914 and 11 November 1918 – the period between the commencement of World War One and the Armistice. The least-issued of the First World War campaign medals, eligibility was restricted to those who had volunteered for overseas service with the territorials, or had completed four years service and rejoined the it on or before 30 September 1914, and those who did not qualify for the 1914 Star or 1914-15 Star.</string>
+		<key>imageName</key>
+		<string>The Territorial Force War Medal, 1914-1919.png</string>
+	</dict>
+	<key>silver war badge</key>
+	<dict>
+		<key>website</key>
+		<string>https://www.forces-war-records.co.uk/collections/86/silver-war-badge-list-1914-1918/</string>
+		<key>medalDescription</key>
+		<string>The Silver War Badge was issued in the United Kingdom to service personnel who had been honourably discharged due to wounds or sickness during World War I. The badge, sometimes known as the Discharge Badge, Wound Badge or Services Rendered Badge, was first issued in September 1916, along with an official certificate of entitlement.
+The sterling silver lapel badge was intended to be worn in civilian clothes. 
+It had been the practice of some women to present white feathers to apparently able-bodied young men who were not wearing the King&apos;s uniform. 
+The badge was to be worn on the right breast while in civilian dress, it was forbidden to wear on a military uniform.
+The badge bears the royal cipher of GRI (for Georgius Rex Imperator; George, King and Emperor) and around the rim &quot;For King and Empire; Services Rendered&quot;.</string>
+		<key>imageName</key>
+		<string>silver war badge.png</string>
+	</dict>
+	<key>1914-15 Star </key>
+	<dict>
+		<key>website</key>
+		<string>http://www.firstworldwar.com/atoz/191415star.htm</string>
+		<key>medalDescription</key>
+		<string>The 1914-14 Star (not to be confused with the 1914 Star) comprised a medal awarded by British authorities to those who had given service in the fight against the Central Powers between the outbreak of war in August 1914 and the end of 1915, either on land or at sea. Those who had already received the 1914 Star were not eligible for the 1914-15 Star.
+
+The 1914-14 Star (not to be confused with the 1914 Star) comprised a medal awarded by British authorities to those who had given service in the fight against the Central Powers between the outbreak of war in August 1914 and the end of 1915, either on land or at sea. Those who had already received the 1914 Star were not eligible for the 1914-15 Star.
+
+The 1914-14 Star (not to be confused with the 1914 Star) comprised a medal awarded by British authorities to those who had given service in the fight against the Central Powers between the outbreak of war in August 1914 and the end of 1915, either on land or at sea. Those who had already received the 1914 Star were not eligible for the 1914-15 Star.
+
+The 1914-14 Star (not to be confused with the 1914 Star) comprised a medal awarded by British authorities to those who had given service in the fight against the Central Powers between the outbreak of war in August 1914 and the end of 1915, either on land or at sea. Those who had already received the 1914 Star were not eligible for the 1914-15 Star.
+
+</string>
+		<key>imageName</key>
+		<string>1914-15 Star.png</string>
+	</dict>
+	<key>1914 Star</key>
+	<dict>
+		<key>medalDescription</key>
+		<string>The 1914 Star campaign medal, which was also commonly referred to as the Mons Star. It was awarded by British authorities to those who served with either the British or Indian Expeditionary Force in France or Belgium between the outbreak of war in August 1914 and 22/23 November 1914. This included medical personnel in addition to servicemen.  Also eligible for the medal were naval and marine units stationed ashore (but none who were actually afloat throughout)</string>
+		<key>imageName</key>
+		<string>1914 Star.png</string>
+		<key>website</key>
+		<string>http://www.firstworldwar.com/atoz/1914star.htm</string>
+	</dict>
+	<key>Victoria Cross Medal</key>
+	<dict>
+		<key>medalDescription </key>
+		<string>For most conspicuous bravery or some daring or pre-eminent act of valour or self-sacrifice or extreme devotion to duty in the presence of the enemy. The medal was instituted on February 5, 1856 with awards retroactive to 1854. The first award to a Canadian was in February 1857, to Lt. Alexander DUNN (Charge of the Light Brigade). There have been 1,351 Victoria Crosses and 3 Bars awarded worldwide, 94 to Canadians (Canadian-born or serving in the Canadian Army or with a close connection to Canada).The medal is a cross pattee, 1.375 inches across, with a dark brown finish. Made from cannons captured from the Russians during the Crimean War.</string>
+		<key>website</key>
+		<string>http://www.vimyfoundation.ca/victoria-cross/</string>
+		<key>imageName</key>
+		<string>Victoria Cross Medal.png</string>
+	</dict>
+	<key>mercantile marine war medal</key>
+	<dict>
+		<key>medalDescription</key>
+		<string>The Mercantile Marine War Medal, which was awarded by the British government (the Board of Trade), was given to prior recipients of the British War Medal who had served at sea during the First World War and had sailed through dangerous waters. Also eligible for the medal were those men who had served at sea for at least six months from the outbreak of war in August 1914 until the armistice of November 1918.</string>
+		<key>website</key>
+		<string>http://www.firstworldwar.com/atoz/mercantilemedal.htm</string>
+		<key>imageName</key>
+		<string>mercantile marine war medal.png</string>
+	</dict>
+</dict>
+</plist>
