@@ -130,6 +130,7 @@ class HomeViewController: UIViewController {
     func updateCounting(){
         if MyVariables.allSoldiersDownloaded {
             loadingImageView.stopAnimating()
+            loadingImageView.hidden = true
             self.performSegueWithIdentifier(self.segueName, sender: nil)
             timer.invalidate()
         }
@@ -161,6 +162,7 @@ class HomeViewController: UIViewController {
         
         //start the animation in the image view called test view
         loadingImageView.startAnimating()
+        loadingImageView.hidden = false
 
     }
 
