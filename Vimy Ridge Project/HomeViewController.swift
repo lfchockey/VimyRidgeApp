@@ -97,7 +97,9 @@ class HomeViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        MyVariables().downloadAllVimySoldiers()
+        if !MyVariables.allSoldiersDownloaded {
+            MyVariables().downloadAllVimySoldiers()
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,7 +112,7 @@ class HomeViewController: UIViewController {
         
         // Start the playing of the song once home view loads
         // Using function in Util.swift
-        playMusic("Serenata Immortale.mp3")
+        playMusic("AppIntro.m4a")
         
         //Change mute button color to blue to show that the music is on
         musicButton.tintColor = UIColor.blueColor()
@@ -135,7 +137,7 @@ class HomeViewController: UIViewController {
             timer.invalidate()
         }
         else {
-            print("Not downloaded yet")
+            //print("Not downloaded yet")
         }
     }
     
