@@ -44,6 +44,7 @@
 		F133F22D1D7473810049B8BB /* bg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F133F22B1D7473810049B8BB /* bg.mp3 */; };
 		F133F22E1D7473810049B8BB /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F133F22C1D7473810049B8BB /* Util.swift */; };
 		F133F2301D74764C0049B8BB /* Serenata Immortale.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F133F22F1D74764C0049B8BB /* Serenata Immortale.mp3 */; };
+		F168B6231D860FF000A9719A /* AppIntro.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F168B6221D860FF000A9719A /* AppIntro.m4a */; };
 		F16B0FE71D4FA578004F2777 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16B0FE61D4FA578004F2777 /* AppDelegate.swift */; };
 		F16B0FEC1D4FA578004F2777 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F16B0FEA1D4FA578004F2777 /* Main.storyboard */; };
 		F16B0FF11D4FA578004F2777 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F16B0FEF1D4FA578004F2777 /* LaunchScreen.storyboard */; };
@@ -126,6 +127,7 @@
 		F133F22B1D7473810049B8BB /* bg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bg.mp3; sourceTree = "<group>"; };
 		F133F22C1D7473810049B8BB /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		F133F22F1D74764C0049B8BB /* Serenata Immortale.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Serenata Immortale.mp3"; sourceTree = "<group>"; };
+		F168B6221D860FF000A9719A /* AppIntro.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppIntro.m4a; sourceTree = "<group>"; };
 		F16B0FE31D4FA578004F2777 /* Vimy Ridge Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vimy Ridge Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16B0FE61D4FA578004F2777 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F16B0FEB1D4FA578004F2777 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 		F133F22A1D74734F0049B8BB /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				F168B6221D860FF000A9719A /* AppIntro.m4a */,
 				F133F22F1D74764C0049B8BB /* Serenata Immortale.mp3 */,
 				F133F22B1D7473810049B8BB /* bg.mp3 */,
 				F133F22C1D7473810049B8BB /* Util.swift */,
@@ -628,6 +631,7 @@
 				F12C11801D71E1FB0071798C /* Medals List.plist in Resources */,
 				F16B10151D4FA6EF004F2777 /* Images.xcassets in Resources */,
 				F170B8FA1D4FB94D00118440 /* westernFront.plist in Resources */,
+				F168B6231D860FF000A9719A /* AppIntro.m4a in Resources */,
 				F12C118F1D73AB010071798C /* WeaponInfo.plist in Resources */,
 				F12C10F41D6212CE0071798C /* Stats.plist in Resources */,
 				F16B0FEC1D4FA578004F2777 /* Main.storyboard in Resources */,
@@ -849,6 +853,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "UCDSB.Vimy-Ridge-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -860,6 +865,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "UCDSB.Vimy-Ridge-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
