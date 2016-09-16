@@ -11,11 +11,11 @@ import UIKit
 class HistoryViewController: UIViewController {
 
     @IBAction func SwitchPages(sender: AnyObject) {
-        moveViews(sender.selectedSegmentIndex)
+        moveViews(sender: sender.selectedSegmentIndex)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        moveViews(0)
+        moveViews(sender: 0)
         // Do any additional setup after loading the view.
     }
 
@@ -29,16 +29,16 @@ class HistoryViewController: UIViewController {
     func moveViews(sender:Int)
     {
         let viewControllerIdentifiers = ["Artwork","Background","Stats","VimyMyth"]
-        let newController = (storyboard?.instantiateViewControllerWithIdentifier(viewControllerIdentifiers[sender]))! as UIViewController
+        let newController = (storyboard?.instantiateViewController(withIdentifier: viewControllerIdentifiers[sender]))! as UIViewController
         let oldController = childViewControllers.last! as UIViewController
         
-        oldController.willMoveToParentViewController(nil)
+        oldController.willMove(toParentViewController: nil)
         addChildViewController(newController)
         newController.view.frame = oldController.view.frame
-        transitionFromViewController(oldController, toViewController: newController, duration: 0.25, options: .TransitionCrossDissolve, animations:{ () -> Void in
+        transition(from: oldController, to: newController, duration: 0.25, options: .transitionCrossDissolve, animations:{ () -> Void in
             }, completion: { (finished) -> Void in
                 oldController.removeFromParentViewController()
-                newController.didMoveToParentViewController(self)
+                newController.didMove(toParentViewController: self)
         })
         
     }

@@ -25,9 +25,9 @@ class MapViewController: UIViewController
         
         var zoomRegion: CLLocationDistance = 10000
         var centerCoordinate = CLLocation(latitude: 50.3603125, longitude: 2.794017)
-        leftButton.hidden = true
-        rightButton.hidden = true
-        slider.hidden = true
+        leftButton.isHidden = true
+        rightButton.isHidden = true
+        slider.isHidden = true
         
         if MapVariables.mapSection == 1{
             // Battalions
@@ -44,31 +44,31 @@ class MapViewController: UIViewController
             // Battalion Progression
             zoomRegion = 10000
             let dummySlider = UISlider()
-            sliderValueDidChange(dummySlider)
-            slider.hidden = false
+            sliderValueDidChange(sender: dummySlider)
+            slider.isHidden = false
         }
         else if MapVariables.mapSection == 4{
             // Western Front
             indexCounter = 0
             zoomRegion = 100000
-            let dummyButton = UIButton(type: UIButtonType.Custom)
-            LeftPreviousClick(dummyButton)
-            leftButton.hidden = false
-            rightButton.hidden = false
+            let dummyButton = UIButton(type: UIButtonType.custom)
+            LeftPreviousClick(sender: dummyButton)
+            leftButton.isHidden = false
+            rightButton.isHidden = false
         }
         else {
             
         }
         
-        centerMap(zoomRegion, centerCoordinate: centerCoordinate)
+        centerMap(zoomRegion: zoomRegion, centerCoordinate: centerCoordinate)
         //NSLog(String(self.menu.frame.size.width)+"1")
         //NSLog(String(self.ribbon.frame.size.width))
-        UIView.animateWithDuration(0.5){
+        UIView.animate(withDuration: 0.5){
             // self.view.layoutIfNeeded()
-            self.menuImage.transform = CGAffineTransformMakeTranslation(0, 0)
-            self.menu.transform = CGAffineTransformMakeTranslation( 0, 0)
+            self.menuImage.transform = CGAffineTransform(translationX: 0, y: 0)
+            self.menu.transform = CGAffineTransform( translationX: 0, y: 0)
         }
-        UIView.animateWithDuration(0.3, delay:0.3, options:UIViewAnimationOptions.TransitionFlipFromTop,animations: {self.menu.alpha = 0}, completion: { finished in self.menu.hidden = true})
+        UIView.animate(withDuration: 0.3, delay:0.3, options:UIViewAnimationOptions.transitionFlipFromTop,animations: {self.menu.alpha = 0}, completion: { finished in self.menu.isHidden = true})
         
         
     }
@@ -76,12 +76,12 @@ class MapViewController: UIViewController
     // User Swipes right
     @IBAction func openMenu(sender: UISwipeGestureRecognizer) {
         
-        menu.hidden = false
+        menu.isHidden = false
         self.menu.alpha = 1
-        UIView.animateWithDuration(0.3){
+        UIView.animate(withDuration: 0.3){
             self.view.layoutIfNeeded()
-            self.menuImage.transform = CGAffineTransformMakeTranslation(self.menu.frame.size.width, 0)
-            self.menu.transform = CGAffineTransformMakeTranslation(self.menu.frame.size.width, 0)
+            self.menuImage.transform = CGAffineTransform(translationX: self.menu.frame.size.width, y: 0)
+            self.menu.transform = CGAffineTransform(translationX: self.menu.frame.size.width, y: 0)
         }
     }
 
@@ -332,7 +332,7 @@ class MapViewController: UIViewController
         let CHLbattalion = BattalionsCoords(filename: "BattalionMovement", battalionName: " CND Light Horse ")
         
         let polyLine = MKPolyline(coordinates: &CHLbattalion.battalion, count: CHLbattalion.battalionPointsCount)
-        mapView.addOverlay(polyLine)
+        mapView.add(polyLine)
         
         //FIRST CANADIAN DIVISION
         let battalion1A = BattalionsCoords(filename: "BattalionMovement", battalionName: " 1st Bn ")
@@ -346,31 +346,31 @@ class MapViewController: UIViewController
         let battalion1I = BattalionsCoords(filename: "BattalionMovement", battalionName: " 16th Bn ")
         
         let polyLine1A = MKPolyline(coordinates: &battalion1A.battalion, count: battalion1A.battalionPointsCount)
-        mapView.addOverlay(polyLine1A)
+        mapView.add(polyLine1A)
         
         let polyLine1B = MKPolyline(coordinates: &battalion1B.battalion, count: battalion1B.battalionPointsCount)
-        mapView.addOverlay(polyLine1B)
+        mapView.add(polyLine1B)
         
         let polyLine1C = MKPolyline(coordinates: &battalion1C.battalion, count: battalion1C.battalionPointsCount)
-        mapView.addOverlay(polyLine1C)
+        mapView.add(polyLine1C)
         
         let polyLine1D = MKPolyline(coordinates: &battalion1D.battalion, count: battalion1D.battalionPointsCount)
-        mapView.addOverlay(polyLine1D)
+        mapView.add(polyLine1D)
         
         let polyLine1E = MKPolyline(coordinates: &battalion1E.battalion, count: battalion1E.battalionPointsCount)
-        mapView.addOverlay(polyLine1E)
+        mapView.add(polyLine1E)
         
         let polyLine1F = MKPolyline(coordinates: &battalion1F.battalion, count: battalion1F.battalionPointsCount)
-        mapView.addOverlay(polyLine1F)
+        mapView.add(polyLine1F)
         
         let polyLine1G = MKPolyline(coordinates: &battalion1G.battalion, count: battalion1G.battalionPointsCount)
-        mapView.addOverlay(polyLine1G)
+        mapView.add(polyLine1G)
         
         let polyLine1H = MKPolyline(coordinates: &battalion1H.battalion, count: battalion1H.battalionPointsCount)
-        mapView.addOverlay(polyLine1H)
+        mapView.add(polyLine1H)
         
         let polyLine1I = MKPolyline(coordinates: &battalion1I.battalion, count: battalion1I.battalionPointsCount)
-        mapView.addOverlay(polyLine1I)
+        mapView.add(polyLine1I)
         
         //SECOND CANADIAN DIVISION
         let battalion2A = BattalionsCoords(filename: "BattalionMovement", battalionName: " 18th Bn ")
@@ -385,34 +385,34 @@ class MapViewController: UIViewController
         let battalion2J = BattalionsCoords(filename: "BattalionMovement", battalionName: " 31st Bn ")
         
         let polyLine2A = MKPolyline(coordinates: &battalion2A.battalion, count: battalion2A.battalionPointsCount)
-        mapView.addOverlay(polyLine2A)
+        mapView.add(polyLine2A)
         
         let polyLine2B = MKPolyline(coordinates: &battalion2B.battalion, count: battalion2B.battalionPointsCount)
-        mapView.addOverlay(polyLine2B)
+        mapView.add(polyLine2B)
         
         let polyLine2C = MKPolyline(coordinates: &battalion2C.battalion, count: battalion2C.battalionPointsCount)
-        mapView.addOverlay(polyLine2C)
+        mapView.add(polyLine2C)
         
         let polyLine2D = MKPolyline(coordinates: &battalion2D.battalion, count: battalion2D.battalionPointsCount)
-        mapView.addOverlay(polyLine2D)
+        mapView.add(polyLine2D)
         
         let polyLine2E = MKPolyline(coordinates: &battalion2E.battalion, count: battalion2E.battalionPointsCount)
-        mapView.addOverlay(polyLine2E)
+        mapView.add(polyLine2E)
         
         let polyLine2F = MKPolyline(coordinates: &battalion2F.battalion, count: battalion2F.battalionPointsCount)
-        mapView.addOverlay(polyLine2F)
+        mapView.add(polyLine2F)
         
         let polyLine2G = MKPolyline(coordinates: &battalion2G.battalion, count: battalion2G.battalionPointsCount)
-        mapView.addOverlay(polyLine2G)
+        mapView.add(polyLine2G)
         
         let polyLine2H = MKPolyline(coordinates: &battalion2H.battalion, count: battalion2H.battalionPointsCount)
-        mapView.addOverlay(polyLine2H)
+        mapView.add(polyLine2H)
         
         let polyLine2I = MKPolyline(coordinates: &battalion2I.battalion, count: battalion2I.battalionPointsCount)
-        mapView.addOverlay(polyLine2I)
+        mapView.add(polyLine2I)
         
         let polyLine2J = MKPolyline(coordinates: &battalion2J.battalion, count: battalion2J.battalionPointsCount)
-        mapView.addOverlay(polyLine2J)
+        mapView.add(polyLine2J)
         
         //THIRD CANADIAN DIVISION
         let battalion3A = BattalionsCoords(filename: "BattalionMovement", battalionName: " 1st CMR ")
@@ -423,22 +423,22 @@ class MapViewController: UIViewController
         let battalion3F = BattalionsCoords(filename: "BattalionMovement", battalionName: " 42nd Bn ")
         
         let polyLine3A = MKPolyline(coordinates: &battalion3A.battalion, count: battalion3A.battalionPointsCount)
-        mapView.addOverlay(polyLine3A)
+        mapView.add(polyLine3A)
         
         let polyLine3B = MKPolyline(coordinates: &battalion3B.battalion, count: battalion3B.battalionPointsCount)
-        mapView.addOverlay(polyLine3B)
+        mapView.add(polyLine3B)
         
         let polyLine3C = MKPolyline(coordinates: &battalion3C.battalion, count: battalion3C.battalionPointsCount)
-        mapView.addOverlay(polyLine3C)
+        mapView.add(polyLine3C)
         
         let polyLine3D = MKPolyline(coordinates: &battalion3D.battalion, count: battalion3D.battalionPointsCount)
-        mapView.addOverlay(polyLine3D)
+        mapView.add(polyLine3D)
         
         let polyLine3E = MKPolyline(coordinates: &battalion3E.battalion, count: battalion3E.battalionPointsCount)
-        mapView.addOverlay(polyLine3E)
+        mapView.add(polyLine3E)
         
         let polyLine3F = MKPolyline(coordinates: &battalion3F.battalion, count: battalion3F.battalionPointsCount)
-        mapView.addOverlay(polyLine3F)
+        mapView.add(polyLine3F)
         
         //Fourth Canadian Division
         let battalion4A = BattalionsCoords(filename: "BattalionMovement", battalionName: " 44th Bn ")
@@ -452,43 +452,45 @@ class MapViewController: UIViewController
         let battalion4I = BattalionsCoords(filename: "BattalionMovement", battalionName: " 102nd Bn ")
         
         let polyLine4A = MKPolyline(coordinates: &battalion4A.battalion, count: battalion4A.battalionPointsCount)
-        mapView.addOverlay(polyLine4A)
+        mapView.add(polyLine4A)
         
         let polyLine4B = MKPolyline(coordinates: &battalion4B.battalion, count: battalion4B.battalionPointsCount)
-        mapView.addOverlay(polyLine4B)
+        mapView.add(polyLine4B)
         
         let polyLine4C = MKPolyline(coordinates: &battalion4C.battalion, count: battalion4C.battalionPointsCount)
-        mapView.addOverlay(polyLine4C)
+        mapView.add(polyLine4C)
         
         let polyLine4D = MKPolyline(coordinates: &battalion4D.battalion, count: battalion4D.battalionPointsCount)
-        mapView.addOverlay(polyLine4D)
+        mapView.add(polyLine4D)
         
         let polyLine4E = MKPolyline(coordinates: &battalion4E.battalion, count: battalion4E.battalionPointsCount)
-        mapView.addOverlay(polyLine4E)
+        mapView.add(polyLine4E)
         
         let polyLine4F = MKPolyline(coordinates: &battalion4F.battalion, count: battalion4F.battalionPointsCount)
-        mapView.addOverlay(polyLine4F)
+        mapView.add(polyLine4F)
         
         let polyLine4G = MKPolyline(coordinates: &battalion4G.battalion, count: battalion4G.battalionPointsCount)
-        mapView.addOverlay(polyLine4G)
+        mapView.add(polyLine4G)
         
         let polyLine4H = MKPolyline(coordinates: &battalion4H.battalion, count: battalion4H.battalionPointsCount)
-        mapView.addOverlay(polyLine4H)
+        mapView.add(polyLine4H)
         
         let polyLine4I = MKPolyline(coordinates: &battalion4I.battalion, count: battalion4I.battalionPointsCount)
-        mapView.addOverlay(polyLine4I)
+        mapView.add(polyLine4I)
     }
     
     func resizeImage(image: UIImage, newHeight: CGFloat) -> UIImage
     {
         let scale = newHeight / image.size.height
         let newWidth = image.size.width * scale
-        UIGraphicsBeginImageContext(CGSizeMake(newWidth, newHeight))
-        image.drawInRect(CGRectMake(0, 0, newWidth, newHeight))
+        //UIGraphicsBeginImageContext(CGSizeMake(newWidth, newHeight))
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        //image.draw(in: CGRectMake(0, 0, newWidth, newHeight))
+        image.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return newImage
+        return newImage!
     }
     
 //************************************************************* Western Fronts Code ********//
@@ -507,7 +509,7 @@ class MapViewController: UIViewController
         
         var Polyine1900: MKPolyline = MKPolyline()
         Polyine1900 = MKPolyline(coordinates: &newLine.frontLineCoords, count: newLine.coordCount)
-        mapView.addOverlay(Polyine1900)
+        mapView.add(Polyine1900)
         
     }
     
@@ -525,16 +527,16 @@ class MapViewController: UIViewController
         
         var Polyine1900: MKPolyline = MKPolyline()
         Polyine1900 = MKPolyline(coordinates: &newLine.frontLineCoords, count: newLine.coordCount)
-        mapView.addOverlay(Polyine1900)
+        mapView.add(Polyine1900)
     }
 
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
 //        let newLine = lineArray[0]
 //        
 //        var Polyine1900: MKPolyline = MKPolyline()
 //        Polyine1900 = MKPolyline(coordinates: &newLine.frontLineCoords, count: newLine.coordCount)
 
-        //mapView.addOverlay(Polyine1900)
+        //mapView.add(Polyine1900)
     }
     
     var regionRadius: CLLocationDistance = 50000
@@ -574,49 +576,49 @@ class MapViewController: UIViewController
         if(r <= 10) {
             pointsToUse = ThickRedLine.advancementCoords
             myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
-            mapView.addOverlay(myPolyline)
+            mapView.add(myPolyline)
             
             pointsToUse = RedDashedLine.advancementCoords
             myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
-            mapView.addOverlay(myPolyline)
+            mapView.add(myPolyline)
             
             pointsToUse = SolidBlueGermanLine.advancementCoords
             myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
-            mapView.addOverlay(myPolyline)
+            mapView.add(myPolyline)
             
         }
         else if(r > 10 && r <= 20) {
             pointsToUse = ThickBlueLine.advancementCoords
             myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
-            mapView.addOverlay(myPolyline)
+            mapView.add(myPolyline)
             
             pointsToUse = RedDottedLine.advancementCoords
             myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
-            mapView.addOverlay(myPolyline)
+            mapView.add(myPolyline)
             
             pointsToUse = ThickBrownLine.advancementCoords
             myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
-            mapView.addOverlay(myPolyline)
+            mapView.add(myPolyline)
             
         }
         else if(r > 20 && r <= 30) {
             pointsToUse = BlueDottedLine12thApril.advancementCoords
             myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
-            mapView.addOverlay(myPolyline)
+            mapView.add(myPolyline)
             
             pointsToUse = GermanLineMorningApril13th.advancementCoords
             myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
-            mapView.addOverlay(myPolyline)
+            mapView.add(myPolyline)
             
             pointsToUse = RedLineApril12th.advancementCoords
             myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
-            mapView.addOverlay(myPolyline)
+            mapView.add(myPolyline)
             
         }
         else if(r > 30 && r <= 40) {
             pointsToUse = BlackLine.advancementCoords
             myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
-            mapView.addOverlay(myPolyline)
+            mapView.add(myPolyline)
             
         }
     }
@@ -644,7 +646,7 @@ class MapViewController: UIViewController
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
         if overlay is MKPolyline {
             let polylineView = MKPolylineRenderer(overlay: overlay)
-            polylineView.strokeColor = UIColor.blackColor()
+            polylineView.strokeColor = UIColor.black
             polylineView.lineWidth = 1.5
             
             return polylineView
@@ -658,16 +660,16 @@ class MapViewController: UIViewController
         let identifier1 = "CustomAnnotation"
         let identifier2 = "Annotation"
 
-        if annotation.isKindOfClass(CemAnno)        // The CemAnno is for the cemeteries ONLY
+        if annotation.isKind(of: CemAnno.self)        // The CemAnno is for the cemeteries ONLY
         {
-            var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
+            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
             
             if annotationView == nil {
                 
                 annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
                 annotationView!.canShowCallout = true
                 
-                let btn = UIButton(type: .DetailDisclosure)
+                let btn = UIButton(type: .detailDisclosure)
                 
                 annotationView!.rightCalloutAccessoryView = btn
                 
@@ -679,9 +681,9 @@ class MapViewController: UIViewController
             }
             return annotationView
         }
-        else if annotation.isKindOfClass(CustomAnnotation.self)         // The CustomAnnotation is for the division squares ONLY
+        else if annotation.isKind(of: CustomAnnotation.self)         // The CustomAnnotation is for the division squares ONLY
         {
-            var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier1)
+            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier1)
             
             if annotationView == nil
             {
@@ -695,7 +697,7 @@ class MapViewController: UIViewController
             
             let ca = annotation as! CustomAnnotation
             annotationView!.image = ca.image
-            annotationView!.image = resizeImage(annotationView!.image!, newHeight: 75)
+            annotationView!.image = resizeImage(image: annotationView!.image!, newHeight: 75)
             
 //            let btn = UIButton(type: .DetailDisclosure)
 //            btn.addTarget(self, action: "buttonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
@@ -705,7 +707,7 @@ class MapViewController: UIViewController
         }
         else if annotation is MKPointAnnotation         // The MKPointAnnotation is for the red pins ONLY
         {
-            var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier2)
+            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier2)
             
             if annotationView == nil
             {
@@ -719,7 +721,7 @@ class MapViewController: UIViewController
 //                }
             }
             
-            let btn = UIButton(type: .DetailDisclosure)
+            let btn = UIButton(type: .detailDisclosure)
             //btn.addTarget(self, action: "buttonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
             annotationView!.rightCalloutAccessoryView = btn
             //annotationView!.backgroundColor = UIColor.blackColor()
@@ -732,16 +734,16 @@ class MapViewController: UIViewController
     
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)
     {
-        if view.annotation!.isKindOfClass(CemAnno.self)
+        if view.annotation!.isKind(of: CemAnno.self)
         {
             let customAnno = view.annotation as! CemAnno
             let title = customAnno.title
             
             let histInfo = customAnno.histInfo
             
-            let ac = UIAlertController(title: title, message: histInfo, preferredStyle: .Alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-            presentViewController(ac, animated: true, completion: nil)
+            let ac = UIAlertController(title: title, message: histInfo, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(ac, animated: true, completion: nil)
         }
         else
         {
@@ -749,17 +751,17 @@ class MapViewController: UIViewController
             let title = anno.title
             let subtitle = anno.subtitle
             
-            let ac = UIAlertController(title: title, message: subtitle, preferredStyle: .Alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-            presentViewController(ac, animated: true, completion: nil)
+            let ac = UIAlertController(title: title, message: subtitle, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(ac, animated: true, completion: nil)
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        slider.hidden = true
-        leftButton.hidden = true
-        rightButton.hidden = true
+        slider.isHidden = true
+        leftButton.isHidden = true
+        rightButton.isHidden = true
         
         mapq = mapView
         
