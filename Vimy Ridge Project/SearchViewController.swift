@@ -26,13 +26,13 @@ extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         let searchBar = searchController.searchBar
         let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
-        filterContentForSearchText(searchController.searchBar.text!, scope: scope)
+        filterContentForSearchText(searchText: searchController.searchBar.text!, scope: scope)
     }
 }
 
 extension SearchViewController: UISearchBarDelegate {
-    func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-        filterContentForSearchText(searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        filterContentForSearchText(searchText: searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
     }
 }
 
@@ -102,7 +102,7 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
         self.searchController.searchBar.becomeFirstResponder()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if Reachability.isConnectedToNetwork() == true {
             
@@ -166,9 +166,9 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
             searchController.searchBar.text = "Please choose a category to search for soldiers"
             
             
-            searchController.active = true
+            searchController.isActive = true
             
-            dispatch_async(dispatch_get_main_queue(), {
+            DispatchQueue.main.asynchronously(execute: {
                 self.searchController.searchBar.becomeFirstResponder()
             });
                 
@@ -178,15 +178,15 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
         else  {
             print("(Search) Internet connection FAILED")
             
-            let alertController = UIAlertController(title: "No Internet Connection", message: "Make sure your device is connected to the internet.", preferredStyle: .Alert)
+            let alertController = UIAlertController(title: "No Internet Connection", message: "Make sure your device is connected to the internet.", preferredStyle: .alert)
             
-            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+            let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
                 // When OK is pressed, segue back to the previous ViewController (Main Screen)
-                self.navigationController?.popViewControllerAnimated(true)
+                self.navigationController?.popViewController(animated: true)
             }
             alertController.addAction(OKAction)
             
-            self.presentViewController(alertController, animated: true) {
+            self.present(alertController, animated: true) {
                 // ...
             }
 
@@ -201,7 +201,7 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
 
   }
   
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         //clearsSelectionOnViewWillAppear = splitViewController!.collapsed
         super.viewWillAppear(animated)
     }
@@ -215,19 +215,19 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
         return 1
     }
   
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if searchController.active && searchController.searchBar.text != "" {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if searchController.isActive && searchController.searchBar.text != "" {
             return filteredSoldiers.count
         }
         return finalSoldierArray.count
     }
   
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath)
         
         let soldier: Soldier_Search
         
-        if searchController.active && searchController.searchBar.text != "" && filteredSoldiers.count != 0 {
+        if searchController.isActive && searchController.searchBar.text != "" && filteredSoldiers.count != 0 {
             soldier = filteredSoldiers[indexPath.row]
         } else {
             soldier = finalSoldierArray[indexPath.row]
@@ -246,14 +246,14 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
         let soldier: Soldier_Search
         
         // The following code segues to the Facebook View Controller once a soldier has been selected
-        if searchController.active && searchController.searchBar.text != "" && filteredSoldiers.count != 0 {
+        if searchController.isActive && searchController.searchBar.text != "" && filteredSoldiers.count != 0 {
             soldier = filteredSoldiers[indexPath.row]
         } else {
             soldier = finalSoldierArray[indexPath.row]
         }
         //let index = indexPath.row as Int //Gets the index for the cell being done at that time
         MyVariables.facebookSoldierID = soldier.id //"55" // allSoldiersSorted[index]["soldier_id"].stringValue
-        dispatch_async(dispatch_get_main_queue()) {
+        dispatch_get_main_queue().asynchronously() {
             self.performSegueWithIdentifier("FacebookSegue", sender: self)
         }
         
