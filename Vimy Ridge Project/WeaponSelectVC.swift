@@ -28,9 +28,9 @@ class WeaponSelectVC: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     //Navigation for the segues
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == weaponDetailsSegueIdentifier {
-            if let destination = segue.destinationViewController as? WeaponDetailsVC {
+            if let destination = segue.destination as? WeaponDetailsVC {
                 if let weaponIndex = tableView.indexPathForSelectedRow?.row {
                     destination.weaponName = weapons[weaponIndex]
                 }
@@ -38,13 +38,13 @@ class WeaponSelectVC: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return weapons.count
     }
     
     //Methods required by viewController protocols
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    private func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
@@ -52,8 +52,8 @@ class WeaponSelectVC: UIViewController, UITableViewDataSource, UITableViewDelega
 //        return weapons.count
 //    }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath as IndexPath) 
         
         let row = indexPath.row
         cell.textLabel?.text = weapons[row]
@@ -61,8 +61,8 @@ class WeaponSelectVC: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    private func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
         
         //let row = indexPath.row
         //print(weapons[row])

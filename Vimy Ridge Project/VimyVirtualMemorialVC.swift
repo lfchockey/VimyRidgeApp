@@ -161,7 +161,7 @@ class VimyVirtualMemorialVC: UIViewController {
         
             //dependent on the direction of the swipe the soldiers names will change
         switch gesture.direction{
-            case UISwipeGestureRecognizerDirection.Right:
+            case UISwipeGestureRecognizerDirection.right:
                 print("swiped right")
                 pageNumber -= 1
                 print(pageNumber)

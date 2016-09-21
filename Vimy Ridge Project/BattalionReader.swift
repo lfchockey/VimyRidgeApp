@@ -16,11 +16,11 @@ class BattalionReader {
     
     init()
     {
-        let filePath = NSBundle.mainBundle().pathForResource("BattalionTest", ofType: "plist")
+        let filePath = Bundle.main.path(forResource: "BattalionTest", ofType: "plist")
         let properties = NSDictionary(contentsOfFile: filePath!)
 
         
-        battalionCount = properties!["Battalions"]!.count
+        battalionCount = (properties!["Battalions"]! as AnyObject).count
         let allBattalions = properties!["Battalions"] as! NSArray
         
         

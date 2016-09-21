@@ -16,7 +16,7 @@ extension FaceBookViewController: MKMapViewDelegate {
         if let annotation = annotation as? SoldierLocation {
             let identifier = "pin"
             var view: MKPinAnnotationView
-            if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
+            if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
                 as? MKPinAnnotationView { // 2
                     dequeuedView.annotation = annotation
                     view = dequeuedView

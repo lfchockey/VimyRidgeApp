@@ -23,7 +23,7 @@ class WeaponDetailsVC: UIViewController {
     
     var weaponName = String() //a string to hold the name of the weapon the user wants to see
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         weaponTitle.text = weaponName //set the title to the name of the weapon
     }
     
@@ -98,7 +98,7 @@ class WeaponDetailsVC: UIViewController {
 
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
 }

@@ -18,7 +18,7 @@ class BattalionsCoords
     
     init(filename: String, battalionName: String)
     {
-        let filePath = NSBundle.mainBundle().pathForResource(filename, ofType: "plist")
+        let filePath = Bundle.main.path(forResource: filename, ofType: "plist")
         let properties = NSDictionary(contentsOfFile: filePath!)
         
         let battalionPoints = properties![battalionName] as! NSArray

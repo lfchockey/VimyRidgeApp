@@ -23,7 +23,9 @@
 import UIKit
 
 extension SearchViewController: UISearchResultsUpdating {
-    func updateSearchResultsForSearchController(searchController: UISearchController) {
+
+    func updateSearchResults(for searchController: UISearchController)
+    {
         let searchBar = searchController.searchBar
         let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
         filterContentForSearchText(searchText: searchController.searchBar.text!, scope: scope)
@@ -50,18 +52,19 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
 
         filteredSoldiers = finalSoldierArray.filter { soldier in
             let categoryMatch = (scope == "Soldier Name") || (soldier.category == scope)
-            return  categoryMatch && soldier.name.lowercaseString.containsString(searchText.lowercaseString)
+            return  categoryMatch && soldier.name.lowercased().contains(searchText.lowercased())
         }
         
         filteredSoldiers = finalSoldierArray.filter { soldier in
             if scope == "Soldier Name"{
-                return  soldier.name.lowercaseString.containsString(searchText.lowercaseString)
+                return soldier.name.lowercased().contains(searchText.lowercased())
+                //return  soldier.name.lowercased().containsString(searchText.lowercaseString)
             }
             else if scope == "Location" {
                 var matchFound = false
                 for loc in soldier.locations {
                     for (key, value) in loc {
-                        if value.lowercaseString.containsString(searchText.lowercaseString) {
+                        if value.lowercased().contains(searchText.lowercased()) {
                             matchFound = true
                             soldier.category = "Location"
                             soldier.subcategory = key
@@ -77,7 +80,7 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
                 var matchFound = false
                 for loc in soldier.battalions {
                     for (key, value) in loc {
-                        if value.lowercaseString.containsString(searchText.lowercaseString) {
+                        if value.lowercased().contains(searchText.lowercased()) {
                             matchFound = true
                             soldier.category = "Battalion"
                             soldier.subcategory = key
@@ -98,7 +101,7 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
     
     var totalSoldiersAtTime = 0
     
-    func didPresentSearchController(searchController: UISearchController) {
+    func didPresentSearchController(_ searchController: UISearchController) {
         self.searchController.searchBar.becomeFirstResponder()
     }
     
@@ -168,7 +171,7 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
             
             searchController.isActive = true
             
-            DispatchQueue.main.asynchronously(execute: {
+            DispatchQueue.main.async(execute: {
                 self.searchController.searchBar.becomeFirstResponder()
             });
                 
@@ -211,7 +214,7 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
     }
 
     // MARK: - Table View
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
   
@@ -222,7 +225,7 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
         return finalSoldierArray.count
     }
   
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath)
         
         let soldier: Soldier_Search
@@ -242,7 +245,7 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let soldier: Soldier_Search
         
         // The following code segues to the Facebook View Controller once a soldier has been selected
@@ -253,14 +256,17 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
         }
         //let index = indexPath.row as Int //Gets the index for the cell being done at that time
         MyVariables.facebookSoldierID = soldier.id //"55" // allSoldiersSorted[index]["soldier_id"].stringValue
-        dispatch_get_main_queue().asynchronously() {
-            self.performSegueWithIdentifier("FacebookSegue", sender: self)
+        DispatchQueue.main.async() {
+            self.performSegue(withIdentifier: "FacebookSegue", sender: self)
         }
         
     }
   
+    
+    
+    
   // MARK: - Segues
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+  func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     
 
   }
