@@ -28,11 +28,11 @@ class BattalionReader {
             
             let IndviBattalion = allBattalions[i] as! NSDictionary
             let allIDS = IndviBattalion["id"] as! Int
-            let allNAMES = IndviBattalion["name"]
-            let splitArray = allNAMES!.componentsSeparatedByString("-")
+            let allNames = IndviBattalion["name"]
+            //let splitArray = allNAMES!.componentsSeparatedByString("-")
+            let splitArray = (allNames! as! String).components(separatedBy: "-")
             let battalion2 = Battalions (id: allIDS , name: splitArray[0] , brigade: splitArray[1] , division: splitArray[2] )
         
-            
             battalions.append(battalion2)
         }
         

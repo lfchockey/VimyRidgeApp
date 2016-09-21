@@ -19,7 +19,7 @@ class WesternFrontLinesCoords
     init(lineName: String)
     {
         let filename = "westernFront"
-        let filePath = NSBundle.mainBundle().pathForResource(filename, ofType: "plist")
+        let filePath = Bundle.main.path(forResource: filename, ofType: "plist")
         let properties = NSDictionary(contentsOfFile: filePath!)
 
         let linePoints = properties![lineName] as! NSArray

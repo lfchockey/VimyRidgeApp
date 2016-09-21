@@ -34,14 +34,17 @@ class StudentBiographyViewController: UIViewController {
         //Setup the toolbar and add it to the containerView with the appropriate dimensions and position
         self.downloadToolbar = UIToolbar()
         self.containerView!.addSubview(self.downloadToolbar!)
-        self.downloadToolbar!.frame = CGRectMake(0, self.containerView!.frame.maxY - self.containerView!.frame.minY - 44, self.containerView!.frame.width, 44)
+        //image.draw(in: CGRectMake(0, 0, newWidth, newHeight))
+        //image.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
+        self.downloadToolbar!.frame = CGRect(x: 0, y: self.containerView!.frame.maxY - self.containerView!.frame.minY - 44, width: self.containerView!.frame.width, height: 44)
         self.downloadToolbar!.sizeToFit()
         
         //Setup the download button inside the toolbar
         self.downloadButton = UIBarButtonItem()
         self.downloadButton?.title = "Download To Device"
         self.downloadButton?.target = self
-        self.downloadButton?.action = #selector(StudentBiographyViewController.downloadButtonPressed(_:)) //This will call the downloadButtonPressed function when the button is pressed
+        //self.downloadButton?.action = #selector(StudentBiographyViewController.downloadButtonPressed(_:)) //This will call the downloadButtonPressed function when the button is pressed
+        self.downloadButton?.action(self, action: #selector(StudentBiographyViewController.downloadButtonPressed(_:)), forControlEvents: .TouchDown)
         self.downloadToolbar!.items = [self.downloadButton!]
         
         //Add the finalized containerView to the main view

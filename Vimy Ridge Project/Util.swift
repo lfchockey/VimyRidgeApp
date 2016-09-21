@@ -24,13 +24,13 @@ var MusicPlayer = AVAudioPlayer()
 
 // Function that sets up the music player with the song and plays it
 func playMusic(filename: String) {
-    let url = NSBundle.mainBundle().URLForResource(filename, withExtension: nil)
+    let url = Bundle.main.url(forResource: filename, withExtension: nil)
     guard let newURL = url else {
         print("Could not find file: \(filename)")
         return
     }
     do {
-        MusicPlayer = try AVAudioPlayer(contentsOfURL: newURL)
+        MusicPlayer = try AVAudioPlayer(contentsOf: newURL)
         MusicPlayer.numberOfLoops = -1
         MusicPlayer.prepareToPlay()
         MusicPlayer.play()
@@ -46,11 +46,11 @@ func toggleMute(button: UIButton) {
     if MusicPlayer.volume == 1 {
         MusicPlayer.volume = 0
         // Set button color to grey when muted
-        button.tintColor = UIColor.lightGrayColor()
+        button.tintColor = UIColor.lightGray
     }
     else {
         MusicPlayer.volume = 1
         // Set button color to blue when on
-        button.tintColor = UIColor.blueColor()
+        button.tintColor = UIColor.blue
     }
 }

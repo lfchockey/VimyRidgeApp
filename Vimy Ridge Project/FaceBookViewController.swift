@@ -14,13 +14,13 @@ class FaceBookViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBAction func SwapViews(sender: AnyObject) {
-        moveViews(sender.selectedSegmentIndex)
+        moveViews(sender: sender.selectedSegmentIndex)
     }
    
     func grabDataOnSoldier() {
 
         //self.moveViews(0)
-        self.indicator.hidden = true
+        self.indicator.isHidden = true
 
         var name = ""
         if MyVariables.globalSoldier.rank_highest_achieved != ""
@@ -43,16 +43,16 @@ class FaceBookViewController: UIViewController {
     
     func moveViews(sender:Int) {
         let viewControllerIdentifiers = ["Profile", "Biography", "Friends", "Timeline", "Photos", "Medals", "StudentBio"]
-        let newController = (storyboard?.instantiateViewControllerWithIdentifier(viewControllerIdentifiers[sender]))! as UIViewController
+        let newController = (storyboard?.instantiateViewController(withIdentifier: viewControllerIdentifiers[sender]))! as UIViewController
         let oldController = childViewControllers.last! as UIViewController
         
-        oldController.willMoveToParentViewController(nil)
+        oldController.willMove(toParentViewController: nil)
         addChildViewController(newController)
         newController.view.frame = oldController.view.frame
-        transitionFromViewController(oldController, toViewController: newController, duration: 0.25, options: .TransitionCrossDissolve, animations:{ () -> Void in
+        transition(from: oldController, to: newController, duration: 0.25, options: .transitionCrossDissolve, animations:{ () -> Void in
             }, completion: { (finished) -> Void in
                 oldController.removeFromParentViewController()
-                newController.didMoveToParentViewController(self)
+                newController.didMove(toParentViewController: self)
         })
 
     }
@@ -63,9 +63,9 @@ class FaceBookViewController: UIViewController {
         grabDataOnSoldier()
         
         if MyVariables.facebookSoldierID != "" {
-            MyVariables().setGlobalSoldier(MyVariables.facebookSoldierID)
-            moveViews(0)
-            indicator.hidden = false
+            MyVariables().setGlobalSoldier(id: MyVariables.facebookSoldierID)
+            moveViews(sender: 0)
+            indicator.isHidden = false
             grabDataOnSoldier()
         }
         

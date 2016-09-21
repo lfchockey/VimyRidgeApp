@@ -101,7 +101,7 @@ class FriendsView: UITableViewController {
         return totalSoldiers
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) 
         
         let soldier = allSoldiers[indexPath.row]
@@ -112,14 +112,13 @@ class FriendsView: UITableViewController {
         return cell
     }
     
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let soldier = allSoldiers[indexPath.row]
         MyVariables.facebookSoldierID = soldier["soldier_id"].stringValue
         
-        dispatch_get_main_queue().asynchronously() {
-            self.performSegueWithIdentifier("facebookVCSegue", sender: self)
+        DispatchQueue.main.async() {
+            self.performSegue(withIdentifier: "facebookVCSegue", sender: self)
         }
         
     }

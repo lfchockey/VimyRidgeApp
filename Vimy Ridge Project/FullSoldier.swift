@@ -636,7 +636,7 @@ class FullSoldier: NSObject{
         if let latestValue = soldierDict.object(forKey: "present_address") as? String {
             fullSol.present_address = latestValue
             if latestValue != "" {
-                let address = latestValue.stringByReplacingOccurrencesOfString("~~~,", withString: "")
+                let address = latestValue.replacingOccurrences(of: "~~~", with: "") //latestValue.stringByReplacingOccurrencesOfString("~~~,", withString: "")
                 fullSol.location_array.append(["address":address])
             }
         }
