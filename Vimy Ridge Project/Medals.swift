@@ -106,7 +106,9 @@ class Medals:UIViewController, UITableViewDataSource, UITableViewDelegate {
     func buildMedals(data: NSData?) {
         var awardsArray = JSON([])
         do {
-            if let _: NSDictionary! = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers) as? NSDictionary {
+            if let _ =  try JSONSerialization.jsonObject(with: data! as Data, options:JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
+            {
+            //if let bob: NSDictionary try JSONSerialization.JSONObjectWithData(data! as Data, options:JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
                 
                 if data != nil {
                     awardsArray = JSON(data: data! as Data)

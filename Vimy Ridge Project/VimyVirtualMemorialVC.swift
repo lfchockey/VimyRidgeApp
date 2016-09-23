@@ -55,6 +55,7 @@ class VimyVirtualMemorialVC: UIViewController {
         
         
         print(" number of pages \(numOfPages)")
+    }
        // print(String(newSoldier.newSoldier_id))
         
         //this code sets up your swipe gestures
