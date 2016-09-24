@@ -15,7 +15,7 @@ class StatsReader
     
     init(categories: String)
     {
-        let filePath = NSBundle.mainBundle().pathForResource("Stats", ofType: "plist")
+        let filePath = Bundle.main.path(forResource: "Stats", ofType: "plist")
         let properties = NSDictionary(contentsOfFile: filePath!)
         let information = properties![categories] as! NSDictionary
         

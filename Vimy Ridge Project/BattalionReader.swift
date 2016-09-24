@@ -16,11 +16,11 @@ class BattalionReader {
     
     init()
     {
-        let filePath = NSBundle.mainBundle().pathForResource("BattalionTest", ofType: "plist")
+        let filePath = Bundle.main.path(forResource: "BattalionTest", ofType: "plist")
         let properties = NSDictionary(contentsOfFile: filePath!)
 
         
-        battalionCount = properties!["Battalions"]!.count
+        battalionCount = (properties!["Battalions"]! as AnyObject).count
         let allBattalions = properties!["Battalions"] as! NSArray
         
         
@@ -28,11 +28,11 @@ class BattalionReader {
             
             let IndviBattalion = allBattalions[i] as! NSDictionary
             let allIDS = IndviBattalion["id"] as! Int
-            let allNAMES = IndviBattalion["name"]
-            let splitArray = allNAMES!.componentsSeparatedByString("-")
+            let allNames = IndviBattalion["name"]
+            //let splitArray = allNAMES!.componentsSeparatedByString("-")
+            let splitArray = (allNames! as! String).components(separatedBy: "-")
             let battalion2 = Battalions (id: allIDS , name: splitArray[0] , brigade: splitArray[1] , division: splitArray[2] )
         
-            
             battalions.append(battalion2)
         }
         

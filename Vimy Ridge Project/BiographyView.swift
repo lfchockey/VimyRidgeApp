@@ -41,12 +41,12 @@ class BiographyView:UIViewController {
         Label_Info_4.text = MyVariables.globalSoldier.relationship_to_next_of_kin
         Label_Bio_5.text = "Number of Dependents:"
         Label_Info_5.text = MyVariables.globalSoldier.number_of_dependants
-        Label_Bio_6.hidden = true
-        Label_Info_6.hidden = true
-        Label_Bio_7.hidden = true
-        Label_Info_7.hidden = true
-        Label_Bio_8.hidden = true
-        Label_Info_8.hidden = true
+        Label_Bio_6.isHidden = true
+        Label_Info_6.isHidden = true
+        Label_Bio_7.isHidden = true
+        Label_Info_7.isHidden = true
+        Label_Bio_8.isHidden = true
+        Label_Info_8.isHidden = true
     }
     
     @IBAction func Switch(sender: AnyObject)
@@ -64,12 +64,12 @@ class BiographyView:UIViewController {
             Label_Info_4.text = MyVariables.globalSoldier.relationship_to_next_of_kin
             Label_Bio_5.text = "Number of Dependents:"
             Label_Info_5.text = MyVariables.globalSoldier.number_of_dependants
-            Label_Bio_6.hidden = true
-            Label_Info_6.hidden = true
-            Label_Bio_7.hidden = true
-            Label_Info_7.hidden = true
-            Label_Bio_8.hidden = true
-            Label_Info_8.hidden = true
+            Label_Bio_6.isHidden = true
+            Label_Info_6.isHidden = true
+            Label_Bio_7.isHidden = true
+            Label_Info_7.isHidden = true
+            Label_Bio_8.isHidden = true
+            Label_Info_8.isHidden = true
 
         case 1:
             Label_Bio_1.text = "Military Rank at Enlistment:"
@@ -88,12 +88,12 @@ class BiographyView:UIViewController {
             Label_Info_7.text = "\(MyVariables.globalSoldier.remains_buried_in_cemetery) \(MyVariables.globalSoldier.remains_buried_in_city_village) \(MyVariables.globalSoldier.remains_buried_in_country)"
             Label_Bio_8.text = "Burial Information:"
             Label_Info_8.text = "Grave: \(MyVariables.globalSoldier.remains_buried_in_grave) Row: \(MyVariables.globalSoldier.remains_buried_in_row) Plot: \(MyVariables.globalSoldier.remains_buried_in_plot)"
-            Label_Bio_6.hidden = false
-            Label_Info_6.hidden = false
-            Label_Bio_7.hidden = false
-            Label_Info_7.hidden = false
-            Label_Bio_8.hidden = false
-            Label_Info_8.hidden = false
+            Label_Bio_6.isHidden = false
+            Label_Info_6.isHidden = false
+            Label_Bio_7.isHidden = false
+            Label_Info_7.isHidden = false
+            Label_Bio_8.isHidden = false
+            Label_Info_8.isHidden = false
             
         case 2:
             Label_Bio_1.text = "Gender:"
@@ -112,12 +112,12 @@ class BiographyView:UIViewController {
             Label_Info_7.text = "\(MyVariables.globalSoldier.height_feet) \(MyVariables.globalSoldier.height_inches)"
             Label_Bio_8.text = "Weight in Imperial:"
             Label_Info_8.text = MyVariables.globalSoldier.weight
-            Label_Bio_6.hidden = false
-            Label_Info_6.hidden = false
-            Label_Bio_7.hidden = false
-            Label_Info_7.hidden = false
-            Label_Bio_8.hidden = false
-            Label_Info_8.hidden = false
+            Label_Bio_6.isHidden = false
+            Label_Info_6.isHidden = false
+            Label_Bio_7.isHidden = false
+            Label_Info_7.isHidden = false
+            Label_Bio_8.isHidden = false
+            Label_Info_8.isHidden = false
             
             
         case 3:

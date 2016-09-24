@@ -25,7 +25,7 @@ class WeaponsInfo
     
     init(weaponName: String)
     {
-        let filePath = NSBundle.mainBundle().pathForResource("WeaponInfo", ofType: "plist")
+        let filePath = Bundle.main.path(forResource: "WeaponInfo", ofType: "plist")
         let properties = NSDictionary(contentsOfFile: filePath!)
         
         let individualWeaponInfo = properties![weaponName] as! NSArray

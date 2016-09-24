@@ -546,7 +546,7 @@ class FullSoldier: NSObject{
             "vimy_casualty": self.vimy_casualty
         ]
         
-        return json
+        return json as NSObject
     }
     
     //func assignSoldier(soldierDict: Dictionary<String, String>!) -> FullSoldier {
@@ -556,7 +556,7 @@ class FullSoldier: NSObject{
         // Check each piece of information that was passed in the JSON to see whether it contains a value or is NULL
         //      If it contains a value, place it inside the soldier
         
-        if let latestValue = soldierDict.objectForKey("locations") as? NSArray{
+        if let latestValue = soldierDict.object(forKey: "locations") as? NSArray{
             for locations in latestValue {
 
                 let loc = locations as! NSDictionary
@@ -576,317 +576,317 @@ class FullSoldier: NSObject{
         //        if let latestValue = soldierDict.indexForKey("additional_info") as? String {
         //
         //        }
-        if let latestValue = soldierDict.objectForKey("additional_info") as? String {
+        if let latestValue = soldierDict.object(forKey: "additional_info") as? String {
             fullSol.additional_info = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("address_next_of_kin") as? String {
+        if let latestValue = soldierDict.object(forKey: "address_next_of_kin") as? String {
             fullSol.address_next_of_kin = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("attestation_willingness") as? String {
+        if let latestValue = soldierDict.object(forKey: "attestation_willingness") as? String {
             fullSol.attestation_willingness = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("christian_names") as? String {
+        if let latestValue = soldierDict.object(forKey: "christian_names") as? String {
             fullSol.christian_names = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("citizenship") as? String {
+        if let latestValue = soldierDict.object(forKey: "citizenship") as? String {
             fullSol.citizenship = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("date_of_birth") as? String {
+        if let latestValue = soldierDict.object(forKey: "date_of_birth") as? String {
             fullSol.date_of_birth = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("date_of_enlistment") as? String {
+        if let latestValue = soldierDict.object(forKey: "date_of_enlistment") as? String {
             fullSol.date_of_enlistment = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("initials") as? String {
+        if let latestValue = soldierDict.object(forKey: "initials") as? String {
             fullSol.initials = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("lac") as? String {
+        if let latestValue = soldierDict.object(forKey: "lac") as? String {
             fullSol.lac = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("lac_reference") as? String {
+        if let latestValue = soldierDict.object(forKey: "lac_reference") as? String {
             fullSol.lac_reference = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("marital_status") as? String {
+        if let latestValue = soldierDict.object(forKey: "marital_status") as? String {
             fullSol.marital_status = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("name_next_of_kin") as? String {
+        if let latestValue = soldierDict.object(forKey: "name_next_of_kin") as? String {
             fullSol.name_next_of_kin = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("number_of_dependants") as? String {
+        if let latestValue = soldierDict.object(forKey: "number_of_dependants") as? String {
             fullSol.number_of_dependants = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("officer_id") as? String {
+        if let latestValue = soldierDict.object(forKey: "officer_id") as? String {
             fullSol.officer_id = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("place_of_birth") as? String {
+        if let latestValue = soldierDict.object(forKey: "place_of_birth") as? String {
             fullSol.place_of_birth = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("place_of_birth_country") as? String {
+        if let latestValue = soldierDict.object(forKey: "place_of_birth_country") as? String {
             fullSol.place_of_birth_country = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("place_of_birth_province") as? String {
+        if let latestValue = soldierDict.object(forKey: "place_of_birth_province") as? String {
             fullSol.place_of_birth_province = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("place_of_birth_town") as? String {
+        if let latestValue = soldierDict.object(forKey: "place_of_birth_town") as? String {
             fullSol.place_of_birth_town = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("place_of_enlistment") as? String {
+        if let latestValue = soldierDict.object(forKey: "place_of_enlistment") as? String {
             fullSol.place_of_enlistment = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("present_address") as? String {
+        if let latestValue = soldierDict.object(forKey: "present_address") as? String {
             fullSol.present_address = latestValue
             if latestValue != "" {
-                let address = latestValue.stringByReplacingOccurrencesOfString("~~~,", withString: "")
+                let address = latestValue.replacingOccurrences(of: "~~~", with: "") //latestValue.stringByReplacingOccurrencesOfString("~~~,", withString: "")
                 fullSol.location_array.append(["address":address])
             }
         }
-        if let latestValue = soldierDict.objectForKey("present_address_country") as? String {
+        if let latestValue = soldierDict.object(forKey: "present_address_country") as? String {
             fullSol.present_address_country = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("present_address_province") as? String {
+        if let latestValue = soldierDict.object(forKey: "present_address_province") as? String {
             fullSol.present_address_province = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("present_address_street") as? String {
+        if let latestValue = soldierDict.object(forKey: "present_address_street") as? String {
             fullSol.present_address_street = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("present_address_town") as? String {
+        if let latestValue = soldierDict.object(forKey: "present_address_town") as? String {
             fullSol.present_address_town = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("relationship_to_next_of_kin") as? String {
+        if let latestValue = soldierDict.object(forKey: "relationship_to_next_of_kin") as? String {
             fullSol.relationship_to_next_of_kin = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("religion") as? String {
+        if let latestValue = soldierDict.object(forKey: "religion") as? String {
             fullSol.religion = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("soldier_id") as? String {
+        if let latestValue = soldierDict.object(forKey: "soldier_id") as? String {
             fullSol.soldier_id = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("surname") as? String {
+        if let latestValue = soldierDict.object(forKey: "surname") as? String {
             fullSol.surname = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("trade_or_calling") as? String {
+        if let latestValue = soldierDict.object(forKey: "trade_or_calling") as? String {
             fullSol.trade_or_calling = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("virtual_war_memorial") as? String {
+        if let latestValue = soldierDict.object(forKey: "virtual_war_memorial") as? String {
             fullSol.virtual_war_memorial = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("war_graves_commission") as? String {
+        if let latestValue = soldierDict.object(forKey: "war_graves_commission") as? String {
             fullSol.war_graves_commission = latestValue
         }
         
         //----------Medical History Properties------------
-        if let latestValue = soldierDict.objectForKey("age_months_medical") as? String {
+        if let latestValue = soldierDict.object(forKey: "age_months_medical") as? String {
             fullSol.age_months_medical = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("age_years_medical") as? String {
+        if let latestValue = soldierDict.object(forKey: "age_years_medical") as? String {
             fullSol.age_years_medical = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("apparent_age_months_att") as? String {
+        if let latestValue = soldierDict.object(forKey: "apparent_age_months_att") as? String {
             fullSol.apparent_age_months_att = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("apparent_age_years_att") as? String {
+        if let latestValue = soldierDict.object(forKey: "apparent_age_years_att") as? String {
             fullSol.apparent_age_years_att = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("chest_full_expansion_att") as? String {
+        if let latestValue = soldierDict.object(forKey: "chest_full_expansion_att") as? String {
             fullSol.chest_full_expansion_att = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("chest_maximum_expansion") as? String {
+        if let latestValue = soldierDict.object(forKey: "chest_maximum_expansion") as? String {
             fullSol.chest_maximum_expansion = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("chest_minimum") as? String {
+        if let latestValue = soldierDict.object(forKey: "chest_minimum") as? String {
             fullSol.chest_minimum = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("chest_range_of_expansion_att") as? String {
+        if let latestValue = soldierDict.object(forKey: "chest_range_of_expansion_att") as? String {
             fullSol.chest_range_of_expansion_att = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("complexion_att") as? String {
+        if let latestValue = soldierDict.object(forKey: "complexion_att") as? String {
             fullSol.complexion_att = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("date_examined") as? String {
+        if let latestValue = soldierDict.object(forKey: "date_examined") as? String {
             fullSol.date_examined = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("ethnic_origin_att") as? String {
+        if let latestValue = soldierDict.object(forKey: "ethnic_origin_att") as? String {
             fullSol.ethnic_origin_att = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("examined_or_discharged") as? String {
+        if let latestValue = soldierDict.object(forKey: "examined_or_discharged") as? String {
             fullSol.examined_or_discharged = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("eye_colour_att") as? String {
+        if let latestValue = soldierDict.object(forKey: "eye_colour_att") as? String {
             fullSol.eye_colour_att = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("gender") as? String {
+        if let latestValue = soldierDict.object(forKey: "gender") as? String {
             fullSol.gender = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("hair_colour_att") as? String {
+        if let latestValue = soldierDict.object(forKey: "hair_colour_att") as? String {
             fullSol.hair_colour_att = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("height_feet") as? String {
+        if let latestValue = soldierDict.object(forKey: "height_feet") as? String {
             fullSol.height_feet = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("height_feet_att") as? String {
+        if let latestValue = soldierDict.object(forKey: "height_feet_att") as? String {
             fullSol.height_feet_att = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("height_inches") as? String {
+        if let latestValue = soldierDict.object(forKey: "height_inches") as? String {
             fullSol.height_inches = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("height_inches_att") as? String {
+        if let latestValue = soldierDict.object(forKey: "height_inches_att") as? String {
             fullSol.height_inches_att = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("identifying_marks") as? String {
+        if let latestValue = soldierDict.object(forKey: "identifying_marks") as? String {
             fullSol.identifying_marks = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("physical_development") as? String {
+        if let latestValue = soldierDict.object(forKey: "physical_development") as? String {
             fullSol.physical_development = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("place_examined") as? String {
+        if let latestValue = soldierDict.object(forKey: "place_examined") as? String {
             fullSol.place_examined = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("previous_disease_marks") as? String {
+        if let latestValue = soldierDict.object(forKey: "previous_disease_marks") as? String {
             fullSol.previous_disease_marks = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("slight_defects") as? String {
+        if let latestValue = soldierDict.object(forKey: "slight_defects") as? String {
             fullSol.slight_defects = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("trade_or_occupation") as? String {
+        if let latestValue = soldierDict.object(forKey: "trade_or_occupation") as? String {
             fullSol.trade_or_occupation = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("vaccination_marks_left_arm") as? String {
+        if let latestValue = soldierDict.object(forKey: "vaccination_marks_left_arm") as? String {
             fullSol.vaccination_marks_left_arm = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("vaccination_marks_number") as? String {
+        if let latestValue = soldierDict.object(forKey: "vaccination_marks_number") as? String {
             fullSol.vaccination_marks_number = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("vaccination_marks_right_arm") as? String {
+        if let latestValue = soldierDict.object(forKey: "vaccination_marks_right_arm") as? String {
             fullSol.vaccination_marks_right_arm = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("vaccination_willingness") as? String {
+        if let latestValue = soldierDict.object(forKey: "vaccination_willingness") as? String {
             fullSol.vaccination_willingness = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("weight") as? String {
+        if let latestValue = soldierDict.object(forKey: "weight") as? String {
             fullSol.weight = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("weight_att") as? String {
+        if let latestValue = soldierDict.object(forKey: "weight_att") as? String {
             fullSol.weight_att = latestValue
         }
         
         //----------Regimental Properties------------
-        if let latestValue = soldierDict.objectForKey("active_militia") as? String {
+        if let latestValue = soldierDict.object(forKey: "active_militia") as? String {
             fullSol.active_militia = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("age_at_death") as? String {
+        if let latestValue = soldierDict.object(forKey: "age_at_death") as? String {
             fullSol.age_at_death = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("battalion") as? String {
+        if let latestValue = soldierDict.object(forKey: "battalion") as? String {
             fullSol.battalion = latestValue
             battalion_array.append(["battalion":latestValue])
         }
-        if let latestValue = soldierDict.objectForKey("cause_of_death") as? String {
+        if let latestValue = soldierDict.object(forKey: "cause_of_death") as? String {
             fullSol.cause_of_death = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("commemorated") as? String {
+        if let latestValue = soldierDict.object(forKey: "commemorated") as? String {
             fullSol.commemorated = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("company") as? String {
+        if let latestValue = soldierDict.object(forKey: "company") as? String {
             fullSol.company = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("conscription") as? String {
+        if let latestValue = soldierDict.object(forKey: "conscription") as? String {
             fullSol.conscription = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("date_of_death") as? String {
+        if let latestValue = soldierDict.object(forKey: "date_of_death") as? String {
             fullSol.date_of_death = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("date_of_discharge") as? String {
+        if let latestValue = soldierDict.object(forKey: "date_of_discharge") as? String {
             fullSol.date_of_discharge = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("date_of_enlistment_conscription") as? String {
+        if let latestValue = soldierDict.object(forKey: "date_of_enlistment_conscription") as? String {
             fullSol.date_of_enlistment_conscription = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("died_at") as? String {
+        if let latestValue = soldierDict.object(forKey: "died_at") as? String {
             fullSol.died_at = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("engagement_understanding") as? String {
+        if let latestValue = soldierDict.object(forKey: "engagement_understanding") as? String {
             fullSol.engagement_understanding = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("interned") as? String {
+        if let latestValue = soldierDict.object(forKey: "interned") as? String {
             fullSol.interned = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("kia") as? String {
+        if let latestValue = soldierDict.object(forKey: "kia") as? String {
             fullSol.kia = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("location_of_death") as? String {
+        if let latestValue = soldierDict.object(forKey: "location_of_death") as? String {
             fullSol.location_of_death = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("military_force") as? String {
+        if let latestValue = soldierDict.object(forKey: "military_force") as? String {
             fullSol.military_force = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("military_force_particulars") as? String {
+        if let latestValue = soldierDict.object(forKey: "military_force_particulars") as? String {
             fullSol.military_force_particulars = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("name_on_grave") as? String {
+        if let latestValue = soldierDict.object(forKey: "name_on_grave") as? String {
             fullSol.name_on_grave = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("officer_rank") as? String {
+        if let latestValue = soldierDict.object(forKey: "officer_rank") as? String {
             fullSol.officer_rank = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("prisoner_of_war") as? String {
+        if let latestValue = soldierDict.object(forKey: "prisoner_of_war") as? String {
             fullSol.prisoner_of_war = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("qualification") as? String {
+        if let latestValue = soldierDict.object(forKey: "qualification") as? String {
             fullSol.qualification = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("rank_highest_achieved") as? String {
+        if let latestValue = soldierDict.object(forKey: "rank_highest_achieved") as? String {
             fullSol.rank_highest_achieved = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("rank_upon_enlistment") as? String {
+        if let latestValue = soldierDict.object(forKey: "rank_upon_enlistment") as? String {
             fullSol.rank_upon_enlistment = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("regiment_at_death") as? String {
+        if let latestValue = soldierDict.object(forKey: "regiment_at_death") as? String {
             fullSol.regiment_at_death = latestValue
             fullSol.battalion_array.append(["regiment_at_death":latestValue])
         }
-        if let latestValue = soldierDict.objectForKey("regiment_upon_enlistment") as? String {
+        if let latestValue = soldierDict.object(forKey: "regiment_upon_enlistment") as? String {
             fullSol.regiment_upon_enlistment = latestValue
             fullSol.battalion_array.append(["regiment_upon_enlistment":latestValue])
         }
-        if let latestValue = soldierDict.objectForKey("remains_buried_in_cemetery") as? String {
+        if let latestValue = soldierDict.object(forKey: "remains_buried_in_cemetery") as? String {
             fullSol.remains_buried_in_cemetery = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("remains_buried_in_city_village") as? String {
+        if let latestValue = soldierDict.object(forKey: "remains_buried_in_city_village") as? String {
             fullSol.remains_buried_in_city_village = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("remains_buried_in_country") as? String {
+        if let latestValue = soldierDict.object(forKey: "remains_buried_in_country") as? String {
             fullSol.remains_buried_in_country = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("remains_buried_in_grave") as? String {
+        if let latestValue = soldierDict.object(forKey: "remains_buried_in_grave") as? String {
             fullSol.remains_buried_in_grave = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("remains_buried_in_plot") as? String {
+        if let latestValue = soldierDict.object(forKey: "remains_buried_in_plot") as? String {
             fullSol.remains_buried_in_plot = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("remains_buried_in_row") as? String {
+        if let latestValue = soldierDict.object(forKey: "remains_buried_in_row") as? String {
             fullSol.remains_buried_in_row = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("saw_service_in") as? String {
+        if let latestValue = soldierDict.object(forKey: "saw_service_in") as? String {
             fullSol.saw_service_in = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("served_in_military_force") as? String {
+        if let latestValue = soldierDict.object(forKey: "served_in_military_force") as? String {
             fullSol.served_in_military_force = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("soldier_reburied") as? String {
+        if let latestValue = soldierDict.object(forKey: "soldier_reburied") as? String {
             fullSol.soldier_reburied = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("survived_war") as? String {
+        if let latestValue = soldierDict.object(forKey: "survived_war") as? String {
             fullSol.survived_war = latestValue
         }
-        if let latestValue = soldierDict.objectForKey("unit_at_discharge") as? String {
+        if let latestValue = soldierDict.object(forKey: "unit_at_discharge") as? String {
             fullSol.unit_at_discharge = latestValue
             fullSol.battalion_array.append(["unit_at_discharge":latestValue])
         }
-        if let latestValue = soldierDict.objectForKey("unit_ship_squadron") as? String {
+        if let latestValue = soldierDict.object(forKey: "unit_ship_squadron") as? String {
             fullSol.unit_ship_squadron = latestValue
             fullSol.battalion_array.append(["unit_ship_squadron":latestValue])
         }
-        if let latestValue = soldierDict.objectForKey("vimy_casualty") as? String {
+        if let latestValue = soldierDict.object(forKey: "vimy_casualty") as? String {
             fullSol.vimy_casualty = latestValue
         }
         

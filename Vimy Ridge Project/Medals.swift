@@ -27,29 +27,29 @@ class Medals:UIViewController, UITableViewDataSource, UITableViewDelegate {
         awardTableView!.dataSource = self
         
         
-        let defaultSession = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
-        var dataTask: NSURLSessionDataTask?
+        let defaultSession = URLSession(configuration: URLSessionConfiguration.default)
+        var dataTask: URLSessionDataTask?
         
         if dataTask != nil {
             dataTask?.cancel()
         }
         
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         let url = NSURL(string: "http://lest-we-forget.ca/apis/search2.php?action=search_awards&access_code=\(MyVariables.access_code)&soldier_id=\(MyVariables.facebookSoldierID)")
         
-        dataTask = defaultSession.dataTaskWithURL(url!) {
+        dataTask = defaultSession.dataTask(with: url! as URL) {
             data, response, error in
             
-            dispatch_async(dispatch_get_main_queue()) {
-                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            DispatchQueue.main.async() {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
             }
             
             if let error = error {
                 print(" MedalsVC \(error.localizedDescription)")
-            } else if let httpResponse = response as? NSHTTPURLResponse {
+            } else if let httpResponse = response as? HTTPURLResponse {
                 if httpResponse.statusCode == 200 {
-                    self.buildMedals(data)
+                    self.buildMedals(data: data as NSData?)
                 }
             }
         }
@@ -58,13 +58,13 @@ class Medals:UIViewController, UITableViewDataSource, UITableViewDelegate {
         
     }
     
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return totalAwards
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         let award = allAwards[indexPath.row]
         
@@ -106,13 +106,15 @@ class Medals:UIViewController, UITableViewDataSource, UITableViewDelegate {
     func buildMedals(data: NSData?) {
         var awardsArray = JSON([])
         do {
-            if let _: NSDictionary! = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers) as? NSDictionary {
+            if let _ =  try JSONSerialization.jsonObject(with: data! as Data, options:JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
+            {
+            //if let bob: NSDictionary try JSONSerialization.JSONObjectWithData(data! as Data, options:JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
                 
                 if data != nil {
-                    awardsArray = JSON(data: data!)
+                    awardsArray = JSON(data: data! as Data)
                     allAwards = awardsArray
                     totalAwards = awardsArray.count
-                    dispatch_async(dispatch_get_main_queue()) {
+                    DispatchQueue.main.async() {
                         self.awardTableView!.reloadData()
                     }
                     

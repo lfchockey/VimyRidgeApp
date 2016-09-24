@@ -495,6 +495,11 @@ class MapViewController: UIViewController
     
 //************************************************************* Western Fronts Code ********//
     
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBAction func infoClick(_ sender: AnyObject) {
+    }
+    
     @IBAction func RightNextClick(sender: UIButton) {
         let allOverlays = mapView.overlays
         mapView.removeOverlays(allOverlays)
@@ -506,6 +511,9 @@ class MapViewController: UIViewController
         }
         
         let newLine = lineArray[indexCounter]
+        
+        let printName = lineArray[indexCounter].name
+        nameLabel.text = printName
         
         var Polyine1900: MKPolyline = MKPolyline()
         Polyine1900 = MKPolyline(coordinates: &newLine.frontLineCoords, count: newLine.coordCount)
@@ -524,6 +532,9 @@ class MapViewController: UIViewController
         }
         
         let newLine = lineArray[indexCounter]
+        
+        let printName = lineArray[indexCounter].name
+        nameLabel.text = printName
         
         var Polyine1900: MKPolyline = MKPolyline()
         Polyine1900 = MKPolyline(coordinates: &newLine.frontLineCoords, count: newLine.coordCount)
@@ -645,12 +656,25 @@ class MapViewController: UIViewController
     
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
         if overlay is MKPolyline {
-            let polylineView = MKPolylineRenderer(overlay: overlay)
-            polylineView.strokeColor = UIColor.black
-            polylineView.lineWidth = 1.5
+            let polylineRenderer = MKPolylineRenderer(overlay: overlay)
             
-            return polylineView
+            if indexCounter == 0 {
+                polylineRenderer.strokeColor = UIColor.red
+            } else if indexCounter == 1 {
+                polylineRenderer.strokeColor = UIColor.blue
+            } else if indexCounter == 2 {
+                polylineRenderer.strokeColor = UIColor.init(colorLiteralRed:0.09, green:0.48, blue:0.18, alpha:1.0)
+            } else if indexCounter == 3 {
+                polylineRenderer.strokeColor = UIColor.init(colorLiteralRed:0.90, green:0.41, blue:0.00, alpha:1.0)
+            } else if indexCounter == 4 {
+                polylineRenderer.strokeColor = UIColor.purple
+            }
+            
+            // polylineRenderer.strokeColor = UIColor.init(colorLiteralRed:0.10, green:0.15, blue:0.39, alpha:0.85)
+            // polylineRenderer.lineWidth = 2
+            return polylineRenderer
         }
+        
         return MKOverlayRenderer()
     }
     
