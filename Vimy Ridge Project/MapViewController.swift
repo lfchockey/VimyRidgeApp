@@ -21,7 +21,7 @@ class MapViewController: UIViewController
     @IBOutlet weak var slider: UISlider!
     
     // User Swipes left
-    @IBAction func closeMenu(sender: UISwipeGestureRecognizer) {
+    @IBAction func closeMenu(_ sender: UISwipeGestureRecognizer) {
         
         var zoomRegion: CLLocationDistance = 10000
         var centerCoordinate = CLLocation(latitude: 50.3603125, longitude: 2.794017)
@@ -44,7 +44,7 @@ class MapViewController: UIViewController
             // Battalion Progression
             zoomRegion = 10000
             let dummySlider = UISlider()
-            sliderValueDidChange(sender: dummySlider)
+            sliderValueDidChange(dummySlider)
             slider.isHidden = false
         }
         else if MapVariables.mapSection == 4{
@@ -52,7 +52,7 @@ class MapViewController: UIViewController
             indexCounter = 0
             zoomRegion = 100000
             let dummyButton = UIButton(type: UIButtonType.custom)
-            LeftPreviousClick(sender: dummyButton)
+            LeftPreviousClick(dummyButton)
             leftButton.isHidden = false
             rightButton.isHidden = false
         }
@@ -74,7 +74,7 @@ class MapViewController: UIViewController
     }
     
     // User Swipes right
-    @IBAction func openMenu(sender: UISwipeGestureRecognizer) {
+    @IBAction func openMenu(_ sender: UISwipeGestureRecognizer) {
         
         menu.isHidden = false
         self.menu.alpha = 1
@@ -495,7 +495,12 @@ class MapViewController: UIViewController
     
 //************************************************************* Western Fronts Code ********//
     
-    @IBAction func RightNextClick(sender: UIButton) {
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBAction func infoClick(_ sender: AnyObject) {
+    }
+    
+    @IBAction func RightNextClick(_ sender: UIButton) {
         let allOverlays = mapView.overlays
         mapView.removeOverlays(allOverlays)
         
@@ -507,13 +512,16 @@ class MapViewController: UIViewController
         
         let newLine = lineArray[indexCounter]
         
+        let printName = lineArray[indexCounter].name
+        nameLabel.text = printName
+        
         var Polyine1900: MKPolyline = MKPolyline()
         Polyine1900 = MKPolyline(coordinates: &newLine.frontLineCoords, count: newLine.coordCount)
         mapView.add(Polyine1900)
         
     }
     
-    @IBAction func LeftPreviousClick(sender: UIButton) {
+    @IBAction func LeftPreviousClick(_ sender: UIButton) {
         let allOverlays = mapView.overlays
         mapView.removeOverlays(allOverlays)
         
@@ -524,6 +532,9 @@ class MapViewController: UIViewController
         }
         
         let newLine = lineArray[indexCounter]
+        
+        let printName = lineArray[indexCounter].name
+        nameLabel.text = printName
         
         var Polyine1900: MKPolyline = MKPolyline()
         Polyine1900 = MKPolyline(coordinates: &newLine.frontLineCoords, count: newLine.coordCount)
@@ -564,7 +575,7 @@ class MapViewController: UIViewController
 //************************************************************ Trench Line Progressions Code ********//
     
     
-    @IBAction func sliderValueDidChange(sender: UISlider) {
+    @IBAction func sliderValueDidChange(_ sender: UISlider) {
         
         let sliderVal = Int(sender.value)
         let r = sliderVal
@@ -643,18 +654,31 @@ class MapViewController: UIViewController
     // Needs an if statement to determine which type of line needs to be displayed (WesternFront, Battalion, Progression)
     // This function is for the Progression
     
-    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         if overlay is MKPolyline {
-            let polylineView = MKPolylineRenderer(overlay: overlay)
-            polylineView.strokeColor = UIColor.black
-            polylineView.lineWidth = 1.5
+            let polylineRenderer = MKPolylineRenderer(overlay: overlay)
             
-            return polylineView
+            if indexCounter == 0 {
+                polylineRenderer.strokeColor = UIColor.red
+            } else if indexCounter == 1 {
+                polylineRenderer.strokeColor = UIColor.blue
+            } else if indexCounter == 2 {
+                polylineRenderer.strokeColor = UIColor.init(colorLiteralRed:0.09, green:0.48, blue:0.18, alpha:1.0)
+            } else if indexCounter == 3 {
+                polylineRenderer.strokeColor = UIColor.init(colorLiteralRed:0.90, green:0.41, blue:0.00, alpha:1.0)
+            } else if indexCounter == 4 {
+                polylineRenderer.strokeColor = UIColor.purple
+            }
+            
+            // polylineRenderer.strokeColor = UIColor.init(colorLiteralRed:0.10, green:0.15, blue:0.39, alpha:0.85)
+            // polylineRenderer.lineWidth = 2
+            return polylineRenderer
         }
+        
         return MKOverlayRenderer()
     }
     
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView?
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?
     {
         let identifier = "CemAnno"
         let identifier1 = "CustomAnnotation"

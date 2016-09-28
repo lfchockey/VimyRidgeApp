@@ -48,19 +48,19 @@ class StatsViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
 
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    private func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
         return 1
         
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return allStats.info.count
     }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = statsTable.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath);
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = statsTable.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath as IndexPath);
         
         
         let keyName = Array(allStats.info.keys)[indexPath.row]

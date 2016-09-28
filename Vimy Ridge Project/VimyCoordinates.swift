@@ -20,7 +20,7 @@ class VimyCoordinates{
     
     
     init(filename: String) {
-        let filePath = NSBundle.mainBundle().pathForResource(filename, ofType: "plist")
+        let filePath = Bundle.main.path(forResource: filename, ofType: "plist")
         let properties = NSDictionary(contentsOfFile: filePath!)
         
         let allMemorials:NSArray = properties!["Memorials"] as! NSArray

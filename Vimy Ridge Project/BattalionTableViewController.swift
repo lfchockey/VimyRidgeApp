@@ -9,8 +9,8 @@
 import UIKit
 
 extension BattalionTableViewController: UISearchResultsUpdating {
-    func updateSearchResultsForSearchController(searchController: UISearchController) {
-        filterContentForSearchText(searchController.searchBar.text!)
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchText: searchController.searchBar.text!)
     }
 }
 
@@ -30,28 +30,27 @@ class BattalionTableViewController: UIViewController, UITableViewDataSource, UIT
     
     func filterContentForSearchText(searchText: String, scope: String = "All") {
         filteredBattalions = battalions.filter { battalion in
-            return battalion.name.lowercaseString.containsString(searchText.lowercaseString)
+            return battalion.name.lowercased().contains(searchText.lowercased())
         }
         
         tableView.reloadData()
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if searchController.active && searchController.searchBar.text != "" {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if searchController.isActive && searchController.searchBar.text != "" {
             return filteredBattalions.count
         }
         return battalions.count
     }
 
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath as IndexPath)
         let battalion: Battalions
-        if searchController.active && searchController.searchBar.text != "" {
+        if searchController.isActive && searchController.searchBar.text != "" {
             battalion = filteredBattalions[indexPath.row]
         } else {
             battalion = battalions[indexPath.row]
@@ -64,11 +63,11 @@ class BattalionTableViewController: UIViewController, UITableViewDataSource, UIT
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let battalion: Battalions
         
         // The following code segues to the Single Battalion View Controller once a battalion has been selected
-        if searchController.active && searchController.searchBar.text != "" && filteredBattalions.count != 0 {
+        if searchController.isActive && searchController.searchBar.text != "" && filteredBattalions.count != 0 {
             battalion = filteredBattalions[indexPath.row]
             BattVars.battalion_id = String(battalion.id)
         } else {
@@ -77,8 +76,8 @@ class BattalionTableViewController: UIViewController, UITableViewDataSource, UIT
         }
 
         // Segue to the SingleBattalionViewController once a row has been selected
-        dispatch_async(dispatch_get_main_queue()) {
-            self.performSegueWithIdentifier("SingleBattalionSegue", sender: self)
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "SingleBattalionSegue", sender: self)
         }
 
     }

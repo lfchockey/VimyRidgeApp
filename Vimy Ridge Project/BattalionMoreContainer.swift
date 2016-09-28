@@ -22,8 +22,8 @@ class BattalionMoreContainer: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         let url = NSURL (string: "https://en.wikipedia.org/wiki/Battle_of_Vimy_Ridge_order_of_battle");
         //This section generates a website to displayed in the WebViewMore.
-        let requestObj = NSURLRequest(URL: url!);
-        WebViewMore.loadRequest(requestObj);
+        let requestObj = NSURLRequest(url: url! as URL);
+        WebViewMore.loadRequest(requestObj as URLRequest);
         
     }
     

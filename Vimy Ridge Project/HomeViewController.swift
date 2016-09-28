@@ -12,19 +12,19 @@ import AVFoundation
 class HomeViewController: UIViewController {
     
     // The timer is used to check when the download is complete and will only allow segues when it is
-    var timer = NSTimer()
+    var timer = Timer()
     var segueName: String = ""
 
     @IBOutlet weak var SearchOutlet: UIButton!
     @IBOutlet weak var loadingImageView: UIImageView!
     
     @IBOutlet weak var musicButton: UIButton!
-    @IBAction func musicButtonPress(sender: AnyObject) {
+    @IBAction func musicButtonPress(_ sender: AnyObject) {
         // Toggle mute via function in Util.swift
-        toggleMute(musicButton)
+        toggleMute(button: musicButton)
     }
     
-    @IBAction func TestFacebook(sender: AnyObject) {
+    @IBAction func TestFacebook(_ sender: AnyObject) {
         MyVariables.facebookSoldierID = "55"
         segueName = "FacebookSegue"
         if !MyVariables.allSoldiersDownloaded {
@@ -32,11 +32,11 @@ class HomeViewController: UIViewController {
             scheduledTimerWithTimeInterval()
         }
         else {
-            self.performSegueWithIdentifier(self.segueName, sender: nil)
+            self.performSegue(withIdentifier: self.segueName, sender: nil)
         }
     }
     
-    @IBAction func soldierOfHourClick(sender: AnyObject) {
+    @IBAction func soldierOfHourClick(_ sender: AnyObject) {
         MyVariables.facebookSoldierID = "55"
         segueName = "FacebookSegue"
         if !MyVariables.allSoldiersDownloaded {
@@ -44,59 +44,59 @@ class HomeViewController: UIViewController {
             scheduledTimerWithTimeInterval()
         }
         else {
-            self.performSegueWithIdentifier(self.segueName, sender: nil)
+            self.performSegue(withIdentifier: self.segueName, sender: nil)
         }
         
     }
     
-    @IBAction func SearchClick(sender: AnyObject) {
+    @IBAction func SearchClick(_ sender: AnyObject) {
         segueName = "SearchSegue"
         if !MyVariables.allSoldiersDownloaded {
             loadAnimation()
             scheduledTimerWithTimeInterval()
         }
         else {
-            self.performSegueWithIdentifier(self.segueName, sender: nil)
+            self.performSegue(withIdentifier: self.segueName, sender: nil)
         }
     }
     
-    @IBAction func MapClick(sender: AnyObject) {
+    @IBAction func MapClick(_ sender: AnyObject) {
         segueName = "MapSegue"
-        self.performSegueWithIdentifier(self.segueName, sender: nil)
+        self.performSegue(withIdentifier: self.segueName, sender: nil)
     }
     
-    @IBAction func WeaponsClick(sender: AnyObject) {
+    @IBAction func WeaponsClick(_ sender: AnyObject) {
         segueName = "WeaponsSegue"
-        self.performSegueWithIdentifier(self.segueName, sender: nil)
+        self.performSegue(withIdentifier: self.segueName, sender: nil)
     }
     
-    @IBAction func BattalionsClick(sender: AnyObject) {
+    @IBAction func BattalionsClick(_ sender: AnyObject) {
         segueName = "BattalionSegue"
-        self.performSegueWithIdentifier(self.segueName, sender: nil)
+        self.performSegue(withIdentifier: self.segueName, sender: nil)
     }
     
-    @IBAction func HistoryClick(sender: AnyObject) {
+    @IBAction func HistoryClick(_ sender: AnyObject) {
         segueName = "HistorySegue"
-        self.performSegueWithIdentifier(self.segueName, sender: nil)
+        self.performSegue(withIdentifier: self.segueName, sender: nil)
     }
     
-    @IBAction func AboutClick(sender: AnyObject) {
+    @IBAction func AboutClick(_ sender: AnyObject) {
         segueName = "AboutSegue"
-        self.performSegueWithIdentifier(self.segueName, sender: nil)
+        self.performSegue(withIdentifier: self.segueName, sender: nil)
     }
     
-    @IBAction func VirtualTourClick(sender: AnyObject) {
+    @IBAction func VirtualTourClick(_ sender: AnyObject) {
         segueName = "VirtualMemorialSegue"
         if !MyVariables.allSoldiersDownloaded {
             loadAnimation()
             scheduledTimerWithTimeInterval()
         }
         else {
-            self.performSegueWithIdentifier(self.segueName, sender: nil)
+            self.performSegue(withIdentifier: self.segueName, sender: nil)
         }
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         if !MyVariables.allSoldiersDownloaded {
             MyVariables().downloadAllVimySoldiers()
         }
@@ -107,15 +107,15 @@ class HomeViewController: UIViewController {
         
         //Set up the Music Button
         if let image = UIImage(named: "sound.png") {
-            musicButton.setImage(image, forState: .Normal)
+            musicButton.setImage(image, for: .normal)
         }
         
         // Start the playing of the song once home view loads
         // Using function in Util.swift
-        playMusic("AppIntro.m4a")
+        playMusic(filename: "AppIntro.m4a")
         
         //Change mute button color to blue to show that the music is on
-        musicButton.tintColor = UIColor.blueColor()
+        musicButton.tintColor = UIColor.blue
     }
     
     override func didReceiveMemoryWarning() {
@@ -125,15 +125,15 @@ class HomeViewController: UIViewController {
 
     func scheduledTimerWithTimeInterval(){
         // Scheduling timer to Call the function **Countdown** with the interval of 1 seconds
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.25, target: self, selector: #selector(HomeViewController.updateCounting), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.25, target: self, selector: #selector(HomeViewController.updateCounting), userInfo: nil, repeats: true)
     }
     
     
     func updateCounting(){
         if MyVariables.allSoldiersDownloaded {
             loadingImageView.stopAnimating()
-            loadingImageView.hidden = true
-            self.performSegueWithIdentifier(self.segueName, sender: nil)
+            loadingImageView.isHidden = true
+            self.performSegue(withIdentifier: self.segueName, sender: nil)
             timer.invalidate()
         }
         else {
@@ -164,7 +164,7 @@ class HomeViewController: UIViewController {
         
         //start the animation in the image view called test view
         loadingImageView.startAnimating()
-        loadingImageView.hidden = false
+        loadingImageView.isHidden = false
 
     }
 

@@ -20,31 +20,32 @@ struct MyVariables {
     static var allVimySoldiers: [FullSoldier] = [FullSoldier]()
     
     func downloadAllVimySoldiers() {
-        let defaultSession = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
-        var dataTask: NSURLSessionDataTask?
+        let defaultSession = URLSession(configuration: URLSessionConfiguration.default)
+        var dataTask: URLSessionDataTask?
         
         if dataTask != nil {
             dataTask?.cancel()
         }
         
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         let url = NSURL(string: "http://lest-we-forget.ca/apis/get_all_full_vimy_soldiers_api.php?access_code=\(MyVariables.access_code)")
         MyVariables.allSoldiersDownloadStarted = true
         // 5
-        dataTask = defaultSession.dataTaskWithURL(url!) {
+        dataTask = defaultSession.dataTask(with: url! as URL) {
             data, response, error in
-            
+
             // 6
-            dispatch_async(dispatch_get_main_queue()) {
-                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            DispatchQueue.main.async() {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
             }
             // 7
             if let error = error {
                 print("(MyVars) \(error.localizedDescription)")
-            } else if let httpResponse = response as? NSHTTPURLResponse {
+                // *** add some code here that explains that the request timed out (or some other option)
+            } else if let httpResponse = response as? HTTPURLResponse {
                 if httpResponse.statusCode == 200 {
-                    self.buildSoldiers(data)
+                    self.buildSoldiers(data: data as NSData?)
                     
                 }
             }
@@ -60,18 +61,23 @@ struct MyVariables {
     func buildSoldiers(data: NSData?) {
         var soldierArray = JSON([])
         do {
-            if let _: NSDictionary! = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers) as? NSDictionary {
+            if let _: NSDictionary? = try JSONSerialization.jsonObject(with: data! as Data, options:JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
                 
                 if data != nil {
-                    soldierArray = JSON(data: data!)
+                    soldierArray = JSON(data: data! as Data)
                     
                     for jsonSoldier in soldierArray {
 
-                        let soldier = JSON.parse(jsonSoldier.1.stringValue)
+                        let soldier = JSON.parse(string: jsonSoldier.1.stringValue)
                         var soldierDict = Dictionary<String, AnyObject>()
                         
+                        var count2 = 0
                         for (key, value) in soldier {
-
+                            count2 += 1
+                            if count2 > 105
+                            {
+                                break // *** choppy piece of code that is getting into an infinite loop if a soldier is returned with no values
+                            }
                             if key == "locations" {
                                 var location_array: [[String:String]] = []
                                 let locations = soldier["locations"]
@@ -81,10 +87,10 @@ struct MyVariables {
                                     let sig = location.1["significance"]
                                     location_array.append([sig.stringValue:loc])
                                 }
-                                soldierDict.updateValue(location_array, forKey: key)
+                                soldierDict.updateValue(location_array as AnyObject, forKey: key)
                             }
                             else{
-                                soldierDict.updateValue(value.stringValue, forKey: key)
+                                soldierDict.updateValue(value.stringValue as AnyObject, forKey: key)
                             }
                             
                         }
@@ -92,12 +98,12 @@ struct MyVariables {
                         
                         let finalSoldier: NSDictionary = soldierDict as NSDictionary
                         var newSoldier: FullSoldier = FullSoldier()
-                        newSoldier = newSoldier.assignSoldier(finalSoldier)
+                        newSoldier = newSoldier.assignSoldier(soldierDict: finalSoldier)
                         
                         
                         //  Store the current soldier in the allVimySoldiers global variable array
                         MyVariables.allVimySoldiers.append(newSoldier)
-  
+                        
                     }
                     
                 }
@@ -121,7 +127,7 @@ struct MyVariables {
         }
     }
     
-    func setGlobalSoldier(id: String) -> FullSoldier {
+    func setGlobalSoldier(id: String) {
         
         
         // Make sure there are soldiers already downloaded
@@ -130,7 +136,6 @@ struct MyVariables {
                 if singleSoldier.soldier_id == MyVariables.facebookSoldierID {
                     MyVariables.globalSoldier = singleSoldier
                     MyVariables.soldierSet = true
-                    return singleSoldier
                 }
             }
         }
@@ -139,6 +144,5 @@ struct MyVariables {
             print ("No soldier found with that ID. Could NOT set MyVariables.globalSoldier.")
         }
         
-        return FullSoldier()
     }
 }

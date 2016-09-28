@@ -26,11 +26,11 @@ class TimelineView:UIViewController, UITableViewDataSource, UITableViewDelegate,
     
     @IBOutlet weak var tableView: UITableView!
     
-    @IBAction func Polyline(sender: AnyObject) {
+    @IBAction func Polyline(_ sender: AnyObject) {
         
         let polyline = MKPolyline(coordinates: &polyLine, count: polyLine.count)
         
-        self.Mapper.addOverlay(polyline)
+        self.Mapper.add(polyline)
     }
     
     override func viewDidLoad() {
@@ -41,13 +41,13 @@ class TimelineView:UIViewController, UITableViewDataSource, UITableViewDelegate,
         
         // This defines how the information will be passed to the API website
         let request : NSMutableURLRequest = NSMutableURLRequest()
-        request.URL = NSURL(string: url)
-        request.HTTPMethod = "GET"
+        request.url = NSURL(string: url) as URL?
+        request.httpMethod = "GET"
         
-        var response : NSURLResponse?
+        var response : URLResponse?
 
         //An array of information(url) 
-        let locationData = JSON(data: try! NSURLConnection.sendSynchronousRequest(request, returningResponse: &response))
+        let locationData = JSON(data: try! NSURLConnection.sendSynchronousRequest(request as URLRequest, returning: &response))
         
         pins = locationData.arrayValue
 
@@ -77,13 +77,13 @@ class TimelineView:UIViewController, UITableViewDataSource, UITableViewDelegate,
         self.Mapper.delegate = self
       
         
-        changePin(pindex)
+        changePin(newPindex: pindex)
 
     }
     //Enables the pin to change image when a new location is selected
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationReuseId = "Place"
-        var anView = mapView.dequeueReusableAnnotationViewWithIdentifier(annotationReuseId)
+        var anView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationReuseId)
         if anView == nil {
             anView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationReuseId)
         } else {
@@ -118,12 +118,12 @@ class TimelineView:UIViewController, UITableViewDataSource, UITableViewDelegate,
         return anView
     }
     
-    @IBAction func Previous(sender: AnyObject) {
-        changePin(pindex - 1)
+    @IBAction func Previous(_ sender: AnyObject) {
+        changePin(newPindex: pindex - 1)
         
     }
-    @IBAction func Next(sender: AnyObject) {
-        changePin(pindex + 1)
+    @IBAction func Next(_ sender: AnyObject) {
+        changePin(newPindex: pindex + 1)
     }
     
     func centerMapOnLocation(location: CLLocation) {
@@ -165,26 +165,26 @@ class TimelineView:UIViewController, UITableViewDataSource, UITableViewDelegate,
         
         Mapper.selectAnnotation(pin!, animated: true)
         
-        centerMapOnLocation(CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
+        centerMapOnLocation(location: CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        changePin(indexPath.row)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        changePin(newPindex: indexPath.row)
       
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return signSearch.count
 
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath as IndexPath)
         
         // Configure the cell...
         cell.textLabel?.text = signSearch[indexPath.row]
@@ -215,10 +215,10 @@ class TimelineView:UIViewController, UITableViewDataSource, UITableViewDelegate,
     }
     
     //Creates polyline and connects all locations
-    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         if overlay is MKPolyline {
             let polylineRenderer = MKPolylineRenderer(overlay: overlay)
-            polylineRenderer.strokeColor = UIColor.blueColor()
+            polylineRenderer.strokeColor = UIColor.blue
             polylineRenderer.lineWidth = 5
             return polylineRenderer
         }

@@ -38,9 +38,9 @@ class MenuVC: UIViewController {
     
     // This changes the type of map that is displayed (Battalions, Cemetery, Trenchline Progress, Western Front
     // It also changes the options inside the Menu's container for each different type of map
-    @IBAction func sgementSelect(sender: UISegmentedControl) {
+    @IBAction func sgementSelect(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            UIView.animateWithDuration(0.5, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 MapVariables.mapSection = 1
                 self.first.alpha = 1
                 self.second.alpha = 0;
@@ -48,7 +48,7 @@ class MenuVC: UIViewController {
                 self.fourth.alpha = 0;
         })
         }else if sender.selectedSegmentIndex == 1{
-            UIView.animateWithDuration(0.5, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 MapVariables.mapSection = 2
                 self.first.alpha = 0
                 self.second.alpha = 1;
@@ -57,7 +57,7 @@ class MenuVC: UIViewController {
         })
     
         }else if sender.selectedSegmentIndex == 2{
-            UIView.animateWithDuration(0.5, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 MapVariables.mapSection = 3
                 self.first.alpha = 0
                 self.second.alpha = 0;
@@ -65,7 +65,7 @@ class MenuVC: UIViewController {
                 self.fourth.alpha = 0;
             })
         }else{
-            UIView.animateWithDuration(0.5, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 MapVariables.mapSection = 4
                 self.first.alpha = 0
                 self.second.alpha = 0;
@@ -73,20 +73,20 @@ class MenuVC: UIViewController {
                 self.fourth.alpha = 1;            })
         }
         
-        moveViews(sender.selectedSegmentIndex)
+        moveViews(sender: sender.selectedSegmentIndex)
     }
     
     // This changes the display type of the map
-    @IBAction func maptypeSeg(sender: AnyObject) {
+    @IBAction func maptypeSeg(_ sender: AnyObject) {
         switch maptype.selectedSegmentIndex{
         case 0:
-            mapq.mapType = .Standard
+            mapq.mapType = .standard
         case 1:
-            mapq.mapType = .Hybrid
+            mapq.mapType = .hybrid
         case 2:
-            mapq.mapType = .Satellite
+            mapq.mapType = .satellite
         default:
-            mapq.mapType = .Standard
+            mapq.mapType = .standard
             break;
         }
     }

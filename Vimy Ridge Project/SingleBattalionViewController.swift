@@ -21,23 +21,23 @@ class SingleBattalionViewController: UIViewController {
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
 
-    @IBAction func SwapViews(sender: AnyObject) {
-        moveViews(sender.selectedSegmentIndex)
+    @IBAction func SwapViews(_ sender: AnyObject) {
+        moveViews(sender: sender.selectedSegmentIndex)
         
     }
     
     func moveViews(sender:Int) {
         let viewControllerIdentifiers = ["Info", "Facts", "More"]
-        let newController = (storyboard?.instantiateViewControllerWithIdentifier(viewControllerIdentifiers[sender]))! as UIViewController
+        let newController = (storyboard?.instantiateViewController(withIdentifier: viewControllerIdentifiers[sender]))! as UIViewController
         let oldController = childViewControllers.last! as UIViewController
         
-        oldController.willMoveToParentViewController(nil)
+        oldController.willMove(toParentViewController: nil)
         addChildViewController(newController)
         newController.view.frame = oldController.view.frame
-        transitionFromViewController(oldController, toViewController: newController, duration: 0.25, options: .TransitionCrossDissolve, animations:{ () -> Void in
+        transition(from: oldController, to: newController, duration: 0.25, options: .transitionCrossDissolve, animations:{ () -> Void in
             }, completion: { (finished) -> Void in
                 oldController.removeFromParentViewController()
-                newController.didMoveToParentViewController(self)
+                newController.didMove(toParentViewController: self)
         })
         
     }
@@ -48,31 +48,31 @@ class SingleBattalionViewController: UIViewController {
         
         if Reachability.isConnectedToNetwork() == true {
             
-            let defaultSession = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
-            var dataTask: NSURLSessionDataTask?
+            let defaultSession = URLSession(configuration: URLSessionConfiguration.default)
+            var dataTask: URLSessionDataTask?
             
             if dataTask != nil {
                 dataTask?.cancel()
             }
             
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
             
             let url = NSURL(string: "http://lest-we-forget.ca/apis/get_ww1_battalion_info.php")
             
             // 5
-            dataTask = defaultSession.dataTaskWithURL(url!) {
+            dataTask = defaultSession.dataTask(with: url! as URL) {
                 data, response, error in
                 
                 // 6
-                dispatch_async(dispatch_get_main_queue()) {
-                    UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                DispatchQueue.main.async{
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 }
                 // 7
                 if let error = error {
                     print("(Battalion \(error.localizedDescription)")
-                } else if let httpResponse = response as? NSHTTPURLResponse {
+                } else if let httpResponse = response as? HTTPURLResponse {
                     if httpResponse.statusCode == 200 {
-                        self.buildBattalions(data)
+                        self.buildBattalions(data: data as NSData?)
                         
                         //                        var BattArray = JSON([])
                         //                        BattArray = JSON(data: data!)
@@ -99,10 +99,10 @@ class SingleBattalionViewController: UIViewController {
         //var soldierArray = JSON([])
         var allBatts = JSON([])
         do {
-            if let _: NSDictionary! = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers) as? NSDictionary {
+            if let _: NSDictionary? = try JSONSerialization.jsonObject(with: data! as Data, options:JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
                 
                 if data != nil {
-                    allBatts = JSON(data: data!)
+                    allBatts = JSON(data: data! as Data)
                     
                     // Search through the allBatts array(read from lwf.ca database) and find the proper id
                     BattVars.battalionFound = false

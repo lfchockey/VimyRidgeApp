@@ -53,17 +53,17 @@ class FriendsView: UITableViewController {
             
             // Build the URL request with the URL above
             let request : NSMutableURLRequest = NSMutableURLRequest()
-            request.URL = NSURL(string: url)
-            request.HTTPMethod = "GET"  // This defines how the information will be passed to the API website
+            request.url = NSURL(string: url) as URL?
+            request.httpMethod = "GET"  // This defines how the information will be passed to the API website
             
             
-            var response : NSURLResponse?
+            var response : URLResponse?
             var err : NSError?
             
             var soldierArray = JSON([])
             let data: NSData?
             do {
-                data = try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
+                data = try NSURLConnection.sendSynchronousRequest(request as URLRequest, returning: &response) as NSData?
             } catch let error as NSError {
                 err = error
                 data = nil
@@ -71,7 +71,7 @@ class FriendsView: UITableViewController {
             
             //let jsn: NSDictionary = data as NSDictionary
             if data != nil {
-                soldierArray = JSON(data: data!)
+                soldierArray = JSON(data: data! as Data)
                 totalSoldiers = soldierArray.count
                 //println(soldierArray) // print to see the data that was passed back from the server
             }
@@ -97,12 +97,12 @@ class FriendsView: UITableViewController {
     }
     
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return totalSoldiers
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) 
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) 
         
         let soldier = allSoldiers[indexPath.row]
 
@@ -112,14 +112,13 @@ class FriendsView: UITableViewController {
         return cell
     }
     
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let soldier = allSoldiers[indexPath.row]
         MyVariables.facebookSoldierID = soldier["soldier_id"].stringValue
         
-        dispatch_async(dispatch_get_main_queue()) {
-            self.performSegueWithIdentifier("facebookVCSegue", sender: self)
+        DispatchQueue.main.async() {
+            self.performSegue(withIdentifier: "facebookVCSegue", sender: self)
         }
         
     }

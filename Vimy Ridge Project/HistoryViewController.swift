@@ -10,7 +10,7 @@ import UIKit
 
 class HistoryViewController: UIViewController {
 
-    @IBAction func SwitchPages(sender: AnyObject) {
+    @IBAction func SwitchPages(_ sender: AnyObject) {
         moveViews(sender: sender.selectedSegmentIndex)
     }
     override func viewDidLoad() {
