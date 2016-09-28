@@ -21,7 +21,7 @@ class SingleBattalionViewController: UIViewController {
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
 
-    @IBAction func SwapViews(sender: AnyObject) {
+    @IBAction func SwapViews(_ sender: AnyObject) {
         moveViews(sender: sender.selectedSegmentIndex)
         
     }

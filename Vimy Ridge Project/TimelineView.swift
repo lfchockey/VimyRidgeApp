@@ -26,7 +26,7 @@ class TimelineView:UIViewController, UITableViewDataSource, UITableViewDelegate,
     
     @IBOutlet weak var tableView: UITableView!
     
-    @IBAction func Polyline(sender: AnyObject) {
+    @IBAction func Polyline(_ sender: AnyObject) {
         
         let polyline = MKPolyline(coordinates: &polyLine, count: polyLine.count)
         
@@ -81,7 +81,7 @@ class TimelineView:UIViewController, UITableViewDataSource, UITableViewDelegate,
 
     }
     //Enables the pin to change image when a new location is selected
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationReuseId = "Place"
         var anView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationReuseId)
         if anView == nil {
@@ -118,11 +118,11 @@ class TimelineView:UIViewController, UITableViewDataSource, UITableViewDelegate,
         return anView
     }
     
-    @IBAction func Previous(sender: AnyObject) {
+    @IBAction func Previous(_ sender: AnyObject) {
         changePin(newPindex: pindex - 1)
         
     }
-    @IBAction func Next(sender: AnyObject) {
+    @IBAction func Next(_ sender: AnyObject) {
         changePin(newPindex: pindex + 1)
     }
     
@@ -168,15 +168,14 @@ class TimelineView:UIViewController, UITableViewDataSource, UITableViewDelegate,
         centerMapOnLocation(location: CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         changePin(newPindex: indexPath.row)
       
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -216,7 +215,7 @@ class TimelineView:UIViewController, UITableViewDataSource, UITableViewDelegate,
     }
     
     //Creates polyline and connects all locations
-    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         if overlay is MKPolyline {
             let polylineRenderer = MKPolylineRenderer(overlay: overlay)
             polylineRenderer.strokeColor = UIColor.blue

@@ -36,7 +36,7 @@ class BattalionTableViewController: UIViewController, UITableViewDataSource, UIT
         tableView.reloadData()
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
@@ -63,7 +63,7 @@ class BattalionTableViewController: UIViewController, UITableViewDataSource, UIT
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let battalion: Battalions
         
         // The following code segues to the Single Battalion View Controller once a battalion has been selected

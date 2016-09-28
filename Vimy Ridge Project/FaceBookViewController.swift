@@ -13,7 +13,7 @@ class FaceBookViewController: UIViewController {
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var nameLabel: UILabel!
     
-    @IBAction func SwapViews(sender: AnyObject) {
+    @IBAction func SwapViews(_ sender: AnyObject) {
         moveViews(sender: sender.selectedSegmentIndex)
     }
    
@@ -68,7 +68,9 @@ class FaceBookViewController: UIViewController {
             indicator.isHidden = false
             grabDataOnSoldier()
         }
-        
+        else {
+            // *** come up with error message if no soldier id was passed
+        }
         
         
 

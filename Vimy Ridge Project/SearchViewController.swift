@@ -185,7 +185,7 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
             
             let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
                 // When OK is pressed, segue back to the previous ViewController (Main Screen)
-                self.navigationController?.popViewController(animated: true)
+                _ = self.navigationController?.popViewController(animated: true)
             }
             alertController.addAction(OKAction)
             
@@ -225,7 +225,7 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
         return finalSoldierArray.count
     }
   
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath)
         
         let soldier: Soldier_Search
@@ -245,7 +245,8 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let soldier: Soldier_Search
         
         // The following code segues to the Facebook View Controller once a soldier has been selected

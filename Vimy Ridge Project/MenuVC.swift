@@ -38,7 +38,7 @@ class MenuVC: UIViewController {
     
     // This changes the type of map that is displayed (Battalions, Cemetery, Trenchline Progress, Western Front
     // It also changes the options inside the Menu's container for each different type of map
-    @IBAction func sgementSelect(sender: UISegmentedControl) {
+    @IBAction func sgementSelect(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             UIView.animate(withDuration: 0.5, animations: {
                 MapVariables.mapSection = 1
@@ -77,7 +77,7 @@ class MenuVC: UIViewController {
     }
     
     // This changes the display type of the map
-    @IBAction func maptypeSeg(sender: AnyObject) {
+    @IBAction func maptypeSeg(_ sender: AnyObject) {
         switch maptype.selectedSegmentIndex{
         case 0:
             mapq.mapType = .standard

@@ -21,7 +21,7 @@ class MapViewController: UIViewController
     @IBOutlet weak var slider: UISlider!
     
     // User Swipes left
-    @IBAction func closeMenu(sender: UISwipeGestureRecognizer) {
+    @IBAction func closeMenu(_ sender: UISwipeGestureRecognizer) {
         
         var zoomRegion: CLLocationDistance = 10000
         var centerCoordinate = CLLocation(latitude: 50.3603125, longitude: 2.794017)
@@ -44,7 +44,7 @@ class MapViewController: UIViewController
             // Battalion Progression
             zoomRegion = 10000
             let dummySlider = UISlider()
-            sliderValueDidChange(sender: dummySlider)
+            sliderValueDidChange(dummySlider)
             slider.isHidden = false
         }
         else if MapVariables.mapSection == 4{
@@ -52,7 +52,7 @@ class MapViewController: UIViewController
             indexCounter = 0
             zoomRegion = 100000
             let dummyButton = UIButton(type: UIButtonType.custom)
-            LeftPreviousClick(sender: dummyButton)
+            LeftPreviousClick(dummyButton)
             leftButton.isHidden = false
             rightButton.isHidden = false
         }
@@ -74,7 +74,7 @@ class MapViewController: UIViewController
     }
     
     // User Swipes right
-    @IBAction func openMenu(sender: UISwipeGestureRecognizer) {
+    @IBAction func openMenu(_ sender: UISwipeGestureRecognizer) {
         
         menu.isHidden = false
         self.menu.alpha = 1
@@ -500,7 +500,7 @@ class MapViewController: UIViewController
     @IBAction func infoClick(_ sender: AnyObject) {
     }
     
-    @IBAction func RightNextClick(sender: UIButton) {
+    @IBAction func RightNextClick(_ sender: UIButton) {
         let allOverlays = mapView.overlays
         mapView.removeOverlays(allOverlays)
         
@@ -521,7 +521,7 @@ class MapViewController: UIViewController
         
     }
     
-    @IBAction func LeftPreviousClick(sender: UIButton) {
+    @IBAction func LeftPreviousClick(_ sender: UIButton) {
         let allOverlays = mapView.overlays
         mapView.removeOverlays(allOverlays)
         
@@ -575,7 +575,7 @@ class MapViewController: UIViewController
 //************************************************************ Trench Line Progressions Code ********//
     
     
-    @IBAction func sliderValueDidChange(sender: UISlider) {
+    @IBAction func sliderValueDidChange(_ sender: UISlider) {
         
         let sliderVal = Int(sender.value)
         let r = sliderVal
@@ -654,7 +654,7 @@ class MapViewController: UIViewController
     // Needs an if statement to determine which type of line needs to be displayed (WesternFront, Battalion, Progression)
     // This function is for the Progression
     
-    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         if overlay is MKPolyline {
             let polylineRenderer = MKPolylineRenderer(overlay: overlay)
             
@@ -678,7 +678,7 @@ class MapViewController: UIViewController
         return MKOverlayRenderer()
     }
     
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView?
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?
     {
         let identifier = "CemAnno"
         let identifier1 = "CustomAnnotation"

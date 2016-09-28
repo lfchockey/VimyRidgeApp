@@ -42,6 +42,7 @@ struct MyVariables {
             // 7
             if let error = error {
                 print("(MyVars) \(error.localizedDescription)")
+                // *** add some code here that explains that the request timed out (or some other option)
             } else if let httpResponse = response as? HTTPURLResponse {
                 if httpResponse.statusCode == 200 {
                     self.buildSoldiers(data: data as NSData?)
@@ -70,8 +71,13 @@ struct MyVariables {
                         let soldier = JSON.parse(string: jsonSoldier.1.stringValue)
                         var soldierDict = Dictionary<String, AnyObject>()
                         
+                        var count2 = 0
                         for (key, value) in soldier {
-
+                            count2 += 1
+                            if count2 > 105
+                            {
+                                break // *** choppy piece of code that is getting into an infinite loop if a soldier is returned with no values
+                            }
                             if key == "locations" {
                                 var location_array: [[String:String]] = []
                                 let locations = soldier["locations"]
@@ -97,7 +103,7 @@ struct MyVariables {
                         
                         //  Store the current soldier in the allVimySoldiers global variable array
                         MyVariables.allVimySoldiers.append(newSoldier)
-  
+                        
                     }
                     
                 }
@@ -121,7 +127,7 @@ struct MyVariables {
         }
     }
     
-    func setGlobalSoldier(id: String) -> FullSoldier {
+    func setGlobalSoldier(id: String) {
         
         
         // Make sure there are soldiers already downloaded
@@ -130,7 +136,6 @@ struct MyVariables {
                 if singleSoldier.soldier_id == MyVariables.facebookSoldierID {
                     MyVariables.globalSoldier = singleSoldier
                     MyVariables.soldierSet = true
-                    return singleSoldier
                 }
             }
         }
@@ -139,6 +144,5 @@ struct MyVariables {
             print ("No soldier found with that ID. Could NOT set MyVariables.globalSoldier.")
         }
         
-        return FullSoldier()
     }
 }

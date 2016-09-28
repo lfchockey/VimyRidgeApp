@@ -49,7 +49,7 @@ class BiographyView:UIViewController {
         Label_Info_8.isHidden = true
     }
     
-    @IBAction func Switch(sender: AnyObject)
+    @IBAction func Switch(_ sender: AnyObject)
     {
         let index = Selector.selectedSegmentIndex
         switch index {

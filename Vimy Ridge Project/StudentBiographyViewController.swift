@@ -40,12 +40,12 @@ class StudentBiographyViewController: UIViewController {
         self.downloadToolbar!.sizeToFit()
         
         
-        let downloadButton2 = UIBarButtonItem(
-            title: "Download To Device",
-            style: .plain,
-            target: self,
-            action: #selector(StudentBiographyViewController.downloadButtonPressed(sender:))
-        )
+//        let downloadButton2 = UIBarButtonItem(
+//            title: "Download To Device",
+//            style: .plain,
+//            target: self,
+//            action: #selector(StudentBiographyViewController.downloadButtonPressed(sender:))
+//        )
         
         //Setup the download button inside the toolbar
         self.downloadButton = UIBarButtonItem()
