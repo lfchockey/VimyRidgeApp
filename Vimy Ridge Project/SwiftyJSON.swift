@@ -74,6 +74,7 @@ public struct JSON {
             self.init(object)
         }
         catch {
+            print("There is an error serialising the JSON within SwiftyJSON")
             // For now do nothing with the error
             self.init(NSNull() as Any)
         }

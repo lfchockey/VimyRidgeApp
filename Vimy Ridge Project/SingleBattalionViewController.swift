@@ -98,57 +98,56 @@ class SingleBattalionViewController: UIViewController {
     func buildBattalions(data: NSData?) {
         //var soldierArray = JSON([])
         var allBatts = JSON([])
-        do {
-            if let _: NSDictionary? = try JSONSerialization.jsonObject(with: data! as Data, options:JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
+        //do {
+        //    if let _: NSDictionary? = try JSONSerialization.jsonObject(with: data! as Data, options:JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
                 
-                if data != nil {
-                    allBatts = JSON(data: data! as Data)
+        if data != nil {
+            allBatts = JSON(data: data! as Data)
+            
+            // Search through the allBatts array(read from lwf.ca database) and find the proper id
+            BattVars.battalionFound = false
+            for jsonBattalion in allBatts {
+                
+                let bat = jsonBattalion.1.dictionary
+                if BattVars.battalionFound {
+                    break
+                }
+                
+                // Set all individual variables and build a singleBattalion global object
+                if BattVars.battalion_id == (bat!["battalion_id"]?.stringValue)! {
+                    let properBattalion = FullBattalionInfo()
+                    properBattalion.battalion_id = (bat!["battalion_id"]?.stringValue)!
+                    properBattalion.france_arrival = (bat!["france_arrival"]?.stringValue)!
+                    properBattalion.strength = (bat!["strength"]?.stringValue)!
+                    properBattalion.war_diary = (bat!["war_diary"]?.stringValue)!
+                    properBattalion.perpetuated_by = (bat!["perpetuated_by"]?.stringValue)!
+                    properBattalion.candaian_arrival = (bat!["canadian_arrival"]?.stringValue)!
+                    properBattalion.location = (bat!["location"]?.stringValue)!
+                    properBattalion.embarkation = (bat!["embarkation"]?.stringValue)!
+                    properBattalion.interesting_facts = (bat!["interesting_facts"]?.stringValue)!
+                    properBattalion.date_created = (bat!["date_created"]?.stringValue)!
+                    properBattalion.disembarkation = (bat!["disembarkation"]?.stringValue)!
+                    properBattalion.battalion_name = (bat!["battalion_name"]?.stringValue)!
+                    properBattalion.commanded_by = (bat!["commanded_by"]?.stringValue)!
+                    properBattalion.reinforced_by = (bat!["reinforced_by"]?.stringValue)!
                     
-                    // Search through the allBatts array(read from lwf.ca database) and find the proper id
-                    BattVars.battalionFound = false
-                    for jsonBattalion in allBatts {
-                        
-                        let bat = jsonBattalion.1.dictionary
-                        if BattVars.battalionFound {
-                            break
-                        }
-                        
-                        // Set all individual variables and build a singleBattalion global object
-                        if BattVars.battalion_id == (bat!["battalion_id"]?.stringValue)! {
-                            let properBattalion = FullBattalionInfo()
-                            properBattalion.battalion_id = (bat!["battalion_id"]?.stringValue)!
-                            properBattalion.france_arrival = (bat!["france_arrival"]?.stringValue)!
-                            properBattalion.strength = (bat!["strength"]?.stringValue)!
-                            properBattalion.war_diary = (bat!["war_diary"]?.stringValue)!
-                            properBattalion.perpetuated_by = (bat!["perpetuated_by"]?.stringValue)!
-                            properBattalion.candaian_arrival = (bat!["canadian_arrival"]?.stringValue)!
-                            properBattalion.location = (bat!["location"]?.stringValue)!
-                            properBattalion.embarkation = (bat!["embarkation"]?.stringValue)!
-                            properBattalion.interesting_facts = (bat!["interesting_facts"]?.stringValue)!
-                            properBattalion.date_created = (bat!["date_created"]?.stringValue)!
-                            properBattalion.disembarkation = (bat!["disembarkation"]?.stringValue)!
-                            properBattalion.battalion_name = (bat!["battalion_name"]?.stringValue)!
-                            properBattalion.commanded_by = (bat!["commanded_by"]?.stringValue)!
-                            properBattalion.reinforced_by = (bat!["reinforced_by"]?.stringValue)!
-                            
-                            BattVars.singleBattalion = properBattalion
-                            BattVars.battalionFound = true
-                            break
-                        }
-                        else {
-                            break
-                        }
-                    }
-                    
-                    if !BattVars.battalionFound {
-                        // *** print error message indicating that the selected battalion could not be retrieved from the database
-                        //      then segue back to BattalionTableViewController
-                    }
+                    BattVars.singleBattalion = properBattalion
+                    BattVars.battalionFound = true
+                    break
+                }
+                else {
+                    break
                 }
             }
-        } catch let error as NSError {
-            print("Error parsing results: \(error.localizedDescription)")
+            
+            if !BattVars.battalionFound {
+                // *** print error message indicating that the selected battalion could not be retrieved from the database
+                //      then segue back to BattalionTableViewController
+            }
         }
+        //} catch let error as NSError {
+        //    print("Error parsing results: \(error.localizedDescription)")
+        //}
         
     }
     

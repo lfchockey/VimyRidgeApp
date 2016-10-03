@@ -258,8 +258,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Pdn-Lz-oNB">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Pdn-Lz-oNB">
                                 <frame key="frameInset" width="1000" height="1000"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="CzM-56-0ZK" id="wNa-es-5oI"/>
                                 </connections>
@@ -272,13 +273,17 @@
                                     <action selector="infoClick:" destination="CzM-56-0ZK" eventType="touchUpInside" id="M24-61-iVz"/>
                                 </connections>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hSi-YG-lt8">
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hSi-YG-lt8">
+                                <frame key="frameInset" minX="-510" minY="90" width="510" height="601"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="OJG-ka-T9L" kind="embed" id="90u-95-xyf"/>
                                 </connections>
                             </containerView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="kJS-GV-d9v">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="kJS-GV-d9v">
+                                <frame key="frameInset" minY="134" width="107" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.57600740130000005" green="0.55666472860000005" blue="0.1205404628" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="O8A-wd-D8G" appends="YES" id="CqU-Db-NOR"/>
@@ -321,18 +326,6 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="kJS-GV-d9v" firstAttribute="leading" secondItem="hSi-YG-lt8" secondAttribute="trailing" id="5fQ-AE-dgK"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="hSi-YG-lt8" secondAttribute="bottom" constant="-24" id="C16-yL-13n"/>
-                            <constraint firstItem="kJS-GV-d9v" firstAttribute="top" secondItem="J6Y-zq-YaZ" secondAttribute="bottom" constant="70" id="FgK-je-JdG"/>
-                            <constraint firstItem="hSi-YG-lt8" firstAttribute="leading" secondItem="BLm-aT-y5Y" secondAttribute="leading" constant="-510" id="Q9y-7o-i53"/>
-                            <constraint firstItem="kJS-GV-d9v" firstAttribute="leading" secondItem="Pdn-Lz-oNB" secondAttribute="leading" id="SMq-js-oHA"/>
-                            <constraint firstItem="Pdn-Lz-oNB" firstAttribute="top" secondItem="BLm-aT-y5Y" secondAttribute="top" id="jhu-AW-eXb"/>
-                            <constraint firstAttribute="trailing" secondItem="Pdn-Lz-oNB" secondAttribute="trailing" id="uJ3-ix-FNN"/>
-                            <constraint firstItem="hSi-YG-lt8" firstAttribute="top" secondItem="BLm-aT-y5Y" secondAttribute="topMargin" constant="90" id="v31-kF-GW1"/>
-                            <constraint firstItem="kJS-GV-d9v" firstAttribute="leading" secondItem="BLm-aT-y5Y" secondAttribute="leading" id="wca-8Z-mxp"/>
-                            <constraint firstItem="Pdn-Lz-oNB" firstAttribute="bottom" secondItem="Fvb-7i-ZSZ" secondAttribute="top" constant="49" id="yWC-Kd-TbR"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dL0-OP-glv"/>
                     <connections>
@@ -894,7 +887,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j2s-Fy-e8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1698" y="-1611.5"/>
+            <point key="canvasLocation" x="1176" y="-1613"/>
         </scene>
         <!--Stats View Controller-->
         <scene sceneID="r3n-jD-SRY">
@@ -983,7 +976,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2no-2K-2nz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2961" y="-1612"/>
+            <point key="canvasLocation" x="3317" y="-1614"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="aW9-Ls-WlX">
@@ -1065,7 +1058,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egt-EV-bLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2334" y="-1611.5"/>
+            <point key="canvasLocation" x="2142" y="-1612"/>
         </scene>
         <!--Vimy Myth View Controller-->
         <scene sceneID="JGE-sG-dAD">
@@ -1124,7 +1117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9mY-nX-hmE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3584" y="-1611.5"/>
+            <point key="canvasLocation" x="4291" y="-1613"/>
         </scene>
         <!--Face Book View Controller-->
         <scene sceneID="DWb-zM-PZt">
@@ -1177,7 +1170,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rt-a4-2VW">
                                 <frame key="frameInset" minX="201" minY="152" width="469" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2808,6 +2801,6 @@
         <image name="vimy_brick" width="234" height="83"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kc3-Q6-gup"/>
+        <segue reference="ozq-9e-KiN"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -60,63 +60,65 @@ struct MyVariables {
     
     func buildSoldiers(data: NSData?) {
         var soldierArray = JSON([])
-        do {
-            if let _: NSDictionary? = try JSONSerialization.jsonObject(with: data! as Data, options:JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
+        //do {
+            
+            //if let _: NSDictionary? = try JSONSerialization.jsonObject(with: data! as Data, options:JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
                 
-                if data != nil {
-                    soldierArray = JSON(data: data! as Data)
-                    
-                    for jsonSoldier in soldierArray {
+        if data != nil {
+            soldierArray = JSON(data: data! as Data)
+            
+            for jsonSoldier in soldierArray {
 
-                        let soldier = JSON.parse(string: jsonSoldier.1.stringValue)
-                        var soldierDict = Dictionary<String, AnyObject>()
+                let soldier = JSON.parse(string: jsonSoldier.1.stringValue)
+                var soldierDict = Dictionary<String, AnyObject>()
+                
+                var count2 = 0
+                for (key, value) in soldier {
+                    count2 += 1
+                    if count2 > 105
+                    {
+                        break // *** choppy piece of code that is getting into an infinite loop if a soldier is returned with no values
+                    }
+                    if key == "locations" {
+                        var location_array: [[String:String]] = []
+                        let locations = soldier["locations"]
                         
-                        var count2 = 0
-                        for (key, value) in soldier {
-                            count2 += 1
-                            if count2 > 105
-                            {
-                                break // *** choppy piece of code that is getting into an infinite loop if a soldier is returned with no values
-                            }
-                            if key == "locations" {
-                                var location_array: [[String:String]] = []
-                                let locations = soldier["locations"]
-                                
-                                for location in locations {
-                                    let loc = location.1["location"].stringValue
-                                    let sig = location.1["significance"]
-                                    location_array.append([sig.stringValue:loc])
-                                }
-                                soldierDict.updateValue(location_array as AnyObject, forKey: key)
-                            }
-                            else{
-                                soldierDict.updateValue(value.stringValue as AnyObject, forKey: key)
-                            }
-                            
+                        for location in locations {
+                            let loc = location.1["location"].stringValue
+                            let sig = location.1["significance"]
+                            location_array.append([sig.stringValue:loc])
                         }
-                        
-                        
-                        let finalSoldier: NSDictionary = soldierDict as NSDictionary
-                        var newSoldier: FullSoldier = FullSoldier()
-                        newSoldier = newSoldier.assignSoldier(soldierDict: finalSoldier)
-                        
-                        
-                        //  Store the current soldier in the allVimySoldiers global variable array
-                        MyVariables.allVimySoldiers.append(newSoldier)
-                        
+                        soldierDict.updateValue(location_array as AnyObject, forKey: key)
+                    }
+                    else{
+                        soldierDict.updateValue(value.stringValue as AnyObject, forKey: key)
                     }
                     
                 }
-                else {
-                    print ("(MyVars) Data came back from server as nil")
-                }
+                
+                
+                let finalSoldier: NSDictionary = soldierDict as NSDictionary
+                var newSoldier: FullSoldier = FullSoldier()
+                newSoldier = newSoldier.assignSoldier(soldierDict: finalSoldier)
+                
+                
+                //  Store the current soldier in the allVimySoldiers global variable array
+                MyVariables.allVimySoldiers.append(newSoldier)
+                
             }
-            else {
-                print("(MyVars) Problem with NSJSONSerialization")
-            }
-        } catch let error as NSError {
-            print("(MyVars) Error parsing results: \(error.localizedDescription)")
+            
         }
+        else {
+            print ("(MyVars) Data came back from server as nil")
+        }
+        
+            //}
+            //else {
+            //    print("(MyVars) Problem with NSJSONSerialization")
+            //}
+        //} catch let error as NSError {
+        //    print("(MyVars) Error parsing results: \(error.localizedDescription)")
+        //}
         
         // If the soldiers have been downloaded
         if MyVariables.allVimySoldiers.count > 0 {
