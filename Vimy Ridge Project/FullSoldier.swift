@@ -12,6 +12,7 @@ class FullSoldier: NSObject{
     // Location Variables
     var location_array: [[String:String]]
     var battalion_array: [[String:String]] = []
+    var friends_array: [[String:String]] = []
     
     // Attestation Variables
     var additional_info: String
@@ -123,6 +124,7 @@ class FullSoldier: NSObject{
     override init (){
         self.location_array = []
         self.battalion_array = []
+        self.friends_array = []
         self.additional_info = ""
         self.address_next_of_kin = ""
         self.attestation_willingness = ""
@@ -334,6 +336,7 @@ class FullSoldier: NSObject{
         ){
         self.location_array = []
         self.battalion_array = []
+        self.friends_array = []
         self.additional_info = additional_info
         self.address_next_of_kin = address_next_of_kin
         self.attestation_willingness = attestation_willingness
@@ -549,7 +552,6 @@ class FullSoldier: NSObject{
         return json as NSObject
     }
     
-    //func assignSoldier(soldierDict: Dictionary<String, String>!) -> FullSoldier {
     func assignSoldier(soldierDict: NSDictionary!) -> FullSoldier {
         let fullSol:FullSoldier = FullSoldier()
         
@@ -570,12 +572,25 @@ class FullSoldier: NSObject{
                 }
 
             }
-
         }
         
-        //        if let latestValue = soldierDict.indexForKey("additional_info") as? String {
-        //
-        //        }
+        if let latestValue = soldierDict.object(forKey: "friends") as? NSArray{
+            for friends in latestValue {
+                
+                let friend = friends as! NSDictionary
+                
+                for (key, value) in friend {
+                    
+                    let k = key as! String
+                    let v = value as! String
+                    fullSol.friends_array.append([k:v])
+                    
+                }
+                
+            }
+
+        }
+
         if let latestValue = soldierDict.object(forKey: "additional_info") as? String {
             fullSol.additional_info = latestValue
         }

@@ -11,7 +11,7 @@ import MapKit
 
 internal var mapq = MKMapView();
 
-class MapViewController: UIViewController
+class MapViewController: UIViewController, MKMapViewDelegate
 {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var menuImage: UIImageView!
@@ -756,7 +756,7 @@ class MapViewController: UIViewController
         return nil
     }
     
-    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)
     {
         if view.annotation!.isKind(of: CemAnno.self)
         {
@@ -783,6 +783,8 @@ class MapViewController: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mapView.delegate = self
         slider.isHidden = true
         leftButton.isHidden = true
         rightButton.isHidden = true

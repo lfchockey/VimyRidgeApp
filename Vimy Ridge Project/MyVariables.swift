@@ -60,9 +60,6 @@ struct MyVariables {
     
     func buildSoldiers(data: NSData?) {
         var soldierArray = JSON([])
-        //do {
-            
-            //if let _: NSDictionary? = try JSONSerialization.jsonObject(with: data! as Data, options:JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
                 
         if data != nil {
             soldierArray = JSON(data: data! as Data)
@@ -94,6 +91,23 @@ struct MyVariables {
                         soldierDict.updateValue(value.stringValue as AnyObject, forKey: key)
                     }
                     
+                    if key == "friends" {
+                        var friends_array: [[String:String]] = []
+                        let friends = soldier["friends"]
+                        
+                        for friend in friends {
+                            // *** need to get the values from the friends array
+                            let loc = friend.1["location"].stringValue
+                            let sig = friend.1["significance"]
+                            friends_array.append([sig.stringValue:loc])
+                        }
+                        soldierDict.updateValue(friends_array as AnyObject, forKey: key)
+                    }
+                    else{
+                        soldierDict.updateValue(value.stringValue as AnyObject, forKey: key)
+                    }
+
+                    
                 }
                 
                 
@@ -111,14 +125,7 @@ struct MyVariables {
         else {
             print ("(MyVars) Data came back from server as nil")
         }
-        
-            //}
-            //else {
-            //    print("(MyVars) Problem with NSJSONSerialization")
-            //}
-        //} catch let error as NSError {
-        //    print("(MyVars) Error parsing results: \(error.localizedDescription)")
-        //}
+
         
         // If the soldiers have been downloaded
         if MyVariables.allVimySoldiers.count > 0 {
