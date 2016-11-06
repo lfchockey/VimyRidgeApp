@@ -20,6 +20,8 @@ class MapViewController: UIViewController, MKMapViewDelegate
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var slider: UISlider!
     
+    var menuVC: MenuVC = MenuVC()
+    
     // User Swipes left
     @IBAction func closeMenu(_ sender: UISwipeGestureRecognizer) {
         
@@ -758,10 +760,21 @@ class MapViewController: UIViewController, MKMapViewDelegate
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)
     {
+        
         if view.annotation!.isKind(of: CemAnno.self)
         {
+            openMenu(UISwipeGestureRecognizer())
             let customAnno = view.annotation as! CemAnno
             let title = customAnno.title
+            //MapVariables.cemeteryTitle = title!
+            
+            let cemVC = menuVC.childViewControllers[2] as! CemViewController
+            cemVC.nameLabel.text = title!
+            //var containerViewController: MenuVC?
+            //let cVC = containerViewController?.childViewControllers[2] as! CemViewController
+            //cVC.nameLabel.text = "yay"
+            //print(menu.parent)
+            //menu.childViewControllers[2].nameLabel.text = "yay"
             
             let histInfo = customAnno.histInfo
             
@@ -778,6 +791,14 @@ class MapViewController: UIViewController, MKMapViewDelegate
             let ac = UIAlertController(title: title, message: subtitle, preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(ac, animated: true, completion: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let vc = segue.destination as? MenuVC {
+            menuVC = vc
         }
     }
     

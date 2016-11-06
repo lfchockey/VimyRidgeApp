@@ -11,10 +11,17 @@ import MapKit
 
 class CemViewController: UIViewController, MKMapViewDelegate{
 
+    @IBOutlet weak var nameLabel: UILabel!
+    
     var regionRadius: CLLocationDistance = 10000
+
+    override func viewDidAppear(_ animated: Bool) {
+        nameLabel.text = ("Title: \(MapVariables.cemeteryTitle)")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameLabel.text = ("Title: \(MapVariables.cemeteryTitle)")
     }
 }
 

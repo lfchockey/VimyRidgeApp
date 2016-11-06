@@ -17,7 +17,7 @@ struct MapVariables {
     static var zoomRegion: CLLocationDistance = 10000
     static var mapSection: Int = 1
     
-    //static var cemeteryID: Int
+    static var cemeteryTitle: String = ""
     //static var easterFrontID: Int
 
 }
@@ -41,12 +41,13 @@ class MenuVC: UIViewController {
     @IBAction func sgementSelect(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             UIView.animate(withDuration: 0.5, animations: {
+                
                 MapVariables.mapSection = 1
                 self.first.alpha = 1
                 self.second.alpha = 0;
                 self.third.alpha = 0;
                 self.fourth.alpha = 0;
-        })
+            })
         }else if sender.selectedSegmentIndex == 1{
             UIView.animate(withDuration: 0.5, animations: {
                 MapVariables.mapSection = 2
@@ -54,8 +55,8 @@ class MenuVC: UIViewController {
                 self.second.alpha = 1;
                 self.third.alpha = 0;
                 self.fourth.alpha = 0;
-        })
-    
+            })
+
         }else if sender.selectedSegmentIndex == 2{
             UIView.animate(withDuration: 0.5, animations: {
                 MapVariables.mapSection = 3
@@ -70,7 +71,8 @@ class MenuVC: UIViewController {
                 self.first.alpha = 0
                 self.second.alpha = 0;
                 self.third.alpha = 0;
-                self.fourth.alpha = 1;            })
+                self.fourth.alpha = 1;
+            })
         }
         
         moveViews(sender: sender.selectedSegmentIndex)

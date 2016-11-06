@@ -8,6 +8,11 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Chapter 11 W00 Regular.ttf">
+            <string>Chapter11W00-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Home View Controller-->
         <scene sceneID="DWD-ut-8Pd">
@@ -26,7 +31,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTX-A2-f9v">
                                         <color key="backgroundColor" red="0.99607843139999996" green="0.85490196080000003" blue="0.74901960779999999" alpha="0.16460129309999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                        <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="17"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Search">
                                             <color key="titleColor" red="1" green="0.8828294753" blue="0.79797533089999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -350,7 +355,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4531" y="5513"/>
+            <point key="canvasLocation" x="4134" y="5526"/>
         </scene>
         <!--MenuVC-->
         <scene sceneID="jQB-dR-mGN">
@@ -474,7 +479,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YKU-FK-uHs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5494" y="5513"/>
+            <point key="canvasLocation" x="5056" y="5527"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="oyN-32-nXf">
@@ -557,10 +562,10 @@
             </objects>
             <point key="canvasLocation" x="6127" y="6440"/>
         </scene>
-        <!--View Controller-->
+        <!--Cem View Controller-->
         <scene sceneID="dTZ-Ud-srk">
             <objects>
-                <viewController id="Mh4-Gr-0KI" sceneMemberID="viewController">
+                <viewController id="Mh4-Gr-0KI" customClass="CemViewController" customModule="Vimy_Ridge_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0Sa-pU-rFG"/>
                         <viewControllerLayoutGuide type="bottom" id="3wm-K2-ImI"/>
@@ -614,6 +619,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="6nm-hE-iuJ" id="oF3-hq-GmN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMZ-aO-sfm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -709,7 +717,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eNN-He-xef" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" id="b7X-2t-5Xo"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="beU-Bt-Igp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="beU-Bt-Igp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */; };
 		F12C10E61D60CDBC0071798C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E41D60CDBC0071798C /* SearchViewController.swift */; };
 		F12C10E71D60CDBC0071798C /* SoldierSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E51D60CDBC0071798C /* SoldierSearch.swift */; };
 		F12C10E91D60CDDB0071798C /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E81D60CDDB0071798C /* Reachability.swift */; };
@@ -90,6 +91,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chapter 11 W00 Regular.ttf"; sourceTree = "<group>"; };
 		F12C10E41D60CDBC0071798C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F12C10E51D60CDBC0071798C /* SoldierSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierSearch.swift; sourceTree = "<group>"; };
 		F12C10E81D60CDDB0071798C /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -438,6 +440,7 @@
 				F133F22A1D74734F0049B8BB /* Music */,
 				F16B10141D4FA6EF004F2777 /* Images.xcassets */,
 				F16B0FEF1D4FA578004F2777 /* LaunchScreen.storyboard */,
+				3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */,
 				F12C10EA1D60CDE80071798C /* Helper Classes */,
 				F16B0FF21D4FA578004F2777 /* Info.plist */,
 			);
@@ -633,6 +636,7 @@
 				F170B8F51D4FB93400118440 /* daysOfBattle.plist in Resources */,
 				F170B8EE1D4FB90C00118440 /* BattalionMovement.plist in Resources */,
 				F12C11801D71E1FB0071798C /* Medals List.plist in Resources */,
+				3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */,
 				F16B10151D4FA6EF004F2777 /* Images.xcassets in Resources */,
 				F170B8FA1D4FB94D00118440 /* westernFront.plist in Resources */,
 				F168B6231D860FF000A9719A /* AppIntro.m4a in Resources */,
