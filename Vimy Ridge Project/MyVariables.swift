@@ -14,6 +14,7 @@ struct MyVariables {
     static var access_code: String = "SFDCI_Black"
     static var soldierSet:Bool = false
     static var facebookSoldierID: String = ""
+    static var soldierOfTheHour: String = ""
     
     static var allSoldiersDownloadStarted = false
     static var allSoldiersDownloaded = false
@@ -69,10 +70,21 @@ struct MyVariables {
                 let soldier = JSON.parse(string: jsonSoldier.1.stringValue)
                 var soldierDict = Dictionary<String, AnyObject>()
                 
-                var count2 = 0
+                var count = 0
                 for (key, value) in soldier {
-                    count2 += 1
-                    if count2 > 105
+                    if key == "soldier_of_the_hour" {
+                        print("\(key) - \(value)")
+                    }
+                    count += 1
+                    if MyVariables.soldierOfTheHour == "" {
+                        if key == "soldier_of_the_hour" {
+                            if soldier["soldier_of_the_hour"] != "" {
+                                let soth = soldier["soldier_of_the_hour"].stringValue
+                                MyVariables.soldierOfTheHour = soth
+                            }
+                        }
+                    }
+                    if count > 105
                     {
                         break // *** choppy piece of code that is getting into an infinite loop if a soldier is returned with no values
                     }
