@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Ross Rifle MK III (Canada)</key>
+	<array>
+		<string>Country of origin: Canada</string>
+		<string>First year of service: 1905</string>
+		<string>Overall length: 1320 mm (51.97in)</string>
+		<string>Barrel length: 711.00mm (27.99in)</string>
+		<string>Weight(empty): 8.82 lb (4.00 kg)</string>
+		<string>Calibre: 0.303 British</string>
+		<string>Action(reload): Manual pull, bolt-Action system</string>
+		<string>Magazine size: 5-round magazine</string>
+		<string>Muzzle velocity: 2,00 ft./sec (610m/sec)</string>
+		<string>Rate of fire: 20 rounds per minute</string>
+		<string>Range: </string>
+		<string>Sight: iron front and rear </string>
+	</array>
+	<key>Lee enfield (Canada) </key>
+	<array>
+		<string>Country of origin: United Kingdom</string>
+		<string>First year of service: 1895</string>
+		<string>Overall length: 1130mm (44.49in)</string>
+		<string>Barrel length: 635mm (25.00in)</string>
+		<string>Weight(empty): 8.82lb (4.00kg)</string>
+		<string>Calibre: .303 MK VII SAA ball</string>
+		<string>Action(reload): bolt-action</string>
+		<string>Magazine size: 10 round magazine (detachable box)</string>
+		<string>Muzzle velocity: 2,441 ft./sec (744m/sec)</string>
+		<string>Rate of fire: 20 rounds per minute</string>
+		<string>Range:</string>
+		<string>Sight: sliding ramp rear, fixed front; telescopic sights (optional)</string>
+	</array>
+	<key>KAR-98K (German)</key>
+	<array>
+		<string>Country of origin: Germany</string>
+		<string>First year of service: 1935</string>
+		<string>Overall length: 1110mm (43.70in)</string>
+		<string>Barrel length: 610mm (24.02in)</string>
+		<string>Weight(empty): 8.60lb (3.90kg)</string>
+		<string>Calibre: 7.92x57mm Mauser</string>
+		<string>Action(reload): bolt-action</string>
+		<string>Magazine size: 5 round internal box magazine size</string>
+		<string>Muzzle velocity: 2,822 ft./sec (860m/sec)</string>
+		<string>Rate of fire:</string>
+		<string>Range: 1969ft (600m)</string>
+		<string>Sight: iron sight and rear: optionla optics</string>
+	</array>
+	<key>Mauser gewehr 98 (German)</key>
+	<array>
+		<string>Country of origin: Germany</string>
+		<string>First year of service: 1898</string>
+		<string>Overall length: 1250mm (49.21in)</string>
+		<string>Barrel length: 740mm (29.1in)</string>
+		<string>Weight (empty): 9.02lb ( 4.09kg)</string>
+		<string>Caliber: 7.92x57mm Mauser</string>
+		<string>Action (reload): manually operated bolt-action</string>
+		<string>Magazine size: 5 round clip, internal magazine</string>
+		<string>Muzle velocity: 2881 ft./sec (878m/sec)</string>
+		<string>Rate of fire: 12 rounds per minute</string>
+		<string>Range: 1640 ft, 574yds (500m)</string>
+		<string>Sight: iron sight; opional optics</string>
+	</array>
+	<key>Webley revolver (Canada)</key>
+	<array>
+		<string>Country of origin: British Empire</string>
+		<string>First year of service: 1887</string>
+		<string>Overall length: 286mm (11.25in)</string>
+		<string>Barrel length: 106mm (4.17in)</string>
+		<string>Weight (empty): 2.4lb (1.1kg)</string>
+		<string>Calibre: .445 (11.6mm)</string>
+		<string>Action (reload): double action revolver</string>
+		<string>Magazine size: 6 round cylinder</string>
+		<string>muzzle velocity: 620 ft./sec (190m/sec)</string>
+		<string>Rate of fire:20-30 rounds/minute</string>
+		<string>Range: 50 yd</string>
+		<string>Sight: fixed front and rear notch</string>
+	</array>
+	<key>Luger (German)</key>
+	<array>
+		<string>Country of origin: Germany</string>
+		<string>First year of service: 1904</string>
+		<string>Overall length: 223mm (8.87in)</string>
+		<string>Barrel length: 98mm (3.86in) </string>
+		<string>Weight (empty): 1.92lb (0.87kg)</string>
+		<string>Calibre: 7.65x22mm parbellum: 1908 (p08) 9x19mm parbellum</string>
+		<string>Action (empty): semi-autmatic; short recoil; toggle-locked</string>
+		<string>Magazine size: 8 round detachable box magazine: 32 round detachable drum</string>
+		<string>Muzzle velocity: 375 ft./sec (114m/sec)</string>
+		<string>Rate of fire:</string>
+		<string>Range: 164 ft, 55yds (50m)</string>
+		<string>Sight: iron front and rear </string>
+	</array>
+	<key>Colt-browning machine gun M1895/14 (Canada)</key>
+	<array>
+		<string>Country of origin:</string>
+		<string>First year of service: 1895</string>
+		<string>Overall length: 1016mm (40in)</string>
+		<string>Barrel length: 711mm (27.99in)</string>
+		<string>Weight (empty): 22.49lb (10.20kg)</string>
+		<string>Calibre: .30-06 springfield; 6mm; 30-40 Krag; 7x57mm; 6.5x52mm</string>
+		<string>Action (reload): gas-operated, lever action</string>
+		<string>Magazine size:</string>
+		<string>Muzzle velocity: 2,800 ft./sec (853m/sec)</string>
+		<string>Rate of fire: 600 rounds per minute</string>
+		<string>Range:</string>
+		<string>Sight: iron sight</string>
+	</array>
+	<key>Lewis (Canada)</key>
+	<array>
+		<string>Country of origin: United States</string>
+		<string>First year of service: 1914</string>
+		<string>Overall length: 1280mm (50.39in)</string>
+		<string>Barrel length: 670mm (26.38in)</string>
+		<string>Weight (empty): 28.66lb (13kg)</string>
+		<string>Calibre: .303 Britsh; 30-06 Springfield; 7.92x57mm mauser</string>
+		<string>Action (reload): gas-operated</string>
+		<string>Magazine size:</string>
+		<string>Muzzle velocity: 2,440 ft.sec (744m/sec)</string>
+		<string>Rate of fire: 550 rounds per minute</string>
+		<string>Range: 2,624 ft (800m)</string>
+		<string>Sight: iron blade and tangent leaf</string>
+	</array>
+	<key>Mills bomb (Canada)</key>
+	<array>
+		<string>Country of origin: United Kingdom</string>
+		<string>First year of service: 1915</string>
+		<string>Overall length: 95mm (3.74in)</string>
+		<string>Weight:1.69lb (0.77kg) </string>
+		<string>Action: manually actuated; thrown</string>
+		<string>Range: 115 ft, 38 yds (35m)</string>
+	</array>
+	<key>Stick grenade (German)</key>
+	<array>
+		<string>Country of origin: Germany</string>
+		<string>First year of service: 1915</string>
+		<string>Overall length: 365mm (14.37in)</string>
+		<string>Weight:1.31lb (0.6kg)</string>
+		<string>Action: manually actuated, time fuse explosive; thrown</string>
+		<string>Range: 105 ft, 35 yds (32m)</string>
+	</array>
+</dict>
+</plist>
