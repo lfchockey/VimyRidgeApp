@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>After Action Report</key>
+	<dict>
+		<key>Intervals between &quot;Creeping Barrage&quot;</key>
+		<string>100 yards</string>
+		<key>Couter battery shell amount</key>
+		<string>126 900 shells</string>
+		<key>Length of telephone cabling </key>
+		<string>1400 kilometers</string>
+		<key>Depth of cables</key>
+		<string>2.1 meters</string>
+		<key>Underground subways used</key>
+		<string>13</string>
+		<key>Tunelling groups used</key>
+		<string>20</string>
+		<key>Air squadrons deployed </key>
+		<string>26 (2-1 ratio)</string>
+		<key>Time attack began</key>
+		<string>6:30 AM</string>
+		<key>Time alloted to reach &quot;The Black Line&quot;</key>
+		<string>36 minutes</string>
+		<key>Time alloted to reach &quot;The Red Line&quot;</key>
+		<string>21 minutes</string>
+		<key>Memorial cost</key>
+		<string>1.5 million (20.9 million  today)</string>
+		<key>Date memorial was unvield</key>
+		<string>July 26th 1937</string>
+	</dict>
+	<key>Geography</key>
+	<dict>
+		<key>Length of Vimy Ridge</key>
+		<string>8 kilometers</string>
+		<key>Elevation of Vimy Ridge (Hill 145)</key>
+		<string>145 meters above sea level</string>
+		<key>Elevation of Hill 135</key>
+		<string>135 meters above sea level</string>
+		<key>Width of Vimy Ridge</key>
+		<string>700 meters</string>
+		<key>Lenth of the Canadian Front</key>
+		<string>6.4 kilometers</string>
+		<key>Length of tunnles (app.)</key>
+		<string>1.2 kilometers</string>
+		<key>Depth of tunnles (app.)</key>
+		<string>10 meters</string>
+		<key>Length of road maintained </key>
+		<string>40.2 kilometers</string>
+		<key>Length of plank road maintained</key>
+		<string>4.8 kilometers</string>
+		<key>Length of tramway maintained</key>
+		<string>32.2 kilometers</string>
+		<key>Space of the Memorial and park </key>
+		<string>251 acres</string>
+	</dict>
+	<key>War Machines</key>
+	<dict>
+		<key>Shell alloment </key>
+		<string>1.6 milion shells</string>
+		<key>Weight of shells in ammunition dumps</key>
+		<string>43 000 tons</string>
+		<key>Total weight of shells fired</key>
+		<string>53 500 tons</string>
+		<key>Daily shell alloment weight</key>
+		<string>2501 tons</string>
+		<key>Shells used is Counter Battery </key>
+		<string>126 900 shells</string>
+		<key>German guns taken out</key>
+		<string>213 (83 percent)</string>
+		<key>18 pounder field guns used</key>
+		<string>481</string>
+		<key>4.5 inch howitzers used</key>
+		<string>181</string>
+		<key>2 inch trench mortors used</key>
+		<string>97</string>
+		<key>9.45 inch trench mortors used</key>
+		<string>25</string>
+		<key>Heavy artillery groups used</key>
+		<string>5</string>
+		<key>Artillery field brigades used</key>
+		<string>10</string>
+		<key>Divisional artillery groups used</key>
+		<string>4</string>
+		<key>Heavy artillery support groups used</key>
+		<string>11</string>
+		<key>Offensive mines laid</key>
+		<string>14</string>
+		<key>Defensive mines laid</key>
+		<string>9</string>
+		<key>Distance between heavy field guns </key>
+		<string>18 meters</string>
+		<key>Distance between medium field guns</key>
+		<string>10 meters</string>
+		<key>Allied aircraft used over Vimy Ridge</key>
+		<string>366</string>
+		<key>Allied aircraft lost over Vimy Ridge</key>
+		<string>132</string>
+	</dict>
+	<key>The Boys</key>
+	<dict>
+		<key>German Prisoners</key>
+		<string>4000</string>
+		<key>German Casualties</key>
+		<string>20 000</string>
+		<key>Victoria Cross&apos;s Awarded</key>
+		<string>5</string>
+		<key>Wounded Casualties (Can.)</key>
+		<string>7005</string>
+		<key>Fatal Casualties (Can.)</key>
+		<string>3565</string>
+		<key>Canadian Casualties </key>
+		<string>10 570</string>
+		<key>French Casualties (Vimy Efforts)</key>
+		<string>150 000</string>
+	</dict>
+</dict>
+</plist>

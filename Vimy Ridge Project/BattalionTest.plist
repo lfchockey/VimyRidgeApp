@@ -1,0 +1,1455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Battalions</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>1st Field Battery - 1st Brigade C.F.A. - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>3rd Field Battery - 1st Brigade C.F.A. - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>4th Field Battery - 1st Brigade C.F.A. - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>5th Field Battery - 2nd Brigade C.F.A. - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>6th Field Battery - 2nd Brigade C.F.A. - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>7th Field Battery - 2nd Brigade C.F.A. - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>10th Field Battery - 3rd Brigade C.F.A. - 4th Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>11th Field Battery - 3rd Brigade C.F.A. - 4th Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>12th Field Battery - 3rd Brigade C.F.A. - 4th Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>13th Field Battery - 4th Brigade C.F.A. - 4th Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>15th Field Battery - 6th Brigade C.F.A. - 2nd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>16th Field Battery - 6th Brigade C.F.A. - 2nd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>17th Field Battery - 5th Brigade C.F.A. - 2nd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>18th Field Battery - 5th Brigade C.F.A. - 2nd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>19th Field Battery - 4th Brigade C.F.A. - 4th Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>20th Field Battery - 5th Brigade C.F.A. - 2nd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>25th Field Battery - 6th Brigade C.F.A. - 2nd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>27th Field Battery - 4th Brigade C.F.A. - 4th Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>31st Field Battery - 9th Brigade C.F.A. - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>33rd Field Battery - 9th Brigade C.F.A. - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>38th Field Battery - 10th Brigade C.F.A. - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>39th Field Battery - 10th Brigade C.F.A. - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>40th Field Battery - 10th Brigade C.F.A. - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>45th Field Battery - 9th Brigade C.F.A. - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>1st Battalion - 1st Infantry Brigade - 1st Division</string>
+			<key>id</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>2nd Battalion - 1st Infantry Brigade - 1st Division</string>
+			<key>id</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>3rd Battalion - 1st Infantry Brigade - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>4th Battalion - 1st Infantry Brigade - 1st Division</string>
+			<key>id</key>
+			<integer>5</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>5th Battalion - 2nd Infantry Brigade - 1st Division</string>
+			<key>id</key>
+			<integer>6</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>7th Battalion - 2nd Infantry Brigade - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>8th Battalion - 2nd Infantry Brigade - 1st Division</string>
+			<key>id</key>
+			<integer>9</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>10th Battalion - 2nd Infantry Brigade - 1st Division</string>
+			<key>id</key>
+			<integer>11</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>13th Battalion - 3rd Infantry Brigade - 1st Division</string>
+			<key>id</key>
+			<integer>14</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>14th Battalion - 3rd Infantry Brigade - 1st Division</string>
+			<key>id</key>
+			<integer>15</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>15th Battalion - 3rd Infantry Brigade - 1st Division</string>
+			<key>id</key>
+			<integer>16</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>16th Battalion - 3rd Infantry Brigade - 1st Division</string>
+			<key>id</key>
+			<integer>17</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>18th Battalion - 4th Infantry Brigade - 2nd Division</string>
+			<key>id</key>
+			<integer>19</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>19th Battalion - 4th Infantry Brigade - 2nd Division</string>
+			<key>id</key>
+			<integer>20</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>20th Battalion - 4th Infantry Brigade - 2nd Division</string>
+			<key>id</key>
+			<integer>21</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>21st Battalion - 4th Infantry Brigade - 2nd Division</string>
+			<key>id</key>
+			<integer>22</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>22nd Battalion - 5th Infantry Brigade - 2nd Division</string>
+			<key>id</key>
+			<integer>23</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>24th Battalion - 5th Infantry Brigade - 2nd Division</string>
+			<key>id</key>
+			<integer>25</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>25th Battalion - 5th Infantry Brigade - 2nd Division</string>
+			<key>id</key>
+			<integer>26</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>26th Battalion - 5th Infantry Brigade - 2nd Division</string>
+			<key>id</key>
+			<integer>27</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>27th Battalion - 6th Infantry Brigade - 2nd Division</string>
+			<key>id</key>
+			<integer>28</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>28th Battalion - 6th Infantry Brigade - 2nd Division</string>
+			<key>id</key>
+			<integer>29</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>29th Battalion - 6th Infantry Brigade - 2nd Division</string>
+			<key>id</key>
+			<integer>30</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>31st Battalion - 6th Infantry Brigade - 2nd Division</string>
+			<key>id</key>
+			<integer>32</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>38th Battalion - 12th Infantry Brigade - 4th Division</string>
+			<key>id</key>
+			<integer>39</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>42nd Battalion - 7th Infantry Brigade - 3rd Division</string>
+			<key>id</key>
+			<integer>43</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>43rd Battalion - 9th Infantry Brigade - 3rd Division</string>
+			<key>id</key>
+			<integer>44</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>44th Battalion - 10th Infantry Brigade - 4th Division</string>
+			<key>id</key>
+			<integer>45</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>46th Battalion - 10th Infantry Brigade - 4th Division</string>
+			<key>id</key>
+			<integer>47</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>47th Battalion - 10th Infantry Brigade - 4th Division</string>
+			<key>id</key>
+			<integer>48</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>49th Battalion - 7th Infantry Brigade - 3rd Division</string>
+			<key>id</key>
+			<integer>50</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>50th Battalion - 10th Infantry Brigade - 4th Division</string>
+			<key>id</key>
+			<integer>51</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>52nd Battalion - 9th Infantry Brigade - 3rd Division</string>
+			<key>id</key>
+			<integer>53</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>54th Battalion - 11th Infantry Brigade - 4th Division</string>
+			<key>id</key>
+			<integer>55</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>58th Battalion - 9th Infantry Brigade - 3rd Division</string>
+			<key>id</key>
+			<integer>59</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>72nd Battalion - 12th Infantry Brigade - 4th Division</string>
+			<key>id</key>
+			<integer>73</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>75th Battalion - 11th Infantry Brigade - 4th Division</string>
+			<key>id</key>
+			<integer>76</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>78th Battalion - 12th Infantry Brigade - 4th Division</string>
+			<key>id</key>
+			<integer>79</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>85th Battalion - 12th Infantry Brigade - 4th Division</string>
+			<key>id</key>
+			<integer>86</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>87th Battalion - 11th Infantry Brigade - 4th Division</string>
+			<key>id</key>
+			<integer>88</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>102nd Battalion - 11th Infantry Brigade - 4th Division</string>
+			<key>id</key>
+			<integer>104</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>116th Battalion - 9th Infantry Brigade - 3rd Division</string>
+			<key>id</key>
+			<integer>118</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Royal Canadian Regiment - 7th Infantry Brigade - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Princess Patricia&apos;s Canadian Light Infantry - 7th Infantry Brigade - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>1st Canadian Mounted Rifles Battalion - 8th Infantry Brigade - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>2nd Canadian Mounted Rifles Battalion - 8th Infantry Brigade - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>4th Canadian Mounted Rifles Battalion - 8th Infantry Brigade - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>5th Canadian Mounted Rifles Battalion - 8th Infantry Brigade - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>1st Trench Mortar Battery - 1st Infantry Brigade - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>2nd Trench Mortar Battery - 2nd Infantry Brigade - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>3rd Trench Mortar Battery - 3rd Infantry Brigade - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>4th Trench Mortar Battery - 4th Infantry Brigade - 2nd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>5th Trench Mortar Battery - 5th Infantry Brigade - 2nd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>6th Trench Mortar Battery - 6th Infantry Brigade - 2nd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>7th Trench Mortar Battery - 7th Infantry Brigade - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>8th Trench Mortar Battery - 8th Infantry Brigade - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>9th Trench Mortar Battery - 9th Infantry Brigade - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>10th Trench Mortar Battery - 10th Infantry Brigade - 4th Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>11th Trench Mortar Battery - 11th Infantry Brigade - 4th Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>12th Trench Mortar Battery - 12th Infantry Brigade - 4th Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>2nd Howitzer Battery - 1st Brigade C.F.A. - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>48th Howitzer Battery - 2nd Brigade C.F.A. - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>23rd Howitzer Battery - 5th Brigade C.F.A. - 2nd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>22nd Howitzer Battery - 6th Brigade C.F.A. - 2nd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>36th Howitzer Battery - 9th Brigade C.F.A. - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>35th Howitzer Battery - 10th Brigade C.F.A. - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>9th Howitzer Battery - 3rd Brigade C.F.A. - 4th Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>21st Howitzer Battery - 4th Brigade C.F.A. - 4th Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 1st Div. Ammunition Column - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 2nd Div. Ammunition Column - 2nd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 3rd Div. Ammunition Column - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 4th Div. Ammunition Column - 4th Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>1st Battalion - 1st Brigade Cdn. Engineers - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>2nd Battalion - 1st Brigade Cdn. Engineers - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>3rd Battalion - 1st Brigade Cdn. Engineers - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>4th Battalion - 2nd Brigade Cdn. Engineers - 2nd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>5th Battalion - 2nd Brigade Cdn. Engineers - 2nd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>6th Battalion - 2nd Brigade Cdn. Engineers - 2nd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>7th Battalion - 3rd Brigade Cdn. Engineers - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>8th Battalion - 3rd Brigade Cdn. Engineers - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>9th Battalion - 3rd Brigade Cdn. Engineers - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>10th Battalion - 4th Brigade Cdn. Engineers - 4th Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>11th Battalion - 4th Brigade Cdn. Engineers - 4th Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>12th Battalion - 4th Brigade Cdn. Engineers - 4th Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 1st Div. Signal Company - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 2nd Div. Signal Company - 2nd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 3rd Div. Signal Company - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 4th Div. Signal Company - 4th Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 1st Bn. Cdn. Machine Gun Corps - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 2nd Bn. Cdn. Machine Gun Corps - 2nd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 3rd Bn. Cdn. Machine Gun Corps - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 4th Bn. Cdn. Machine Gun Corps - 4th Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 1st Divisional Train C.A.S.C. - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 2nd Divisional Train C.A.S.C. - 2nd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 3rd Divisional Train C.A.S.C. - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 4th Divisional Train C.A.S.C. - 4th Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - No. 1 Field Ambulance - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - No. 2 Field Ambulance - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - No. 3 Field Ambulance - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - No. 4 Field Ambulance - 2nd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - No. 5 Field Ambulance - 2nd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - No. 6 Field Ambulance - 2nd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - No. 8 Field Ambulance - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - No. 9 Field Ambulance - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - No. 10 Field Ambulance - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - No. 11 Field Ambulance - 4th Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - No. 12 Field Ambulance - 4th Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - No. 13 Field Ambulance - 4th Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 1st Div. Employment Company - 1st Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 2nd Div. Employment Company - 2nd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 3rd Div. Employment Company - 3rd Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 4th Div. Employment Company - 4th Division</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Royal Canadian Dragoons - Cavalry</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Lord Strathcona&apos;s Horse (Royal Canadians) - Cavalry</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Fort Garry Horse - Cavalry</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Canadian Light Horse - Cavalry</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - R.N.W.M.P. Squadron - Cavalry</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - R.C.H.A. Brigade C.F.A. - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>24th Field Battery - 8th Army Brigade - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>30th Field Battery - 8th Army Brigade - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>32nd Field Battery - 8th Army Brigade - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>43rd Howitzer Battery - 8th Army Brigade - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>8th Army Bde. Ammunition Column - 8th Army Brigade - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - E Anti-Aircraft Battery - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Corps Heavy Artillery - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>1st Siege Battery - 1st Brigade C.G.A. - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>3rd Siege Battery - 1st Brigade C.G.A. - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>7th Siege Battery - 1st Brigade C.G.A. - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>9th Siege Battery - 1st Brigade C.G.A. - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>1st Heavy Battery - 2nd Brigade C.G.A. - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>2nd Heavy Battery - 2nd Brigade C.G.A. - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>2nd Siege Battery - 2nd Brigade C.G.A. - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>4th Siege Battery - 2nd Brigade C.G.A. - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>5th Siege Battery - 2nd Brigade C.G.A. - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>6th Siege Battery - 2nd Brigade C.G.A. - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>8th Siege Battery - 3rd Brigade C.G.A - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>10th Siege Battery - 3rd Brigade C.G.A - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>11th Siege Battery - 3rd Brigade C.G.A - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>12th Siege Battery - 3rd Brigade C.G.A - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 5th Divisional Artillery - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>52nd Field Battery - 13th Brigade C.F.A. - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>53rd Field Battery - 13th Brigade C.F.A. - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>55th Field Battery - 13th Brigade C.F.A. - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>51st Howitzer Battery - 13th Brigade C.F.A. - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>60th Field Battery - 14th Brigade C.F.A. - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>61st Field Battery - 14th Brigade C.F.A. - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>66th Field Battery - 14th Brigade C.F.A. - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>58th Howitzer Battery - 14th Brigade C.F.A. - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 5th Div. Ammunition Column - Artillery</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 1st Army Troops Companies - Engineers</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 2nd Army Troops Companies - Engineers</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 3rd Army Troops Companies - Engineers</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 4th Army Troops Companies - Engineers</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 5th Army Troops Companies - Engineers</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Anti-Aircraft Searchlight Company - Engineers</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 3rd Tunnelling Company - Engineers</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Corps Survey Section - Engineers</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 1st Tramways Company - Engineers</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 2nd Tramways Company - Engineers</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 1st Motor M.G. Brigade - Machine Gun Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 2nd Motor M.G. Brigade - Machine Gun Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Corps Troops M.T. Company - Army Service Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 1st Division M.T. Company - Army Service Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 2nd Division M.T. Company - Army Service Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 3rd Division M.T. Company - Army Service Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 4th Division M.T. Company - Army Service Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Engineers M.T. Company - Army Service Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Motor Machine Gun M.T. Company - Army Service Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 5th Div. Artillery M.T. Detachment - Army Service Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 5th Divisional Train Detachment - Army Service Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Number 1 General Hospital - Medical Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Number 2 General Hospital - Medical Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Number 3 General Hospital - Medical Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Number 6 General Hospital - Medical Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Number 7 General Hospital - Medical Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Number 8 General Hospital - Medical Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Number 2 Stationary Hospital - Medical Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Number 3 Stationary Hospital - Medical Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Number 7 Stationary Hospital - Medical Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Number 8 Stationary Hospital - Medical Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Number 9 Stationary Hospital - Medical Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Number 10 Stationary Hospital - Medical Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Forestry Corps Hospital - Medical Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Number 1 Casualty Clearing Station - Medical Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Number 2 Casualty Clearing Station - Medical Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Number 3 Casualty Clearing Station - Medical Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Number 4 Casualty Clearing Station - Medical Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Number 7 (Cavalry) Field Ambulance - Medical Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Number 14 Field Ambulance - Medical Corps</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Canadian Overseas Railway Construction Corps - Railway Troops</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 1st Battalion - Railway Troops</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 2nd Battalion - Railway Troops</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 3rd Battalion - Railway Troops</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 4th Battalion - Railway Troops</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 5th Battalion - Railway Troops</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 6th Battalion - Railway Troops</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 7th Battalion - Railway Troops</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 8th Battalion - Railway Troops</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 9th Battalion - Railway Troops</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 10th Battalion - Railway Troops</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 11th Battalion - Railway Troops</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 12th Battalion - Railway Troops</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 13th Battalion - Railway Troops</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 1st Infantry Works Coy. - Labour</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 2nd Infantry Works Coy. - Labour</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 3rd Infantry Works Coy. - Labour</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 4th Infantry Works Coy. - Labour</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 5th Area Employment  Coy. - Labour</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 6th Area Employment  Coy. - Labour</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 7th Area Employment  Coy. - Labour</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 8th Area Employment  Coy. - Labour</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - 9th Area Employment  Coy. - Labour</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Canadian Cyclist Battalion - Miscellaneous</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Corps Signal Company - Miscellaneous</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Corps Reinforcement Camp - Miscellaneous</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Corps Schools - Miscellaneous</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string> - Forestry Company  - Miscellaneous</string>
+			<key>id</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+</dict>
+</plist>
