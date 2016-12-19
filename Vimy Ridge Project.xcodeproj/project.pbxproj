@@ -588,7 +588,7 @@
 				TargetAttributes = {
 					F16B0FE21D4FA578004F2777 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 6M6MD3ZAQR;
+						DevelopmentTeam = R3EZ9DX4WL;
 						LastSwiftMigration = 0800;
 					};
 					F16B0FF61D4FA578004F2777 = {
@@ -862,7 +862,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6M6MD3ZAQR;
+				DEVELOPMENT_TEAM = R3EZ9DX4WL;
 				INFOPLIST_FILE = "Vimy Ridge Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "UCDSB.Vimy-Ridge-Project";
@@ -876,7 +876,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6M6MD3ZAQR;
+				DEVELOPMENT_TEAM = R3EZ9DX4WL;
 				INFOPLIST_FILE = "Vimy Ridge Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "UCDSB.Vimy-Ridge-Project";
