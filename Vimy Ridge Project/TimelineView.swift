@@ -36,41 +36,104 @@ class TimelineView:UIViewController, UITableViewDataSource, UITableViewDelegate,
     override func viewDidLoad() {
         
         super.viewDidLoad()
-    
-        let url = "http://lest-we-forget.ca/apis/get_ww1_soldier_locations.php?access_code=\(MyVariables.access_code)&soldier_id=\(MyVariables.facebookSoldierID)"
-        
-        // This defines how the information will be passed to the API website
-        let request : NSMutableURLRequest = NSMutableURLRequest()
-        request.url = NSURL(string: url) as URL?
-        request.httpMethod = "GET"
-        
-        var response : URLResponse?
-
-        //An array of information(url) 
-        let locationData = JSON(data: try! NSURLConnection.sendSynchronousRequest(request as URLRequest, returning: &response))
-        
-        pins = locationData.arrayValue
-
-        if pins == [] {
-            // Have message pop up explaining that no locations were found for this soldier
-            //      Indicate this in the UI
-        }
-        else { // we have an array of locations
-            for i in 0...pins.count - 1 {
-                //Loops through the array then takes the significance
-                let data = pins[i]
-                //Allows the significance to enter an array
-                signSearch.append(data["significance"].stringValue)
-                
-                // Create array of only CLlocation coordinate 2D points using the for-loop
-                let lat = Double(data["latitude"].stringValue)
-                let long = Double(data["longitude"].stringValue)
-                let coor = CLLocationCoordinate2D(latitude: lat!, longitude: long!)
-                polyLine.append(coor)
-
+        //----
+        if Reachability.isConnectedToNetwork() == true {
+            
+            let defaultSession = URLSession(configuration: URLSessionConfiguration.default)
+            var dataTask: URLSessionDataTask?
+            
+            if dataTask != nil {
+                dataTask?.cancel()
             }
-
+            
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+            
+            let url = NSURL(string: "http://lest-we-forget.ca/apis/get_ww1_soldier_locations.php?access_code=\(MyVariables.access_code)&soldier_id=\(MyVariables.facebookSoldierID)")
+            
+            // 5
+            dataTask = defaultSession.dataTask(with: url! as URL) {
+                data, response, error in
+                
+                // 6
+                DispatchQueue.main.async{
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                }
+                // 7
+                if let error = error {
+                    print("(Timeline \(error.localizedDescription)")
+                } else if let httpResponse = response as? HTTPURLResponse {
+                    if httpResponse.statusCode == 200 {
+                        self.pins = JSON(data: data! as Data).arrayValue
+                        if self.pins == [] {
+                            // Have message pop up explaining that no locations were found for this soldier
+                            //      Indicate this in the UI
+                            print("no timeline pins")
+                        }
+                        else { // we have an array of locations
+                            for i in 0...self.pins.count - 1 {
+                                //Loops through the array then takes the significance
+                                let data = self.pins[i]
+                                //Allows the significance to enter an array
+                                self.signSearch.append(data["significance"].stringValue)
+                                
+                                // Create array of only CLlocation coordinate 2D points using the for-loop
+                                let lat = Double(data["latitude"].stringValue)
+                                let long = Double(data["longitude"].stringValue)
+                                let coor = CLLocationCoordinate2D(latitude: lat!, longitude: long!)
+                                self.polyLine.append(coor)
+                            }
+                            self.changePin(newPindex: self.pindex)
+                            self.tableView.reloadData()
+                        }
+                    }
+                }
+            }
+            // 8
+            dataTask?.resume()
+            
         }
+        else {
+            // Error message stating that you need an internet connection to view this section of the app
+            print("Error in Timeline")
+        }
+        
+        //----
+//        let url = "http://lest-we-forget.ca/apis/get_ww1_soldier_locations.php?access_code=\(MyVariables.access_code)&soldier_id=\(MyVariables.facebookSoldierID)"
+//        
+//        // This defines how the information will be passed to the API website
+//        let request : NSMutableURLRequest = NSMutableURLRequest()
+//        request.url = NSURL(string: url) as URL?
+//        request.httpMethod = "GET"
+//        
+//        var response : URLResponse?
+//
+//        //An array of information(url) 
+//        let locationData = JSON(data: try! NSURLConnection.sendSynchronousRequest(request as URLRequest, returning: &response))
+//        
+//        pins = locationData.arrayValue
+//        print(pins)
+//        print("old way")
+//        if pins == [] {
+//            // Have message pop up explaining that no locations were found for this soldier
+//            //      Indicate this in the UI
+//            print("no timeline pins")
+//        }
+//        else { // we have an array of locations
+//            for i in 0...pins.count - 1 {
+//                //Loops through the array then takes the significance
+//                let data = pins[i]
+//                //Allows the significance to enter an array
+//                signSearch.append(data["significance"].stringValue)
+//                
+//                // Create array of only CLlocation coordinate 2D points using the for-loop
+//                let lat = Double(data["latitude"].stringValue)
+//                let long = Double(data["longitude"].stringValue)
+//                let coor = CLLocationCoordinate2D(latitude: lat!, longitude: long!)
+//                polyLine.append(coor)
+//
+//            }
+//
+//        }
         
         self.tableView.delegate = self
         self.tableView.dataSource = self

@@ -66,8 +66,10 @@ struct MyVariables {
             soldierArray = JSON(data: data! as Data)
             
             for jsonSoldier in soldierArray {
-
-                let soldier = JSON.parse(string: jsonSoldier.1.stringValue)
+                //let bob = init(parseJSON: jsonSoldier.1.stringValue)
+                //let soldier = JSON.parse(json: jsonSoldier.1.stringValue)
+                let soldier = JSON(parseJSON: jsonSoldier.1.stringValue)
+                
                 var soldierDict = Dictionary<String, AnyObject>()
                 
                 var count = 0
