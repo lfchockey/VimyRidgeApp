@@ -1,0 +1,981 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */; };
+		F12C10E61D60CDBC0071798C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E41D60CDBC0071798C /* SearchViewController.swift */; };
+		F12C10E71D60CDBC0071798C /* SoldierSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E51D60CDBC0071798C /* SoldierSearch.swift */; };
+		F12C10E91D60CDDB0071798C /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E81D60CDDB0071798C /* Reachability.swift */; };
+		F12C10ED1D61FD640071798C /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10EC1D61FD640071798C /* HistoryViewController.swift */; };
+		F12C10F01D620FB40071798C /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10EF1D620FB40071798C /* StatsViewController.swift */; };
+		F12C10F21D6210650071798C /* StatsReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10F11D6210650071798C /* StatsReader.swift */; };
+		F12C10F41D6212CE0071798C /* Stats.plist in Resources */ = {isa = PBXBuildFile; fileRef = F12C10F31D6212CE0071798C /* Stats.plist */; };
+		F12C10FF1D6291810071798C /* SoldierLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10FC1D6291810071798C /* SoldierLocation.swift */; };
+		F12C11011D6291810071798C /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10FE1D6291810071798C /* VCMapView.swift */; };
+		F12C11031D62918E0071798C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C11021D62918E0071798C /* ProfileView.swift */; };
+		F12C11051D62919A0071798C /* Medals.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C11041D62919A0071798C /* Medals.swift */; };
+		F12C11071D6291A40071798C /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C11061D6291A40071798C /* FriendsView.swift */; };
+		F12C11091D6291AC0071798C /* BiographyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C11081D6291AC0071798C /* BiographyView.swift */; };
+		F12C110B1D6291B80071798C /* FaceBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C110A1D6291B80071798C /* FaceBookViewController.swift */; };
+		F12C111E1D6CB7690071798C /* BattalionMoreContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C111D1D6CB7690071798C /* BattalionMoreContainer.swift */; };
+		F12C11201D6CB7810071798C /* BattalionFactsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C111F1D6CB7810071798C /* BattalionFactsContainer.swift */; };
+		F12C11221D6CB7910071798C /* BattalionInfoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C11211D6CB7910071798C /* BattalionInfoContainer.swift */; };
+		F12C11251D6CB7AB0071798C /* FullBattalionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C11231D6CB7AB0071798C /* FullBattalionInfo.swift */; };
+		F12C11261D6CB7AB0071798C /* SingleBattalionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C11241D6CB7AB0071798C /* SingleBattalionViewController.swift */; };
+		F12C112B1D6CB7CD0071798C /* BattalionReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C11271D6CB7CD0071798C /* BattalionReader.swift */; };
+		F12C112C1D6CB7CD0071798C /* Battalions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C11281D6CB7CD0071798C /* Battalions.swift */; };
+		F12C112D1D6CB7CD0071798C /* BattalionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C11291D6CB7CD0071798C /* BattalionTableViewController.swift */; };
+		F12C112E1D6CB7CD0071798C /* BattalionTest.plist in Resources */ = {isa = PBXBuildFile; fileRef = F12C112A1D6CB7CD0071798C /* BattalionTest.plist */; };
+		F12C11301D6CFB670071798C /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C112F1D6CFB670071798C /* TimelineView.swift */; };
+		F12C11701D7095FA0071798C /* MyVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C116F1D7095FA0071798C /* MyVariables.swift */; };
+		F12C117F1D71E1FB0071798C /* MedalReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C117D1D71E1FB0071798C /* MedalReader.swift */; };
+		F12C11801D71E1FB0071798C /* Medals List.plist in Resources */ = {isa = PBXBuildFile; fileRef = F12C117E1D71E1FB0071798C /* Medals List.plist */; };
+		F12C11851D732B360071798C /* VimyVirtualMemorialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C11841D732B360071798C /* VimyVirtualMemorialVC.swift */; };
+		F12C11881D738ACB0071798C /* StudentBiographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C11871D738ACB0071798C /* StudentBiographyViewController.swift */; };
+		F12C118E1D73AB010071798C /* WeaponDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C118A1D73AB010071798C /* WeaponDetailsVC.swift */; };
+		F12C118F1D73AB010071798C /* WeaponInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = F12C118B1D73AB010071798C /* WeaponInfo.plist */; };
+		F12C11901D73AB010071798C /* WeaponSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C118C1D73AB010071798C /* WeaponSelectVC.swift */; };
+		F12C11911D73AB010071798C /* WeaponsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C118D1D73AB010071798C /* WeaponsInfo.swift */; };
+		F12C11941D73ADA20071798C /* WeaponAssets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F12C11931D73ADA20071798C /* WeaponAssets.scnassets */; };
+		F133F22D1D7473810049B8BB /* bg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F133F22B1D7473810049B8BB /* bg.mp3 */; };
+		F133F22E1D7473810049B8BB /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F133F22C1D7473810049B8BB /* Util.swift */; };
+		F133F2301D74764C0049B8BB /* Serenata Immortale.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F133F22F1D74764C0049B8BB /* Serenata Immortale.mp3 */; };
+		F168B6231D860FF000A9719A /* AppIntro.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F168B6221D860FF000A9719A /* AppIntro.m4a */; };
+		F16B0FE71D4FA578004F2777 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16B0FE61D4FA578004F2777 /* AppDelegate.swift */; };
+		F16B0FEC1D4FA578004F2777 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F16B0FEA1D4FA578004F2777 /* Main.storyboard */; };
+		F16B0FF11D4FA578004F2777 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F16B0FEF1D4FA578004F2777 /* LaunchScreen.storyboard */; };
+		F16B0FFC1D4FA578004F2777 /* Vimy_Ridge_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16B0FFB1D4FA578004F2777 /* Vimy_Ridge_ProjectTests.swift */; };
+		F16B10071D4FA578004F2777 /* Vimy_Ridge_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16B10061D4FA578004F2777 /* Vimy_Ridge_ProjectUITests.swift */; };
+		F16B10151D4FA6EF004F2777 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F16B10141D4FA6EF004F2777 /* Images.xcassets */; };
+		F16B10171D4FA735004F2777 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16B10161D4FA735004F2777 /* HomeViewController.swift */; };
+		F16B101A1D4FA929004F2777 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16B10181D4FA929004F2777 /* SwiftyJSON.swift */; };
+		F16B101B1D4FA929004F2777 /* FullSoldier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16B10191D4FA929004F2777 /* FullSoldier.swift */; };
+		F170B8E51D4FB8D600118440 /* CemAnno.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170B8E11D4FB8D600118440 /* CemAnno.swift */; };
+		F170B8E61D4FB8D600118440 /* CemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170B8E21D4FB8D600118440 /* CemViewController.swift */; };
+		F170B8E71D4FB8D600118440 /* CoordinatePrime.plist in Resources */ = {isa = PBXBuildFile; fileRef = F170B8E31D4FB8D600118440 /* CoordinatePrime.plist */; };
+		F170B8E81D4FB8D600118440 /* VimyCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170B8E41D4FB8D600118440 /* VimyCoordinates.swift */; };
+		F170B8ED1D4FB90C00118440 /* BattalionMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170B8E91D4FB90C00118440 /* BattalionMapVC.swift */; };
+		F170B8EE1D4FB90C00118440 /* BattalionMovement.plist in Resources */ = {isa = PBXBuildFile; fileRef = F170B8EA1D4FB90C00118440 /* BattalionMovement.plist */; };
+		F170B8EF1D4FB90C00118440 /* BattalionsCoords.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170B8EB1D4FB90C00118440 /* BattalionsCoords.swift */; };
+		F170B8F01D4FB90C00118440 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170B8EC1D4FB90C00118440 /* CustomAnnotation.swift */; };
+		F170B8F41D4FB93400118440 /* AdvProp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170B8F11D4FB93400118440 /* AdvProp.swift */; };
+		F170B8F51D4FB93400118440 /* daysOfBattle.plist in Resources */ = {isa = PBXBuildFile; fileRef = F170B8F21D4FB93400118440 /* daysOfBattle.plist */; };
+		F170B8F61D4FB93400118440 /* TLPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170B8F31D4FB93400118440 /* TLPViewController.swift */; };
+		F170B8FA1D4FB94D00118440 /* westernFront.plist in Resources */ = {isa = PBXBuildFile; fileRef = F170B8F71D4FB94D00118440 /* westernFront.plist */; };
+		F170B8FB1D4FB94D00118440 /* WesternFrontController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170B8F81D4FB94D00118440 /* WesternFrontController.swift */; };
+		F170B8FC1D4FB94D00118440 /* WesternFrontLinesCoords.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170B8F91D4FB94D00118440 /* WesternFrontLinesCoords.swift */; };
+		F170B8FE1D4FBA4300118440 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170B8FD1D4FBA4300118440 /* MapViewController.swift */; };
+		F1993B151D5226E9001F40F0 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1993B141D5226E9001F40F0 /* MenuVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F16B0FF81D4FA578004F2777 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F16B0FDB1D4FA578004F2777 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F16B0FE21D4FA578004F2777;
+			remoteInfo = "Vimy Ridge Project";
+		};
+		F16B10031D4FA578004F2777 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F16B0FDB1D4FA578004F2777 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F16B0FE21D4FA578004F2777;
+			remoteInfo = "Vimy Ridge Project";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chapter 11 W00 Regular.ttf"; sourceTree = "<group>"; };
+		F12C10E41D60CDBC0071798C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F12C10E51D60CDBC0071798C /* SoldierSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierSearch.swift; sourceTree = "<group>"; };
+		F12C10E81D60CDDB0071798C /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		F12C10EC1D61FD640071798C /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		F12C10EF1D620FB40071798C /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		F12C10F11D6210650071798C /* StatsReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsReader.swift; sourceTree = "<group>"; };
+		F12C10F31D6212CE0071798C /* Stats.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Stats.plist; sourceTree = "<group>"; };
+		F12C10FC1D6291810071798C /* SoldierLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierLocation.swift; sourceTree = "<group>"; };
+		F12C10FE1D6291810071798C /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
+		F12C11021D62918E0071798C /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F12C11041D62919A0071798C /* Medals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medals.swift; sourceTree = "<group>"; };
+		F12C11061D6291A40071798C /* FriendsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		F12C11081D6291AC0071798C /* BiographyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiographyView.swift; sourceTree = "<group>"; };
+		F12C110A1D6291B80071798C /* FaceBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceBookViewController.swift; sourceTree = "<group>"; };
+		F12C111D1D6CB7690071798C /* BattalionMoreContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattalionMoreContainer.swift; sourceTree = "<group>"; };
+		F12C111F1D6CB7810071798C /* BattalionFactsContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattalionFactsContainer.swift; sourceTree = "<group>"; };
+		F12C11211D6CB7910071798C /* BattalionInfoContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattalionInfoContainer.swift; sourceTree = "<group>"; };
+		F12C11231D6CB7AB0071798C /* FullBattalionInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullBattalionInfo.swift; sourceTree = "<group>"; };
+		F12C11241D6CB7AB0071798C /* SingleBattalionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleBattalionViewController.swift; sourceTree = "<group>"; };
+		F12C11271D6CB7CD0071798C /* BattalionReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattalionReader.swift; sourceTree = "<group>"; };
+		F12C11281D6CB7CD0071798C /* Battalions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Battalions.swift; sourceTree = "<group>"; };
+		F12C11291D6CB7CD0071798C /* BattalionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattalionTableViewController.swift; sourceTree = "<group>"; };
+		F12C112A1D6CB7CD0071798C /* BattalionTest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BattalionTest.plist; sourceTree = "<group>"; };
+		F12C112F1D6CFB670071798C /* TimelineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
+		F12C116F1D7095FA0071798C /* MyVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyVariables.swift; sourceTree = "<group>"; };
+		F12C117D1D71E1FB0071798C /* MedalReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedalReader.swift; sourceTree = "<group>"; };
+		F12C117E1D71E1FB0071798C /* Medals List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Medals List.plist"; sourceTree = "<group>"; };
+		F12C11841D732B360071798C /* VimyVirtualMemorialVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VimyVirtualMemorialVC.swift; sourceTree = "<group>"; };
+		F12C11871D738ACB0071798C /* StudentBiographyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentBiographyViewController.swift; sourceTree = "<group>"; };
+		F12C118A1D73AB010071798C /* WeaponDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponDetailsVC.swift; sourceTree = "<group>"; };
+		F12C118B1D73AB010071798C /* WeaponInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WeaponInfo.plist; sourceTree = "<group>"; };
+		F12C118C1D73AB010071798C /* WeaponSelectVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponSelectVC.swift; sourceTree = "<group>"; };
+		F12C118D1D73AB010071798C /* WeaponsInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponsInfo.swift; sourceTree = "<group>"; };
+		F12C11931D73ADA20071798C /* WeaponAssets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = WeaponAssets.scnassets; sourceTree = "<group>"; };
+		F133F22B1D7473810049B8BB /* bg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bg.mp3; sourceTree = "<group>"; };
+		F133F22C1D7473810049B8BB /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		F133F22F1D74764C0049B8BB /* Serenata Immortale.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Serenata Immortale.mp3"; sourceTree = "<group>"; };
+		F168B6221D860FF000A9719A /* AppIntro.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppIntro.m4a; sourceTree = "<group>"; };
+		F16B0FE31D4FA578004F2777 /* Vimy Ridge Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vimy Ridge Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F16B0FE61D4FA578004F2777 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F16B0FEB1D4FA578004F2777 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F16B0FF01D4FA578004F2777 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F16B0FF21D4FA578004F2777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F16B0FF71D4FA578004F2777 /* Vimy Ridge ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vimy Ridge ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F16B0FFB1D4FA578004F2777 /* Vimy_Ridge_ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vimy_Ridge_ProjectTests.swift; sourceTree = "<group>"; };
+		F16B0FFD1D4FA578004F2777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F16B10021D4FA578004F2777 /* Vimy Ridge ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vimy Ridge ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F16B10061D4FA578004F2777 /* Vimy_Ridge_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vimy_Ridge_ProjectUITests.swift; sourceTree = "<group>"; };
+		F16B10081D4FA578004F2777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F16B10141D4FA6EF004F2777 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F16B10161D4FA735004F2777 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F16B10181D4FA929004F2777 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		F16B10191D4FA929004F2777 /* FullSoldier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullSoldier.swift; sourceTree = "<group>"; };
+		F170B8E11D4FB8D600118440 /* CemAnno.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CemAnno.swift; sourceTree = "<group>"; };
+		F170B8E21D4FB8D600118440 /* CemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CemViewController.swift; sourceTree = "<group>"; };
+		F170B8E31D4FB8D600118440 /* CoordinatePrime.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CoordinatePrime.plist; sourceTree = "<group>"; };
+		F170B8E41D4FB8D600118440 /* VimyCoordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VimyCoordinates.swift; sourceTree = "<group>"; };
+		F170B8E91D4FB90C00118440 /* BattalionMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattalionMapVC.swift; sourceTree = "<group>"; };
+		F170B8EA1D4FB90C00118440 /* BattalionMovement.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BattalionMovement.plist; sourceTree = "<group>"; };
+		F170B8EB1D4FB90C00118440 /* BattalionsCoords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattalionsCoords.swift; sourceTree = "<group>"; };
+		F170B8EC1D4FB90C00118440 /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
+		F170B8F11D4FB93400118440 /* AdvProp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvProp.swift; sourceTree = "<group>"; };
+		F170B8F21D4FB93400118440 /* daysOfBattle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = daysOfBattle.plist; sourceTree = "<group>"; };
+		F170B8F31D4FB93400118440 /* TLPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLPViewController.swift; sourceTree = "<group>"; };
+		F170B8F71D4FB94D00118440 /* westernFront.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = westernFront.plist; sourceTree = "<group>"; };
+		F170B8F81D4FB94D00118440 /* WesternFrontController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WesternFrontController.swift; sourceTree = "<group>"; };
+		F170B8F91D4FB94D00118440 /* WesternFrontLinesCoords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WesternFrontLinesCoords.swift; sourceTree = "<group>"; };
+		F170B8FD1D4FBA4300118440 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F1993B141D5226E9001F40F0 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F16B0FE01D4FA578004F2777 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16B0FF41D4FA578004F2777 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16B0FFF1D4FA578004F2777 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F12C10DC1D562EA10071798C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F16B10161D4FA735004F2777 /* HomeViewController.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		F12C10E31D60CD960071798C /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F12C10E41D60CDBC0071798C /* SearchViewController.swift */,
+				F12C10E51D60CDBC0071798C /* SoldierSearch.swift */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		F12C10EA1D60CDE80071798C /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F16B10181D4FA929004F2777 /* SwiftyJSON.swift */,
+				F12C10E81D60CDDB0071798C /* Reachability.swift */,
+				F16B10191D4FA929004F2777 /* FullSoldier.swift */,
+				F12C116F1D7095FA0071798C /* MyVariables.swift */,
+			);
+			name = "Helper Classes";
+			sourceTree = "<group>";
+		};
+		F12C10EB1D61FC840071798C /* History */ = {
+			isa = PBXGroup;
+			children = (
+				F12C10EC1D61FD640071798C /* HistoryViewController.swift */,
+				F133F2311D75E1840049B8BB /* Artwork */,
+				F12C10EE1D61FEFB0071798C /* Stats */,
+			);
+			name = History;
+			sourceTree = "<group>";
+		};
+		F12C10EE1D61FEFB0071798C /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				F12C10F31D6212CE0071798C /* Stats.plist */,
+				F12C10F11D6210650071798C /* StatsReader.swift */,
+				F12C10EF1D620FB40071798C /* StatsViewController.swift */,
+			);
+			name = Stats;
+			sourceTree = "<group>";
+		};
+		F12C10F51D6290890071798C /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				F12C110A1D6291B80071798C /* FaceBookViewController.swift */,
+				F12C10FB1D6290BE0071798C /* Timeline */,
+				F12C10FA1D6290B90071798C /* Profile */,
+				F12C10F91D6290B20071798C /* Photos */,
+				F12C10F81D6290A60071798C /* Medals */,
+				F12C10F71D6290A00071798C /* Friends */,
+				F12C10F61D6290910071798C /* Biography */,
+				F12C11861D738AA40071798C /* Student Bio */,
+			);
+			name = Facebook;
+			sourceTree = "<group>";
+		};
+		F12C10F61D6290910071798C /* Biography */ = {
+			isa = PBXGroup;
+			children = (
+				F12C11081D6291AC0071798C /* BiographyView.swift */,
+			);
+			name = Biography;
+			sourceTree = "<group>";
+		};
+		F12C10F71D6290A00071798C /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				F12C11061D6291A40071798C /* FriendsView.swift */,
+			);
+			name = Friends;
+			sourceTree = "<group>";
+		};
+		F12C10F81D6290A60071798C /* Medals */ = {
+			isa = PBXGroup;
+			children = (
+				F12C117D1D71E1FB0071798C /* MedalReader.swift */,
+				F12C117E1D71E1FB0071798C /* Medals List.plist */,
+				F12C11041D62919A0071798C /* Medals.swift */,
+			);
+			name = Medals;
+			sourceTree = "<group>";
+		};
+		F12C10F91D6290B20071798C /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Photos;
+			sourceTree = "<group>";
+		};
+		F12C10FA1D6290B90071798C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F12C11021D62918E0071798C /* ProfileView.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		F12C10FB1D6290BE0071798C /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				F12C112F1D6CFB670071798C /* TimelineView.swift */,
+				F12C10FC1D6291810071798C /* SoldierLocation.swift */,
+				F12C10FE1D6291810071798C /* VCMapView.swift */,
+			);
+			name = Timeline;
+			sourceTree = "<group>";
+		};
+		F12C11171D6CB6C40071798C /* Battalions */ = {
+			isa = PBXGroup;
+			children = (
+				F12C11191D6CB6E00071798C /* Single Battalion */,
+				F12C11181D6CB6CF0071798C /* Battalion Search */,
+			);
+			name = Battalions;
+			sourceTree = "<group>";
+		};
+		F12C11181D6CB6CF0071798C /* Battalion Search */ = {
+			isa = PBXGroup;
+			children = (
+				F12C11271D6CB7CD0071798C /* BattalionReader.swift */,
+				F12C11281D6CB7CD0071798C /* Battalions.swift */,
+				F12C11291D6CB7CD0071798C /* BattalionTableViewController.swift */,
+				F12C112A1D6CB7CD0071798C /* BattalionTest.plist */,
+			);
+			name = "Battalion Search";
+			sourceTree = "<group>";
+		};
+		F12C11191D6CB6E00071798C /* Single Battalion */ = {
+			isa = PBXGroup;
+			children = (
+				F12C11231D6CB7AB0071798C /* FullBattalionInfo.swift */,
+				F12C11241D6CB7AB0071798C /* SingleBattalionViewController.swift */,
+				F12C111A1D6CB71B0071798C /* BattalionInfo */,
+				F12C111C1D6CB7410071798C /* BattalionMore */,
+				F12C111B1D6CB7380071798C /* BattalionVimy */,
+			);
+			name = "Single Battalion";
+			sourceTree = "<group>";
+		};
+		F12C111A1D6CB71B0071798C /* BattalionInfo */ = {
+			isa = PBXGroup;
+			children = (
+				F12C11211D6CB7910071798C /* BattalionInfoContainer.swift */,
+			);
+			name = BattalionInfo;
+			sourceTree = "<group>";
+		};
+		F12C111B1D6CB7380071798C /* BattalionVimy */ = {
+			isa = PBXGroup;
+			children = (
+				F12C111F1D6CB7810071798C /* BattalionFactsContainer.swift */,
+			);
+			name = BattalionVimy;
+			sourceTree = "<group>";
+		};
+		F12C111C1D6CB7410071798C /* BattalionMore */ = {
+			isa = PBXGroup;
+			children = (
+				F12C111D1D6CB7690071798C /* BattalionMoreContainer.swift */,
+			);
+			name = BattalionMore;
+			sourceTree = "<group>";
+		};
+		F12C11811D732AD40071798C /* Virtual Memorial */ = {
+			isa = PBXGroup;
+			children = (
+				F12C11841D732B360071798C /* VimyVirtualMemorialVC.swift */,
+			);
+			name = "Virtual Memorial";
+			sourceTree = "<group>";
+		};
+		F12C11861D738AA40071798C /* Student Bio */ = {
+			isa = PBXGroup;
+			children = (
+				F12C11871D738ACB0071798C /* StudentBiographyViewController.swift */,
+			);
+			name = "Student Bio";
+			sourceTree = "<group>";
+		};
+		F12C11891D73AAD70071798C /* Weapons */ = {
+			isa = PBXGroup;
+			children = (
+				F12C118A1D73AB010071798C /* WeaponDetailsVC.swift */,
+				F12C118B1D73AB010071798C /* WeaponInfo.plist */,
+				F12C118C1D73AB010071798C /* WeaponSelectVC.swift */,
+				F12C118D1D73AB010071798C /* WeaponsInfo.swift */,
+				F12C11931D73ADA20071798C /* WeaponAssets.scnassets */,
+			);
+			name = Weapons;
+			sourceTree = "<group>";
+		};
+		F133F22A1D74734F0049B8BB /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				F168B6221D860FF000A9719A /* AppIntro.m4a */,
+				F133F22F1D74764C0049B8BB /* Serenata Immortale.mp3 */,
+				F133F22B1D7473810049B8BB /* bg.mp3 */,
+				F133F22C1D7473810049B8BB /* Util.swift */,
+			);
+			name = Music;
+			sourceTree = "<group>";
+		};
+		F133F2311D75E1840049B8BB /* Artwork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Artwork;
+			sourceTree = "<group>";
+		};
+		F16B0FDA1D4FA578004F2777 = {
+			isa = PBXGroup;
+			children = (
+				F16B0FE51D4FA578004F2777 /* Vimy Ridge Project */,
+				F16B0FFA1D4FA578004F2777 /* Vimy Ridge ProjectTests */,
+				F16B10051D4FA578004F2777 /* Vimy Ridge ProjectUITests */,
+				F16B0FE41D4FA578004F2777 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F16B0FE41D4FA578004F2777 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F16B0FE31D4FA578004F2777 /* Vimy Ridge Project.app */,
+				F16B0FF71D4FA578004F2777 /* Vimy Ridge ProjectTests.xctest */,
+				F16B10021D4FA578004F2777 /* Vimy Ridge ProjectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F16B0FE51D4FA578004F2777 /* Vimy Ridge Project */ = {
+			isa = PBXGroup;
+			children = (
+				F16B0FE61D4FA578004F2777 /* AppDelegate.swift */,
+				F16B0FEA1D4FA578004F2777 /* Main.storyboard */,
+				F12C10DC1D562EA10071798C /* Home */,
+				F12C11171D6CB6C40071798C /* Battalions */,
+				F12C10F51D6290890071798C /* Facebook */,
+				F12C10EB1D61FC840071798C /* History */,
+				F12C10E31D60CD960071798C /* Search */,
+				F12C11811D732AD40071798C /* Virtual Memorial */,
+				F16B101C1D4FB477004F2777 /* Maps */,
+				F12C11891D73AAD70071798C /* Weapons */,
+				F133F22A1D74734F0049B8BB /* Music */,
+				F16B10141D4FA6EF004F2777 /* Images.xcassets */,
+				F16B0FEF1D4FA578004F2777 /* LaunchScreen.storyboard */,
+				3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */,
+				F12C10EA1D60CDE80071798C /* Helper Classes */,
+				F16B0FF21D4FA578004F2777 /* Info.plist */,
+			);
+			path = "Vimy Ridge Project";
+			sourceTree = "<group>";
+		};
+		F16B0FFA1D4FA578004F2777 /* Vimy Ridge ProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				F16B0FFB1D4FA578004F2777 /* Vimy_Ridge_ProjectTests.swift */,
+				F16B0FFD1D4FA578004F2777 /* Info.plist */,
+			);
+			path = "Vimy Ridge ProjectTests";
+			sourceTree = "<group>";
+		};
+		F16B10051D4FA578004F2777 /* Vimy Ridge ProjectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F16B10061D4FA578004F2777 /* Vimy_Ridge_ProjectUITests.swift */,
+				F16B10081D4FA578004F2777 /* Info.plist */,
+			);
+			path = "Vimy Ridge ProjectUITests";
+			sourceTree = "<group>";
+		};
+		F16B101C1D4FB477004F2777 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				F170B8FD1D4FBA4300118440 /* MapViewController.swift */,
+				F1993B141D5226E9001F40F0 /* MenuVC.swift */,
+				F170B8DF1D4FB7D200118440 /* Battalions */,
+				F170B8DD1D4FB7CC00118440 /* Battle Progression */,
+				F170B8E01D4FB7D400118440 /* Cemeteries */,
+				F170B8DE1D4FB7D000118440 /* Western Front */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		F170B8DD1D4FB7CC00118440 /* Battle Progression */ = {
+			isa = PBXGroup;
+			children = (
+				F170B8F11D4FB93400118440 /* AdvProp.swift */,
+				F170B8F21D4FB93400118440 /* daysOfBattle.plist */,
+				F170B8F31D4FB93400118440 /* TLPViewController.swift */,
+			);
+			name = "Battle Progression";
+			sourceTree = "<group>";
+		};
+		F170B8DE1D4FB7D000118440 /* Western Front */ = {
+			isa = PBXGroup;
+			children = (
+				F170B8F71D4FB94D00118440 /* westernFront.plist */,
+				F170B8F81D4FB94D00118440 /* WesternFrontController.swift */,
+				F170B8F91D4FB94D00118440 /* WesternFrontLinesCoords.swift */,
+			);
+			name = "Western Front";
+			sourceTree = "<group>";
+		};
+		F170B8DF1D4FB7D200118440 /* Battalions */ = {
+			isa = PBXGroup;
+			children = (
+				F170B8E91D4FB90C00118440 /* BattalionMapVC.swift */,
+				F170B8EA1D4FB90C00118440 /* BattalionMovement.plist */,
+				F170B8EB1D4FB90C00118440 /* BattalionsCoords.swift */,
+				F170B8EC1D4FB90C00118440 /* CustomAnnotation.swift */,
+			);
+			name = Battalions;
+			sourceTree = "<group>";
+		};
+		F170B8E01D4FB7D400118440 /* Cemeteries */ = {
+			isa = PBXGroup;
+			children = (
+				F170B8E11D4FB8D600118440 /* CemAnno.swift */,
+				F170B8E21D4FB8D600118440 /* CemViewController.swift */,
+				F170B8E31D4FB8D600118440 /* CoordinatePrime.plist */,
+				F170B8E41D4FB8D600118440 /* VimyCoordinates.swift */,
+			);
+			name = Cemeteries;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F16B0FE21D4FA578004F2777 /* Vimy Ridge Project */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F16B100B1D4FA578004F2777 /* Build configuration list for PBXNativeTarget "Vimy Ridge Project" */;
+			buildPhases = (
+				F16B0FDF1D4FA578004F2777 /* Sources */,
+				F16B0FE01D4FA578004F2777 /* Frameworks */,
+				F16B0FE11D4FA578004F2777 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Vimy Ridge Project";
+			productName = "Vimy Ridge Project";
+			productReference = F16B0FE31D4FA578004F2777 /* Vimy Ridge Project.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F16B0FF61D4FA578004F2777 /* Vimy Ridge ProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F16B100E1D4FA578004F2777 /* Build configuration list for PBXNativeTarget "Vimy Ridge ProjectTests" */;
+			buildPhases = (
+				F16B0FF31D4FA578004F2777 /* Sources */,
+				F16B0FF41D4FA578004F2777 /* Frameworks */,
+				F16B0FF51D4FA578004F2777 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F16B0FF91D4FA578004F2777 /* PBXTargetDependency */,
+			);
+			name = "Vimy Ridge ProjectTests";
+			productName = "Vimy Ridge ProjectTests";
+			productReference = F16B0FF71D4FA578004F2777 /* Vimy Ridge ProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F16B10011D4FA578004F2777 /* Vimy Ridge ProjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F16B10111D4FA578004F2777 /* Build configuration list for PBXNativeTarget "Vimy Ridge ProjectUITests" */;
+			buildPhases = (
+				F16B0FFE1D4FA578004F2777 /* Sources */,
+				F16B0FFF1D4FA578004F2777 /* Frameworks */,
+				F16B10001D4FA578004F2777 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F16B10041D4FA578004F2777 /* PBXTargetDependency */,
+			);
+			name = "Vimy Ridge ProjectUITests";
+			productName = "Vimy Ridge ProjectUITests";
+			productReference = F16B10021D4FA578004F2777 /* Vimy Ridge ProjectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F16B0FDB1D4FA578004F2777 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Mason Black";
+				TargetAttributes = {
+					F16B0FE21D4FA578004F2777 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 6M6MD3ZAQR;
+						LastSwiftMigration = 0800;
+					};
+					F16B0FF61D4FA578004F2777 = {
+						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
+						TestTargetID = F16B0FE21D4FA578004F2777;
+					};
+					F16B10011D4FA578004F2777 = {
+						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
+						TestTargetID = F16B0FE21D4FA578004F2777;
+					};
+				};
+			};
+			buildConfigurationList = F16B0FDE1D4FA578004F2777 /* Build configuration list for PBXProject "Vimy Ridge Project" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F16B0FDA1D4FA578004F2777;
+			productRefGroup = F16B0FE41D4FA578004F2777 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F16B0FE21D4FA578004F2777 /* Vimy Ridge Project */,
+				F16B0FF61D4FA578004F2777 /* Vimy Ridge ProjectTests */,
+				F16B10011D4FA578004F2777 /* Vimy Ridge ProjectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F16B0FE11D4FA578004F2777 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F133F22D1D7473810049B8BB /* bg.mp3 in Resources */,
+				F16B0FF11D4FA578004F2777 /* LaunchScreen.storyboard in Resources */,
+				F12C112E1D6CB7CD0071798C /* BattalionTest.plist in Resources */,
+				F133F2301D74764C0049B8BB /* Serenata Immortale.mp3 in Resources */,
+				F170B8E71D4FB8D600118440 /* CoordinatePrime.plist in Resources */,
+				F170B8F51D4FB93400118440 /* daysOfBattle.plist in Resources */,
+				F170B8EE1D4FB90C00118440 /* BattalionMovement.plist in Resources */,
+				F12C11801D71E1FB0071798C /* Medals List.plist in Resources */,
+				3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */,
+				F16B10151D4FA6EF004F2777 /* Images.xcassets in Resources */,
+				F170B8FA1D4FB94D00118440 /* westernFront.plist in Resources */,
+				F168B6231D860FF000A9719A /* AppIntro.m4a in Resources */,
+				F12C118F1D73AB010071798C /* WeaponInfo.plist in Resources */,
+				F12C10F41D6212CE0071798C /* Stats.plist in Resources */,
+				F16B0FEC1D4FA578004F2777 /* Main.storyboard in Resources */,
+				F12C11941D73ADA20071798C /* WeaponAssets.scnassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16B0FF51D4FA578004F2777 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16B10001D4FA578004F2777 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F16B0FDF1D4FA578004F2777 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F170B8FE1D4FBA4300118440 /* MapViewController.swift in Sources */,
+				F170B8F41D4FB93400118440 /* AdvProp.swift in Sources */,
+				F12C10E91D60CDDB0071798C /* Reachability.swift in Sources */,
+				F12C10ED1D61FD640071798C /* HistoryViewController.swift in Sources */,
+				F12C10F01D620FB40071798C /* StatsViewController.swift in Sources */,
+				F12C11701D7095FA0071798C /* MyVariables.swift in Sources */,
+				F170B8E51D4FB8D600118440 /* CemAnno.swift in Sources */,
+				F12C10E61D60CDBC0071798C /* SearchViewController.swift in Sources */,
+				F12C11901D73AB010071798C /* WeaponSelectVC.swift in Sources */,
+				F12C11851D732B360071798C /* VimyVirtualMemorialVC.swift in Sources */,
+				F12C11011D6291810071798C /* VCMapView.swift in Sources */,
+				F12C112C1D6CB7CD0071798C /* Battalions.swift in Sources */,
+				F12C117F1D71E1FB0071798C /* MedalReader.swift in Sources */,
+				F12C10E71D60CDBC0071798C /* SoldierSearch.swift in Sources */,
+				F12C11201D6CB7810071798C /* BattalionFactsContainer.swift in Sources */,
+				F16B101A1D4FA929004F2777 /* SwiftyJSON.swift in Sources */,
+				F16B101B1D4FA929004F2777 /* FullSoldier.swift in Sources */,
+				F12C11301D6CFB670071798C /* TimelineView.swift in Sources */,
+				F1993B151D5226E9001F40F0 /* MenuVC.swift in Sources */,
+				F170B8EF1D4FB90C00118440 /* BattalionsCoords.swift in Sources */,
+				F12C11071D6291A40071798C /* FriendsView.swift in Sources */,
+				F12C11031D62918E0071798C /* ProfileView.swift in Sources */,
+				F170B8E81D4FB8D600118440 /* VimyCoordinates.swift in Sources */,
+				F12C11881D738ACB0071798C /* StudentBiographyViewController.swift in Sources */,
+				F170B8ED1D4FB90C00118440 /* BattalionMapVC.swift in Sources */,
+				F12C11911D73AB010071798C /* WeaponsInfo.swift in Sources */,
+				F16B0FE71D4FA578004F2777 /* AppDelegate.swift in Sources */,
+				F12C10FF1D6291810071798C /* SoldierLocation.swift in Sources */,
+				F12C112B1D6CB7CD0071798C /* BattalionReader.swift in Sources */,
+				F12C11251D6CB7AB0071798C /* FullBattalionInfo.swift in Sources */,
+				F12C11261D6CB7AB0071798C /* SingleBattalionViewController.swift in Sources */,
+				F170B8F01D4FB90C00118440 /* CustomAnnotation.swift in Sources */,
+				F170B8F61D4FB93400118440 /* TLPViewController.swift in Sources */,
+				F170B8FC1D4FB94D00118440 /* WesternFrontLinesCoords.swift in Sources */,
+				F12C118E1D73AB010071798C /* WeaponDetailsVC.swift in Sources */,
+				F12C11051D62919A0071798C /* Medals.swift in Sources */,
+				F12C11221D6CB7910071798C /* BattalionInfoContainer.swift in Sources */,
+				F133F22E1D7473810049B8BB /* Util.swift in Sources */,
+				F170B8E61D4FB8D600118440 /* CemViewController.swift in Sources */,
+				F12C11091D6291AC0071798C /* BiographyView.swift in Sources */,
+				F12C110B1D6291B80071798C /* FaceBookViewController.swift in Sources */,
+				F12C111E1D6CB7690071798C /* BattalionMoreContainer.swift in Sources */,
+				F12C112D1D6CB7CD0071798C /* BattalionTableViewController.swift in Sources */,
+				F170B8FB1D4FB94D00118440 /* WesternFrontController.swift in Sources */,
+				F12C10F21D6210650071798C /* StatsReader.swift in Sources */,
+				F16B10171D4FA735004F2777 /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16B0FF31D4FA578004F2777 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F16B0FFC1D4FA578004F2777 /* Vimy_Ridge_ProjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16B0FFE1D4FA578004F2777 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F16B10071D4FA578004F2777 /* Vimy_Ridge_ProjectUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F16B0FF91D4FA578004F2777 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F16B0FE21D4FA578004F2777 /* Vimy Ridge Project */;
+			targetProxy = F16B0FF81D4FA578004F2777 /* PBXContainerItemProxy */;
+		};
+		F16B10041D4FA578004F2777 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F16B0FE21D4FA578004F2777 /* Vimy Ridge Project */;
+			targetProxy = F16B10031D4FA578004F2777 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F16B0FEA1D4FA578004F2777 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F16B0FEB1D4FA578004F2777 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F16B0FEF1D4FA578004F2777 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F16B0FF01D4FA578004F2777 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F16B10091D4FA578004F2777 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		F16B100A1D4FA578004F2777 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F16B100C1D4FA578004F2777 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6M6MD3ZAQR;
+				INFOPLIST_FILE = "Vimy Ridge Project/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UCDSB.Vimy-Ridge-Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F16B100D1D4FA578004F2777 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6M6MD3ZAQR;
+				INFOPLIST_FILE = "Vimy Ridge Project/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UCDSB.Vimy-Ridge-Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F16B100F1D4FA578004F2777 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Vimy Ridge ProjectTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UCDSB.Vimy-Ridge-ProjectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vimy Ridge Project.app/Vimy Ridge Project";
+			};
+			name = Debug;
+		};
+		F16B10101D4FA578004F2777 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Vimy Ridge ProjectTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UCDSB.Vimy-Ridge-ProjectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vimy Ridge Project.app/Vimy Ridge Project";
+			};
+			name = Release;
+		};
+		F16B10121D4FA578004F2777 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Vimy Ridge ProjectUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UCDSB.Vimy-Ridge-ProjectUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Vimy Ridge Project";
+			};
+			name = Debug;
+		};
+		F16B10131D4FA578004F2777 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Vimy Ridge ProjectUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UCDSB.Vimy-Ridge-ProjectUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Vimy Ridge Project";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F16B0FDE1D4FA578004F2777 /* Build configuration list for PBXProject "Vimy Ridge Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F16B10091D4FA578004F2777 /* Debug */,
+				F16B100A1D4FA578004F2777 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F16B100B1D4FA578004F2777 /* Build configuration list for PBXNativeTarget "Vimy Ridge Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F16B100C1D4FA578004F2777 /* Debug */,
+				F16B100D1D4FA578004F2777 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F16B100E1D4FA578004F2777 /* Build configuration list for PBXNativeTarget "Vimy Ridge ProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F16B100F1D4FA578004F2777 /* Debug */,
+				F16B10101D4FA578004F2777 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F16B10111D4FA578004F2777 /* Build configuration list for PBXNativeTarget "Vimy Ridge ProjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F16B10121D4FA578004F2777 /* Debug */,
+				F16B10131D4FA578004F2777 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F16B0FDB1D4FA578004F2777 /* Project object */;
+}
