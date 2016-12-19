@@ -996,7 +996,7 @@ extension JSON {
                 return nil
             }
         }
-        set 
+        set {
             self.object = newValue?.absoluteString ?? NSNull()
         }
     }
