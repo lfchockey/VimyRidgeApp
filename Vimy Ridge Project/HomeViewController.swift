@@ -7,6 +7,7 @@
 //
 // Culminating Assignment Student Branches
 // Mr Black
+// Eric Duberville
 
 import UIKit
 import AVFoundation
