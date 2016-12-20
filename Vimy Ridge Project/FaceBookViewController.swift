@@ -67,13 +67,14 @@ class FaceBookViewController: UIViewController {
             moveViews(sender: 0)
             indicator.isHidden = false
             grabDataOnSoldier()
+            FriendsMatcher().matchSoldiers()
+
         }
         else {
             // *** come up with error message if no soldier id was passed
         }
         
-        
-
+        print("Hello Matcher")
         
     }
 

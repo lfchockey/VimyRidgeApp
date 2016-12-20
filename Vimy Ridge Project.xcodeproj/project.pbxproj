@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F057FCB1E099C25006471C9 /* FriendsMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F057FCA1E099C25006471C9 /* FriendsMatcher.swift */; };
 		3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */; };
 		F12C10E61D60CDBC0071798C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E41D60CDBC0071798C /* SearchViewController.swift */; };
 		F12C10E71D60CDBC0071798C /* SoldierSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E51D60CDBC0071798C /* SoldierSearch.swift */; };
@@ -91,6 +92,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F057FCA1E099C25006471C9 /* FriendsMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsMatcher.swift; path = "../../VimyRidgeApp-master(new)/Vimy Ridge Project/FriendsMatcher.swift"; sourceTree = "<group>"; };
 		3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chapter 11 W00 Regular.ttf"; sourceTree = "<group>"; };
 		F12C10E41D60CDBC0071798C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F12C10E51D60CDBC0071798C /* SoldierSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierSearch.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 		F12C10F71D6290A00071798C /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				3F057FCA1E099C25006471C9 /* FriendsMatcher.swift */,
 				F12C11061D6291A40071798C /* FriendsView.swift */,
 			);
 			name = Friends;
@@ -675,6 +678,7 @@
 				F12C10F01D620FB40071798C /* StatsViewController.swift in Sources */,
 				F12C11701D7095FA0071798C /* MyVariables.swift in Sources */,
 				F170B8E51D4FB8D600118440 /* CemAnno.swift in Sources */,
+				3F057FCB1E099C25006471C9 /* FriendsMatcher.swift in Sources */,
 				F12C10E61D60CDBC0071798C /* SearchViewController.swift in Sources */,
 				F12C11901D73AB010071798C /* WeaponSelectVC.swift in Sources */,
 				F12C11851D732B360071798C /* VimyVirtualMemorialVC.swift in Sources */,
