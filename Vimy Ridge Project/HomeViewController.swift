@@ -7,6 +7,7 @@
 //
 // Culminating Assignment Student Branches
 // Mr Black
+// Daniel Gordon
 
 import UIKit
 import AVFoundation
