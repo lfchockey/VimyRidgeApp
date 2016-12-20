@@ -7,6 +7,7 @@
 //
 // Culminating Assignment Student Branches
 // Mr Black
+// Justin Yanosik
 
 import UIKit
 import AVFoundation
