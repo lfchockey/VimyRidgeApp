@@ -7,6 +7,8 @@
 //
 // Culminating Assignment Student Branches
 // Mr Black
+// Spencer Wright
+
 
 import UIKit
 import AVFoundation
