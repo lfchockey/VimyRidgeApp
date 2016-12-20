@@ -13,6 +13,8 @@ internal var mapq = MKMapView();
 
 class MapViewController: UIViewController, MKMapViewDelegate
 {
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var menuImage: UIImageView!
     @IBOutlet weak var menu: UIView!
@@ -30,6 +32,8 @@ class MapViewController: UIViewController, MKMapViewDelegate
         leftButton.isHidden = true
         rightButton.isHidden = true
         slider.isHidden = true
+        nameLabel.isHidden = true
+        infoButton.isHidden = true
         
         if MapVariables.mapSection == 1{
             // Battalions
@@ -51,12 +55,15 @@ class MapViewController: UIViewController, MKMapViewDelegate
         }
         else if MapVariables.mapSection == 4{
             // Western Front
-            indexCounter = 0
             zoomRegion = 100000
-            let dummyButton = UIButton(type: UIButtonType.custom)
-            LeftPreviousClick(dummyButton)
             leftButton.isHidden = false
             rightButton.isHidden = false
+            let dummyButton = UIButton()
+            LeftPreviousClick(dummyButton)
+            RightNextClick(dummyButton)
+            nameLabel.isHidden = false
+            nameLabel.text = lineArray[indexCounter].name
+            infoButton.isHidden = false
         }
         else {
             
@@ -71,7 +78,6 @@ class MapViewController: UIViewController, MKMapViewDelegate
             self.menu.transform = CGAffineTransform( translationX: 0, y: 0)
         }
         UIView.animate(withDuration: 0.3, delay:0.3, options:UIViewAnimationOptions.transitionFlipFromTop,animations: {self.menu.alpha = 0}, completion: { finished in self.menu.isHidden = true})
-        
         
     }
     
@@ -497,9 +503,22 @@ class MapViewController: UIViewController, MKMapViewDelegate
     
 //************************************************************* Western Fronts Code ********//
     
-    @IBOutlet weak var nameLabel: UILabel!
-    
     @IBAction func infoClick(_ sender: AnyObject) {
+        let name = lineArray[indexCounter].name
+//      let info = lineArray[indexCounter]."whatever the information varibale is called"
+        
+        let wfVC = menuVC.childViewControllers[0] as! WesternFrontVC
+        
+        wfVC.titleLabel.text = name
+//      wfVC.descriptionLabel = info
+        
+        menu.isHidden = false
+        self.menu.alpha = 1
+        UIView.animate(withDuration: 0.3){
+            self.view.layoutIfNeeded()
+            self.menuImage.transform = CGAffineTransform(translationX: self.menu.frame.size.width, y: 0)
+            self.menu.transform = CGAffineTransform(translationX: self.menu.frame.size.width, y: 0)
+        }
     }
     
     @IBAction func RightNextClick(_ sender: UIButton) {
@@ -542,13 +561,13 @@ class MapViewController: UIViewController, MKMapViewDelegate
         Polyine1900 = MKPolyline(coordinates: &newLine.frontLineCoords, count: newLine.coordCount)
         mapView.add(Polyine1900)
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
 //        let newLine = lineArray[0]
-//        
+//
 //        var Polyine1900: MKPolyline = MKPolyline()
 //        Polyine1900 = MKPolyline(coordinates: &newLine.frontLineCoords, count: newLine.coordCount)
-
+        
         //mapView.add(Polyine1900)
     }
     
@@ -573,6 +592,7 @@ class MapViewController: UIViewController, MKMapViewDelegate
     var Polyine3: MKPolyline = MKPolyline()
     var Polyine4: MKPolyline = MKPolyline()
     var Polyine5: MKPolyline = MKPolyline()
+
     
 //************************************************************ Trench Line Progressions Code ********//
     
