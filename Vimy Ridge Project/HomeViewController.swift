@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Mason Black. All rights reserved.
 //
 // Culminating Assignment Student Branches
-// Brynne Allan
+// B Elizabeth Allan
 
 import UIKit
 import AVFoundation
