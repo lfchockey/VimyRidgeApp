@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Mason Black. All rights reserved.
 //
 // Culminating Assignment Student Branches
-//
+// Mr Black
 
 import UIKit
 import AVFoundation
