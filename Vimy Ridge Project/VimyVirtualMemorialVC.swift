@@ -6,12 +6,10 @@
 //  Copyright © 2016 Student. All rights reserved.
 //
 
-
-
+//
 /////light images to 40
 
 import UIKit
-
 class VimyVirtualMemorialVC: UIViewController {
 
     var testAnimation = 1
@@ -495,9 +493,7 @@ class VimyVirtualMemorialVC: UIViewController {
     }
     
   
-
     
-
     
     
     override func viewDidLoad()
