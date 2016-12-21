@@ -626,9 +626,30 @@ class MapViewController: UIViewController, MKMapViewDelegate
             }
             
             let ca = annotation as! CustomAnnotation
+            if ca.battalionID > 1 && ca.battalionID < 18
+            {
+                annotationView!.centerOffset = CGPoint(x: 0, y: -ca.image.size.height / 9)  //CGPointMake(0, -ca.image.size.height / 2);
+            }
+            else if ca.battalionID > 18 && ca.battalionID < 33
+            {
+                annotationView!.centerOffset = CGPoint(x: 0, y: -ca.image.size.height / 3)  //CGPointMake(0, -ca.image.size.height / 2);
+            }
+            else if ca.battalionID == 43 || ca.battalionID == 200
+            {
+                annotationView!.centerOffset = CGPoint(x: 0, y: -35)
+                //print(ca.image.size.height)
+                //annotationView!.centerOffset = CGPoint(x: 0, y: -1 * (ca.image.size.height / 2));
+                //annotationView!.centerOffset = CGPoint(x: 0, y: -ca.image.size.height / 10 - 50)  //CGPointMake(0, -ca.image.size.height / 2);
+                //annotationView!.backgroundColor = UIColor.black
+            }
+            else if ca.battalionID > 38 && ca.battalionID < 105
+            {
+                annotationView!.centerOffset = CGPoint(x: 0, y: -35)
+            }
             annotationView!.image = ca.image
             annotationView!.image = resizeImage(image: annotationView!.image!, newHeight: 75)
             
+
 //            let btn = UIButton(type: .DetailDisclosure)
 //            btn.addTarget(self, action: "buttonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
 //            annotationView!.rightCalloutAccessoryView = btn
@@ -664,25 +685,24 @@ class MapViewController: UIViewController, MKMapViewDelegate
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)
     {
-        
         if view.annotation!.isKind(of: CemAnno.self)
         {
-            openMenu(UISwipeGestureRecognizer())
             let customAnno = view.annotation as! CemAnno
             let title = customAnno.title
-            //MapVariables.cemeteryTitle = title!
-            
-            let cemVC = menuVC.childViewControllers[2] as! CemViewController
-            cemVC.nameLabel.text = title!
-            //var containerViewController: MenuVC?
-            //let cVC = containerViewController?.childViewControllers[2] as! CemViewController
-            //cVC.nameLabel.text = "yay"
-            //print(menu.parent)
-            //menu.childViewControllers[2].nameLabel.text = "yay"
             
             let histInfo = customAnno.histInfo
             
             let ac = UIAlertController(title: title, message: histInfo, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(ac, animated: true, completion: nil)
+        }
+        else if view.annotation!.isKind(of: CustomAnnotation.self)
+        {
+            let customAnno = view.annotation as! CustomAnnotation
+            let subtitle = customAnno.subtitle
+            print(customAnno.battalionID)
+            
+            let ac = UIAlertController(title: title, message: subtitle, preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(ac, animated: true, completion: nil)
         }
@@ -696,6 +716,7 @@ class MapViewController: UIViewController, MKMapViewDelegate
             ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(ac, animated: true, completion: nil)
         }
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
