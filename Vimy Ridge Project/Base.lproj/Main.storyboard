@@ -745,7 +745,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eNN-He-xef" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" id="b7X-2t-5Xo"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="beU-Bt-Igp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="beU-Bt-Igp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -974,7 +974,7 @@
                                                         <rect key="frame" x="0.0" y="28" width="503" height="20"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kgi-1p-tJU" id="th0-xS-m5e">
-                                                            <rect key="frame" x="0.0" y="0.0" width="503" height="19"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="503" height="20"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </tableViewCellContentView>
                                                     </tableViewCell>
@@ -1670,11 +1670,11 @@
                                 <rect key="frame" x="0.0" y="22" width="736" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="My9-fS-1Hb" id="bv3-Ox-oAc">
-                                    <rect key="frame" x="0.0" y="0.0" width="736" height="49"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="736" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="This was brayden's job? I think, but I never got the code. This is suppose to show regiments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rCq-ai-AIb">
-                                            <rect key="frame" x="32" y="0.0" width="672" height="49"/>
+                                            <rect key="frame" x="32" y="0.0" width="672" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1687,11 +1687,11 @@
                                 <rect key="frame" x="0.0" y="72" width="736" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ioP-3z-eBu" id="w8p-5S-AgQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="736" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="736" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="This has no class, but if you get his code put it in 'friends' and attach that class to this storyboard" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HYa-sP-o7n">
-                                            <rect key="frame" x="32" y="0.0" width="672" height="43"/>
+                                            <rect key="frame" x="32" y="0.0" width="672" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2227,7 +2227,7 @@
                                         <rect key="frame" x="0.0" y="28" width="379" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dnt-Wh-Kug" id="Xp9-UY-5Ac">
-                                            <rect key="frame" x="0.0" y="0.0" width="379" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="379" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
@@ -2729,7 +2729,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4hk-UT-aVD">
-                                                    <rect key="frame" x="15" y="0.0" width="273" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="273" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2785,7 +2785,7 @@
         <!--Weapon DetailsVC-->
         <scene sceneID="PYp-xb-IuY">
             <objects>
-                <viewController id="ee8-pG-pX1" customClass="WeaponDetailsVC" customModule="Vimy_Ridge_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WDVC" id="ee8-pG-pX1" customClass="WeaponDetailsVC" customModule="Vimy_Ridge_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aeP-Mk-fj0"/>
                         <viewControllerLayoutGuide type="bottom" id="LfR-DM-kQh"/>
@@ -2834,7 +2834,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Add-Ow-G4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5181" y="3855"/>
+            <point key="canvasLocation" x="2383" y="2932"/>
         </scene>
     </scenes>
     <resources>

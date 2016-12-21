@@ -70,8 +70,10 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func WeaponsClick(_ sender: AnyObject) {
-        segueName = "WeaponsSegue"
-        self.performSegue(withIdentifier: self.segueName, sender: nil)
+        //segueName = "WeaponsSegue"
+        //self.performSegue(withIdentifier: self.segueName, sender: nil)
+        let navController = UINavigationController(rootViewController: WeaponSelectVC())
+        self.present(navController, animated: true, completion: nil)
     }
     
     @IBAction func BattalionsClick(_ sender: AnyObject) {

@@ -93,6 +93,7 @@ class WeaponDetailsVC: UIViewController {
             infoOutputTextView.text = "PotatOS Lament"  //portal 2 reference lol
         }
         
+        infoOutputTextView.text = weaponName
         //lets the user move the camera around the view
         weaponView.allowsCameraControl = true
 
