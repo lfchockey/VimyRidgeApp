@@ -7,7 +7,7 @@
 //
 // Culminating Assignment Student Branches
 // Mr Black
-//SherryWang Dec 21
+//SherryWang Dec 21 - 3rd period
 
 import UIKit
 import AVFoundation
