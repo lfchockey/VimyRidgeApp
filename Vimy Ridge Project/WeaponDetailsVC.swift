@@ -39,56 +39,57 @@ class WeaponDetailsVC: UIViewController {
         case "Ross Rifle MK III (Canada)":
             // The following line now reads the weapon info from a plist (instead of the array above)
             //      This allows us to grab individual pieces of information to make it easier to display
+            
             let weapon = WeaponsInfo(weaponName: weaponName)
+            print(weapon.country)
             infoOutputTextView.text = weapon.overallLength
-            //infoOutputTextView.text = weaponInfo[0]
-            let scene = SCNScene(named: "WeaponAssets.scnassets/Ross rifle Mk III (Canada).dae")!
+            let scene = SCNScene(named: "WeaponAssets.scnassets/WW1 Ross Rifle MKIII (Complete).dae")!
             weaponView.scene = scene
             
-        case "Lee Enfield (Canadian)":
-            infoOutputTextView.text = weaponInfo[1]
+        //case "Lee Enfield (Canadian)":
+            
             //let scene = SCNScene(named: "art.scnassets/Lee Enfield (Canadian).dae")!
             //weaponView.scene = scene
             
-        case "KAR-98K (German)":
-            infoOutputTextView.text = weaponInfo[2]
+        //case "KAR-98K (German)":
+            
             //let scene = SCNScene(named: "art.scnassets/Lee Enfield (Canadian).dae")!
             //weaponView.scene = scene
             
-        case "Mauser Gewehr 98 (German)":
-            infoOutputTextView.text = weaponInfo[3]
+        //case "Mauser Gewehr 98 (German)":
+           
             //let scene = SCNScene(named: "art.scnassets/Mauser Gewehr 98 (German).dae")!
             //weaponView.scene = scene
             
         case "Webley revolver (Canadian)":
-            infoOutputTextView.text = weaponInfo[4]
-            //let scene = SCNScene(named: "art.scnassets/Webley revolver (Canadian).dae")!
-            //weaponView.scene = scene
+            
+            let scene = SCNScene(named: "WeaponAssets.scnassets/WWI Canadian Webley (Complete)")!
+            weaponView.scene = scene
            
         case "Luger (German)":
             infoOutputTextView.text = weaponInfo[5]
             //let scene = SCNScene(named: "art.scnassets/Luger (German).dae")!
             //weaponView.scene = scene
             
-        case "Colt-browning machine gun M1895/14 (Canadian)":
-            infoOutputTextView.text = weaponInfo[6]
+        //case "Colt-browning machine gun M1895/14 (Canadian)":
+            
             //let scene = SCNScene(named: "art.scnassets/Colt-browning machine gun M1895/14 (Canadian).dae")!
             //weaponView.scene = scene
             
         case "Lewis (Canadian)":
-            infoOutputTextView.text = weaponInfo[7]
-            //let scene = SCNScene(named: "art.scnassets/Lewis (Canadian).dae")!
-            //weaponView.scene = scene
+            
+            let scene = SCNScene(named: "WeaponAssets.scnassets/WW1 Male Tank (Complete)).dae")!
+            weaponView.scene = scene
             
         case "Mills bomb (Canadian)":
-            infoOutputTextView.text = weaponInfo[8]
-            //let scene = SCNScene(named: "art.scnassets/Mills bomb (Canadian).dae")!
-            //weaponView.scene = scene
+            
+            let scene = SCNScene(named: "WeaponAssets.scnassets/WW1 mills bomb N0 5 (Complete).dae")!
+            weaponView.scene = scene
             
         case "Stick grenade (German)":
-            infoOutputTextView.text = weaponInfo[9]
-            //let scene = SCNScene(named: "art.scnassets/Stick grenade (German).dae")!
-            //weaponView.scene = scene
+           
+            let scene = SCNScene(named: "WeaponAssets.scnassets/WWI Potato Masher (Complete).dae")!
+            weaponView.scene = scene
         default:
             infoOutputTextView.text = "PotatOS Lament"  //portal 2 reference lol
         }
