@@ -33,10 +33,10 @@
                                 <rect key="frame" x="0.0" y="64" width="1024" height="1253"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOc-3Y-ooP">
-                                <rect key="frame" x="102.5" y="182" width="819" height="1002"/>
+                                <rect key="frame" x="103" y="182" width="819" height="1002"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTX-A2-f9v">
-                                        <rect key="frame" x="20" y="60" width="286.5" height="150.5"/>
+                                        <rect key="frame" x="20" y="60" width="286" height="151"/>
                                         <color key="backgroundColor" red="0.99607843139999996" green="0.85490196080000003" blue="0.74901960779999999" alpha="0.16460129309999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="17"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -53,7 +53,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqT-L0-HdA">
-                                        <rect key="frame" x="20" y="426" width="286.5" height="150"/>
+                                        <rect key="frame" x="20" y="425.5" width="286" height="151"/>
                                         <color key="backgroundColor" red="0.99607843139999996" green="0.85490196080000003" blue="0.74901960779999999" alpha="0.16460129309999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -70,7 +70,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUh-a4-Dqd">
-                                        <rect key="frame" x="20" y="791.5" width="286.5" height="150.5"/>
+                                        <rect key="frame" x="20" y="791" width="286" height="151"/>
                                         <color key="backgroundColor" red="0.99607843139999996" green="0.85490196080000003" blue="0.74901960779999999" alpha="0.16460129309999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -87,7 +87,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKA-MY-THM">
-                                        <rect key="frame" x="512.5" y="60" width="286.5" height="150.5"/>
+                                        <rect key="frame" x="513" y="60" width="286" height="151"/>
                                         <color key="backgroundColor" red="0.99607843139999996" green="0.85490196080000003" blue="0.74901960779999999" alpha="0.16460129309999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -104,7 +104,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRR-CE-mzo">
-                                        <rect key="frame" x="512.5" y="426" width="286.5" height="150"/>
+                                        <rect key="frame" x="513" y="425.5" width="286" height="151"/>
                                         <color key="backgroundColor" red="0.99607843139999996" green="0.85490196080000003" blue="0.74901960779999999" alpha="0.16460129309999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -121,7 +121,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4G-bU-GSA">
-                                        <rect key="frame" x="512.5" y="791.5" width="286.5" height="150.5"/>
+                                        <rect key="frame" x="513" y="791" width="286" height="151"/>
                                         <color key="backgroundColor" red="0.99607843139999996" green="0.85490196080000003" blue="0.74901960779999999" alpha="0.16460129309999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -138,7 +138,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YY-J2-dFt">
-                                        <rect key="frame" x="237.5" y="851.5" width="344" height="150.5"/>
+                                        <rect key="frame" x="238.5" y="851" width="343" height="151"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <state key="normal" title="Vimy Virtual Tour">
                                             <color key="titleColor" red="0.29478401040000002" green="0.3644302539" blue="0.7331730769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -149,7 +149,7 @@
                                         </connections>
                                     </button>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="run1" translatesAutoresizingMaskIntoConstraints="NO" id="6wi-6j-LFJ">
-                                        <rect key="frame" x="286.5" y="350.5" width="246" height="301"/>
+                                        <rect key="frame" x="287" y="351" width="246" height="301"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.12658361486486486" colorSpace="custom" customColorSpace="sRGB"/>
@@ -293,8 +293,9 @@
                                     <action selector="infoClick:" destination="CzM-56-0ZK" eventType="touchUpInside" id="M24-61-iVz"/>
                                 </connections>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hSi-YG-lt8">
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hSi-YG-lt8">
                                 <rect key="frame" x="-510" y="90" width="510" height="1224"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="Mua-LB-N4Z" kind="embed" id="T7E-0H-McN"/>
@@ -345,9 +346,6 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="hSi-YG-lt8" firstAttribute="height" secondItem="BLm-aT-y5Y" secondAttribute="height" id="P4m-QC-6XX"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dL0-OP-glv"/>
                     <connections>
@@ -394,7 +392,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3us-Ni-0F5">
-                                        <rect key="frame" x="20" y="191" width="416" height="29"/>
+                                        <rect key="frame" x="20" y="192" width="416" height="29"/>
                                         <segments>
                                             <segment title="Battalions"/>
                                             <segment title="Cemeteries"/>
@@ -406,19 +404,19 @@
                                         </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTu-6n-ven">
-                                        <rect key="frame" x="20" y="133.5" width="42" height="20.5"/>
+                                        <rect key="frame" x="20" y="134" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qpf-bh-j9v">
-                                        <rect key="frame" x="20" y="314" width="416" height="442"/>
+                                        <rect key="frame" x="20" y="315" width="416" height="442"/>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Szj-tP-snK">
-                                        <rect key="frame" x="20" y="314" width="416" height="442"/>
+                                        <rect key="frame" x="20" y="315" width="416" height="442"/>
                                     </containerView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jus-75-IUm">
-                                        <rect key="frame" x="20" y="57.5" width="416" height="29"/>
+                                        <rect key="frame" x="20" y="58" width="416" height="29"/>
                                         <segments>
                                             <segment title="Standard"/>
                                             <segment title="Hybrid"/>
@@ -429,16 +427,16 @@
                                         </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qt5-bq-zjT">
-                                        <rect key="frame" x="20" y="8" width="42" height="20.5"/>
+                                        <rect key="frame" x="20" y="8" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JKO-DH-TEF">
-                                        <rect key="frame" x="20" y="314" width="416" height="442"/>
+                                        <rect key="frame" x="20" y="315" width="416" height="442"/>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eXg-Kc-wsk">
-                                        <rect key="frame" x="20" y="314" width="416" height="442"/>
+                                        <rect key="frame" x="20" y="315" width="416" height="442"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="442" id="9S4-69-Z10"/>
                                         </constraints>
@@ -591,14 +589,14 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name: Vimy Memorial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nm-hE-iuJ">
                                 <rect key="frame" x="14" y="30" width="436" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="21"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Idetified Casualties: 11162" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMV-2G-YAB">
                                 <rect key="frame" x="20" y="141" width="430" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="21"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -606,30 +604,24 @@
                                 <rect key="frame" x="14" y="183" width="376" height="153"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">History Info: On the opening day of the Battle of Arras, 9 April 1917, the four divisions of the Canadian Corps, fighting side by side for the first time, scored a huge tactical victory in the capture of the 60 metre high Vimy Ridge.</string>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GK0-iP-Fss">
-                                <rect key="frame" x="14" y="306" width="407" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">Visitor Info: Wheelchair access to the memorial is possible via an alternative entrance at the rear of Faubourg-Amiens Cemetery. </string>
-                                        <attributes>
-                                            <font key="NSFont" size="16" name="AmericanTypewriter"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Region: Pas de Calais" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZK-7j-g3F">
                                 <rect key="frame" x="20" y="83" width="430" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="21"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GK0-iP-Fss">
+                                <rect key="frame" x="14" y="333" width="407" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Visitor Info: Wheelchair access to the memorial is possible via an alternative entrance at the rear of Faubourg-Amiens Cemetery. </string>
+                                <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -661,7 +653,7 @@
                                 <rect key="frame" x="20" y="0.0" width="984" height="1366"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About the VimyRidge Project" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjr-aZ-b4C">
-                                <rect key="frame" x="157" y="74" width="710" height="26.5"/>
+                                <rect key="frame" x="157" y="74" width="710" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
