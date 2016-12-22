@@ -34,8 +34,9 @@ class WeaponDetailsVC: UIViewController {
         
         //NOTE:
         //When you get the 3D models done for all the other weapons, you can import them and thier textures into the art.scnassets folder. MAKE SURE THEY ARE NAMED EXACTLY THE SAME AS WHAT THEY ARE REFERRED TO BELOW. After that, all ya have to do is uncomment the two lines of code under the corrosponding infoOutputTextView.text declaration statements :)
-        
+        print (weaponName)
         switch weaponName {
+            
         case "Ross Rifle MK III (Canada)":
             // The following line now reads the weapon info from a plist (instead of the array above)
             //      This allows us to grab individual pieces of information to make it easier to display
@@ -62,7 +63,7 @@ class WeaponDetailsVC: UIViewController {
             //weaponView.scene = scene
             
         case "Webley revolver (Canadian)":
-            
+             _ = WeaponsInfo(weaponName: weaponName)
             let scene = SCNScene(named: "WeaponAssets.scnassets/WWI Canadian Webley (Complete)")!
             weaponView.scene = scene
            
@@ -77,19 +78,23 @@ class WeaponDetailsVC: UIViewController {
             //weaponView.scene = scene
             
         case "Lewis (Canadian)":
-            
+             _ = WeaponsInfo(weaponName: weaponName)
             let scene = SCNScene(named: "WeaponAssets.scnassets/WW1 Male Tank (Complete)).dae")!
             weaponView.scene = scene
             
         case "Mills bomb (Canadian)":
-            
+ 
+            _ = WeaponsInfo(weaponName: weaponName)
             let scene = SCNScene(named: "WeaponAssets.scnassets/WW1 mills bomb N0 5 (Complete).dae")!
             weaponView.scene = scene
             
         case "Stick grenade (German)":
-           
+            
+            _ = WeaponsInfo(weaponName: weaponName)
             let scene = SCNScene(named: "WeaponAssets.scnassets/WWI Potato Masher (Complete).dae")!
             weaponView.scene = scene
+        
+        
         default:
             infoOutputTextView.text = "PotatOS Lament"  //portal 2 reference lol
         }

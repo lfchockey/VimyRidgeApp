@@ -28,10 +28,11 @@ class WeaponSelectVC: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     //Navigation for the segues
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == weaponDetailsSegueIdentifier {
             if let destination = segue.destination as? WeaponDetailsVC {
                 if let weaponIndex = tableView.indexPathForSelectedRow?.row {
+                    //print (weaponIndex)
                     destination.weaponName = weapons[weaponIndex]
                 }
             }
@@ -60,8 +61,8 @@ class WeaponSelectVC: UIViewController, UITableViewDataSource, UITableViewDelega
         
         return cell
     }
-    
-    private func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
         
         //let row = indexPath.row
