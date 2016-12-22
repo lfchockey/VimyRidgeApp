@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F5114D71E0C42EB005867B8 /* MedalsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5114D61E0C42EB005867B8 /* MedalsTable.swift */; };
+		3F5114D91E0C4320005867B8 /* Medals List1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F5114D81E0C4320005867B8 /* Medals List1.plist */; };
+		3F5114DB1E0C437B005867B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5114DA1E0C437B005867B8 /* Main.storyboard */; };
+		3F5114DD1E0C4397005867B8 /* Medals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5114DC1E0C4397005867B8 /* Medals.swift */; };
 		3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */; };
 		F12C10E61D60CDBC0071798C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E41D60CDBC0071798C /* SearchViewController.swift */; };
 		F12C10E71D60CDBC0071798C /* SoldierSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E51D60CDBC0071798C /* SoldierSearch.swift */; };
@@ -18,7 +22,6 @@
 		F12C10FF1D6291810071798C /* SoldierLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10FC1D6291810071798C /* SoldierLocation.swift */; };
 		F12C11011D6291810071798C /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10FE1D6291810071798C /* VCMapView.swift */; };
 		F12C11031D62918E0071798C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C11021D62918E0071798C /* ProfileView.swift */; };
-		F12C11051D62919A0071798C /* Medals.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C11041D62919A0071798C /* Medals.swift */; };
 		F12C11071D6291A40071798C /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C11061D6291A40071798C /* FriendsView.swift */; };
 		F12C11091D6291AC0071798C /* BiographyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C11081D6291AC0071798C /* BiographyView.swift */; };
 		F12C110B1D6291B80071798C /* FaceBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C110A1D6291B80071798C /* FaceBookViewController.swift */; };
@@ -34,7 +37,6 @@
 		F12C11301D6CFB670071798C /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C112F1D6CFB670071798C /* TimelineView.swift */; };
 		F12C11701D7095FA0071798C /* MyVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C116F1D7095FA0071798C /* MyVariables.swift */; };
 		F12C117F1D71E1FB0071798C /* MedalReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C117D1D71E1FB0071798C /* MedalReader.swift */; };
-		F12C11801D71E1FB0071798C /* Medals List.plist in Resources */ = {isa = PBXBuildFile; fileRef = F12C117E1D71E1FB0071798C /* Medals List.plist */; };
 		F12C11851D732B360071798C /* VimyVirtualMemorialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C11841D732B360071798C /* VimyVirtualMemorialVC.swift */; };
 		F12C11881D738ACB0071798C /* StudentBiographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C11871D738ACB0071798C /* StudentBiographyViewController.swift */; };
 		F12C118E1D73AB010071798C /* WeaponDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C118A1D73AB010071798C /* WeaponDetailsVC.swift */; };
@@ -47,7 +49,6 @@
 		F133F2301D74764C0049B8BB /* Serenata Immortale.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F133F22F1D74764C0049B8BB /* Serenata Immortale.mp3 */; };
 		F168B6231D860FF000A9719A /* AppIntro.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F168B6221D860FF000A9719A /* AppIntro.m4a */; };
 		F16B0FE71D4FA578004F2777 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16B0FE61D4FA578004F2777 /* AppDelegate.swift */; };
-		F16B0FEC1D4FA578004F2777 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F16B0FEA1D4FA578004F2777 /* Main.storyboard */; };
 		F16B0FF11D4FA578004F2777 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F16B0FEF1D4FA578004F2777 /* LaunchScreen.storyboard */; };
 		F16B0FFC1D4FA578004F2777 /* Vimy_Ridge_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16B0FFB1D4FA578004F2777 /* Vimy_Ridge_ProjectTests.swift */; };
 		F16B10071D4FA578004F2777 /* Vimy_Ridge_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16B10061D4FA578004F2777 /* Vimy_Ridge_ProjectUITests.swift */; };
@@ -91,6 +92,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F5114D61E0C42EB005867B8 /* MedalsTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedalsTable.swift; sourceTree = "<group>"; };
+		3F5114D81E0C4320005867B8 /* Medals List1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Medals List1.plist"; sourceTree = "<group>"; };
+		3F5114DA1E0C437B005867B8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3F5114DC1E0C4397005867B8 /* Medals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medals.swift; sourceTree = "<group>"; };
 		3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chapter 11 W00 Regular.ttf"; sourceTree = "<group>"; };
 		F12C10E41D60CDBC0071798C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F12C10E51D60CDBC0071798C /* SoldierSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierSearch.swift; sourceTree = "<group>"; };
@@ -102,7 +107,6 @@
 		F12C10FC1D6291810071798C /* SoldierLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierLocation.swift; sourceTree = "<group>"; };
 		F12C10FE1D6291810071798C /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
 		F12C11021D62918E0071798C /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		F12C11041D62919A0071798C /* Medals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medals.swift; sourceTree = "<group>"; };
 		F12C11061D6291A40071798C /* FriendsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		F12C11081D6291AC0071798C /* BiographyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiographyView.swift; sourceTree = "<group>"; };
 		F12C110A1D6291B80071798C /* FaceBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceBookViewController.swift; sourceTree = "<group>"; };
@@ -118,7 +122,6 @@
 		F12C112F1D6CFB670071798C /* TimelineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 		F12C116F1D7095FA0071798C /* MyVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyVariables.swift; sourceTree = "<group>"; };
 		F12C117D1D71E1FB0071798C /* MedalReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedalReader.swift; sourceTree = "<group>"; };
-		F12C117E1D71E1FB0071798C /* Medals List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Medals List.plist"; sourceTree = "<group>"; };
 		F12C11841D732B360071798C /* VimyVirtualMemorialVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VimyVirtualMemorialVC.swift; sourceTree = "<group>"; };
 		F12C11871D738ACB0071798C /* StudentBiographyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentBiographyViewController.swift; sourceTree = "<group>"; };
 		F12C118A1D73AB010071798C /* WeaponDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponDetailsVC.swift; sourceTree = "<group>"; };
@@ -132,7 +135,6 @@
 		F168B6221D860FF000A9719A /* AppIntro.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppIntro.m4a; sourceTree = "<group>"; };
 		F16B0FE31D4FA578004F2777 /* Vimy Ridge Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vimy Ridge Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16B0FE61D4FA578004F2777 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F16B0FEB1D4FA578004F2777 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F16B0FF01D4FA578004F2777 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F16B0FF21D4FA578004F2777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F16B0FF71D4FA578004F2777 /* Vimy Ridge ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vimy Ridge ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,8 +273,9 @@
 			isa = PBXGroup;
 			children = (
 				F12C117D1D71E1FB0071798C /* MedalReader.swift */,
-				F12C117E1D71E1FB0071798C /* Medals List.plist */,
-				F12C11041D62919A0071798C /* Medals.swift */,
+				3F5114D61E0C42EB005867B8 /* MedalsTable.swift */,
+				3F5114D81E0C4320005867B8 /* Medals List1.plist */,
+				3F5114DC1E0C4397005867B8 /* Medals.swift */,
 			);
 			name = Medals;
 			sourceTree = "<group>";
@@ -428,7 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				F16B0FE61D4FA578004F2777 /* AppDelegate.swift */,
-				F16B0FEA1D4FA578004F2777 /* Main.storyboard */,
+				3F5114DA1E0C437B005867B8 /* Main.storyboard */,
 				F12C10DC1D562EA10071798C /* Home */,
 				F12C11171D6CB6C40071798C /* Battalions */,
 				F12C10F51D6290890071798C /* Facebook */,
@@ -635,15 +638,15 @@
 				F170B8E71D4FB8D600118440 /* CoordinatePrime.plist in Resources */,
 				F170B8F51D4FB93400118440 /* daysOfBattle.plist in Resources */,
 				F170B8EE1D4FB90C00118440 /* BattalionMovement.plist in Resources */,
-				F12C11801D71E1FB0071798C /* Medals List.plist in Resources */,
 				3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */,
 				F16B10151D4FA6EF004F2777 /* Images.xcassets in Resources */,
 				F170B8FA1D4FB94D00118440 /* westernFront.plist in Resources */,
 				F168B6231D860FF000A9719A /* AppIntro.m4a in Resources */,
+				3F5114DB1E0C437B005867B8 /* Main.storyboard in Resources */,
 				F12C118F1D73AB010071798C /* WeaponInfo.plist in Resources */,
 				F12C10F41D6212CE0071798C /* Stats.plist in Resources */,
-				F16B0FEC1D4FA578004F2777 /* Main.storyboard in Resources */,
 				F12C11941D73ADA20071798C /* WeaponAssets.scnassets in Resources */,
+				3F5114D91E0C4320005867B8 /* Medals List1.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,6 +680,7 @@
 				F170B8E51D4FB8D600118440 /* CemAnno.swift in Sources */,
 				F12C10E61D60CDBC0071798C /* SearchViewController.swift in Sources */,
 				F12C11901D73AB010071798C /* WeaponSelectVC.swift in Sources */,
+				3F5114D71E0C42EB005867B8 /* MedalsTable.swift in Sources */,
 				F12C11851D732B360071798C /* VimyVirtualMemorialVC.swift in Sources */,
 				F12C11011D6291810071798C /* VCMapView.swift in Sources */,
 				F12C112C1D6CB7CD0071798C /* Battalions.swift in Sources */,
@@ -703,7 +707,6 @@
 				F170B8F61D4FB93400118440 /* TLPViewController.swift in Sources */,
 				F170B8FC1D4FB94D00118440 /* WesternFrontLinesCoords.swift in Sources */,
 				F12C118E1D73AB010071798C /* WeaponDetailsVC.swift in Sources */,
-				F12C11051D62919A0071798C /* Medals.swift in Sources */,
 				F12C11221D6CB7910071798C /* BattalionInfoContainer.swift in Sources */,
 				F133F22E1D7473810049B8BB /* Util.swift in Sources */,
 				F170B8E61D4FB8D600118440 /* CemViewController.swift in Sources */,
@@ -714,6 +717,7 @@
 				F170B8FB1D4FB94D00118440 /* WesternFrontController.swift in Sources */,
 				F12C10F21D6210650071798C /* StatsReader.swift in Sources */,
 				F16B10171D4FA735004F2777 /* HomeViewController.swift in Sources */,
+				3F5114DD1E0C4397005867B8 /* Medals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,14 +753,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F16B0FEA1D4FA578004F2777 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F16B0FEB1D4FA578004F2777 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F16B0FEF1D4FA578004F2777 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -16,7 +16,7 @@ class MedalReader
     
     init(medalName: String)
     {
-        let filePath = Bundle.main.path(forResource: "Medals List", ofType: "plist")
+        let filePath = Bundle.main.path(forResource: "Medals List1", ofType: "plist")
         let properties = NSDictionary(contentsOfFile: filePath!)
         
         let individualMedal = properties![medalName] as! NSDictionary

@@ -18,6 +18,7 @@ class Medals:UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var medalImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    @IBOutlet weak var MainLabel: UILabel!
     @IBOutlet weak var webView: UIWebView!
     
     override func viewDidLoad() {
@@ -66,6 +67,8 @@ class Medals:UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
+        cell.textLabel?.font = UIFont(name: "Chapter11W00-Regular", size:18)
+        
         let award = allAwards[indexPath.row]
         
         cell.textLabel?.text = award.stringValue
@@ -73,21 +76,47 @@ class Medals:UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         // *** The following code attempts to place images of each medal/award in the table view cell
         //      These images need to be created first and placed in the Images.xcassets
-        switch award
+        switch award 
         {
             
         case "1914 Star":
             let medal = MedalReader(medalName: "1914 Star")
             let image : UIImage = UIImage(named: medal.medal.imageName)!
             cell.imageView?.image = image
-            cell.textLabel?.text = medal.medal.medalDescription
-            //            case "1914 - 1915 Star":
-            //                let image : UIImage = UIImage(named: "1914 1915 star")!
-            //                cell.imageView?.image = image
-            //
-            //            case "British War Medal":
-            //                let image : UIImage = UIImage(named: "British war medal")!
-            //                cell.imageView?.image = image
+   
+            
+        case "1914-15 Star":
+            let medal = MedalReader(medalName: "1914-15 Star")
+            let image : UIImage = UIImage(named: medal.medal.imageName)!
+            cell.imageView?.image = image
+           
+            
+        case "British War Medal":
+            let medal = MedalReader(medalName: "British War Medal")
+            let image : UIImage = UIImage(named: medal.medal.imageName)!
+            cell.imageView?.image = image
+// /Users/student/Downloads/VimyRidgeApp-master 3/Vimy Ridge Project/Medals List.plist
+//        case "Silver War Badge":
+//            let medal = MedalReader(medalName: "Silver War Badge")
+//            let image : UIImage = UIImage(named: medal.medal.imageName)!
+//            cell.imageView?.image = image
+//            
+        case "Victoria Cross Medal":
+            let medal = MedalReader(medalName: "Victoria Cross Medal")
+            let image : UIImage = UIImage(named: medal.medal.imageName)!
+            cell.imageView?.image = image
+//            
+        case "Military Medal":
+            let medal = MedalReader(medalName: "Military Medal")
+            let image : UIImage = UIImage(named: medal.medal.imageName)!
+            cell.imageView?.image = image
+//
+//
+            
+            
+//                        case "British War Medal":
+//                            let image : UIImage = UIImage(named: "British war medal")!
+//                            cell.imageView?.image = image
             
         default:
             let image : UIImage = UIImage(named: "1914 Star")! // get another image for an award that is unknown
@@ -98,6 +127,20 @@ class Medals:UIViewController, UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let theAwardIClickedOn = allAwards[indexPath.row]
+        print(theAwardIClickedOn)
+        
+//        let medal = MedalReader(medalName: theAwardIClickedOn.rawString)
+//        print(medal.medal.medalDescription)
+//        
+//        descriptionLabel.text = allAwards.rawString
+//        MainLabel.text = medal.medal.medalDescription
+//        medalImageView.image = UIImage(contentsOfFile: medal.medal.imageName)
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -105,9 +148,9 @@ class Medals:UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func buildMedals(data: NSData?) {
         var awardsArray = JSON([])
-        do {
-            if let _ =  try JSONSerialization.jsonObject(with: data! as Data, options:JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
-            {
+//        do {
+//            if let _ =  try JSONSerialization.jsonObject(with: data! as Data, options:JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
+//            {
             //if let bob: NSDictionary try JSONSerialization.JSONObjectWithData(data! as Data, options:JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
                 
                 if data != nil {
@@ -122,13 +165,13 @@ class Medals:UIViewController, UITableViewDataSource, UITableViewDelegate {
                 else {
                     print ("(MedalsVC) Data came back from server as nil")
                 }
-            }
-            else {
-                print("(MedalsVC) Problem with NSJSONSerialization")
-            }
-        } catch let error as NSError {
-            print("(MedalsVC) Error parsing results: \(error.localizedDescription)")
-        }
+//            }
+//            else {
+//                print("(MedalsVC) Problem with NSJSONSerialization")
+//            }
+//        } catch let error as NSError {
+//            print("(MedalsVC) Error parsing results: \(error.localizedDescription)")
+//        }
         
     }
     
