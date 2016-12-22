@@ -90,6 +90,7 @@ class WeaponDetailsVC: UIViewController {
             //let scene = SCNScene(named: "art.scnassets/Stick grenade (German).dae")!
             //weaponView.scene = scene
         default:
+            print("Owen")
             infoOutputTextView.text = "PotatOS Lament"  //portal 2 reference lol
         }
         

@@ -40,7 +40,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func soldierOfHourClick(_ sender: AnyObject) {
-        MyVariables.facebookSoldierID = "55"
+        MyVariables.facebookSoldierID = MyVariables.soldierOfTheHour
         segueName = "FacebookSegue"
         if !MyVariables.allSoldiersDownloaded {
             loadAnimation()
@@ -71,8 +71,12 @@ class HomeViewController: UIViewController {
     @IBAction func WeaponsClick(_ sender: AnyObject) {
         //segueName = "WeaponsSegue"
         //self.performSegue(withIdentifier: self.segueName, sender: nil)
-        let navController = UINavigationController(rootViewController: WeaponSelectVC())
-        self.present(navController, animated: true, completion: nil)
+        //self.view.window!.rootViewController = exampleViewController
+        self.navigationController?.pushViewController(WeaponSelectVC(), animated: true)
+        //popToViewController(WeaponSelectVC(), animated: true)
+        
+        //let navController = UINavigationController(rootViewController: WeaponSelectVC())
+        //self.present(navController, animated: true, completion: nil)
     }
     
     @IBAction func BattalionsClick(_ sender: AnyObject) {

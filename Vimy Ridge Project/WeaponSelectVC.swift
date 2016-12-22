@@ -36,7 +36,6 @@ class WeaponSelectVC: UITableViewController {
         self.title = "Weapons"
         
         // Initialize the sections array
-        // Here we have three sections: Mac, iPad, iPhone
         sections = [
             Section(name: "Canadian Weapons", items: ["Colt-browning machine gun M1895/14","Lee Enfield", "Ross Rifle MK III",  "Webley Revolver", "Lewis", "Mills bomb"]),
             Section(name: "German Weapons", items: ["KAR-98K", "Mauser Gewehr 98", "Luger", "Stick grenade"])]
@@ -69,11 +68,13 @@ extension WeaponSelectVC {
     {
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
         //print( sections[indexPath.section].items[indexPath.row])
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let exampleViewController: WeaponDetailsVC = mainStoryboard.instantiateViewController(withIdentifier: "WDVC") as!WeaponDetailsVC
-        
+        //let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        //let exampleViewController: WeaponDetailsVC = mainStoryboard.instantiateViewController(withIdentifier: "WDVC") as!WeaponDetailsVC
+        let exampleViewController: WeaponDetailsVC = self.storyboard?.instantiateViewController(withIdentifier: "WDVC") as! WeaponDetailsVC
         exampleViewController.weaponName = sections[indexPath.section].items[indexPath.row]
-        self.view.window!.rootViewController = exampleViewController
+        //self.view.window!.rootViewController = exampleViewController
+        self.navigationController?.pushViewController(exampleViewController, animated: true)
+        
         
         //            if let destination = segue.destination as? WeaponDetailsVC {
         //                if let weaponIndex = tableView.indexPathForSelectedRow?.row {

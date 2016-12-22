@@ -75,7 +75,7 @@ struct MyVariables {
                 var count = 0
                 for (key, value) in soldier {
                     if key == "soldier_of_the_hour" {
-                        print("\(key) - \(value)")
+                        //print("\(key) - \(value)")
                     }
                     count += 1
                     if MyVariables.soldierOfTheHour == "" {
