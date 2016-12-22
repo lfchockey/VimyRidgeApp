@@ -71,8 +71,7 @@ class MenuVC: UIViewController {
                 self.first.alpha = 0
                 self.second.alpha = 0;
                 self.third.alpha = 0;
-                self.fourth.alpha = 1;
-            })
+                self.fourth.alpha = 1;            })
         }
         
         moveViews(sender: sender.selectedSegmentIndex)

@@ -11,9 +11,16 @@ import MapKit
 
 class BattalionMapVC: UIViewController, MKMapViewDelegate
 {
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
     var mapView: MKMapView = MKMapView()
     
-    
+    override func viewDidLoad() {
+        
+        nameLabel.text = ""
+        
+    }
     
 //    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer
 //    {

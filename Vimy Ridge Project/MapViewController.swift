@@ -903,37 +903,46 @@ class MapViewController: UIViewController, MKMapViewDelegate
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)
     {
-        
         if view.annotation!.isKind(of: CemAnno.self)
         {
-            openMenu(UISwipeGestureRecognizer())
             let customAnno = view.annotation as! CemAnno
             let title = customAnno.title
-            //MapVariables.cemeteryTitle = title!
+            let casualties = customAnno.casualties
+            let region = customAnno.region
+            let visitInfo = customAnno.visitInfo
+            let HistInfo = customAnno.histInfo
             
             let cemVC = menuVC.childViewControllers[2] as! CemViewController
             cemVC.nameLabel.text = title!
-            //var containerViewController: MenuVC?
-            //let cVC = containerViewController?.childViewControllers[2] as! CemViewController
-            //cVC.nameLabel.text = "yay"
-            //print(menu.parent)
-            //menu.childViewControllers[2].nameLabel.text = "yay"
+            cemVC.region.text = region!
+            cemVC.casualties.text = casualties!
+            cemVC.histInfo.text = HistInfo!
+            cemVC.visitInfo.text = visitInfo!
             
-            let histInfo = customAnno.histInfo
-            
-            let ac = UIAlertController(title: title, message: histInfo, preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            present(ac, animated: true, completion: nil)
+            menu.isHidden = false
+            self.menu.alpha = 1
+            UIView.animate(withDuration: 0.3){
+                self.view.layoutIfNeeded()
+                self.menuImage.transform = CGAffineTransform(translationX: self.menu.frame.size.width, y: 0)
+                self.menu.transform = CGAffineTransform(translationX: self.menu.frame.size.width, y: 0)
+            }
         }
-        else
+        else if view.annotation is MKPointAnnotation
         {
             let anno = view.annotation as! MKPointAnnotation
             let title = anno.title
             let subtitle = anno.subtitle
             
-            let ac = UIAlertController(title: title, message: subtitle, preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            present(ac, animated: true, completion: nil)
+            let batVC = menuVC.childViewControllers[3] as! BattalionMapVC
+            batVC.nameLabel.text = title!
+            
+            menu.isHidden = false
+            self.menu.alpha = 1
+            UIView.animate(withDuration: 0.3){
+                self.view.layoutIfNeeded()
+                self.menuImage.transform = CGAffineTransform(translationX: self.menu.frame.size.width, y: 0)
+                self.menu.transform = CGAffineTransform(translationX: self.menu.frame.size.width, y: 0)
+            }
         }
     }
     
