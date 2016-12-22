@@ -18,7 +18,7 @@ class WeaponSelectVC: UIViewController, UITableViewDataSource, UITableViewDelega
     let weaponDetailsSegueIdentifier = "weaponDetailsSegue"
     
     //array of weapon names
-    let weapons = ["Ross Rifle MK III (Canada)", "Lee Enfield (Canadian)", "KAR-98K (German)", "Mauser Gewehr 98 (German)", "Webley revolver (Canadian)", "Luger (German)", "Colt-browning machine gun M1895/14 (Canadian)", "Lewis (Canadian)", "Mills bomb (Canadian)", "Stick grenade (German)"]
+    let weapons = ["Ross Rifle MK III (Canada)", "Lee Enfield (Canada)", "KAR-98K (German)", "Mauser Gewehr 98 (German)", "Webley revolver (Canadian)", "Luger (German)", "Colt-browning machine gun M1895/14 (Canadian)", "Lewis (Canadian)", "Mills bomb (Canada)", "Stick grenade (German)"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

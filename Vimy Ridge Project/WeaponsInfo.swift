@@ -30,7 +30,7 @@ class WeaponsInfo
         
         let individualWeaponInfo = properties![weaponName] as! NSArray
         
-        //print(individualWeaponInfo)
+        print(individualWeaponInfo)
         
         country = individualWeaponInfo[0] as! String
         year = individualWeaponInfo[1] as! String
