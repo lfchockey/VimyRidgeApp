@@ -64,7 +64,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func MapClick(_ sender: AnyObject) {
-        segueName = "MapSegue"
+        segueName = "NewMapSegue"
         self.performSegue(withIdentifier: self.segueName, sender: nil)
     }
     

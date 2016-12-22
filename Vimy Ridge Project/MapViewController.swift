@@ -13,14 +13,29 @@ internal var mapq = MKMapView();
 
 class MapViewController: UIViewController, MKMapViewDelegate
 {
+    @IBOutlet weak var mapTypeSeg: UISegmentedControl!
+    
+    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var menuImage: UIImageView!
     @IBOutlet weak var menu: UIView!
     @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var rightButton: UIButton!
-    @IBOutlet weak var slider: UISlider!
+    var thumbImage: UIImage = UIImage(named: "PlaceOfDeath")!
+    
+    
+    @IBOutlet weak var slider: UISlider! {
+        didSet{
+            slider.transform = CGAffineTransform.init(rotationAngle: CGFloat(M_PI_2))
+        }
+    }
+    
+    func shouldAutoRotate() -> Bool {
+        return false
+    }
     
     var menuVC: MenuVC = MenuVC()
+    
     
     // User Swipes left
     @IBAction func closeMenu(_ sender: UISwipeGestureRecognizer) {
@@ -801,9 +816,45 @@ class MapViewController: UIViewController, MKMapViewDelegate
             menuVC = vc
         }
     }
+    let startRegionRadius: CLLocationDistance = 10000
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, startRegionRadius * 2.0 , startRegionRadius * 2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    @IBAction func mapType(_ sender: AnyObject) {
+        switch mapTypeSeg.selectedSegmentIndex{
+        case 0:
+            mapq.mapType = .standard
+        case 1:
+            mapq.mapType = .hybrid
+        case 2:
+            mapq.mapType = .satellite
+        default:
+            mapq.mapType = .standard
+            break;
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if (self.view.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.compact) {
+            let thumbImage: UIImage = UIImage (named: "PlaceOfDeath")!
+            let reSize = resizeImage(image: thumbImage, newHeight: 55.0)
+            
+            slider.setThumbImage(reSize, for: UIControlState.normal)
+        }
+        else if (self.view.traitCollection.horizontalSizeClass != UIUserInterfaceSizeClass.compact) {
+            slider.setThumbImage(UIImage(named: "PlaceOfDeath")!, for: .normal)
+        }
+        
+        let initialLocation = CLLocation(latitude: 50.3603125, longitude: 2.794017)
+        centerMapOnLocation(location: initialLocation)
+        
+        
+        
         
         mapView.delegate = self
         slider.isHidden = true
