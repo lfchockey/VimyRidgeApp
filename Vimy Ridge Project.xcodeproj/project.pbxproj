@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */; };
+		3FE011C01E0AE8520067DFD0 /* StatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE011BF1E0AE8520067DFD0 /* StatsTableViewController.swift */; };
+		3FE011C21E0AE85D0067DFD0 /* CollapsibleTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE011C11E0AE85D0067DFD0 /* CollapsibleTableViewHeader.swift */; };
+		3FE011C41E0AE8630067DFD0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE011C31E0AE8630067DFD0 /* Extensions.swift */; };
+		3FE011C81E0AE8770067DFD0 /* BensTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE011C71E0AE8770067DFD0 /* BensTableViewCell.swift */; };
+		3FE011CA1E0AE8810067DFD0 /* old paper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FE011C91E0AE8810067DFD0 /* old paper.jpg */; };
+		3FE011CC1E0AF6DD0067DFD0 /* vimyWallBrickupLight1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FE011CB1E0AF6DD0067DFD0 /* vimyWallBrickupLight1.jpg */; };
 		F12C10E61D60CDBC0071798C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E41D60CDBC0071798C /* SearchViewController.swift */; };
 		F12C10E71D60CDBC0071798C /* SoldierSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E51D60CDBC0071798C /* SoldierSearch.swift */; };
 		F12C10E91D60CDDB0071798C /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E81D60CDDB0071798C /* Reachability.swift */; };
@@ -92,6 +98,12 @@
 
 /* Begin PBXFileReference section */
 		3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chapter 11 W00 Regular.ttf"; sourceTree = "<group>"; };
+		3FE011BF1E0AE8520067DFD0 /* StatsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsTableViewController.swift; sourceTree = "<group>"; };
+		3FE011C11E0AE85D0067DFD0 /* CollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewHeader.swift; sourceTree = "<group>"; };
+		3FE011C31E0AE8630067DFD0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3FE011C71E0AE8770067DFD0 /* BensTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BensTableViewCell.swift; sourceTree = "<group>"; };
+		3FE011C91E0AE8810067DFD0 /* old paper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "old paper.jpg"; sourceTree = "<group>"; };
+		3FE011CB1E0AF6DD0067DFD0 /* vimyWallBrickupLight1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vimyWallBrickupLight1.jpg; sourceTree = "<group>"; };
 		F12C10E41D60CDBC0071798C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F12C10E51D60CDBC0071798C /* SoldierSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierSearch.swift; sourceTree = "<group>"; };
 		F12C10E81D60CDDB0071798C /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -229,9 +241,15 @@
 		F12C10EE1D61FEFB0071798C /* Stats */ = {
 			isa = PBXGroup;
 			children = (
-				F12C10F31D6212CE0071798C /* Stats.plist */,
 				F12C10F11D6210650071798C /* StatsReader.swift */,
 				F12C10EF1D620FB40071798C /* StatsViewController.swift */,
+				3FE011BF1E0AE8520067DFD0 /* StatsTableViewController.swift */,
+				3FE011C11E0AE85D0067DFD0 /* CollapsibleTableViewHeader.swift */,
+				3FE011C31E0AE8630067DFD0 /* Extensions.swift */,
+				3FE011C71E0AE8770067DFD0 /* BensTableViewCell.swift */,
+				3FE011C91E0AE8810067DFD0 /* old paper.jpg */,
+				3FE011CB1E0AF6DD0067DFD0 /* vimyWallBrickupLight1.jpg */,
+				F12C10F31D6212CE0071798C /* Stats.plist */,
 			);
 			name = Stats;
 			sourceTree = "<group>";
@@ -588,7 +606,7 @@
 				TargetAttributes = {
 					F16B0FE21D4FA578004F2777 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = R3EZ9DX4WL;
+						DevelopmentTeam = 6M6MD3ZAQR;
 						LastSwiftMigration = 0800;
 					};
 					F16B0FF61D4FA578004F2777 = {
@@ -639,10 +657,12 @@
 				3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */,
 				F16B10151D4FA6EF004F2777 /* Images.xcassets in Resources */,
 				F170B8FA1D4FB94D00118440 /* westernFront.plist in Resources */,
+				3FE011CA1E0AE8810067DFD0 /* old paper.jpg in Resources */,
 				F168B6231D860FF000A9719A /* AppIntro.m4a in Resources */,
 				F12C118F1D73AB010071798C /* WeaponInfo.plist in Resources */,
 				F12C10F41D6212CE0071798C /* Stats.plist in Resources */,
 				F16B0FEC1D4FA578004F2777 /* Main.storyboard in Resources */,
+				3FE011CC1E0AF6DD0067DFD0 /* vimyWallBrickupLight1.jpg in Resources */,
 				F12C11941D73ADA20071798C /* WeaponAssets.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -677,6 +697,7 @@
 				F170B8E51D4FB8D600118440 /* CemAnno.swift in Sources */,
 				F12C10E61D60CDBC0071798C /* SearchViewController.swift in Sources */,
 				F12C11901D73AB010071798C /* WeaponSelectVC.swift in Sources */,
+				3FE011C01E0AE8520067DFD0 /* StatsTableViewController.swift in Sources */,
 				F12C11851D732B360071798C /* VimyVirtualMemorialVC.swift in Sources */,
 				F12C11011D6291810071798C /* VCMapView.swift in Sources */,
 				F12C112C1D6CB7CD0071798C /* Battalions.swift in Sources */,
@@ -701,8 +722,10 @@
 				F12C11261D6CB7AB0071798C /* SingleBattalionViewController.swift in Sources */,
 				F170B8F01D4FB90C00118440 /* CustomAnnotation.swift in Sources */,
 				F170B8F61D4FB93400118440 /* TLPViewController.swift in Sources */,
+				3FE011C21E0AE85D0067DFD0 /* CollapsibleTableViewHeader.swift in Sources */,
 				F170B8FC1D4FB94D00118440 /* WesternFrontLinesCoords.swift in Sources */,
 				F12C118E1D73AB010071798C /* WeaponDetailsVC.swift in Sources */,
+				3FE011C81E0AE8770067DFD0 /* BensTableViewCell.swift in Sources */,
 				F12C11051D62919A0071798C /* Medals.swift in Sources */,
 				F12C11221D6CB7910071798C /* BattalionInfoContainer.swift in Sources */,
 				F133F22E1D7473810049B8BB /* Util.swift in Sources */,
@@ -714,6 +737,7 @@
 				F170B8FB1D4FB94D00118440 /* WesternFrontController.swift in Sources */,
 				F12C10F21D6210650071798C /* StatsReader.swift in Sources */,
 				F16B10171D4FA735004F2777 /* HomeViewController.swift in Sources */,
+				3FE011C41E0AE8630067DFD0 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -862,7 +886,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = R3EZ9DX4WL;
+				DEVELOPMENT_TEAM = 6M6MD3ZAQR;
 				INFOPLIST_FILE = "Vimy Ridge Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "UCDSB.Vimy-Ridge-Project";
@@ -876,7 +900,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = R3EZ9DX4WL;
+				DEVELOPMENT_TEAM = 6M6MD3ZAQR;
 				INFOPLIST_FILE = "Vimy Ridge Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "UCDSB.Vimy-Ridge-Project";

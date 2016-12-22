@@ -28,19 +28,26 @@ class HistoryViewController: UIViewController {
     
     func moveViews(sender:Int)
     {
-        let viewControllerIdentifiers = ["Artwork","Background","Stats","VimyMyth"]
-        let newController = (storyboard?.instantiateViewController(withIdentifier: viewControllerIdentifiers[sender]))! as UIViewController
-        let oldController = childViewControllers.last! as UIViewController
-        
-        oldController.willMove(toParentViewController: nil)
-        addChildViewController(newController)
-        newController.view.frame = oldController.view.frame
-        transition(from: oldController, to: newController, duration: 0.25, options: .transitionCrossDissolve, animations:{ () -> Void in
-            }, completion: { (finished) -> Void in
-                oldController.removeFromParentViewController()
-                newController.didMove(toParentViewController: self)
-        })
-        
+        if sender == 2 {
+            let navController = UINavigationController(rootViewController: StatsTableViewController())
+
+            self.present(navController, animated: true, completion: nil)
+            
+        }
+        else {
+            let viewControllerIdentifiers = ["Artwork","Background","Stats","VimyMyth"]
+            let newController = (storyboard?.instantiateViewController(withIdentifier: viewControllerIdentifiers[sender]))! as UIViewController
+            let oldController = childViewControllers.last! as UIViewController
+            
+            oldController.willMove(toParentViewController: nil)
+            addChildViewController(newController)
+            newController.view.frame = oldController.view.frame
+            transition(from: oldController, to: newController, duration: 0.25, options: .transitionCrossDissolve, animations:{ () -> Void in
+                }, completion: { (finished) -> Void in
+                    oldController.removeFromParentViewController()
+                    newController.didMove(toParentViewController: self)
+            })
+        }
     }
     
     
