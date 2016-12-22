@@ -592,50 +592,166 @@ class MapViewController: UIViewController, MKMapViewDelegate
     var Polyine3: MKPolyline = MKPolyline()
     var Polyine4: MKPolyline = MKPolyline()
     var Polyine5: MKPolyline = MKPolyline()
-
     
 //************************************************************ Trench Line Progressions Code ********//
     
     
     @IBAction func sliderValueDidChange(_ sender: UISlider) {
         
+        var zoomRegion: CLLocationDistance = 11000
+        var centerCoordinate = CLLocation(latitude: 50.3603125, longitude: 2.794017)
+        
         let sliderVal = Int(sender.value)
         let r = sliderVal
         
+        var lineColour = 0
         let allOverlays = mapView.overlays
         mapView.removeOverlays(allOverlays)
         pointsToUse = []
         
         if(r <= 10) {
-            pointsToUse = ThickRedLine.advancementCoords
+            mapq.removeOverlays(allOverlays)
+            lineColour = 1
+            pointsToUse = BeforeVimyRed.advancementCoords
             myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
             mapView.add(myPolyline)
             
-            pointsToUse = RedDashedLine.advancementCoords
+            lineColour = 2
+            pointsToUse = BeforeVimyBlue.advancementCoords
             myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
             mapView.add(myPolyline)
             
-            pointsToUse = SolidBlueGermanLine.advancementCoords
-            myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
-            mapView.add(myPolyline)
             
         }
+            
+            //Use day 2 points
         else if(r > 10 && r <= 20) {
-            pointsToUse = ThickBlueLine.advancementCoords
+            mapq.removeOverlays(allOverlays)
+            
+            lineColour = 1
+            pointsToUse = BeforeVimyRed.advancementCoords
             myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
             mapView.add(myPolyline)
             
-            pointsToUse = RedDottedLine.advancementCoords
+            lineColour = 2
+            pointsToUse = BeforeVimyBlue.advancementCoords
             myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
             mapView.add(myPolyline)
             
-            pointsToUse = ThickBrownLine.advancementCoords
+            lineColour = 3
+            pointsToUse = BlackLine.advancementCoords
+            myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
+            mapView.add(myPolyline)
+            
+            lineColour = 1
+            pointsToUse = RedLine.advancementCoords
+            myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
+            mapView.add(myPolyline)
+            
+            lineColour = 1
+            pointsToUse = BlueLine.advancementCoords
+            myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
+            mapView.add(myPolyline)
+            
+            lineColour = 1
+            pointsToUse = LineLastLightApril9th.advancementCoords
             myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
             mapView.add(myPolyline)
             
         }
+            
+            //Use day 3 points
         else if(r > 20 && r <= 30) {
-            pointsToUse = BlueDottedLine12thApril.advancementCoords
+            mapq.removeOverlays(allOverlays)
+            
+            lineColour = 1
+            pointsToUse = BeforeVimyRed.advancementCoords
+            myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
+            mapView.add(myPolyline)
+            
+            lineColour = 2
+            pointsToUse = BeforeVimyBlue.advancementCoords
+            myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
+            mapView.add(myPolyline)
+            
+            lineColour = 3
+            pointsToUse = BlackLine.advancementCoords
+            myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
+            mapView.add(myPolyline)
+            
+            lineColour = 2
+            pointsToUse = RedLine.advancementCoords
+            myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
+            mapView.add(myPolyline)
+            
+            lineColour = 1
+            pointsToUse = BlueLine.advancementCoords
+            myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
+            mapView.add(myPolyline)
+            
+            lineColour = 1
+            pointsToUse = LineLastLightApril9th.advancementCoords
+            myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
+            mapView.add(myPolyline)
+            
+            lineColour = 4
+            pointsToUse = BrownLine.advancementCoords
+            myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
+            mapView.add(myPolyline)
+            
+            lineColour = 5
+            pointsToUse = LineApril10.advancementCoords
+            myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
+            mapView.add(myPolyline)
+            
+        }
+            
+            //Use day 4 points
+        else if(r > 30 && r <= 40) {
+            mapq.removeOverlays(allOverlays)
+            
+            lineColour = 1
+            pointsToUse = BeforeVimyRed.advancementCoords
+            myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
+            mapView.add(myPolyline)
+            
+            lineColour = 2
+            pointsToUse = BeforeVimyBlue.advancementCoords
+            myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
+            mapView.add(myPolyline)
+            
+            lineColour = 3
+            pointsToUse = BlackLine.advancementCoords
+            myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
+            mapView.add(myPolyline)
+            
+            lineColour = 2
+            pointsToUse = RedLine.advancementCoords
+            myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
+            mapView.add(myPolyline)
+            
+            lineColour = 1
+            pointsToUse = BlueLine.advancementCoords
+            myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
+            mapView.add(myPolyline)
+            
+            lineColour = 1
+            pointsToUse = LineLastLightApril9th.advancementCoords
+            myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
+            mapView.add(myPolyline)
+            
+            lineColour = 4
+            pointsToUse = BrownLine.advancementCoords
+            myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
+            mapView.add(myPolyline)
+            
+            lineColour = 5
+            pointsToUse = LineApril10.advancementCoords
+            myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
+            mapView.add(myPolyline)
+            
+            lineColour = 2
+            pointsToUse = GermanLineApril12th.advancementCoords
             myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
             mapView.add(myPolyline)
             
@@ -643,29 +759,36 @@ class MapViewController: UIViewController, MKMapViewDelegate
             myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
             mapView.add(myPolyline)
             
-            pointsToUse = RedLineApril12th.advancementCoords
+            lineColour = 5
+            pointsToUse = LineApril12th.advancementCoords
+            myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
+            mapView.add(myPolyline)
+            
+            pointsToUse = Line2April12.advancementCoords
+            myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
+            mapView.add(myPolyline)
+            
+            pointsToUse = Line3April12.advancementCoords
             myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
             mapView.add(myPolyline)
             
         }
-        else if(r > 30 && r <= 40) {
-            pointsToUse = BlackLine.advancementCoords
-            myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsToUse.count)
-            mapView.add(myPolyline)
-            
-        }
+        centerMap(zoomRegion: zoomRegion, centerCoordinate: centerCoordinate)
     }
 
     var BlackLine = AdvProp(Coor: "BlackLine")
-    var RedDashedLine = AdvProp(Coor: "RedDashedLine")
-    var SolidBlueGermanLine = AdvProp(Coor: "SolidBlueGermanLine")
-    var RedDottedLine = AdvProp(Coor: "RedDottedLine")
-    var ThickBrownLine = AdvProp(Coor: "ThickBrownLine")
-    var BlueDottedLine12thApril = AdvProp(Coor: "BlueDottedLine12thApril")
+    var BlueLine = AdvProp(Coor: "BlueLine")
+    var RedLine = AdvProp(Coor: "RedLine")
+    var BrownLine = AdvProp(Coor: "BrownLine")
+    var BeforeVimyRed = AdvProp(Coor: "BeforeVimyRed")
+    var BeforeVimyBlue = AdvProp(Coor: "BeforeVimyBlue")
     var GermanLineMorningApril13th = AdvProp(Coor: "GermanLineMorningApril13th")
-    var RedLineApril12th = AdvProp(Coor: "RedLineApril12th")
-    var ThickBlueLine = AdvProp(Coor: "ThickBlueLine")
-    var ThickRedLine = AdvProp(Coor: "ThickRedLine")
+    var GermanLineApril12th = AdvProp(Coor: "GermanLineApril12th")
+    var LineApril10 = AdvProp(Coor: "LineApril10")
+    var LineLastLightApril9th = AdvProp(Coor: "LineLastLightApril9th")
+    var LineApril12th = AdvProp(Coor: "LineApril12th")
+    var Line2April12 = AdvProp(Coor: "Line2April12")
+    var Line3April12 = AdvProp(Coor: "Line3April12")
     
     var pointsToUse: [CLLocationCoordinate2D] = []
 //    var regionRadius: CLLocationDistance = 4000

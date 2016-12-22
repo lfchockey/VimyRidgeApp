@@ -401,16 +401,6 @@
                                             <segue destination="HzV-hJ-qwa" kind="embed" id="Vou-bd-hUm"/>
                                         </connections>
                                     </containerView>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jus-75-IUm">
-                                        <segments>
-                                            <segment title="Standard"/>
-                                            <segment title="Hybrid"/>
-                                            <segment title="Space"/>
-                                        </segments>
-                                        <connections>
-                                            <action selector="maptypeSeg:" destination="OJG-ka-T9L" eventType="valueChanged" id="lme-Rf-J9U"/>
-                                        </connections>
-                                    </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qt5-bq-zjT">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -429,6 +419,17 @@
                                             <segue destination="M4x-Oa-nJV" kind="embed" id="8Jp-Zf-l2j"/>
                                         </connections>
                                     </containerView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jus-75-IUm">
+                                        <rect key="frame" x="20" y="53" width="416" height="29"/>
+                                        <segments>
+                                            <segment title="Standard"/>
+                                            <segment title="Hybrid"/>
+                                            <segment title="Space"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="maptypeSeg:" destination="OJG-ka-T9L" eventType="valueChanged" id="lme-Rf-J9U"/>
+                                        </connections>
+                                    </segmentedControl>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="NTu-6n-ven" firstAttribute="top" secondItem="jus-75-IUm" secondAttribute="bottom" constant="48" id="0PY-X4-QQt"/>
@@ -2681,14 +2682,14 @@
                                 <color key="sectionIndexBackgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextCell" textLabel="4hk-UT-aVD" style="IBUITableViewCellStyleDefault" id="Yhs-Gd-G9X">
-                                        <rect key="frame" x="0.0" y="86" width="323" height="44"/>
+                                        <rect key="frame" x="0.0" y="86" width="1000" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yhs-Gd-G9X" id="CTj-A2-GGz">
-                                            <frame key="frameInset" width="290" height="43"/>
+                                            <frame key="frameInset" width="818" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4hk-UT-aVD">
-                                                    <frame key="frameInset" minX="15" width="273" height="43"/>
+                                                    <frame key="frameInset" minX="164" width="654" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
