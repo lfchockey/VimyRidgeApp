@@ -8,6 +8,7 @@
 // Culminating Assignment Student Branches
 // Mr Black
 // Spencer Wright - test Dec 21 10:07am
+// KevinHicks
 
 import UIKit
 import AVFoundation
