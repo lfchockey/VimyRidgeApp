@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */; };
+		3FF33A401E09A13D007B643F /* VimyMythsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF33A3E1E09A13D007B643F /* VimyMythsViewController.swift */; };
+		3FF33A411E09A13D007B643F /* VimyMythsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF33A3F1E09A13D007B643F /* VimyMythsScreenViewController.swift */; };
 		F12C10E61D60CDBC0071798C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E41D60CDBC0071798C /* SearchViewController.swift */; };
 		F12C10E71D60CDBC0071798C /* SoldierSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E51D60CDBC0071798C /* SoldierSearch.swift */; };
 		F12C10E91D60CDDB0071798C /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E81D60CDDB0071798C /* Reachability.swift */; };
@@ -92,6 +94,8 @@
 
 /* Begin PBXFileReference section */
 		3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chapter 11 W00 Regular.ttf"; sourceTree = "<group>"; };
+		3FF33A3E1E09A13D007B643F /* VimyMythsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VimyMythsViewController.swift; path = "../../Greg Mitchell/Greg App/Vimy Ridge Project/VimyMythsViewController.swift"; sourceTree = "<group>"; };
+		3FF33A3F1E09A13D007B643F /* VimyMythsScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VimyMythsScreenViewController.swift; path = "../../Greg Mitchell/Greg App/VimyMythsScreenViewController.swift"; sourceTree = "<group>"; };
 		F12C10E41D60CDBC0071798C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F12C10E51D60CDBC0071798C /* SoldierSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierSearch.swift; sourceTree = "<group>"; };
 		F12C10E81D60CDDB0071798C /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -188,6 +192,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FF33A3D1E09A106007B643F /* Myths */ = {
+			isa = PBXGroup;
+			children = (
+				3FF33A3E1E09A13D007B643F /* VimyMythsViewController.swift */,
+				3FF33A3F1E09A13D007B643F /* VimyMythsScreenViewController.swift */,
+			);
+			name = Myths;
+			sourceTree = "<group>";
+		};
 		F12C10DC1D562EA10071798C /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				F12C10EC1D61FD640071798C /* HistoryViewController.swift */,
+				3FF33A3D1E09A106007B643F /* Myths */,
 				F133F2311D75E1840049B8BB /* Artwork */,
 				F12C10EE1D61FEFB0071798C /* Stats */,
 			);
@@ -678,10 +692,12 @@
 				F12C10E61D60CDBC0071798C /* SearchViewController.swift in Sources */,
 				F12C11901D73AB010071798C /* WeaponSelectVC.swift in Sources */,
 				F12C11851D732B360071798C /* VimyVirtualMemorialVC.swift in Sources */,
+				3FF33A401E09A13D007B643F /* VimyMythsViewController.swift in Sources */,
 				F12C11011D6291810071798C /* VCMapView.swift in Sources */,
 				F12C112C1D6CB7CD0071798C /* Battalions.swift in Sources */,
 				F12C117F1D71E1FB0071798C /* MedalReader.swift in Sources */,
 				F12C10E71D60CDBC0071798C /* SoldierSearch.swift in Sources */,
+				3FF33A411E09A13D007B643F /* VimyMythsScreenViewController.swift in Sources */,
 				F12C11201D6CB7810071798C /* BattalionFactsContainer.swift in Sources */,
 				F16B101A1D4FA929004F2777 /* SwiftyJSON.swift in Sources */,
 				F16B101B1D4FA929004F2777 /* FullSoldier.swift in Sources */,
