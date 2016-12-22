@@ -42,7 +42,7 @@ class FaceBookViewController: UIViewController {
     
     
     func moveViews(sender:Int) {
-        let viewControllerIdentifiers = ["Profile", "Biography", "Friends", "Timeline", "Photos", "Medals", "StudentBio"]
+        let viewControllerIdentifiers = ["NonMilitaryProfile", "MilitaryProfile", "Friends", "Timeline", "Photos", "Medals", "StudentBio"]
         let newController = (storyboard?.instantiateViewController(withIdentifier: viewControllerIdentifiers[sender]))! as UIViewController
         let oldController = childViewControllers.last! as UIViewController
         

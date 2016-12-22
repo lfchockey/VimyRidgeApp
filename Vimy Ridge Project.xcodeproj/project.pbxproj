@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3F2376241E0AD47A004C3862 /* CollapsibleTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2376221E0AD47A004C3862 /* CollapsibleTableViewHeader.swift */; };
 		3F2376251E0AD47A004C3862 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2376231E0AD47A004C3862 /* Extensions.swift */; };
+		3F819CBA1E0C26A2003B12C4 /* FacebookMilitaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F819CB81E0C26A2003B12C4 /* FacebookMilitaryVC.swift */; };
+		3F819CBB1E0C26A2003B12C4 /* FacebookNonMilitaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F819CB91E0C26A2003B12C4 /* FacebookNonMilitaryVC.swift */; };
 		3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */; };
 		F12C10E61D60CDBC0071798C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E41D60CDBC0071798C /* SearchViewController.swift */; };
 		F12C10E71D60CDBC0071798C /* SoldierSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E51D60CDBC0071798C /* SoldierSearch.swift */; };
@@ -95,6 +97,8 @@
 /* Begin PBXFileReference section */
 		3F2376221E0AD47A004C3862 /* CollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewHeader.swift; sourceTree = "<group>"; };
 		3F2376231E0AD47A004C3862 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3F819CB81E0C26A2003B12C4 /* FacebookMilitaryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookMilitaryVC.swift; sourceTree = "<group>"; };
+		3F819CB91E0C26A2003B12C4 /* FacebookNonMilitaryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookNonMilitaryVC.swift; sourceTree = "<group>"; };
 		3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chapter 11 W00 Regular.ttf"; sourceTree = "<group>"; };
 		F12C10E41D60CDBC0071798C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F12C10E51D60CDBC0071798C /* SoldierSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierSearch.swift; sourceTree = "<group>"; };
@@ -192,6 +196,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F819CB71E0C265D003B12C4 /* Military and NonMilitary */ = {
+			isa = PBXGroup;
+			children = (
+				3F819CB81E0C26A2003B12C4 /* FacebookMilitaryVC.swift */,
+				3F819CB91E0C26A2003B12C4 /* FacebookNonMilitaryVC.swift */,
+			);
+			name = "Military and NonMilitary";
+			sourceTree = "<group>";
+		};
 		F12C10DC1D562EA10071798C /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +256,7 @@
 		F12C10F51D6290890071798C /* Facebook */ = {
 			isa = PBXGroup;
 			children = (
+				3F819CB71E0C265D003B12C4 /* Military and NonMilitary */,
 				F12C110A1D6291B80071798C /* FaceBookViewController.swift */,
 				F12C10FB1D6290BE0071798C /* Timeline */,
 				F12C10FA1D6290B90071798C /* Profile */,
@@ -676,6 +690,7 @@
 			files = (
 				F170B8FE1D4FBA4300118440 /* MapViewController.swift in Sources */,
 				F170B8F41D4FB93400118440 /* AdvProp.swift in Sources */,
+				3F819CBA1E0C26A2003B12C4 /* FacebookMilitaryVC.swift in Sources */,
 				F12C10E91D60CDDB0071798C /* Reachability.swift in Sources */,
 				F12C10ED1D61FD640071798C /* HistoryViewController.swift in Sources */,
 				F12C10F01D620FB40071798C /* StatsViewController.swift in Sources */,
@@ -688,6 +703,7 @@
 				F12C112C1D6CB7CD0071798C /* Battalions.swift in Sources */,
 				F12C117F1D71E1FB0071798C /* MedalReader.swift in Sources */,
 				F12C10E71D60CDBC0071798C /* SoldierSearch.swift in Sources */,
+				3F819CBB1E0C26A2003B12C4 /* FacebookNonMilitaryVC.swift in Sources */,
 				F12C11201D6CB7810071798C /* BattalionFactsContainer.swift in Sources */,
 				F16B101A1D4FA929004F2777 /* SwiftyJSON.swift in Sources */,
 				F16B101B1D4FA929004F2777 /* FullSoldier.swift in Sources */,
