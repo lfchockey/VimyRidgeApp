@@ -4,7 +4,7 @@
 //
 //  Created by Griffin on 2015-06-12.
 //  Copyright (c) 2015 KatsuSoft. All rights reserved.
-//
+// Brynne Allan
 
 import UIKit
 import SceneKit
