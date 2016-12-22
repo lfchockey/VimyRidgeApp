@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2789151E0AE8FD009CEDEB /* WesternFrontPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2789141E0AE8FD009CEDEB /* WesternFrontPolyline.swift */; };
 		3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */; };
 		F12C10E61D60CDBC0071798C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E41D60CDBC0071798C /* SearchViewController.swift */; };
 		F12C10E71D60CDBC0071798C /* SoldierSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E51D60CDBC0071798C /* SoldierSearch.swift */; };
@@ -91,6 +92,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F2789141E0AE8FD009CEDEB /* WesternFrontPolyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WesternFrontPolyline.swift; sourceTree = "<group>"; };
 		3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chapter 11 W00 Regular.ttf"; sourceTree = "<group>"; };
 		F12C10E41D60CDBC0071798C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F12C10E51D60CDBC0071798C /* SoldierSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierSearch.swift; sourceTree = "<group>"; };
@@ -443,6 +445,7 @@
 				3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */,
 				F12C10EA1D60CDE80071798C /* Helper Classes */,
 				F16B0FF21D4FA578004F2777 /* Info.plist */,
+				3F2789141E0AE8FD009CEDEB /* WesternFrontPolyline.swift */,
 			);
 			path = "Vimy Ridge Project";
 			sourceTree = "<group>";
@@ -685,6 +688,7 @@
 				F12C11201D6CB7810071798C /* BattalionFactsContainer.swift in Sources */,
 				F16B101A1D4FA929004F2777 /* SwiftyJSON.swift in Sources */,
 				F16B101B1D4FA929004F2777 /* FullSoldier.swift in Sources */,
+				3F2789151E0AE8FD009CEDEB /* WesternFrontPolyline.swift in Sources */,
 				F12C11301D6CFB670071798C /* TimelineView.swift in Sources */,
 				F1993B151D5226E9001F40F0 /* MenuVC.swift in Sources */,
 				F170B8EF1D4FB90C00118440 /* BattalionsCoords.swift in Sources */,

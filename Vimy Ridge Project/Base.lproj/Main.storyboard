@@ -2584,6 +2584,9 @@
                             </mapView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Izz-X9-nqa">
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="czE-cE-Ijw" kind="embed" id="W6o-Qb-v0B"/>
+                                </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKg-dg-msb">
                                 <color key="tintColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2813,7 +2816,6 @@
                         <outlet property="nameLabel" destination="xKg-dg-msb" id="M0o-Bn-RY1"/>
                         <outlet property="rightButton" destination="hQJ-4W-GgF" id="Hbb-D7-kIF"/>
                         <outlet property="slider" destination="GqX-FZ-ZCG" id="vUv-P6-EmN"/>
-                        <segue destination="czE-cE-Ijw" kind="show" id="1gI-EA-S05"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ynI-0y-Lje" sceneMemberID="firstResponder"/>
@@ -2839,7 +2841,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ata-bx-1Ro"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="z9v-n0-lvD">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="512" height="922"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y4y-r5-WpS">
