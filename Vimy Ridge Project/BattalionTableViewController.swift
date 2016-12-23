@@ -70,9 +70,11 @@ class BattalionTableViewController: UIViewController, UITableViewDataSource, UIT
         if searchController.isActive && searchController.searchBar.text != "" && filteredBattalions.count != 0 {
             battalion = filteredBattalions[indexPath.row]
             BattVars.battalion_id = String(battalion.id)
+            BattVars.singleBattalion.battalion_name = battalion.name
         } else {
             battalion = battalions[indexPath.row]
             BattVars.battalion_id = String(battalion.id)
+            BattVars.singleBattalion.battalion_name = battalion.name
         }
 
         // Segue to the SingleBattalionViewController once a row has been selected

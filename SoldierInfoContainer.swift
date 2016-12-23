@@ -12,69 +12,20 @@ class SoldierInfoContainer: UITableViewController {
     
     var totalSoldiers = 0
     var allSoldiers = [JSON]()
-    var rank: String = ""
-    var rankName: String = ""
-    
-    
+   
     
     @IBOutlet var soldierTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print ("|||||||||||||NAME!\(BattVars.singleBattalion.battalion_name)|||||||||||||||")
         
-        //Set the delegate and the dataSource of the TableView (that lists soldiers)
+
         
-        
-        var battalion_name: String = ""
-       
-        
-        if (MyVariables.globalSoldier.battalion != "") {
-            battalion_name = MyVariables.globalSoldier.battalion
-        }
-        else if (MyVariables.globalSoldier.regiment_upon_enlistment != "") {
-            battalion_name = MyVariables.globalSoldier.regiment_upon_enlistment
-        }
-        else if (MyVariables.globalSoldier.regiment_at_death != "") {
-            battalion_name = MyVariables.globalSoldier.regiment_at_death
-        }
-        else // no battalion info stored in soldier
-        {
-            print("error")// Show message to user
-            
-        }
-        
-        print(battalion_name)
-        
-        
-        for soldier in MyVariables.allVimySoldiers{
-            
-            if soldier.battalion == battalion_name
-            {
-                
-            }
-        }
-        //        var rank: String = ""
-        //
-        //        if (MyVariables.globalSoldier.rank_highest_achieved != "") {
-        //            rank = MyVariables.globalSoldier.rank_highest_achieved
-        //        }
-        //        else if (MyVariables.globalSoldier.officer_rank != "") {
-        //            rank = MyVariables.globalSoldier.officer_rank
-        //        }
-        //        else if (MyVariables.globalSoldier.rank_upon_enlistment != "") {
-        //            rank = MyVariables.globalSoldier.rank_upon_enlistment
-        //        }
-        //        else // no battalion info stored in soldier
-        //        {
-        //            // Show message to user
-        //        }
-        
-        print(rank)
-        var BattalionNameArray = [String]()
         var battalionMatchArray = [String]()
-        battalion_name = BattVars.singleBattalion.battalion_name
+        var battalion_name: String = BattVars.singleBattalion.battalion_name
+        //battalion_name = "87th"
+        print(battalion_name)
         
         //battalion_name = "Canadian Infantry"      //TEST
         
@@ -85,45 +36,26 @@ class SoldierInfoContainer: UITableViewController {
             //loop through their battalion array
             for bat in soldier.battalion_array {
                 for (key, value) in bat {
-                    print("Battalion Name: \(battalion_name)  -  Value: \(value)")
+                    print("Battalion Name: \(battalion_name)  -  Key: \(key) ~ Value: \(value)")
+                  
                     if value == battalion_name {
                         print("~~~~AAA~~~~")
-                        BattalionNameArray.append(value)
+                        print(value)
+                        battalionMatchArray.append(value)
+                        print(battalionMatchArray)
+                        
+                        //No value that == battalion_name. Values are either empty or different from what shows in search.
                     } else {
-                    print("|||WWW|A||")
+                        //print("|||WWW|A||")
                     }
-                    
                 }
-                
-                
-                  //allBatts
-                //print(allSoldiers)
-                //test to see if this matches battalionMatchArray
-                // if they match, append their soldier IDs onto an array
-//                if bat == battalion_name {
-//                battalionMatchArray.append(bat)
-//                //place all matches in the table
-//                    //
-//                let smth: [[String: AnyObject]] = [["key": "Value" as AnyObject]]
-//                let smth2: [[String: AnyObject]]?  = nil
-//                
-//                if let smth2 = smth2, smth.elementsEqual(smth2, by: { (obj1, obj2) -> Bool in
-//                    return obj1.elementsEqual(obj2) { (elt1, elt2) -> Bool in
-//                        return elt1.key == elt2.key && elt1.value === elt2.value
-//                    }
-//                    
-//                }) {
-//                    print("Equal")
-//                }
-//                //
-//                
-//                }
             }
         }
         
         
         if (battalion_name != "")
         {
+            print("{RUNNING}")
             // The url webpage that we'll be connecting to.
             //      *****NOTICE THE ACTION VARIABLE "search_battalion" IN THE URL. THIS IS HOW YOU TELL THE SERVER WHAT TYPE OF SEARCH YOU ARE DOING
             let url : String = "http://lest-we-forget.ca/apis/search2.php?access_code=SFDCI_Black&action=search_battalion&battalion=\(battalion_name)"
@@ -222,7 +154,7 @@ class SoldierInfoContainer: UITableViewController {
         
         
         
-        cell.imageView?.image = UIImage(named: rankName) //self.arrImageName[indexPath.row])
+        //cell.imageView?.image = UIImage(named: rankName) //self.arrImageName[indexPath.row])
         
         cell.textLabel?.font = UIFont(name:"Chapter11W00-Regular", size:18)
         
@@ -238,7 +170,7 @@ class SoldierInfoContainer: UITableViewController {
         MyVariables.facebookSoldierID = soldier["soldier_id"].stringValue
         
         DispatchQueue.main.async {
-            self.performSegue(withIdentifier: "facebookVCSegue", sender: self)
+            self.performSegue(withIdentifier: "facebookVCSegue2", sender: self)
         }
     }
     

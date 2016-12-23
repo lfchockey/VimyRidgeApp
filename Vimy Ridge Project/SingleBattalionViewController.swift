@@ -123,9 +123,9 @@ class SingleBattalionViewController: UIViewController {
             BattVars.battalionFound = false
             BattVars.singleBattalion = FullBattalionInfo()
             for jsonBattalion in allBatts {
-                print("hello")
+                //print("hello")
                 let bat = jsonBattalion.1.dictionary
-                print ((bat!["battalion_id"]?.stringValue)!)
+                //print ((bat!["battalion_id"]?.stringValue)!)
                 if BattVars.battalionFound {
                     break
                 }
@@ -151,7 +151,7 @@ class SingleBattalionViewController: UIViewController {
                     BattVars.singleBattalion = properBattalion
                     BattVars.battalionFound = true
                     
-                    print ("|||||||||||||||||||\(BattVars.singleBattalion.battalion_name)|||||||||||")
+                    //print ("|||||||||||||||||||\(BattVars.singleBattalion.battalion_name)|||||||||||")
                     break
                 }
 //                else {
