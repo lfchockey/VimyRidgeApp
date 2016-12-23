@@ -669,6 +669,7 @@ class MapViewController: UIViewController, MKMapViewDelegate
 //                    annotationView!.detailCalloutAccessoryView = UIImageView(image: UIImage(named:"redhawk"))
 //                } else {
 //                    // Fallback on earlier versions
+                // i need to commit but dont have changes //
 //                }
             }
             
