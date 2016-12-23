@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */; };
+		3FB818041E099B5C00533DB9 /* background paper.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB818031E099B5C00533DB9 /* background paper.png */; };
+		3FB818071E09A09900533DB9 /* SoldierInfoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB818061E09A09900533DB9 /* SoldierInfoContainer.swift */; };
 		F12C10E61D60CDBC0071798C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E41D60CDBC0071798C /* SearchViewController.swift */; };
 		F12C10E71D60CDBC0071798C /* SoldierSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E51D60CDBC0071798C /* SoldierSearch.swift */; };
 		F12C10E91D60CDDB0071798C /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E81D60CDDB0071798C /* Reachability.swift */; };
@@ -92,6 +94,8 @@
 
 /* Begin PBXFileReference section */
 		3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chapter 11 W00 Regular.ttf"; sourceTree = "<group>"; };
+		3FB818031E099B5C00533DB9 /* background paper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background paper.png"; path = "../../van Zyll de Jong/background paper.png"; sourceTree = "<group>"; };
+		3FB818061E09A09900533DB9 /* SoldierInfoContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoldierInfoContainer.swift; path = "../../VimyRidgeApp-master/SoldierInfoContainer.swift"; sourceTree = "<group>"; };
 		F12C10E41D60CDBC0071798C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F12C10E51D60CDBC0071798C /* SoldierSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierSearch.swift; sourceTree = "<group>"; };
 		F12C10E81D60CDDB0071798C /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -188,6 +192,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FB818051E09A00600533DB9 /* Single Battalion */ = {
+			isa = PBXGroup;
+			children = (
+				F12C11241D6CB7AB0071798C /* SingleBattalionViewController.swift */,
+			);
+			name = "Single Battalion";
+			sourceTree = "<group>";
+		};
+		3FB818081E09A09D00533DB9 /* SoldiersInfo */ = {
+			isa = PBXGroup;
+			children = (
+				3FB818061E09A09900533DB9 /* SoldierInfoContainer.swift */,
+			);
+			name = SoldiersInfo;
+			sourceTree = "<group>";
+		};
 		F12C10DC1D562EA10071798C /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,7 +346,8 @@
 			isa = PBXGroup;
 			children = (
 				F12C11231D6CB7AB0071798C /* FullBattalionInfo.swift */,
-				F12C11241D6CB7AB0071798C /* SingleBattalionViewController.swift */,
+				3FB818081E09A09D00533DB9 /* SoldiersInfo */,
+				3FB818051E09A00600533DB9 /* Single Battalion */,
 				F12C111A1D6CB71B0071798C /* BattalionInfo */,
 				F12C111C1D6CB7410071798C /* BattalionMore */,
 				F12C111B1D6CB7380071798C /* BattalionVimy */,
@@ -439,6 +460,7 @@
 				F12C11891D73AAD70071798C /* Weapons */,
 				F133F22A1D74734F0049B8BB /* Music */,
 				F16B10141D4FA6EF004F2777 /* Images.xcassets */,
+				3FB818031E099B5C00533DB9 /* background paper.png */,
 				F16B0FEF1D4FA578004F2777 /* LaunchScreen.storyboard */,
 				3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */,
 				F12C10EA1D60CDE80071798C /* Helper Classes */,
@@ -633,6 +655,7 @@
 				F12C112E1D6CB7CD0071798C /* BattalionTest.plist in Resources */,
 				F133F2301D74764C0049B8BB /* Serenata Immortale.mp3 in Resources */,
 				F170B8E71D4FB8D600118440 /* CoordinatePrime.plist in Resources */,
+				3FB818041E099B5C00533DB9 /* background paper.png in Resources */,
 				F170B8F51D4FB93400118440 /* daysOfBattle.plist in Resources */,
 				F170B8EE1D4FB90C00118440 /* BattalionMovement.plist in Resources */,
 				F12C11801D71E1FB0071798C /* Medals List.plist in Resources */,
@@ -693,6 +716,7 @@
 				F170B8E81D4FB8D600118440 /* VimyCoordinates.swift in Sources */,
 				F12C11881D738ACB0071798C /* StudentBiographyViewController.swift in Sources */,
 				F170B8ED1D4FB90C00118440 /* BattalionMapVC.swift in Sources */,
+				3FB818071E09A09900533DB9 /* SoldierInfoContainer.swift in Sources */,
 				F12C11911D73AB010071798C /* WeaponsInfo.swift in Sources */,
 				F16B0FE71D4FA578004F2777 /* AppDelegate.swift in Sources */,
 				F12C10FF1D6291810071798C /* SoldierLocation.swift in Sources */,

@@ -16,18 +16,20 @@ struct BattVars {
 
 
 class SingleBattalionViewController: UIViewController {
-
+    
     @IBOutlet weak var ActivityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-
+    
     @IBAction func SwapViews(_ sender: AnyObject) {
         moveViews(sender: sender.selectedSegmentIndex)
+        
+        
         
     }
     
     func moveViews(sender:Int) {
-        let viewControllerIdentifiers = ["Info", "Facts", "More"]
+        let viewControllerIdentifiers = ["Info", "Facts", "More"] //"Soldiers", "More"] *** re-add the Soldiers Matching section once the database is cleaned up
         let newController = (storyboard?.instantiateViewController(withIdentifier: viewControllerIdentifiers[sender]))! as UIViewController
         let oldController = childViewControllers.last! as UIViewController
         
@@ -47,6 +49,10 @@ class SingleBattalionViewController: UIViewController {
         super.viewDidLoad()
         
         if Reachability.isConnectedToNetwork() == true {
+     
+            
+            
+           
             
             let defaultSession = URLSession(configuration: URLSessionConfiguration.default)
             var dataTask: URLSessionDataTask?
@@ -84,8 +90,19 @@ class SingleBattalionViewController: UIViewController {
             
         }
         else {
+            
             // Error message stating that you need an internet connection to view this section of the app
+            
+               let alert = UIAlertController(title: "Connection Error", message: "You need an internet connection to view this page.", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                   self.present(alert, animated: true, completion: nil)
+            
         }
+        
+        
+        
+        self.title = "\(BattVars.singleBattalion.battalion_name)"
+        //moveViews(sender: 0)
     }
     
     
@@ -100,15 +117,17 @@ class SingleBattalionViewController: UIViewController {
         var allBatts = JSON([])
         //do {
         //    if let _: NSDictionary? = try JSONSerialization.jsonObject(with: data! as Data, options:JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
-                
+        print (BattVars.battalion_id)
         if data != nil {
             allBatts = JSON(data: data! as Data)
-            
+            print(allBatts)
             // Search through the allBatts array(read from lwf.ca database) and find the proper id
             BattVars.battalionFound = false
+            BattVars.singleBattalion = FullBattalionInfo()
             for jsonBattalion in allBatts {
-                
+                //print("hello")
                 let bat = jsonBattalion.1.dictionary
+                //print ((bat!["battalion_id"]?.stringValue)!)
                 if BattVars.battalionFound {
                     break
                 }
@@ -121,7 +140,7 @@ class SingleBattalionViewController: UIViewController {
                     properBattalion.strength = (bat!["strength"]?.stringValue)!
                     properBattalion.war_diary = (bat!["war_diary"]?.stringValue)!
                     properBattalion.perpetuated_by = (bat!["perpetuated_by"]?.stringValue)!
-                    properBattalion.candaian_arrival = (bat!["canadian_arrival"]?.stringValue)!
+                    properBattalion.canadian_arrival = (bat!["canadian_arrival"]?.stringValue)!
                     properBattalion.location = (bat!["location"]?.stringValue)!
                     properBattalion.embarkation = (bat!["embarkation"]?.stringValue)!
                     properBattalion.interesting_facts = (bat!["interesting_facts"]?.stringValue)!
@@ -133,22 +152,25 @@ class SingleBattalionViewController: UIViewController {
                     
                     BattVars.singleBattalion = properBattalion
                     BattVars.battalionFound = true
+                    
+                    //print ("|||||||||||||||||||\(BattVars.singleBattalion.battalion_name)|||||||||||")
                     break
                 }
-                else {
-                    break
-                }
+                //                else {
+                //                    break
+                //
+                
+                
             }
             
-            if !BattVars.battalionFound {
-                // *** print error message indicating that the selected battalion could not be retrieved from the database
-                //      then segue back to BattalionTableViewController
-            }
+            
         }
-        //} catch let error as NSError {
-        //    print("Error parsing results: \(error.localizedDescription)")
-        //}
         
     }
+    //} catch let error as NSError {
+    //    print("Error parsing results: \(error.localizedDescription)")
+    //}
     
 }
+
+

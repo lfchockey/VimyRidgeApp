@@ -15,7 +15,7 @@ extension BattalionTableViewController: UISearchResultsUpdating {
 }
 
 class BattalionTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     var filteredBattalions = [Battalions]()
@@ -25,7 +25,7 @@ class BattalionTableViewController: UIViewController, UITableViewDataSource, UIT
     let allBattalions = BattalionReader()
     
     // MARK: - Properties
-//    var detailViewController: DetailViewController? = nil
+    //    var detailViewController: DetailViewController? = nil
     var battalions = [Battalions]()
     
     func filterContentForSearchText(searchText: String, scope: String = "All") {
@@ -46,7 +46,7 @@ class BattalionTableViewController: UIViewController, UITableViewDataSource, UIT
         }
         return battalions.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath as IndexPath)
         let battalion: Battalions
@@ -55,7 +55,7 @@ class BattalionTableViewController: UIViewController, UITableViewDataSource, UIT
         } else {
             battalion = battalions[indexPath.row]
         }
-
+        
         cell.textLabel?.text = "\(battalion.name) \(battalion.brigade) \(battalion.division)"
         cell.detailTextLabel?.text = battalion.brigade
         // How to change the image in the table view cell
@@ -70,23 +70,25 @@ class BattalionTableViewController: UIViewController, UITableViewDataSource, UIT
         if searchController.isActive && searchController.searchBar.text != "" && filteredBattalions.count != 0 {
             battalion = filteredBattalions[indexPath.row]
             BattVars.battalion_id = String(battalion.id)
+            BattVars.singleBattalion.battalion_name = battalion.name
         } else {
             battalion = battalions[indexPath.row]
             BattVars.battalion_id = String(battalion.id)
+            BattVars.singleBattalion.battalion_name = battalion.name
         }
-
+        
         // Segue to the SingleBattalionViewController once a row has been selected
         DispatchQueue.main.async {
             self.performSegue(withIdentifier: "SingleBattalionSegue", sender: self)
         }
-
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         searchController.searchResultsUpdater = self
-        searchController.dimsBackgroundDuringPresentation = false 
+        searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
         
@@ -95,39 +97,36 @@ class BattalionTableViewController: UIViewController, UITableViewDataSource, UIT
         
         
         // loop through your allBattalions.names array
-//        
-//        for i in 0..<allBattalions.battalionCount
-//        {
-//
-//            let splitArray = allBattalions.names[i].componentsSeparatedByString("-")
-//
-//            let battalion2 = Battalions (name: splitArray[0] , brigade: splitArray[1] , division: splitArray[2] )
-//            
-//            battalions.append(battalion2)
-//            
-//            
-//        }
-
+        //
+        //        for i in 0..<allBattalions.battalionCount
+        //        {
+        //
+        //            let splitArray = allBattalions.names[i].componentsSeparatedByString("-")
+        //
+        //            let battalion2 = Battalions (name: splitArray[0] , brigade: splitArray[1] , division: splitArray[2] )
+        //
+        //            battalions.append(battalion2)
+        //
+        //
+        //        }
         
-            // inside the loop
-            // split up the value of each battalion based on the hyphen '-'
-            // let fullNameArr = fullName.componentsSeparatedByString(" ")
-            // create a local Battalion variable 
-            // set each property of the object
-            // stuff this inside the battalions array (use .append)
+        
+        // inside the loop
+        // split up the value of each battalion based on the hyphen '-'
+        // let fullNameArr = fullName.componentsSeparatedByString(" ")
+        // create a local Battalion variable
+        // set each property of the object
+        // stuff this inside the battalions array (use .append)
         
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
     
     
 }
-
-
-
