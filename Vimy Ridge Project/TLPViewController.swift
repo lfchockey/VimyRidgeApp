@@ -1,4 +1,4 @@
- //
+//
 //  ViewController.swift
 //  Stand alone map TP
 //
@@ -33,6 +33,7 @@ class TLPViewController: UIViewController, MKMapViewDelegate {
    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
         
     }
     
