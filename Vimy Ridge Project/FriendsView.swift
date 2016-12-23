@@ -50,6 +50,14 @@ class FriendsView: UITableViewController {
         cell.textLabel?.text = soldier["soldier_id"]!!+"   "+soldier["name"]!!+"     "+soldier["category"]!!+": "+soldier["matching_name"]!!
         
         
+        let imageView = UIImageView(frame: CGRect(x: 10, y: 0, width: cell.frame.width - 10, height: cell.frame.height - 1))//(10, 10, cell.frame.width - 10, cell.frame.height - 10))
+        let image = UIImage(named: "brickTexture")
+        imageView.image = image
+        cell.backgroundView = UIView()
+        cell.backgroundView!.addSubview(imageView)
+        cell.backgroundColor = .clear
+        
+        
         return cell
     }
     
