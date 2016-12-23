@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F57C1901E0C433D008038E9 /* daysOfBattle.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F57C18F1E0C433D008038E9 /* daysOfBattle.plist */; };
+		3FA620991E0D96AF0082F742 /* AdvMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA620981E0D96AF0082F742 /* AdvMapViewController.swift */; };
 		3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */; };
 		F12C10E61D60CDBC0071798C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E41D60CDBC0071798C /* SearchViewController.swift */; };
 		F12C10E71D60CDBC0071798C /* SoldierSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E51D60CDBC0071798C /* SoldierSearch.swift */; };
@@ -92,6 +93,7 @@
 
 /* Begin PBXFileReference section */
 		3F57C18F1E0C433D008038E9 /* daysOfBattle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = daysOfBattle.plist; sourceTree = "<group>"; };
+		3FA620981E0D96AF0082F742 /* AdvMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvMapViewController.swift; sourceTree = "<group>"; };
 		3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chapter 11 W00 Regular.ttf"; sourceTree = "<group>"; };
 		F12C10E41D60CDBC0071798C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F12C10E51D60CDBC0071798C /* SoldierSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierSearch.swift; sourceTree = "<group>"; };
@@ -481,6 +483,7 @@
 		F170B8DD1D4FB7CC00118440 /* Battle Progression */ = {
 			isa = PBXGroup;
 			children = (
+				3FA620981E0D96AF0082F742 /* AdvMapViewController.swift */,
 				3F57C18F1E0C433D008038E9 /* daysOfBattle.plist */,
 				F170B8F11D4FB93400118440 /* AdvProp.swift */,
 				F170B8F31D4FB93400118440 /* TLPViewController.swift */,
@@ -708,6 +711,7 @@
 				F133F22E1D7473810049B8BB /* Util.swift in Sources */,
 				F170B8E61D4FB8D600118440 /* CemViewController.swift in Sources */,
 				F12C11091D6291AC0071798C /* BiographyView.swift in Sources */,
+				3FA620991E0D96AF0082F742 /* AdvMapViewController.swift in Sources */,
 				F12C110B1D6291B80071798C /* FaceBookViewController.swift in Sources */,
 				F12C111E1D6CB7690071798C /* BattalionMoreContainer.swift in Sources */,
 				F12C112D1D6CB7CD0071798C /* BattalionTableViewController.swift in Sources */,

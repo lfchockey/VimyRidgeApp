@@ -1,5 +1,4 @@
 //
-//  TheFrontPartTwo.swift
 //  MapsTutorial
 //
 //  Created by Student on 1/25/16.
@@ -12,14 +11,11 @@ import MapKit
 
 class WesternFrontVC: UIViewController, MKMapViewDelegate
 {
-    
-    @IBOutlet weak var MapView: MKMapView!
-    
-    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-   
     }
     
     
