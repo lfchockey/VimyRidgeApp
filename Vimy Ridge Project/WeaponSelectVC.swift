@@ -15,11 +15,13 @@ struct Section {
     var name: String!
     var items: [String]!
     var collapsed: Bool!
+
     
     init(name: String, items: [String], collapsed: Bool = false) {
         self.name = name
         self.items = items
         self.collapsed = collapsed
+
     }
 }
 
@@ -38,8 +40,9 @@ class WeaponSelectVC: UITableViewController {
         // Initialize the sections array
         // Here we have three sections: Mac, iPad, iPhone
         sections = [
-            Section(name: "Canadian Weapons", items: ["Colt-browning machine gun M1895/14","Lee Enfield", "Ross Rifle MK III",  "Webley Revolver", "Lewis", "Mills bomb"]),
-            Section(name: "German Weapons", items: ["KAR-98K", "Mauser Gewehr 98", "Luger", "Stick grenade"])]
+            Section(name: "Canadian Weapons", items: ["Ross Rifle MK III",  "Webley Revolver", "Mills bomb", "Lewis", "Sopwith Camel"]),
+            Section(name: "German Weapons", items: [ "Luger", "Stick Grenade"])]
+        //let sectionImages [UIImage]
     }
     
 }
@@ -57,10 +60,11 @@ extension WeaponSelectVC {
     }
     
     // Cell
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as UITableViewCell? ?? UITableViewCell(style: .default, reuseIdentifier: "cell")
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> SpencersTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! SpencersTableViewCell? ?? SpencersTableViewCell(style: .default, reuseIdentifier: "cell")
         
         cell.textLabel?.text = sections[indexPath.section].items[indexPath.row]
+        
         
         return cell
     }
@@ -86,7 +90,7 @@ extension WeaponSelectVC {
     
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return sections[indexPath.section].collapsed! ? 0 : 44.0
+        return sections[indexPath.section].collapsed! ? 0 : 60.0
     }
     
     // Header
@@ -104,7 +108,7 @@ extension WeaponSelectVC {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 44.0
+        return 60.0
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

@@ -20,6 +20,7 @@ class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
     
     let titleLabel = UILabel()
     let arrowLabel = UILabel()
+    let flagImage = UIImage()
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
@@ -60,6 +61,7 @@ class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
         let views = [
             "titleLabel" : titleLabel,
             "arrowLabel" : arrowLabel,
+            "flagImage" : flagImage,
         ]
         
         contentView.addConstraints(NSLayoutConstraint.constraints(

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F2376241E0AD47A004C3862 /* CollapsibleTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2376221E0AD47A004C3862 /* CollapsibleTableViewHeader.swift */; };
 		3F2376251E0AD47A004C3862 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2376231E0AD47A004C3862 /* Extensions.swift */; };
+		3F25BA9A1E0AF38200B49F75 /* SpencersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25BA991E0AF38200B49F75 /* SpencersTableViewCell.swift */; };
 		3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */; };
 		F12C10E61D60CDBC0071798C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E41D60CDBC0071798C /* SearchViewController.swift */; };
 		F12C10E71D60CDBC0071798C /* SoldierSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E51D60CDBC0071798C /* SoldierSearch.swift */; };
@@ -95,6 +96,7 @@
 /* Begin PBXFileReference section */
 		3F2376221E0AD47A004C3862 /* CollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewHeader.swift; sourceTree = "<group>"; };
 		3F2376231E0AD47A004C3862 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3F25BA991E0AF38200B49F75 /* SpencersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpencersTableViewCell.swift; sourceTree = "<group>"; };
 		3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chapter 11 W00 Regular.ttf"; sourceTree = "<group>"; };
 		F12C10E41D60CDBC0071798C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F12C10E51D60CDBC0071798C /* SoldierSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierSearch.swift; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 				F12C118C1D73AB010071798C /* WeaponSelectVC.swift */,
 				F12C118D1D73AB010071798C /* WeaponsInfo.swift */,
 				F12C11931D73ADA20071798C /* WeaponAssets.scnassets */,
+				3F25BA991E0AF38200B49F75 /* SpencersTableViewCell.swift */,
 			);
 			name = Weapons;
 			sourceTree = "<group>";
@@ -682,6 +685,7 @@
 				F12C11701D7095FA0071798C /* MyVariables.swift in Sources */,
 				F170B8E51D4FB8D600118440 /* CemAnno.swift in Sources */,
 				F12C10E61D60CDBC0071798C /* SearchViewController.swift in Sources */,
+				3F25BA9A1E0AF38200B49F75 /* SpencersTableViewCell.swift in Sources */,
 				F12C11901D73AB010071798C /* WeaponSelectVC.swift in Sources */,
 				F12C11851D732B360071798C /* VimyVirtualMemorialVC.swift in Sources */,
 				F12C11011D6291810071798C /* VCMapView.swift in Sources */,
