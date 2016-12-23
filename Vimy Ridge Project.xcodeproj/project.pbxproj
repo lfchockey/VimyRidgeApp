@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1848861E0D943000AD7BF6 /* background paper.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1848851E0D943000AD7BF6 /* background paper.png */; };
 		3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */; };
 		3FF33A401E09A13D007B643F /* VimyMythsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF33A3E1E09A13D007B643F /* VimyMythsViewController.swift */; };
 		3FF33A411E09A13D007B643F /* VimyMythsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF33A3F1E09A13D007B643F /* VimyMythsScreenViewController.swift */; };
@@ -93,6 +94,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F1848851E0D943000AD7BF6 /* background paper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background paper.png"; path = "../../../Downloads/background paper.png"; sourceTree = "<group>"; };
 		3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chapter 11 W00 Regular.ttf"; sourceTree = "<group>"; };
 		3FF33A3E1E09A13D007B643F /* VimyMythsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VimyMythsViewController.swift; path = "../../Greg Mitchell/Greg App/Vimy Ridge Project/VimyMythsViewController.swift"; sourceTree = "<group>"; };
 		3FF33A3F1E09A13D007B643F /* VimyMythsScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VimyMythsScreenViewController.swift; path = "../../Greg Mitchell/Greg App/VimyMythsScreenViewController.swift"; sourceTree = "<group>"; };
@@ -443,6 +445,7 @@
 			children = (
 				F16B0FE61D4FA578004F2777 /* AppDelegate.swift */,
 				F16B0FEA1D4FA578004F2777 /* Main.storyboard */,
+				3F1848851E0D943000AD7BF6 /* background paper.png */,
 				F12C10DC1D562EA10071798C /* Home */,
 				F12C11171D6CB6C40071798C /* Battalions */,
 				F12C10F51D6290890071798C /* Facebook */,
@@ -647,6 +650,7 @@
 				F12C112E1D6CB7CD0071798C /* BattalionTest.plist in Resources */,
 				F133F2301D74764C0049B8BB /* Serenata Immortale.mp3 in Resources */,
 				F170B8E71D4FB8D600118440 /* CoordinatePrime.plist in Resources */,
+				3F1848861E0D943000AD7BF6 /* background paper.png in Resources */,
 				F170B8F51D4FB93400118440 /* daysOfBattle.plist in Resources */,
 				F170B8EE1D4FB90C00118440 /* BattalionMovement.plist in Resources */,
 				F12C11801D71E1FB0071798C /* Medals List.plist in Resources */,
