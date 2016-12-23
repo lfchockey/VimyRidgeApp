@@ -76,7 +76,7 @@ class FriendsView: UITableViewController {
                 //println(soldierArray) // print to see the data that was passed back from the server
             }
             else {
-                print(err!)
+                print(err)
             }
             
             
