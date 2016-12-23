@@ -39,7 +39,7 @@ class VimyCoordinates{
             var cemIm = ""
             
             if memTitle == "Vimy Memorial" {
-                cemIm = "VimyAppNoPhotoIcon"
+                cemIm = "prime_grave_vimy_memorial"
             }
             else{
                 cemIm = "SoG"

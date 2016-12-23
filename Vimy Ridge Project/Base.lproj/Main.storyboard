@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="q96-2r-pMj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="q96-2r-pMj">
     <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -53,7 +53,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqT-L0-HdA">
-                                        <rect key="frame" x="20" y="425.5" width="286" height="151"/>
+                                        <rect key="frame" x="20" y="426" width="286" height="151"/>
                                         <color key="backgroundColor" red="0.99607843139999996" green="0.85490196080000003" blue="0.74901960779999999" alpha="0.16460129309999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -104,7 +104,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRR-CE-mzo">
-                                        <rect key="frame" x="513" y="425.5" width="286" height="151"/>
+                                        <rect key="frame" x="513" y="426" width="286" height="151"/>
                                         <color key="backgroundColor" red="0.99607843139999996" green="0.85490196080000003" blue="0.74901960779999999" alpha="0.16460129309999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -138,7 +138,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YY-J2-dFt">
-                                        <rect key="frame" x="238.5" y="851" width="343" height="151"/>
+                                        <rect key="frame" x="238" y="851" width="343" height="151"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <state key="normal" title="Vimy Virtual Tour">
                                             <color key="titleColor" red="0.29478401040000002" green="0.3644302539" blue="0.7331730769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -513,7 +513,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jk6-E2-vYR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -540,7 +539,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1nU-uK-rBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -567,75 +565,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yjC-VP-pyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6127" y="6440"/>
-        </scene>
-        <!--Cem View Controller-->
-        <scene sceneID="dTZ-Ud-srk">
-            <objects>
-                <viewController id="Mh4-Gr-0KI" customClass="CemViewController" customModule="Vimy_Ridge_Project" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0Sa-pU-rFG"/>
-                        <viewControllerLayoutGuide type="bottom" id="3wm-K2-ImI"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" contentMode="scaleToFill" id="fOG-40-hMB">
-                        <rect key="frame" x="0.0" y="0.0" width="470" height="745"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name: Vimy Memorial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nm-hE-iuJ">
-                                <rect key="frame" x="14" y="30" width="436" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="21"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Idetified Casualties: 11162" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMV-2G-YAB">
-                                <rect key="frame" x="20" y="141" width="430" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="21"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cuw-10-zzD">
-                                <rect key="frame" x="14" y="183" width="376" height="153"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">History Info: On the opening day of the Battle of Arras, 9 April 1917, the four divisions of the Canadian Corps, fighting side by side for the first time, scored a huge tactical victory in the capture of the 60 metre high Vimy Ridge.</string>
-                                <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Region: Pas de Calais" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZK-7j-g3F">
-                                <rect key="frame" x="20" y="83" width="430" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="21"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GK0-iP-Fss">
-                                <rect key="frame" x="14" y="333" width="407" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <string key="text">Visitor Info: Wheelchair access to the memorial is possible via an alternative entrance at the rear of Faubourg-Amiens Cemetery. </string>
-                                <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <connections>
-                        <outlet property="casualties" destination="YMV-2G-YAB" id="973-uD-NFB"/>
-                        <outlet property="histInfo" destination="Cuw-10-zzD" id="Q7n-Au-YxV"/>
-                        <outlet property="nameLabel" destination="6nm-hE-iuJ" id="oF3-hq-GmN"/>
-                        <outlet property="region" destination="tZK-7j-g3F" id="UpY-cQ-zFf"/>
-                        <outlet property="visitInfo" destination="GK0-iP-Fss" id="qqq-Sb-DaY"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xMZ-aO-sfm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5342.578125" y="6324.8169838945823"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="QHs-hm-Ibk">
@@ -731,7 +665,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eNN-He-xef" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" id="b7X-2t-5Xo"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="beU-Bt-Igp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="beU-Bt-Igp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2834,8 +2768,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="510" height="1224"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2gu-lX-9y9">
-                                <rect key="frame" x="19" y="-2" width="472" height="1228"/>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background paper" translatesAutoresizingMaskIntoConstraints="NO" id="2gu-lX-9y9">
+                                <rect key="frame" x="0.0" y="0.0" width="510" height="1224"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1DK-17-xBz">
                                 <rect key="frame" x="0.0" y="0.0" width="510" height="1224"/>
@@ -2854,14 +2788,12 @@
                                     </segmentedControl>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lK5-2u-eUj">
                                         <rect key="frame" x="20" y="177" width="470" height="745"/>
-                                        <color key="backgroundColor" red="0.089863052560000004" green="0.77919541250000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="M4x-Oa-nJV" kind="embed" id="6wk-K5-T3a"/>
+                                            <segue destination="VDA-Uf-goD" kind="embed" id="SH8-yD-NLC"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zzo-w5-GfS">
                                         <rect key="frame" x="20" y="177" width="470" height="745"/>
-                                        <color key="backgroundColor" red="0.089863052560000004" green="0.77919541250000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="745" id="504-kw-D4N"/>
                                         </constraints>
@@ -2871,14 +2803,12 @@
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Hm-mo-Xbw">
                                         <rect key="frame" x="20" y="177" width="470" height="745"/>
-                                        <color key="backgroundColor" red="0.089863052560000004" green="0.77919541250000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="Mh4-Gr-0KI" kind="embed" id="kMF-q2-gEZ"/>
+                                            <segue destination="wCu-en-46p" kind="embed" id="UbY-58-Z2a"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HEi-cn-9QF">
                                         <rect key="frame" x="20" y="177" width="470" height="745"/>
-                                        <color key="backgroundColor" red="0.089863052560000004" green="0.77919541250000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="500" id="d3N-zR-LSd"/>
                                         </constraints>
@@ -2888,7 +2818,7 @@
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <segue destination="VDA-Uf-goD" kind="embed" id="4DH-ZK-jen"/>
+                                            <segue destination="M4x-Oa-nJV" kind="embed" id="cDz-xn-0FF"/>
                                         </connections>
                                     </containerView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1aH-nt-55T">
@@ -2930,18 +2860,19 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="1DK-17-xBz" secondAttribute="trailing" id="ASp-13-cdb"/>
                             <constraint firstItem="g1q-8Z-nm7" firstAttribute="top" secondItem="1DK-17-xBz" secondAttribute="bottom" id="BYC-xm-mW0"/>
                             <constraint firstItem="1DK-17-xBz" firstAttribute="leading" secondItem="K6w-7n-bsU" secondAttribute="leading" id="CYT-IH-g42"/>
                             <constraint firstItem="2gu-lX-9y9" firstAttribute="centerX" secondItem="1DK-17-xBz" secondAttribute="centerX" id="JAl-9e-RaH"/>
+                            <constraint firstItem="2gu-lX-9y9" firstAttribute="leading" secondItem="K6w-7n-bsU" secondAttribute="leading" id="LMH-r7-YfI"/>
+                            <constraint firstAttribute="bottom" secondItem="2gu-lX-9y9" secondAttribute="bottom" id="Mef-Yf-a1X"/>
                             <constraint firstAttribute="trailing" secondItem="1DK-17-xBz" secondAttribute="trailing" id="Q3f-ch-Jvv"/>
+                            <constraint firstAttribute="trailing" secondItem="2gu-lX-9y9" secondAttribute="trailing" id="QGY-SV-kTt"/>
                             <constraint firstItem="1DK-17-xBz" firstAttribute="top" secondItem="Fwt-cJ-sXT" secondAttribute="bottom" id="dRy-J6-eLV"/>
+                            <constraint firstItem="2gu-lX-9y9" firstAttribute="top" secondItem="K6w-7n-bsU" secondAttribute="top" id="kpx-Ya-vP4"/>
                             <constraint firstItem="1DK-17-xBz" firstAttribute="leading" secondItem="K6w-7n-bsU" secondAttribute="leading" id="mPr-kj-2RW"/>
-                            <constraint firstItem="2gu-lX-9y9" firstAttribute="leading" secondItem="K6w-7n-bsU" secondAttribute="leadingMargin" constant="-1" id="nwp-k4-Wd7"/>
                             <constraint firstItem="1DK-17-xBz" firstAttribute="top" secondItem="Fwt-cJ-sXT" secondAttribute="bottom" id="sFJ-fz-haW"/>
-                            <constraint firstItem="2gu-lX-9y9" firstAttribute="top" secondItem="K6w-7n-bsU" secondAttribute="topMargin" constant="-2" id="tM5-Uj-6kE"/>
                             <constraint firstItem="1DK-17-xBz" firstAttribute="centerY" secondItem="2gu-lX-9y9" secondAttribute="centerY" id="zUw-DX-v04"/>
                         </constraints>
                     </view>
@@ -2958,6 +2889,126 @@
             </objects>
             <point key="canvasLocation" x="5026" y="5358"/>
         </scene>
+        <!--Cem View Controller-->
+        <scene sceneID="Rhu-Vg-CtZ">
+            <objects>
+                <viewController id="wCu-en-46p" customClass="CemViewController" customModule="Vimy_Ridge_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="07F-JS-6U0"/>
+                        <viewControllerLayoutGuide type="bottom" id="gzb-4i-duD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eqM-sp-2fk">
+                        <rect key="frame" x="0.0" y="0.0" width="470" height="745"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFH-mr-WVm">
+                                <rect key="frame" x="0.0" y="0.0" width="470" height="745"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Om3-dJ-Gge">
+                                        <rect key="frame" x="0.0" y="0.0" width="470" height="425"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbF-0p-k9C">
+                                                <rect key="frame" x="0.0" y="0.0" width="470" height="20"/>
+                                                <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapelle D'Armentieres Communal Cemetery" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0r-Ep-gBS">
+                                                <rect key="frame" x="0.0" y="20" width="470" height="19"/>
+                                                <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wP5-pM-QfR">
+                                                <rect key="frame" x="0.0" y="39" width="470" height="20"/>
+                                                <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seine-Maritime" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gq-Yo-WLd">
+                                                <rect key="frame" x="0.0" y="59" width="470" height="19"/>
+                                                <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Casualties:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TB-G8-Nb2">
+                                                <rect key="frame" x="0.0" y="78" width="470" height="20"/>
+                                                <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11162" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTp-C3-VEM">
+                                                <rect key="frame" x="0.0" y="98" width="470" height="21"/>
+                                                <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hist Information:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIx-Ey-MJW">
+                                                <rect key="frame" x="0.0" y="119" width="470" height="20"/>
+                                                <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2df-6D-VNp">
+                                                <rect key="frame" x="0.0" y="139" width="470" height="133"/>
+                                                <string key="text">Roclincourt was just within the British lines before the Battles of Arras, 1917; the 51st (Highland) and 34th Divisions advanced from the village on the 9th April, 1917, and the 1st Canadian Division attacked on their left, across the Lens road.</string>
+                                                <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visiting Information:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxF-Cr-xks">
+                                                <rect key="frame" x="0.0" y="272" width="470" height="20"/>
+                                                <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cpa-nO-8sI">
+                                                <rect key="frame" x="0.0" y="292" width="470" height="133"/>
+                                                <string key="text">The communal cemetery is on the northern side of the village, about 600 yards from the church. It lies on the right hand side of the cart track which runs north from the church. The four British graves are near the middle of the eastern boundary.</string>
+                                                <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Om3-dJ-Gge" secondAttribute="bottom" id="46R-1h-Qvl"/>
+                                    <constraint firstAttribute="trailing" secondItem="Om3-dJ-Gge" secondAttribute="trailing" id="VpE-7t-zLy"/>
+                                    <constraint firstItem="Om3-dJ-Gge" firstAttribute="leading" secondItem="pFH-mr-WVm" secondAttribute="leading" id="gc3-X6-hmf"/>
+                                    <constraint firstItem="Om3-dJ-Gge" firstAttribute="top" secondItem="pFH-mr-WVm" secondAttribute="top" id="pll-D0-W9l"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="v0r-Ep-gBS" firstAttribute="width" secondItem="eqM-sp-2fk" secondAttribute="width" id="CIF-D9-Dkn"/>
+                            <constraint firstItem="Cpa-nO-8sI" firstAttribute="width" secondItem="eqM-sp-2fk" secondAttribute="width" id="Ess-pW-ezK"/>
+                            <constraint firstItem="pFH-mr-WVm" firstAttribute="leading" secondItem="eqM-sp-2fk" secondAttribute="leading" id="GRH-L7-guB"/>
+                            <constraint firstItem="8gq-Yo-WLd" firstAttribute="width" secondItem="eqM-sp-2fk" secondAttribute="width" id="ID1-Vb-aLJ"/>
+                            <constraint firstItem="eIx-Ey-MJW" firstAttribute="width" secondItem="eqM-sp-2fk" secondAttribute="width" id="JXF-sH-wpn"/>
+                            <constraint firstItem="OTp-C3-VEM" firstAttribute="width" secondItem="eqM-sp-2fk" secondAttribute="width" id="LUB-vj-Pu4"/>
+                            <constraint firstItem="OxF-Cr-xks" firstAttribute="width" secondItem="eqM-sp-2fk" secondAttribute="width" id="SDE-gf-qis"/>
+                            <constraint firstItem="2df-6D-VNp" firstAttribute="width" secondItem="eqM-sp-2fk" secondAttribute="width" id="UTF-m6-Uxg"/>
+                            <constraint firstItem="1TB-G8-Nb2" firstAttribute="width" secondItem="eqM-sp-2fk" secondAttribute="width" id="W8a-EE-Flm"/>
+                            <constraint firstAttribute="trailing" secondItem="pFH-mr-WVm" secondAttribute="trailing" id="i0f-lV-e0a"/>
+                            <constraint firstItem="wbF-0p-k9C" firstAttribute="width" secondItem="eqM-sp-2fk" secondAttribute="width" id="nfS-eY-MBI"/>
+                            <constraint firstItem="pFH-mr-WVm" firstAttribute="top" secondItem="07F-JS-6U0" secondAttribute="bottom" id="qO3-aW-THI"/>
+                            <constraint firstItem="pFH-mr-WVm" firstAttribute="bottom" secondItem="gzb-4i-duD" secondAttribute="top" id="xpV-nN-dbm"/>
+                            <constraint firstItem="wP5-pM-QfR" firstAttribute="width" secondItem="eqM-sp-2fk" secondAttribute="width" id="yHN-Dp-BSJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="casualties" destination="OTp-C3-VEM" id="MoY-aa-7yw"/>
+                        <outlet property="histInfo" destination="2df-6D-VNp" id="WpH-36-U7H"/>
+                        <outlet property="nameLabel" destination="v0r-Ep-gBS" id="Ybr-mc-y5v"/>
+                        <outlet property="region" destination="8gq-Yo-WLd" id="G5K-49-F6j"/>
+                        <outlet property="visitInfo" destination="Cpa-nO-8sI" id="nKR-7m-59h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="80q-rd-JdW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6263" y="5787"/>
+        </scene>
     </scenes>
     <resources>
         <image name="InfoButton2" width="107" height="111"/>
@@ -2965,6 +3016,7 @@
         <image name="Vimy Ridge Memorial Picture" width="1248" height="960"/>
         <image name="VimyAppCoverPhoto" width="2560" height="1388"/>
         <image name="VimyAppNoPhotoIcon" width="1001" height="1001"/>
+        <image name="background paper" width="1244" height="1975"/>
         <image name="leftArrow" width="107" height="111"/>
         <image name="old paper" width="700" height="1000"/>
         <image name="rightArrow" width="107" height="111"/>
