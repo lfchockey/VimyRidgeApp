@@ -83,6 +83,7 @@ struct MyVariables {
                             if soldier["soldier_of_the_hour"] != "" {
                                 let soth = soldier["soldier_of_the_hour"].stringValue
                                 MyVariables.soldierOfTheHour = soth
+                                MyVariables.facebookSoldierID = soth
                             }
                         }
                     }

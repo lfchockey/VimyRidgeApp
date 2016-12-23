@@ -443,10 +443,10 @@
 		F16B0FE51D4FA578004F2777 /* Vimy Ridge Project */ = {
 			isa = PBXGroup;
 			children = (
-				3FEB443F1E0C606100620494 /* SoldierOfHour */,
 				F16B0FE61D4FA578004F2777 /* AppDelegate.swift */,
 				F16B0FEA1D4FA578004F2777 /* Main.storyboard */,
 				F12C10DC1D562EA10071798C /* Home */,
+				3FEB443F1E0C606100620494 /* SoldierOfHour */,
 				F12C11171D6CB6C40071798C /* Battalions */,
 				F12C10F51D6290890071798C /* Facebook */,
 				F12C10EB1D61FC840071798C /* History */,
