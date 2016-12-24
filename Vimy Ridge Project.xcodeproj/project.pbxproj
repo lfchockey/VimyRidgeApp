@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */; };
+		3FE493251E0DB8CE000A7A03 /* ImageCollecionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE493201E0DB8CE000A7A03 /* ImageCollecionViewCell.swift */; };
+		3FE493261E0DB8CE000A7A03 /* ImageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE493211E0DB8CE000A7A03 /* ImageObject.swift */; };
+		3FE493271E0DB8CE000A7A03 /* ImageReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE493221E0DB8CE000A7A03 /* ImageReader.swift */; };
+		3FE493281E0DB8CE000A7A03 /* Images.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FE493231E0DB8CE000A7A03 /* Images.plist */; };
+		3FE493291E0DB8CE000A7A03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE493241E0DB8CE000A7A03 /* ViewController.swift */; };
+		3FE4932B1E0DEB6A000A7A03 /* FullImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4932A1E0DEB6A000A7A03 /* FullImageView.swift */; };
 		F12C10E61D60CDBC0071798C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E41D60CDBC0071798C /* SearchViewController.swift */; };
 		F12C10E71D60CDBC0071798C /* SoldierSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E51D60CDBC0071798C /* SoldierSearch.swift */; };
 		F12C10E91D60CDDB0071798C /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E81D60CDDB0071798C /* Reachability.swift */; };
@@ -92,6 +98,12 @@
 
 /* Begin PBXFileReference section */
 		3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chapter 11 W00 Regular.ttf"; sourceTree = "<group>"; };
+		3FE493201E0DB8CE000A7A03 /* ImageCollecionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollecionViewCell.swift; sourceTree = "<group>"; };
+		3FE493211E0DB8CE000A7A03 /* ImageObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageObject.swift; sourceTree = "<group>"; };
+		3FE493221E0DB8CE000A7A03 /* ImageReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageReader.swift; sourceTree = "<group>"; };
+		3FE493231E0DB8CE000A7A03 /* Images.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Images.plist; sourceTree = "<group>"; };
+		3FE493241E0DB8CE000A7A03 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3FE4932A1E0DEB6A000A7A03 /* FullImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullImageView.swift; sourceTree = "<group>"; };
 		F12C10E41D60CDBC0071798C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F12C10E51D60CDBC0071798C /* SoldierSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierSearch.swift; sourceTree = "<group>"; };
 		F12C10E81D60CDDB0071798C /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -400,6 +412,12 @@
 		F133F2311D75E1840049B8BB /* Artwork */ = {
 			isa = PBXGroup;
 			children = (
+				3FE493201E0DB8CE000A7A03 /* ImageCollecionViewCell.swift */,
+				3FE4932A1E0DEB6A000A7A03 /* FullImageView.swift */,
+				3FE493211E0DB8CE000A7A03 /* ImageObject.swift */,
+				3FE493221E0DB8CE000A7A03 /* ImageReader.swift */,
+				3FE493231E0DB8CE000A7A03 /* Images.plist */,
+				3FE493241E0DB8CE000A7A03 /* ViewController.swift */,
 			);
 			name = Artwork;
 			sourceTree = "<group>";
@@ -631,6 +649,7 @@
 				F133F22D1D7473810049B8BB /* bg.mp3 in Resources */,
 				F16B0FF11D4FA578004F2777 /* LaunchScreen.storyboard in Resources */,
 				F12C112E1D6CB7CD0071798C /* BattalionTest.plist in Resources */,
+				3FE493281E0DB8CE000A7A03 /* Images.plist in Resources */,
 				F133F2301D74764C0049B8BB /* Serenata Immortale.mp3 in Resources */,
 				F170B8E71D4FB8D600118440 /* CoordinatePrime.plist in Resources */,
 				F170B8F51D4FB93400118440 /* daysOfBattle.plist in Resources */,
@@ -668,11 +687,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE493291E0DB8CE000A7A03 /* ViewController.swift in Sources */,
 				F170B8FE1D4FBA4300118440 /* MapViewController.swift in Sources */,
 				F170B8F41D4FB93400118440 /* AdvProp.swift in Sources */,
 				F12C10E91D60CDDB0071798C /* Reachability.swift in Sources */,
 				F12C10ED1D61FD640071798C /* HistoryViewController.swift in Sources */,
 				F12C10F01D620FB40071798C /* StatsViewController.swift in Sources */,
+				3FE493251E0DB8CE000A7A03 /* ImageCollecionViewCell.swift in Sources */,
+				3FE493261E0DB8CE000A7A03 /* ImageObject.swift in Sources */,
 				F12C11701D7095FA0071798C /* MyVariables.swift in Sources */,
 				F170B8E51D4FB8D600118440 /* CemAnno.swift in Sources */,
 				F12C10E61D60CDBC0071798C /* SearchViewController.swift in Sources */,
@@ -698,12 +720,14 @@
 				F12C10FF1D6291810071798C /* SoldierLocation.swift in Sources */,
 				F12C112B1D6CB7CD0071798C /* BattalionReader.swift in Sources */,
 				F12C11251D6CB7AB0071798C /* FullBattalionInfo.swift in Sources */,
+				3FE4932B1E0DEB6A000A7A03 /* FullImageView.swift in Sources */,
 				F12C11261D6CB7AB0071798C /* SingleBattalionViewController.swift in Sources */,
 				F170B8F01D4FB90C00118440 /* CustomAnnotation.swift in Sources */,
 				F170B8F61D4FB93400118440 /* TLPViewController.swift in Sources */,
 				F170B8FC1D4FB94D00118440 /* WesternFrontLinesCoords.swift in Sources */,
 				F12C118E1D73AB010071798C /* WeaponDetailsVC.swift in Sources */,
 				F12C11051D62919A0071798C /* Medals.swift in Sources */,
+				3FE493271E0DB8CE000A7A03 /* ImageReader.swift in Sources */,
 				F12C11221D6CB7910071798C /* BattalionInfoContainer.swift in Sources */,
 				F133F22E1D7473810049B8BB /* Util.swift in Sources */,
 				F170B8E61D4FB8D600118440 /* CemViewController.swift in Sources */,
