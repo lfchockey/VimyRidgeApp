@@ -410,6 +410,7 @@
 				F12C118C1D73AB010071798C /* WeaponSelectVC.swift */,
 				F12C118D1D73AB010071798C /* WeaponsInfo.swift */,
 				F12C11931D73ADA20071798C /* WeaponAssets.scnassets */,
+				F133F22A1D74734F0049B8BB /* Music */,
 			);
 			name = Weapons;
 			sourceTree = "<group>";
@@ -466,7 +467,6 @@
 				F12C11811D732AD40071798C /* Virtual Memorial */,
 				F16B101C1D4FB477004F2777 /* Maps */,
 				F12C11891D73AAD70071798C /* Weapons */,
-				F133F22A1D74734F0049B8BB /* Music */,
 				F16B10141D4FA6EF004F2777 /* Images.xcassets */,
 				F16B0FEF1D4FA578004F2777 /* LaunchScreen.storyboard */,
 				3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */,

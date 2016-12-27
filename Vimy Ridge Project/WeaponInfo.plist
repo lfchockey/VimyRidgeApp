@@ -130,6 +130,12 @@
 		<string>Weight:1.69lb (0.77kg) </string>
 		<string>Action: manually actuated; thrown</string>
 		<string>Range: 115 ft, 38 yds (35m)</string>
+		<string>Empty 1</string>
+		<string>Empty 2</string>
+		<string>Empty 3</string>
+		<string>Empty 4</string>
+		<string>Empty 5</string>
+		<string>Empty 6</string>
 	</array>
 	<key>Stick grenade (German)</key>
 	<array>
@@ -139,6 +145,12 @@
 		<string>Weight:1.31lb (0.6kg)</string>
 		<string>Action: manually actuated, time fuse explosive; thrown</string>
 		<string>Range: 105 ft, 35 yds (32m)</string>
+		<string>Empty 11</string>
+		<string>Empty12</string>
+		<string>Empty 13</string>
+		<string>Empty 14</string>
+		<string>Empty 15</string>
+		<string>Empty 16</string>
 	</array>
 </dict>
 </plist>
