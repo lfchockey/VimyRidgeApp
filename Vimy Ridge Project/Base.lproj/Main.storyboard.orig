@@ -374,7 +374,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3us-Ni-0F5">
-                                        <rect key="frame" x="20" y="192" width="416" height="29"/>
+                                        <rect key="frame" x="20" y="191" width="416" height="29"/>
                                         <segments>
                                             <segment title="Battalions"/>
                                             <segment title="Cemeteries"/>
@@ -386,25 +386,25 @@
                                         </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTu-6n-ven">
-                                        <rect key="frame" x="20" y="134" width="42" height="21"/>
+                                        <rect key="frame" x="20" y="133.5" width="42" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qpf-bh-j9v">
-                                        <rect key="frame" x="20" y="315" width="416" height="442"/>
+                                        <rect key="frame" x="20" y="314" width="416" height="442"/>
                                         <connections>
                                             <segue destination="VDA-Uf-goD" kind="embed" id="Uhd-CZ-fBq"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Szj-tP-snK">
-                                        <rect key="frame" x="20" y="315" width="416" height="442"/>
+                                        <rect key="frame" x="20" y="314" width="416" height="442"/>
                                         <connections>
                                             <segue destination="HzV-hJ-qwa" kind="embed" id="Vou-bd-hUm"/>
                                         </connections>
                                     </containerView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jus-75-IUm">
-                                        <rect key="frame" x="20" y="58" width="416" height="29"/>
+                                        <rect key="frame" x="20" y="57.5" width="416" height="29"/>
                                         <segments>
                                             <segment title="Standard"/>
                                             <segment title="Hybrid"/>
@@ -415,19 +415,19 @@
                                         </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qt5-bq-zjT">
-                                        <rect key="frame" x="20" y="8" width="42" height="21"/>
+                                        <rect key="frame" x="20" y="8" width="42" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JKO-DH-TEF">
-                                        <rect key="frame" x="20" y="315" width="416" height="442"/>
+                                        <rect key="frame" x="20" y="314" width="416" height="442"/>
                                         <connections>
                                             <segue destination="Mh4-Gr-0KI" kind="embed" id="9IR-HK-Ae3"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eXg-Kc-wsk">
-                                        <rect key="frame" x="20" y="315" width="416" height="442"/>
+                                        <rect key="frame" x="20" y="314" width="416" height="442"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="442" id="9S4-69-Z10"/>
                                         </constraints>

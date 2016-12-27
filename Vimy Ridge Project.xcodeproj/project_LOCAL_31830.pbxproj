@@ -98,6 +98,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F2376221E0AD47A004C3862 /* CollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewHeader.swift; sourceTree = "<group>"; };
+		3F2376231E0AD47A004C3862 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chapter 11 W00 Regular.ttf"; sourceTree = "<group>"; };
 		3FE011BF1E0AE8520067DFD0 /* StatsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsTableViewController.swift; sourceTree = "<group>"; };
 		3FE011C11E0AE85D0067DFD0 /* CollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewHeader.swift; sourceTree = "<group>"; };

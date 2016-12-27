@@ -1,22 +1,24 @@
 //
 //  AppDelegate.swift
-//  Vimy Ridge Project
+//  ios-swift-collapsible-table-section
 //
-//  Created by Mason Black on 2016-08-01.
-//  Copyright © 2016 Mason Black. All rights reserved.
+//  Created by Yong Su on 5/30/16.
+//  Copyright © 2016 Yong Su. All rights reserved.
 //
 
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class VimyAppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
 
-    private func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        self.window = UIWindow(frame:UIScreen.main.bounds)
+        self.window?.makeKeyAndVisible()
+        self.window?.rootViewController = UINavigationController(rootViewController: CollapsibleTableViewController())
         return true
     }
 
