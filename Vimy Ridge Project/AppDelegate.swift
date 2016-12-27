@@ -12,10 +12,19 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    var navController: UINavigationController?
+    var storyboard: UIStoryboard?
+    
     private func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        storyboard = UIStoryboard(name: "Main", bundle: nil)
+        navController = UINavigationController()
+        let viewController: HomeViewController = HomeViewController()
+        self.navController!.pushViewController(viewController, animated: false)
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window!.rootViewController = navController
+        self.window!.backgroundColor = UIColor.white
+        self.window!.makeKeyAndVisible()
 
         return true
     }

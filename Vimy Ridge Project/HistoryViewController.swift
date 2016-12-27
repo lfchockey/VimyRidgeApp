@@ -30,9 +30,27 @@ class HistoryViewController: UIViewController {
     {
         // if the segue needs to go to the Histoyr => Stats
         if sender == 2 {
-            let navController = UINavigationController(rootViewController: StatsTableViewController())
+            
+            //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            //let weaponDetailController = storyboard.instantiateViewController(withIdentifier: "WDVC") as! WeaponDetailsVC
+            //self.navigationController?.pushViewController(weaponDetailController, animated: true)
+            
+            // this is the good line of code
+            ////self.navigationController?.pushViewController(StatsTableViewController(), animated: true)
+            
+            let newController = StatsTableViewController()
+            let oldController = childViewControllers.last! as UIViewController
+            addChildViewController(newController)
+            newController.view.frame = oldController.view.frame
+            
+            transition(from: oldController, to: newController, duration: 0.25, options: .transitionCrossDissolve, animations:{ () -> Void in
+                }, completion: { (finished) -> Void in
+                    oldController.removeFromParentViewController()
+                    newController.didMove(toParentViewController: self)
+            })
+            //let navController = UINavigationController(rootViewController: StatsTableViewController())
 
-            self.present(navController, animated: true, completion: nil)
+            //self.present(navController, animated: true, completion: nil)
             
         }
         else {

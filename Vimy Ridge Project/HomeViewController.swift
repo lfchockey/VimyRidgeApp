@@ -10,6 +10,7 @@
 // Owen Nichols
 // Spencer Wright
 // Ben Seward
+// B Elizabeth Allan
 
 
 import UIKit
@@ -128,6 +129,7 @@ class HomeViewController: UIViewController {
         
         //Change mute button color to blue to show that the music is on
         musicButton.tintColor = UIColor.blue
+        toggleMute(button: musicButton)
     }
     
     override func didReceiveMemoryWarning() {

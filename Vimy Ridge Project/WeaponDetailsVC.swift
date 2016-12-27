@@ -55,7 +55,7 @@ class WeaponDetailsVC: UIViewController {
             let weapon = WeaponsInfo(weaponName: weaponName)
             print(weapon.country)
             
-            let scene = SCNScene(named: "WeaponAssets.scnassets/WW1 Ross Rifle MKIII (Complete).dae")!
+            let scene = SCNScene(named: "WeaponAssets.scnassets/Ross rifle Mk III (Canada).dae")!
 
             weaponView.scene = scene
             CoOAnswer.text = weapon.country
@@ -168,11 +168,9 @@ class WeaponDetailsVC: UIViewController {
         
         
         default:
-            print("Owen")
-            infoOutputTextView.text = "PotatOS Lament"  //portal 2 reference lol
+            print("Unable to find weapon")
         }
         
-        infoOutputTextView.text = weaponName
         //lets the user move the camera around the view
         weaponView.allowsCameraControl = true
 

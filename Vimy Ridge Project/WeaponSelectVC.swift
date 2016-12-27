@@ -30,6 +30,13 @@ class WeaponSelectVC: UITableViewController {
     
     var sections = [Section]()
     
+    //Identifiers
+    let textCellIdentifier = "TextCell"
+    let weaponDetailsSegueIdentifier = "weaponDetailsSegue"
+    
+    //array of weapon names
+    let weapons = ["Ross Rifle MK III (Canada)", "Lee Enfield (Canada)", "KAR-98K (German)", "Mauser Gewehr 98 (German)", "Webley revolver (Canadian)", "Luger (German)", "Colt-browning machine gun M1895/14 (Canadian)", "Lewis (Canadian)", "Mills bomb (Canada)", "Stick grenade (German)"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,7 +44,7 @@ class WeaponSelectVC: UITableViewController {
         
         // Initialize the sections array
         sections = [
-            Section(name: "Canadian Weapons", items: ["Colt-browning machine gun M1895/14","Lee Enfield", "Ross Rifle MK III",  "Webley Revolver", "Lewis", "Mills bomb"]),
+            Section(name: "Canadian Weapons", items: ["Colt-browning machine gun M1895/14","Lee Enfield", "Ross Rifle MK III (Canada)",  "Webley Revolver", "Lewis", "Mills bomb"]),
             Section(name: "German Weapons", items: ["KAR-98K", "Mauser Gewehr 98", "Luger", "Stick grenade"])]
     }
     
@@ -70,11 +77,27 @@ extension WeaponSelectVC {
         //print( sections[indexPath.section].items[indexPath.row])
         //let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         //let exampleViewController: WeaponDetailsVC = mainStoryboard.instantiateViewController(withIdentifier: "WDVC") as!WeaponDetailsVC
-        let exampleViewController: WeaponDetailsVC = self.storyboard?.instantiateViewController(withIdentifier: "WDVC") as! WeaponDetailsVC
-        exampleViewController.weaponName = sections[indexPath.section].items[indexPath.row]
-        //self.view.window!.rootViewController = exampleViewController
-        self.navigationController?.pushViewController(exampleViewController, animated: true)
+        //if let exampleViewController: HistoryViewController = self.storyboard?.instantiateViewController(withIdentifier: "History") as? HistoryViewController
+        //self.navigationController?.pushViewController(WeaponDetailsVC(), animated: true)
+        //print(self.storyboard?.description)
         
+        
+        //self.navigationController?.pushViewController(WeaponDetailsVC(), animated: true)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let weaponDetailController = storyboard.instantiateViewController(withIdentifier: "WDVC") as! WeaponDetailsVC
+        weaponDetailController.weaponName = sections[indexPath.section].items[indexPath.row]
+        self.navigationController?.pushViewController(weaponDetailController, animated: true)
+        
+        
+        //self.storyboard = storyboard
+        //self.present(controller, animated: true, completion: nil)
+        
+//        if let exampleViewController: WeaponDetailsVC = self.storyboard?.instantiateViewController(withIdentifier: "WDVC") as? WeaponDetailsVC
+//        {
+//            exampleViewController.weaponName = sections[indexPath.section].items[indexPath.row]
+//            //self.view.window!.rootViewController = exampleViewController
+//            self.navigationController?.pushViewController(exampleViewController, animated: true)
+//        }
         
         //            if let destination = segue.destination as? WeaponDetailsVC {
         //                if let weaponIndex = tableView.indexPathForSelectedRow?.row {
