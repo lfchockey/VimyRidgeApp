@@ -7,8 +7,10 @@
 //
 // Culminating Assignment Student Branches
 // Mr Black
-//Ben Seward - Dec 23
-// Spencer Wright - test Dec 21 10:07am
+// Owen Nichols
+// Spencer Wright
+// Ben Seward
+
 
 import UIKit
 import AVFoundation

@@ -23,13 +23,6 @@ class BensTableViewCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        let gap : CGFloat = 10
-        let labelHeight: CGFloat = 30
-        let labelWidth: CGFloat = 150
-        let lineGap : CGFloat = 5
-        let label2Y : CGFloat = gap + labelHeight + lineGap
-        let imageSize : CGFloat = 30
-        
         
         myImage = UIImageView()
         myImage.frame = CGRect (x: 0, y: 0, width: bounds.width + 110, height: bounds.height + 10)
