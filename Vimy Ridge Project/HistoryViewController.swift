@@ -28,6 +28,7 @@ class HistoryViewController: UIViewController {
     
     func moveViews(sender:Int)
     {
+        // if the segue needs to go to the Histoyr => Stats
         if sender == 2 {
             let navController = UINavigationController(rootViewController: StatsTableViewController())
 
