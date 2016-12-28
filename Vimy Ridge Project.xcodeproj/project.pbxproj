@@ -271,9 +271,8 @@
 		F12C10F51D6290890071798C /* Facebook */ = {
 			isa = PBXGroup;
 			children = (
-				F1E7D6331E1419B300182A9C /* FacebookMilitaryVC.swift */,
-				F1E7D6341E1419B300182A9C /* FacebookNonMilitaryVC.swift */,
 				F12C110A1D6291B80071798C /* FaceBookViewController.swift */,
+				F1E7D6371E141BDC00182A9C /* Military and Non Military */,
 				F12C10FB1D6290BE0071798C /* Timeline */,
 				F12C10FA1D6290B90071798C /* Profile */,
 				F12C10F91D6290B20071798C /* Photos */,
@@ -553,6 +552,15 @@
 				F170B8E41D4FB8D600118440 /* VimyCoordinates.swift */,
 			);
 			name = Cemeteries;
+			sourceTree = "<group>";
+		};
+		F1E7D6371E141BDC00182A9C /* Military and Non Military */ = {
+			isa = PBXGroup;
+			children = (
+				F1E7D6331E1419B300182A9C /* FacebookMilitaryVC.swift */,
+				F1E7D6341E1419B300182A9C /* FacebookNonMilitaryVC.swift */,
+			);
+			name = "Military and Non Military";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
