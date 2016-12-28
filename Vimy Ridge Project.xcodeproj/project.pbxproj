@@ -78,6 +78,8 @@
 		F170B8FC1D4FB94D00118440 /* WesternFrontLinesCoords.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170B8F91D4FB94D00118440 /* WesternFrontLinesCoords.swift */; };
 		F170B8FE1D4FBA4300118440 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170B8FD1D4FBA4300118440 /* MapViewController.swift */; };
 		F1993B151D5226E9001F40F0 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1993B141D5226E9001F40F0 /* MenuVC.swift */; };
+		F1E7D6351E1419B300182A9C /* FacebookMilitaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D6331E1419B300182A9C /* FacebookMilitaryVC.swift */; };
+		F1E7D6361E1419B300182A9C /* FacebookNonMilitaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D6341E1419B300182A9C /* FacebookNonMilitaryVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +177,8 @@
 		F170B8F91D4FB94D00118440 /* WesternFrontLinesCoords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WesternFrontLinesCoords.swift; sourceTree = "<group>"; };
 		F170B8FD1D4FBA4300118440 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F1993B141D5226E9001F40F0 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		F1E7D6331E1419B300182A9C /* FacebookMilitaryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookMilitaryVC.swift; sourceTree = "<group>"; };
+		F1E7D6341E1419B300182A9C /* FacebookNonMilitaryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookNonMilitaryVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +271,8 @@
 		F12C10F51D6290890071798C /* Facebook */ = {
 			isa = PBXGroup;
 			children = (
+				F1E7D6331E1419B300182A9C /* FacebookMilitaryVC.swift */,
+				F1E7D6341E1419B300182A9C /* FacebookNonMilitaryVC.swift */,
 				F12C110A1D6291B80071798C /* FaceBookViewController.swift */,
 				F12C10FB1D6290BE0071798C /* Timeline */,
 				F12C10FA1D6290B90071798C /* Profile */,
@@ -410,7 +416,6 @@
 				F12C118C1D73AB010071798C /* WeaponSelectVC.swift */,
 				F12C118D1D73AB010071798C /* WeaponsInfo.swift */,
 				F12C11931D73ADA20071798C /* WeaponAssets.scnassets */,
-				F133F22A1D74734F0049B8BB /* Music */,
 			);
 			name = Weapons;
 			sourceTree = "<group>";
@@ -718,6 +723,7 @@
 				F12C11201D6CB7810071798C /* BattalionFactsContainer.swift in Sources */,
 				F16B101A1D4FA929004F2777 /* SwiftyJSON.swift in Sources */,
 				F16B101B1D4FA929004F2777 /* FullSoldier.swift in Sources */,
+				F1E7D6361E1419B300182A9C /* FacebookNonMilitaryVC.swift in Sources */,
 				F12C11301D6CFB670071798C /* TimelineView.swift in Sources */,
 				F1993B151D5226E9001F40F0 /* MenuVC.swift in Sources */,
 				F170B8EF1D4FB90C00118440 /* BattalionsCoords.swift in Sources */,
@@ -733,6 +739,7 @@
 				F12C11251D6CB7AB0071798C /* FullBattalionInfo.swift in Sources */,
 				F12C11261D6CB7AB0071798C /* SingleBattalionViewController.swift in Sources */,
 				F170B8F01D4FB90C00118440 /* CustomAnnotation.swift in Sources */,
+				F1E7D6351E1419B300182A9C /* FacebookMilitaryVC.swift in Sources */,
 				F170B8F61D4FB93400118440 /* TLPViewController.swift in Sources */,
 				3FE011C21E0AE85D0067DFD0 /* CollapsibleTableViewHeader.swift in Sources */,
 				F170B8FC1D4FB94D00118440 /* WesternFrontLinesCoords.swift in Sources */,
