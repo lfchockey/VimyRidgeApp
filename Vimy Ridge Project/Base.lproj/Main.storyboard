@@ -188,16 +188,6 @@
                                     <constraint firstItem="nKA-MY-THM" firstAttribute="top" secondItem="cOc-3Y-ooP" secondAttribute="top" constant="60" id="yZh-WW-wsy"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDb-Sc-6gl">
-                                <rect key="frame" x="20" y="75" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Test">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="TestFacebook:" destination="Eee-on-Pnp" eventType="touchUpInside" id="OD8-qF-rCU"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCB-8a-04q">
                                 <rect key="frame" x="235" y="74" width="130" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -209,8 +199,8 @@
                                     <action selector="soldierOfHourClick:" destination="Eee-on-Pnp" eventType="touchUpInside" id="Zmm-aC-Zo5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywW-No-AqA">
-                                <rect key="frame" x="530" y="75" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywW-No-AqA">
+                                <rect key="frame" x="329" y="587" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="NLG-X2-yog"/>
                                     <constraint firstAttribute="height" constant="30" id="bvI-wM-aDp"/>
@@ -820,13 +810,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Vimy Ridge Memorial Picture" translatesAutoresizingMaskIntoConstraints="NO" id="vF3-ys-JGb">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_paper" translatesAutoresizingMaskIntoConstraints="NO" id="vF3-ys-JGb">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="618"/>
                             </imageView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="h2x-5Z-PgT">
-                                <rect key="frame" x="41" y="70" width="518" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="h2x-5Z-PgT">
+                                <rect key="frame" x="10" y="69" width="355" height="29"/>
                                 <segments>
                                     <segment title="Artwork"/>
                                     <segment title="Background"/>
@@ -837,15 +825,27 @@
                                     <action selector="SwitchPages:" destination="5gc-na-42j" eventType="valueChanged" id="0hn-x9-nd6"/>
                                 </connections>
                             </segmentedControl>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XEA-Kq-MZk">
-                                <rect key="frame" x="0.0" y="99" width="600" height="452"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XEA-Kq-MZk">
+                                <rect key="frame" x="5" y="102" width="365" height="516"/>
                                 <connections>
                                     <segue destination="G0E-je-eAf" kind="embed" id="zfh-pU-WjJ"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="h2x-5Z-PgT" firstAttribute="leading" secondItem="Cz8-4p-Mj7" secondAttribute="leading" constant="10" id="1XM-Gr-Omg"/>
+                            <constraint firstItem="XEA-Kq-MZk" firstAttribute="leading" secondItem="Cz8-4p-Mj7" secondAttribute="leading" constant="5" id="Elb-Xu-jII"/>
+                            <constraint firstItem="vF3-ys-JGb" firstAttribute="top" secondItem="Cz8-4p-Mj7" secondAttribute="topMargin" id="IHO-k3-pLe"/>
+                            <constraint firstItem="jql-Oc-AIv" firstAttribute="top" secondItem="XEA-Kq-MZk" secondAttribute="bottom" id="X2x-xD-tB7"/>
+                            <constraint firstAttribute="trailing" secondItem="XEA-Kq-MZk" secondAttribute="trailing" constant="5" id="bu5-dp-FeK"/>
+                            <constraint firstItem="vF3-ys-JGb" firstAttribute="leading" secondItem="Cz8-4p-Mj7" secondAttribute="leadingMargin" constant="-20" id="hnj-UW-w03"/>
+                            <constraint firstAttribute="trailing" secondItem="h2x-5Z-PgT" secondAttribute="trailing" constant="10" id="img-Fc-Ok2"/>
+                            <constraint firstItem="h2x-5Z-PgT" firstAttribute="top" secondItem="qzb-jN-pLs" secondAttribute="bottom" constant="5" id="mFX-dt-SQ5"/>
+                            <constraint firstItem="jql-Oc-AIv" firstAttribute="top" secondItem="vF3-ys-JGb" secondAttribute="bottom" id="rdM-gn-jyb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vF3-ys-JGb" secondAttribute="trailing" constant="-20" id="uhc-py-n9g"/>
+                            <constraint firstItem="XEA-Kq-MZk" firstAttribute="top" secondItem="h2x-5Z-PgT" secondAttribute="bottom" constant="5" id="y21-Lm-Ndn"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Jgr-jr-NOG"/>
                 </viewController>
@@ -862,11 +862,11 @@
                         <viewControllerLayoutGuide type="bottom" id="shi-E9-hld"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vYW-bN-F35">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="452"/>
+                        <rect key="frame" x="0.0" y="0.0" width="365" height="516"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUV-pe-2pW">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="452"/>
+                                <rect key="frame" x="-4" y="0.0" width="373" height="516"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGL-5u-J2H">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="636"/>
@@ -1034,11 +1034,11 @@
                         <viewControllerLayoutGuide type="bottom" id="kgh-Vj-LKP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FMJ-es-0fj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="452"/>
+                        <rect key="frame" x="0.0" y="0.0" width="365" height="516"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EdU-eG-FY9">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="452"/>
+                                <rect key="frame" x="-4" y="0.0" width="373" height="516"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0k3-Vb-Fcw">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="636"/>
@@ -1095,11 +1095,11 @@
                         <viewControllerLayoutGuide type="bottom" id="loY-j3-Agb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1BX-1O-Kdu">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="452"/>
+                        <rect key="frame" x="0.0" y="0.0" width="365" height="516"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ces-z5-c2T">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="452"/>
+                                <rect key="frame" x="-4" y="0.0" width="373" height="516"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxq-aE-FxU">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="636"/>
@@ -3190,6 +3190,7 @@
         <image name="Vimy Ridge Memorial Picture" width="1248" height="960"/>
         <image name="VimyAppCoverPhoto" width="2560" height="1388"/>
         <image name="VimyAppNoPhotoIcon" width="1001" height="1001"/>
+        <image name="background_paper" width="1244" height="1975"/>
         <image name="leftArrow" width="107" height="111"/>
         <image name="old paper" width="700" height="1000"/>
         <image name="open book30x30" width="30" height="30"/>
@@ -3199,8 +3200,8 @@
         <image name="weapons tab image 30x30" width="30" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DAX-FV-Hpg"/>
         <segue reference="ozq-9e-KiN"/>
+        <segue reference="DAX-FV-Hpg"/>
         <segue reference="5gV-Mb-wIq"/>
     </inferredMetricsTieBreakers>
 </document>

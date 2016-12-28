@@ -31,17 +31,17 @@ class HomeViewController: UIViewController {
         toggleMute(button: musicButton)
     }
     
-    @IBAction func TestFacebook(_ sender: AnyObject) {
-        MyVariables.facebookSoldierID = "55"
-        segueName = "FacebookSegue"
-        if !MyVariables.allSoldiersDownloaded {
-            loadAnimation()
-            scheduledTimerWithTimeInterval()
-        }
-        else {
-            self.performSegue(withIdentifier: self.segueName, sender: nil)
-        }
-    }
+//    @IBAction func TestFacebook(_ sender: AnyObject) {
+//        MyVariables.facebookSoldierID = "55"
+//        segueName = "FacebookSegue"
+//        if !MyVariables.allSoldiersDownloaded {
+//            loadAnimation()
+//            scheduledTimerWithTimeInterval()
+//        }
+//        else {
+//            self.performSegue(withIdentifier: self.segueName, sender: nil)
+//        }
+//    }
     
     @IBAction func soldierOfHourClick(_ sender: AnyObject) {
         MyVariables.facebookSoldierID = MyVariables.soldierOfTheHour
