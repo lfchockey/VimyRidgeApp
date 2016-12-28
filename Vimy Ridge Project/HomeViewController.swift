@@ -11,6 +11,8 @@
 // Spencer Wright
 // Ben Seward
 // B Elizabeth Allan
+// Kevin Hicks
+// Oksana Johnston
 
 
 import UIKit
@@ -159,7 +161,7 @@ class HomeViewController: UIViewController {
     
     func loadAnimation() {
         //creates and stores all the names for the images used in an array
-        var imagesNames = ["run1.jpg", "run2.jpg", "run3.jpg", "run4.jpg", "run5.jpg", "run6.jpg", "run7.jpg", "run8.jpg", "run9.jpg", "run10.jpg", "run11.jpg"]
+        var imagesNames = ["run1-1.jpg", "run2-1.jpg", "run3-1.jpg", "run4-1.jpg", "run5-1.jpg", "run6-1.jpg", "run7-1.jpg", "run8-1.jpg", "run9-1.jpg", "run10-1.jpg", "run11-1.jpg"]
         
         //create new uiimage array
         var images = [UIImage]()

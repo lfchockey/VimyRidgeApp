@@ -80,6 +80,8 @@
 		F1993B151D5226E9001F40F0 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1993B141D5226E9001F40F0 /* MenuVC.swift */; };
 		F1E7D6351E1419B300182A9C /* FacebookMilitaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D6331E1419B300182A9C /* FacebookMilitaryVC.swift */; };
 		F1E7D6361E1419B300182A9C /* FacebookNonMilitaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D6341E1419B300182A9C /* FacebookNonMilitaryVC.swift */; };
+		F1E7D6391E1469B500182A9C /* Roman Stonecut.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1E7D6381E1469B500182A9C /* Roman Stonecut.ttf */; };
+		F1E7D63B1E146DEA00182A9C /* Custom Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D63A1E146DEA00182A9C /* Custom Segue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +181,8 @@
 		F1993B141D5226E9001F40F0 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		F1E7D6331E1419B300182A9C /* FacebookMilitaryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookMilitaryVC.swift; sourceTree = "<group>"; };
 		F1E7D6341E1419B300182A9C /* FacebookNonMilitaryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookNonMilitaryVC.swift; sourceTree = "<group>"; };
+		F1E7D6381E1469B500182A9C /* Roman Stonecut.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roman Stonecut.ttf"; sourceTree = "<group>"; };
+		F1E7D63A1E146DEA00182A9C /* Custom Segue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Custom Segue.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -394,6 +398,7 @@
 		F12C11811D732AD40071798C /* Virtual Memorial */ = {
 			isa = PBXGroup;
 			children = (
+				F1E7D63A1E146DEA00182A9C /* Custom Segue.swift */,
 				F12C11841D732B360071798C /* VimyVirtualMemorialVC.swift */,
 			);
 			name = "Virtual Memorial";
@@ -474,6 +479,7 @@
 				F133F22A1D74734F0049B8BB /* Music */,
 				F16B10141D4FA6EF004F2777 /* Images.xcassets */,
 				F16B0FEF1D4FA578004F2777 /* LaunchScreen.storyboard */,
+				F1E7D6381E1469B500182A9C /* Roman Stonecut.ttf */,
 				3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */,
 				F12C10EA1D60CDE80071798C /* Helper Classes */,
 				F16B0FF21D4FA578004F2777 /* Info.plist */,
@@ -674,6 +680,7 @@
 				F133F22D1D7473810049B8BB /* bg.mp3 in Resources */,
 				F16B0FF11D4FA578004F2777 /* LaunchScreen.storyboard in Resources */,
 				F12C112E1D6CB7CD0071798C /* BattalionTest.plist in Resources */,
+				F1E7D6391E1469B500182A9C /* Roman Stonecut.ttf in Resources */,
 				F133F2301D74764C0049B8BB /* Serenata Immortale.mp3 in Resources */,
 				F170B8E71D4FB8D600118440 /* CoordinatePrime.plist in Resources */,
 				F170B8F51D4FB93400118440 /* daysOfBattle.plist in Resources */,
@@ -766,6 +773,7 @@
 				F12C10F21D6210650071798C /* StatsReader.swift in Sources */,
 				F16B10171D4FA735004F2777 /* HomeViewController.swift in Sources */,
 				3FE011C41E0AE8630067DFD0 /* Extensions.swift in Sources */,
+				F1E7D63B1E146DEA00182A9C /* Custom Segue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

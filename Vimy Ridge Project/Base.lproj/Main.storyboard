@@ -15,6 +15,9 @@
         <array key="Chapter 11 W00 Regular.ttf">
             <string>Chapter11W00-Regular</string>
         </array>
+        <array key="Roman Stonecut.ttf">
+            <string>RomanStonecut</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Home-->
@@ -232,11 +235,11 @@
                         <segue destination="5gc-na-42j" kind="show" identifier="HistorySegue" id="JX9-1E-wll"/>
                         <segue destination="QrR-hS-n2u" kind="show" identifier="BattalionSegue" id="C4R-XZ-Xzd"/>
                         <segue destination="vtA-Pm-GKv" kind="show" identifier="SearchSegue" id="5gV-Mb-wIq"/>
-                        <segue destination="lyx-iv-dhm" kind="show" identifier="VirtualMemorialSegue" id="DAX-FV-Hpg"/>
                         <segue destination="CzM-56-0ZK" kind="show" identifier="MapSegue" id="wW7-Ep-xck"/>
                         <segue destination="Koa-NH-qar" kind="show" identifier="AboutSegue" id="a8F-du-f4r"/>
                         <segue destination="LFT-WK-Hg5" kind="show" identifier="WeaponsSegue" id="88H-hY-U8t"/>
                         <segue destination="lAc-5k-Y7N" kind="show" identifier="FacebookSegue" id="WQT-D0-HzJ"/>
+                        <segue destination="PZw-Mf-OZg" kind="show" identifier="VirtualMemorialSegue" id="Cpx-Ef-A3g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0az-Vn-zeA" sceneMemberID="firstResponder"/>
@@ -1155,7 +1158,7 @@
                         <viewControllerLayoutGuide type="bottom" id="QHV-G1-wAG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="suW-kS-zrc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="369" height="409.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VimyAppCoverPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="TbO-eh-zeG">
@@ -1704,7 +1707,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAl-0O-lLE" userLabel="ButtonView">
-                                <rect key="frame" x="16" y="0.0" width="337" height="61.5"/>
+                                <rect key="frame" x="16" y="0.0" width="337" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nt0-pv-zmk">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
@@ -1735,7 +1738,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMA-XM-Vad">
-                                        <rect key="frame" x="122.5" y="35" width="92" height="36"/>
+                                        <rect key="frame" x="123" y="35" width="92" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="34r-B4-FAP"/>
                                             <constraint firstAttribute="width" constant="92" id="LK9-oF-zvB"/>
@@ -1760,17 +1763,17 @@
                                 </constraints>
                             </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Dva-fL-y5H">
-                                <rect key="frame" x="110.5" y="61.5" width="258.5" height="348"/>
+                                <rect key="frame" x="111" y="62" width="258" height="348"/>
                             </mapView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="38" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lC9-Yv-YlI">
-                                <rect key="frame" x="0.0" y="61.5" width="110.5" height="348"/>
+                                <rect key="frame" x="0.0" y="62" width="111" height="348"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="kiM-m7-ntU">
-                                        <rect key="frame" x="0.0" y="28" width="110.5" height="38"/>
+                                        <rect key="frame" x="0.0" y="28" width="111" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kiM-m7-ntU" id="rmU-mb-I7i">
-                                            <rect key="frame" x="0.0" y="0.0" width="110.5" height="38"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="111" height="38"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1875,247 +1878,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGn-Sz-zKd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8201" y="3256"/>
-        </scene>
-        <!--Vimy Virtual MemorialVC-->
-        <scene sceneID="c3H-g1-U4B">
-            <objects>
-                <viewController modalPresentationStyle="currentContext" id="lyx-iv-dhm" customClass="VimyVirtualMemorialVC" customModule="Vimy_Ridge_Project" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="s0D-LB-IIC"/>
-                        <viewControllerLayoutGuide type="bottom" id="6Zc-HK-0oM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Zoq-qK-ZqF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="guJ-6K-H4x">
-                                <rect key="frame" x="166" y="65" width="233" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="rJZ-mH-Ife">
-                                <rect key="frame" x="260" y="149" width="159" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="dbv-by-0OL">
-                                <rect key="frame" x="100" y="149" width="159" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="GpR-H4-JVE">
-                                <rect key="frame" x="281" y="220" width="92" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="ngP-bq-sVh">
-                                <rect key="frame" x="5" y="235" width="159" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="996-6l-JdX">
-                                <rect key="frame" x="5" y="149" width="93" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="Lua-BN-zOs">
-                                <rect key="frame" x="487" y="220" width="118" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="HPH-tk-Vt7">
-                                <rect key="frame" x="5" y="322" width="93" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="CbH-ev-9JS">
-                                <rect key="frame" x="260" y="410" width="159" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="hKh-rv-o2m">
-                                <rect key="frame" x="349" y="558" width="11" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="bhu-xn-Rxp">
-                                <rect key="frame" x="327" y="235" width="92" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="u9P-ZF-BwQ">
-                                <rect key="frame" x="335" y="494" width="84" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="Gbg-nD-ugl">
-                                <rect key="frame" x="25" y="633" width="159" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="cEZ-fk-aLl">
-                                <rect key="frame" x="281" y="694" width="92" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="Fry-By-B6K">
-                                <rect key="frame" x="487" y="395" width="118" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="kcY-75-MHG">
-                                <rect key="frame" x="248" y="674" width="159" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="j2p-w0-Nff">
-                                <rect key="frame" x="34" y="617" width="159" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="s8n-g7-2md">
-                                <rect key="frame" x="358" y="666" width="41" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="LqD-FR-B95">
-                                <rect key="frame" x="260" y="322" width="159" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="g8D-M1-mbj">
-                                <rect key="frame" x="100" y="322" width="159" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="Chi-Pi-r8U">
-                                <rect key="frame" x="487" y="571" width="118" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="2Q9-Zn-zvj">
-                                <rect key="frame" x="540" y="483" width="65" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="7rK-rX-4Xh">
-                                <rect key="frame" x="568" y="307" width="37" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="uJv-hp-hZV">
-                                <rect key="frame" x="555" y="132" width="50" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="5CV-9D-kWv">
-                                <rect key="frame" x="100" y="410" width="159" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="ltk-yb-oey">
-                                <rect key="frame" x="34" y="651" width="50" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="COw-v7-kRZ">
-                                <rect key="frame" x="5" y="65" width="159" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="anO-un-qq0">
-                                <rect key="frame" x="487" y="45" width="118" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="jS2-WQ-igT">
-                                <rect key="frame" x="73" y="659" width="158" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="zLc-Mx-bSN">
-                                <rect key="frame" x="233" y="659" width="158" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="faf-f9-RXP">
-                                <rect key="frame" x="5" y="659" width="65" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="Yby-Og-Ew7">
-                                <rect key="frame" x="394" y="659" width="25" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="AC7-c9-cLY">
-                                <rect key="frame" x="5" y="746" width="159" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="FLe-um-F1q">
-                                <rect key="frame" x="166" y="746" width="159" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="1yV-Ba-B4a">
-                                <rect key="frame" x="327" y="746" width="92" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="drr-f1-xe0">
-                                <rect key="frame" x="5" y="410" width="92" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="8nJ-UR-8at">
-                                <rect key="frame" x="166" y="235" width="159" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vimy_brick" translatesAutoresizingMaskIntoConstraints="NO" id="y9l-4q-quP">
-                                <rect key="frame" x="253" y="494" width="58" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="1fh-uE-Dzw">
-                                <rect key="frame" x="12" y="235" width="197" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="0.25" green="0.25" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="btn2Action:" destination="lyx-iv-dhm" eventType="touchUpInside" id="BRa-2k-ZJt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="woJ-Rg-npm">
-                                <rect key="frame" x="57" y="149" width="207" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="0.25" green="0.25" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="btn4Action:" destination="lyx-iv-dhm" eventType="touchUpInside" id="VHK-v5-M56"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label " textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJv-gU-ZPU">
-                                <rect key="frame" x="5" y="317" width="204" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="G9i-IU-bzD">
-                                <rect key="frame" x="17" y="65" width="167" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="0.25" green="0.25" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnAction:" destination="lyx-iv-dhm" eventType="touchUpInside" id="Cbh-Tk-9MF"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ed9-2f-qLe">
-                                <rect key="frame" x="12" y="410" width="227" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.99769133329391479" green="0.96189320087432861" blue="0.044623028486967087" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="highlightedColor" red="0.0049455668777227402" green="0.0" blue="0.9401964545249939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dO9-FZ-Wrx">
-                                <rect key="frame" x="177" y="65" width="159" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Button ">
-                                    <color key="titleColor" red="0.25" green="0.25" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="btn3Action:" destination="lyx-iv-dhm" eventType="touchUpInside" id="v7I-QM-qgt"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="UYu-qN-MNg"/>
-                    <connections>
-                        <outlet property="btn" destination="G9i-IU-bzD" id="Uyi-Du-hBP"/>
-                        <outlet property="btn2" destination="1fh-uE-Dzw" id="URK-y4-T0a"/>
-                        <outlet property="btn3" destination="dO9-FZ-Wrx" id="osL-3U-KaY"/>
-                        <outlet property="btn4" destination="woJ-Rg-npm" id="Uy3-LK-NYZ"/>
-                        <outlet property="label" destination="GJv-gU-ZPU" id="9s1-u1-afp"/>
-                        <outlet property="labelTest" destination="ed9-2f-qLe" id="9Xt-zF-hl3"/>
-                        <segue destination="lAc-5k-Y7N" kind="show" identifier="FacebookSegue" id="qME-nH-bAZ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ijz-9u-mQl" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4737" y="3005"/>
         </scene>
         <!--Weapons-->
         <scene sceneID="dXb-iz-MKm">
@@ -2475,7 +2237,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Ka-tn-0un" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Maps" image="Map of Europe copy30x30" id="yMO-JE-ds4"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="arY-8e-ctc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="arY-8e-ctc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2507,7 +2269,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p2Y-3R-C3q" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="search" id="wJT-zZ-tNh"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PCY-j1-GkM">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="PCY-j1-GkM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2548,7 +2310,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="lyx-iv-dhm" kind="relationship" relationship="rootViewController" id="Uhw-5e-03a"/>
+                        <segue destination="PZw-Mf-OZg" kind="relationship" relationship="rootViewController" id="vAl-jz-aGg"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lyg-ou-4hc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2577,7 +2339,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gSQ-F5-48W" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="History" image="open book30x30" id="0WQ-UH-nVD"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="agj-CN-dKt">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="agj-CN-dKt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2616,10 +2378,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_paper" translatesAutoresizingMaskIntoConstraints="NO" id="aFr-HU-LJ2">
-                                <rect key="frame" x="0.0" y="0.0" width="369" height="410"/>
+                                <rect key="frame" x="0.0" y="0.0" width="369" height="503"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJt-bN-cA5" customClass="Nayme">
-                                <rect key="frame" x="0.0" y="0.0" width="369" height="410"/>
+                                <rect key="frame" x="0.0" y="0.0" width="369" height="503"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6dV-Nu-PRu">
                                         <rect key="frame" x="0.0" y="0.0" width="369" height="1233"/>
@@ -3280,10 +3042,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_paper" translatesAutoresizingMaskIntoConstraints="NO" id="2Nd-rS-w8W">
-                                <rect key="frame" x="0.0" y="0.0" width="369" height="410"/>
+                                <rect key="frame" x="0.0" y="0.0" width="369" height="503"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1p-tP-dlg" customClass="Nayme">
-                                <rect key="frame" x="0.0" y="0.0" width="369" height="410"/>
+                                <rect key="frame" x="0.0" y="0.0" width="369" height="503"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1pH-30-zQp">
                                         <rect key="frame" x="0.0" y="0.0" width="369" height="1304"/>
@@ -4049,11 +3811,384 @@
             </objects>
             <point key="canvasLocation" x="5750" y="1996"/>
         </scene>
+        <!--Vimy Virtual MemorialVC-->
+        <scene sceneID="YwQ-i6-USa">
+            <objects>
+                <viewController id="PZw-Mf-OZg" customClass="VimyVirtualMemorialVC" customModule="Vimy_Ridge_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gau-WZ-cmF"/>
+                        <viewControllerLayoutGuide type="bottom" id="q15-OB-xDm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BQA-ZF-y1G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Hz-dc-XBX">
+                                <rect key="frame" x="0.0" y="111" width="375" height="471"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="hpS-xN-qkA" userLabel="btn2">
+                                        <rect key="frame" x="125" y="0.0" width="125" height="118"/>
+                                        <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="20"/>
+                                        <state key="normal" title="btn2" backgroundImage="vimyWallBrickupLight1">
+                                            <color key="titleColor" red="0.25" green="0.25" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="11"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="14"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="btn2Action:" destination="PZw-Mf-OZg" eventType="touchUpInside" id="XE4-ee-W8y"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="bw7-mD-tCl" userLabel="btn3">
+                                        <rect key="frame" x="250" y="0.0" width="125" height="118"/>
+                                        <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="20"/>
+                                        <state key="normal" title="btn3" backgroundImage="vimyWallBrickleftLight">
+                                            <color key="titleColor" red="0.25" green="0.25" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="11"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="14"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="btn3Action:" destination="PZw-Mf-OZg" eventType="touchUpInside" id="LgC-Ar-V7c"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="IPX-4v-aNd" userLabel="btn4">
+                                        <rect key="frame" x="0.0" y="118" width="125" height="118"/>
+                                        <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="20"/>
+                                        <state key="normal" title="btn4" backgroundImage="vimyWallBrickdownLIght1">
+                                            <color key="titleColor" red="0.25" green="0.25" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="11"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="14"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="btn4Action:" destination="PZw-Mf-OZg" eventType="touchUpInside" id="KYv-iO-Fi0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="yem-Jl-rJS">
+                                        <rect key="frame" x="250" y="118" width="125" height="118"/>
+                                        <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="20"/>
+                                        <state key="normal" title="btn6" backgroundImage="vimyWallBrickDownLeftLight1">
+                                            <color key="titleColor" red="0.25" green="0.25" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="11"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="14"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="btn6Action:" destination="PZw-Mf-OZg" eventType="touchUpInside" id="UP7-G8-Z6b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="naF-ru-Uge">
+                                        <rect key="frame" x="0.0" y="236" width="125" height="118"/>
+                                        <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="20"/>
+                                        <state key="normal" title="btn7" backgroundImage="vimyWallBrickSideLight1">
+                                            <color key="titleColor" red="0.25" green="0.25" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="11"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="14"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="btn7Action:" destination="PZw-Mf-OZg" eventType="touchUpInside" id="q18-VX-s0M"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="PSO-ln-HHw">
+                                        <rect key="frame" x="125" y="236" width="125" height="118"/>
+                                        <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="20"/>
+                                        <state key="normal" title="btn8" backgroundImage="vimyWallBrickupLight1">
+                                            <color key="titleColor" red="0.25" green="0.25" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="11"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="14"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="btn8Action:" destination="PZw-Mf-OZg" eventType="touchUpInside" id="IJ6-V3-x6b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="g4d-0j-qc5">
+                                        <rect key="frame" x="250" y="236" width="125" height="118"/>
+                                        <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="20"/>
+                                        <state key="normal" title="btn9" backgroundImage="vimyWallBrickleftLight">
+                                            <color key="titleColor" red="0.25" green="0.25" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="11"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="14"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="btn9Action:" destination="PZw-Mf-OZg" eventType="touchUpInside" id="HWQ-hV-u0D"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="IqX-PI-IdV">
+                                        <rect key="frame" x="0.0" y="354" width="125" height="118"/>
+                                        <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="20"/>
+                                        <state key="normal" title="btn10" backgroundImage="vimyWallBrickdownLIght1">
+                                            <color key="titleColor" red="0.25" green="0.25" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="11"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="14"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="btn10Action:" destination="PZw-Mf-OZg" eventType="touchUpInside" id="4oC-ER-fSg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="2Go-0T-txs">
+                                        <rect key="frame" x="125" y="354" width="125" height="118"/>
+                                        <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="20"/>
+                                        <state key="normal" title="btn11" backgroundImage="vimyWallBrickMidddleLight1">
+                                            <color key="titleColor" red="0.25" green="0.25" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="11"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="14"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="btn11Action:" destination="PZw-Mf-OZg" eventType="touchUpInside" id="cRI-61-Ajn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="DvY-SS-wyt">
+                                        <rect key="frame" x="250" y="354" width="125" height="118"/>
+                                        <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="20"/>
+                                        <state key="normal" title="btn12" backgroundImage="vimyWallBrickDownLeftLight1">
+                                            <color key="titleColor" red="0.25" green="0.25" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="11"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="14"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="btn12Action:" destination="PZw-Mf-OZg" eventType="touchUpInside" id="egY-ZB-A7k"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3CZ-Bp-FcD" userLabel="btn">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="118"/>
+                                        <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="20"/>
+                                        <state key="normal" title="btn" backgroundImage="vimyWallBrickSideLight1">
+                                            <color key="titleColor" red="0.25" green="0.25" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="11"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="14"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="btnAction:" destination="PZw-Mf-OZg" eventType="touchUpInside" id="DTg-3t-LBG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="6H4-7H-8Lx" userLabel="btn5">
+                                        <rect key="frame" x="125" y="118" width="125" height="118"/>
+                                        <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="20"/>
+                                        <state key="normal" title="btn5" backgroundImage="vimyWallBrickMidddleLight1">
+                                            <color key="titleColor" red="0.25" green="0.25" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="11"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="14"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="btn5Action:" destination="PZw-Mf-OZg" eventType="touchUpInside" id="0OH-L0-vH4"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animationSwipe12Good" translatesAutoresizingMaskIntoConstraints="NO" id="UIG-5Z-cwX">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="354"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buttonClick9" translatesAutoresizingMaskIntoConstraints="NO" id="0Ix-cn-rfh">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="236"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hpS-xN-qkA" firstAttribute="height" secondItem="3CZ-Bp-FcD" secondAttribute="height" id="1DV-IT-0bi"/>
+                                    <constraint firstItem="hpS-xN-qkA" firstAttribute="centerX" secondItem="0Hz-dc-XBX" secondAttribute="centerX" id="1l6-95-X7L"/>
+                                    <constraint firstItem="6H4-7H-8Lx" firstAttribute="height" secondItem="IPX-4v-aNd" secondAttribute="height" id="1tb-GR-575"/>
+                                    <constraint firstAttribute="trailing" secondItem="UIG-5Z-cwX" secondAttribute="trailing" id="3Ii-tc-Mwj"/>
+                                    <constraint firstItem="g4d-0j-qc5" firstAttribute="height" secondItem="PSO-ln-HHw" secondAttribute="height" id="4UO-Pa-UOm"/>
+                                    <constraint firstItem="hpS-xN-qkA" firstAttribute="top" secondItem="3CZ-Bp-FcD" secondAttribute="top" id="4lk-Mt-jfD"/>
+                                    <constraint firstItem="IPX-4v-aNd" firstAttribute="height" secondItem="bw7-mD-tCl" secondAttribute="height" id="5FQ-BQ-Bp1"/>
+                                    <constraint firstItem="0Ix-cn-rfh" firstAttribute="top" secondItem="0Hz-dc-XBX" secondAttribute="top" id="5b6-fW-SMV"/>
+                                    <constraint firstItem="3CZ-Bp-FcD" firstAttribute="top" secondItem="0Hz-dc-XBX" secondAttribute="top" id="6AP-my-kq4"/>
+                                    <constraint firstItem="PSO-ln-HHw" firstAttribute="top" secondItem="0Ix-cn-rfh" secondAttribute="bottom" id="6Hw-M0-LX1"/>
+                                    <constraint firstItem="DvY-SS-wyt" firstAttribute="leading" secondItem="2Go-0T-txs" secondAttribute="trailing" id="7bJ-if-QnO"/>
+                                    <constraint firstItem="g4d-0j-qc5" firstAttribute="top" secondItem="yem-Jl-rJS" secondAttribute="bottom" id="7hS-4s-iMX"/>
+                                    <constraint firstItem="6H4-7H-8Lx" firstAttribute="width" secondItem="IPX-4v-aNd" secondAttribute="width" id="97c-rQ-Z0V"/>
+                                    <constraint firstItem="0Ix-cn-rfh" firstAttribute="height" secondItem="6H4-7H-8Lx" secondAttribute="height" multiplier="2" id="9wX-5f-Sre"/>
+                                    <constraint firstItem="IqX-PI-IdV" firstAttribute="width" secondItem="g4d-0j-qc5" secondAttribute="width" id="Acn-9L-pO8"/>
+                                    <constraint firstItem="2Go-0T-txs" firstAttribute="top" secondItem="PSO-ln-HHw" secondAttribute="bottom" id="BO8-xF-Jb7"/>
+                                    <constraint firstItem="naF-ru-Uge" firstAttribute="top" secondItem="IPX-4v-aNd" secondAttribute="bottom" id="Fm7-Yr-gjJ"/>
+                                    <constraint firstItem="naF-ru-Uge" firstAttribute="width" secondItem="yem-Jl-rJS" secondAttribute="width" id="GKT-QK-Vnl"/>
+                                    <constraint firstItem="UIG-5Z-cwX" firstAttribute="leading" secondItem="0Hz-dc-XBX" secondAttribute="leading" id="GPN-Jx-m0x"/>
+                                    <constraint firstItem="yem-Jl-rJS" firstAttribute="top" secondItem="bw7-mD-tCl" secondAttribute="bottom" id="Gwr-cB-5NR"/>
+                                    <constraint firstItem="IqX-PI-IdV" firstAttribute="top" secondItem="naF-ru-Uge" secondAttribute="bottom" id="ITY-ON-MZt"/>
+                                    <constraint firstItem="IPX-4v-aNd" firstAttribute="leading" secondItem="0Hz-dc-XBX" secondAttribute="leading" id="JWv-Va-KLU"/>
+                                    <constraint firstItem="UIG-5Z-cwX" firstAttribute="width" secondItem="2Go-0T-txs" secondAttribute="width" multiplier="3" id="Jrj-zP-c33"/>
+                                    <constraint firstItem="6H4-7H-8Lx" firstAttribute="top" secondItem="hpS-xN-qkA" secondAttribute="bottom" id="KFF-eJ-TMP"/>
+                                    <constraint firstItem="2Go-0T-txs" firstAttribute="leading" secondItem="IqX-PI-IdV" secondAttribute="trailing" id="MMB-Mf-aA1"/>
+                                    <constraint firstItem="0Ix-cn-rfh" firstAttribute="leading" secondItem="0Hz-dc-XBX" secondAttribute="leading" id="Orx-Mk-BEa"/>
+                                    <constraint firstItem="3CZ-Bp-FcD" firstAttribute="height" secondItem="0Hz-dc-XBX" secondAttribute="height" multiplier="0.25" id="PKp-uy-wH3"/>
+                                    <constraint firstItem="naF-ru-Uge" firstAttribute="leading" secondItem="0Hz-dc-XBX" secondAttribute="leading" id="QaM-YQ-jD6"/>
+                                    <constraint firstItem="PSO-ln-HHw" firstAttribute="height" secondItem="naF-ru-Uge" secondAttribute="height" id="Qto-YW-qlC"/>
+                                    <constraint firstItem="PSO-ln-HHw" firstAttribute="top" secondItem="6H4-7H-8Lx" secondAttribute="bottom" id="R3t-rq-q7D"/>
+                                    <constraint firstItem="DvY-SS-wyt" firstAttribute="top" secondItem="g4d-0j-qc5" secondAttribute="bottom" id="TFA-z1-npS"/>
+                                    <constraint firstItem="UIG-5Z-cwX" firstAttribute="top" secondItem="0Hz-dc-XBX" secondAttribute="top" id="UTw-dB-hkM"/>
+                                    <constraint firstItem="bw7-mD-tCl" firstAttribute="height" secondItem="hpS-xN-qkA" secondAttribute="height" id="Ubm-rG-R5e"/>
+                                    <constraint firstItem="bw7-mD-tCl" firstAttribute="width" secondItem="hpS-xN-qkA" secondAttribute="width" id="Urg-Gz-pPQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="bw7-mD-tCl" secondAttribute="trailing" id="VhF-eF-RBI"/>
+                                    <constraint firstItem="naF-ru-Uge" firstAttribute="height" secondItem="yem-Jl-rJS" secondAttribute="height" id="Xrf-CJ-MX4"/>
+                                    <constraint firstItem="bw7-mD-tCl" firstAttribute="top" secondItem="hpS-xN-qkA" secondAttribute="top" id="YQE-wS-EP8"/>
+                                    <constraint firstItem="yem-Jl-rJS" firstAttribute="height" secondItem="6H4-7H-8Lx" secondAttribute="height" id="Yha-yx-ned"/>
+                                    <constraint firstItem="UIG-5Z-cwX" firstAttribute="height" secondItem="2Go-0T-txs" secondAttribute="height" multiplier="3" id="aeE-ya-BO2"/>
+                                    <constraint firstItem="IPX-4v-aNd" firstAttribute="top" secondItem="3CZ-Bp-FcD" secondAttribute="bottom" id="aeL-Fh-pKR"/>
+                                    <constraint firstItem="yem-Jl-rJS" firstAttribute="leading" secondItem="0Ix-cn-rfh" secondAttribute="trailing" id="bL3-ks-Qqh"/>
+                                    <constraint firstItem="hpS-xN-qkA" firstAttribute="width" secondItem="3CZ-Bp-FcD" secondAttribute="width" id="bOV-K2-3OD"/>
+                                    <constraint firstItem="yem-Jl-rJS" firstAttribute="width" secondItem="6H4-7H-8Lx" secondAttribute="width" id="bso-G2-uNX"/>
+                                    <constraint firstItem="2Go-0T-txs" firstAttribute="width" secondItem="IqX-PI-IdV" secondAttribute="width" id="cGx-Kn-WN2"/>
+                                    <constraint firstItem="3CZ-Bp-FcD" firstAttribute="width" secondItem="0Hz-dc-XBX" secondAttribute="width" multiplier="0.333333" id="cZR-m8-kxU"/>
+                                    <constraint firstItem="DvY-SS-wyt" firstAttribute="width" secondItem="2Go-0T-txs" secondAttribute="width" id="dQQ-Ci-cFg"/>
+                                    <constraint firstItem="0Ix-cn-rfh" firstAttribute="width" secondItem="6H4-7H-8Lx" secondAttribute="width" multiplier="2" id="dck-RS-3QW"/>
+                                    <constraint firstItem="PSO-ln-HHw" firstAttribute="leading" secondItem="naF-ru-Uge" secondAttribute="trailing" id="gcu-29-lEV"/>
+                                    <constraint firstItem="2Go-0T-txs" firstAttribute="height" secondItem="IqX-PI-IdV" secondAttribute="height" id="jNK-wW-ilq"/>
+                                    <constraint firstItem="g4d-0j-qc5" firstAttribute="leading" secondItem="PSO-ln-HHw" secondAttribute="trailing" id="jlP-1h-sv5"/>
+                                    <constraint firstItem="IqX-PI-IdV" firstAttribute="leading" secondItem="0Hz-dc-XBX" secondAttribute="leading" id="mvz-wd-tzv"/>
+                                    <constraint firstItem="DvY-SS-wyt" firstAttribute="top" secondItem="UIG-5Z-cwX" secondAttribute="bottom" id="nm5-OB-d5H"/>
+                                    <constraint firstItem="IqX-PI-IdV" firstAttribute="height" secondItem="g4d-0j-qc5" secondAttribute="height" id="piP-i0-U1o"/>
+                                    <constraint firstItem="PSO-ln-HHw" firstAttribute="width" secondItem="naF-ru-Uge" secondAttribute="width" id="rB4-kB-MBp"/>
+                                    <constraint firstItem="3CZ-Bp-FcD" firstAttribute="leading" secondItem="0Hz-dc-XBX" secondAttribute="leading" id="tPT-Ff-8Tx"/>
+                                    <constraint firstItem="DvY-SS-wyt" firstAttribute="height" secondItem="2Go-0T-txs" secondAttribute="height" id="tnD-Ux-rLy"/>
+                                    <constraint firstItem="IPX-4v-aNd" firstAttribute="width" secondItem="bw7-mD-tCl" secondAttribute="width" id="u6d-6h-uVP"/>
+                                    <constraint firstItem="g4d-0j-qc5" firstAttribute="width" secondItem="PSO-ln-HHw" secondAttribute="width" id="uLp-Em-6b4"/>
+                                    <constraint firstItem="yem-Jl-rJS" firstAttribute="leading" secondItem="6H4-7H-8Lx" secondAttribute="trailing" id="y77-CW-nm0"/>
+                                    <constraint firstItem="6H4-7H-8Lx" firstAttribute="leading" secondItem="IPX-4v-aNd" secondAttribute="trailing" id="ywL-t0-ULN"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQq-zL-d86">
+                                <rect key="frame" x="0.0" y="64" width="375" height="47"/>
+                                <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="40"/>
+                                <state key="normal" title="Take A Tour" backgroundImage="vimyWallBrickLight">
+                                    <color key="titleColor" red="0.25" green="0.25" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="35"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="20"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="30"/>
+                                </variation>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vimyWallBrickLight" translatesAutoresizingMaskIntoConstraints="NO" id="cYj-4E-2d6" userLabel="pageNumberImage">
+                                <rect key="frame" x="0.0" y="582" width="375" height="36"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwz-22-C1J" userLabel="pageNumber">
+                                <rect key="frame" x="0.0" y="582" width="375" height="36"/>
+                                <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="40"/>
+                                <color key="textColor" red="0.25" green="0.25" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="35"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="20"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="RomanStonecut" family="Roman Stonecut" pointSize="30"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ApY-dA-f1K">
+                                <rect key="frame" x="338" y="64" width="37" height="33"/>
+                                <state key="normal" image="InfoButtonVimyMemorial"/>
+                                <connections>
+                                    <action selector="info:" destination="PZw-Mf-OZg" eventType="touchUpInside" id="S43-Tc-wd7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cYj-4E-2d6" secondAttribute="trailing" id="2Gi-2r-353"/>
+                            <constraint firstItem="0Hz-dc-XBX" firstAttribute="leading" secondItem="BQA-ZF-y1G" secondAttribute="leading" id="2Mr-zj-OeP"/>
+                            <constraint firstItem="q15-OB-xDm" firstAttribute="top" secondItem="dwz-22-C1J" secondAttribute="bottom" id="4Fg-1k-fIZ"/>
+                            <constraint firstAttribute="trailing" secondItem="ApY-dA-f1K" secondAttribute="trailing" id="5fd-kM-m1a"/>
+                            <constraint firstItem="q15-OB-xDm" firstAttribute="top" secondItem="cYj-4E-2d6" secondAttribute="bottom" id="7tm-2u-PEv"/>
+                            <constraint firstAttribute="trailing" secondItem="GQq-zL-d86" secondAttribute="trailing" id="831-ly-7lg"/>
+                            <constraint firstItem="ApY-dA-f1K" firstAttribute="top" secondItem="gau-WZ-cmF" secondAttribute="bottom" id="8HY-LJ-Gec"/>
+                            <constraint firstItem="dwz-22-C1J" firstAttribute="width" secondItem="BQA-ZF-y1G" secondAttribute="width" id="Db0-wz-rAk"/>
+                            <constraint firstItem="GQq-zL-d86" firstAttribute="height" secondItem="BQA-ZF-y1G" secondAttribute="height" multiplier="0.07" id="EjW-1V-RxD"/>
+                            <constraint firstAttribute="trailing" secondItem="dwz-22-C1J" secondAttribute="trailing" id="GyC-7W-kut"/>
+                            <constraint firstItem="GQq-zL-d86" firstAttribute="leading" secondItem="BQA-ZF-y1G" secondAttribute="leading" id="QgI-5n-ra9"/>
+                            <constraint firstItem="GQq-zL-d86" firstAttribute="top" secondItem="gau-WZ-cmF" secondAttribute="bottom" id="Rmf-PJ-aeE"/>
+                            <constraint firstItem="GQq-zL-d86" firstAttribute="width" secondItem="BQA-ZF-y1G" secondAttribute="width" id="Ty6-Gy-y66"/>
+                            <constraint firstItem="0Hz-dc-XBX" firstAttribute="top" secondItem="GQq-zL-d86" secondAttribute="bottom" id="ZSQ-Mg-SW5"/>
+                            <constraint firstItem="dwz-22-C1J" firstAttribute="top" secondItem="0Hz-dc-XBX" secondAttribute="bottom" id="ZUo-2f-Oug"/>
+                            <constraint firstItem="ApY-dA-f1K" firstAttribute="height" secondItem="GQq-zL-d86" secondAttribute="height" multiplier="0.7" id="cSY-VJ-9Fl"/>
+                            <constraint firstItem="cYj-4E-2d6" firstAttribute="leading" secondItem="BQA-ZF-y1G" secondAttribute="leading" id="dEG-te-WEz"/>
+                            <constraint firstItem="cYj-4E-2d6" firstAttribute="width" secondItem="dwz-22-C1J" secondAttribute="width" id="dJY-0F-N6j"/>
+                            <constraint firstItem="dwz-22-C1J" firstAttribute="height" secondItem="BQA-ZF-y1G" secondAttribute="height" multiplier="0.054" id="fFb-F4-Y4H"/>
+                            <constraint firstItem="dwz-22-C1J" firstAttribute="leading" secondItem="BQA-ZF-y1G" secondAttribute="leading" id="hEH-Qj-hXX"/>
+                            <constraint firstItem="ApY-dA-f1K" firstAttribute="width" secondItem="GQq-zL-d86" secondAttribute="width" multiplier="0.1" id="ngR-0E-LL1"/>
+                            <constraint firstItem="cYj-4E-2d6" firstAttribute="height" secondItem="dwz-22-C1J" secondAttribute="height" id="qwi-bo-BQu"/>
+                            <constraint firstAttribute="trailing" secondItem="0Hz-dc-XBX" secondAttribute="trailing" id="rZp-6F-FRK"/>
+                            <constraint firstItem="0Hz-dc-XBX" firstAttribute="width" secondItem="BQA-ZF-y1G" secondAttribute="width" id="szl-gp-3KE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="C3R-6C-I1j"/>
+                    <connections>
+                        <outlet property="ClickAnimation" destination="0Ix-cn-rfh" id="9qk-dP-lJe"/>
+                        <outlet property="PageNumLabel" destination="dwz-22-C1J" id="jIz-H6-3gY"/>
+                        <outlet property="btn" destination="3CZ-Bp-FcD" id="nNV-3R-Oan"/>
+                        <outlet property="btn10" destination="IqX-PI-IdV" id="qca-ff-Szu"/>
+                        <outlet property="btn11" destination="2Go-0T-txs" id="5Jt-9n-mTZ"/>
+                        <outlet property="btn12" destination="DvY-SS-wyt" id="B8Q-FE-Hlc"/>
+                        <outlet property="btn2" destination="hpS-xN-qkA" id="yUf-fb-2Ev"/>
+                        <outlet property="btn3" destination="bw7-mD-tCl" id="C9U-H3-7Xz"/>
+                        <outlet property="btn4" destination="IPX-4v-aNd" id="Jqd-4G-8DT"/>
+                        <outlet property="btn5" destination="6H4-7H-8Lx" id="tae-Uz-OCG"/>
+                        <outlet property="btn6" destination="yem-Jl-rJS" id="EPo-Yq-kqg"/>
+                        <outlet property="btn7" destination="naF-ru-Uge" id="nk7-eI-j88"/>
+                        <outlet property="btn8" destination="PSO-ln-HHw" id="RUb-9M-QJz"/>
+                        <outlet property="btn9" destination="g4d-0j-qc5" id="zNH-vA-Fvq"/>
+                        <outlet property="label" destination="dwz-22-C1J" id="a2D-bz-cQK"/>
+                        <outlet property="swipeAnimation" destination="UIG-5Z-cwX" id="zB9-pr-hhm"/>
+                        <segue destination="lAc-5k-Y7N" kind="show" identifier="FacebookSegue" id="Aig-zv-mJ6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ghp-eB-mes" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3394" y="2657"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Battalion Button30x30" width="30" height="21"/>
         <image name="Home Button30x30" width="30" height="30"/>
         <image name="InfoButton2" width="107" height="111"/>
+        <image name="InfoButtonVimyMemorial" width="16" height="16"/>
         <image name="Map of Europe copy30x30" width="31" height="30"/>
         <image name="QuestionMark30x30" width="20" height="30"/>
         <image name="Soldier Kit30x30" width="30" height="30"/>
@@ -4063,18 +4198,26 @@
         <image name="Vimy Ridge Memorial Picture" width="1248" height="960"/>
         <image name="VimyAppCoverPhoto" width="2560" height="1388"/>
         <image name="VimyAppNoPhotoIcon" width="1001" height="1001"/>
+        <image name="animationSwipe12Good" width="512" height="512"/>
         <image name="background_paper" width="1244" height="1975"/>
+        <image name="buttonClick9" width="512" height="512"/>
         <image name="leftArrow" width="107" height="111"/>
         <image name="old paper" width="700" height="1000"/>
         <image name="open book30x30" width="30" height="30"/>
         <image name="rightArrow" width="107" height="111"/>
         <image name="run1" width="1024" height="876"/>
-        <image name="vimy_brick" width="234" height="83"/>
+        <image name="vimyWallBrickDownLeftLight1" width="141" height="187"/>
+        <image name="vimyWallBrickLight" width="141" height="187"/>
+        <image name="vimyWallBrickMidddleLight1" width="70" height="93"/>
+        <image name="vimyWallBrickSideLight1" width="70" height="93"/>
+        <image name="vimyWallBrickdownLIght1" width="141" height="187"/>
+        <image name="vimyWallBrickleftLight" width="141" height="187"/>
+        <image name="vimyWallBrickupLight1" width="70" height="93"/>
         <image name="weapons tab image 30x30" width="30" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="WQT-D0-HzJ"/>
+        <segue reference="Cpx-Ef-A3g"/>
         <segue reference="5gV-Mb-wIq"/>
-        <segue reference="DAX-FV-Hpg"/>
-        <segue reference="4Nk-NE-5Ea"/>
     </inferredMetricsTieBreakers>
 </document>
