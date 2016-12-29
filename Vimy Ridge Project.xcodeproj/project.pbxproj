@@ -366,7 +366,8 @@
 				F12C11241D6CB7AB0071798C /* SingleBattalionViewController.swift */,
 				F12C111A1D6CB71B0071798C /* BattalionInfo */,
 				F12C111C1D6CB7410071798C /* BattalionMore */,
-				F12C111B1D6CB7380071798C /* BattalionVimy */,
+				F12C111B1D6CB7380071798C /* BattalionFacts */,
+				F1E7D63E1E15545D00182A9C /* SoldiersInfo */,
 			);
 			name = "Single Battalion";
 			sourceTree = "<group>";
@@ -379,12 +380,12 @@
 			name = BattalionInfo;
 			sourceTree = "<group>";
 		};
-		F12C111B1D6CB7380071798C /* BattalionVimy */ = {
+		F12C111B1D6CB7380071798C /* BattalionFacts */ = {
 			isa = PBXGroup;
 			children = (
 				F12C111F1D6CB7810071798C /* BattalionFactsContainer.swift */,
 			);
-			name = BattalionVimy;
+			name = BattalionFacts;
 			sourceTree = "<group>";
 		};
 		F12C111C1D6CB7410071798C /* BattalionMore */ = {
@@ -567,6 +568,13 @@
 				F1E7D6341E1419B300182A9C /* FacebookNonMilitaryVC.swift */,
 			);
 			name = "Military and Non Military";
+			sourceTree = "<group>";
+		};
+		F1E7D63E1E15545D00182A9C /* SoldiersInfo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SoldiersInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

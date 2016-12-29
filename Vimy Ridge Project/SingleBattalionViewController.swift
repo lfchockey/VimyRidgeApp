@@ -27,7 +27,7 @@ class SingleBattalionViewController: UIViewController {
     }
     
     func moveViews(sender:Int) {
-        let viewControllerIdentifiers = ["Info", "Facts", "More"]
+        let viewControllerIdentifiers = ["Info", "Facts", "More"] //"Soldiers", "More"] *** re-add the Soldiers Matching section once the database is cleaned up
         let newController = (storyboard?.instantiateViewController(withIdentifier: viewControllerIdentifiers[sender]))! as UIViewController
         let oldController = childViewControllers.last! as UIViewController
         
@@ -39,6 +39,8 @@ class SingleBattalionViewController: UIViewController {
                 oldController.removeFromParentViewController()
                 newController.didMove(toParentViewController: self)
         })
+        
+        
         
     }
     
@@ -85,7 +87,14 @@ class SingleBattalionViewController: UIViewController {
         }
         else {
             // Error message stating that you need an internet connection to view this section of the app
+            
+            let alert = UIAlertController(title: "Connection Error", message: "You need an internet connection to view this page.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
+        
+        self.title = "\(BattVars.singleBattalion.battalion_name)"
+        //moveViews(sender: 0)
     }
     
     
@@ -121,7 +130,7 @@ class SingleBattalionViewController: UIViewController {
                     properBattalion.strength = (bat!["strength"]?.stringValue)!
                     properBattalion.war_diary = (bat!["war_diary"]?.stringValue)!
                     properBattalion.perpetuated_by = (bat!["perpetuated_by"]?.stringValue)!
-                    properBattalion.candaian_arrival = (bat!["canadian_arrival"]?.stringValue)!
+                    properBattalion.canadian_arrival = (bat!["canadian_arrival"]?.stringValue)!
                     properBattalion.location = (bat!["location"]?.stringValue)!
                     properBattalion.embarkation = (bat!["embarkation"]?.stringValue)!
                     properBattalion.interesting_facts = (bat!["interesting_facts"]?.stringValue)!
@@ -135,9 +144,7 @@ class SingleBattalionViewController: UIViewController {
                     BattVars.battalionFound = true
                     break
                 }
-                else {
-                    break
-                }
+                
             }
             
             if !BattVars.battalionFound {
@@ -145,9 +152,7 @@ class SingleBattalionViewController: UIViewController {
                 //      then segue back to BattalionTableViewController
             }
         }
-        //} catch let error as NSError {
-        //    print("Error parsing results: \(error.localizedDescription)")
-        //}
+
         
     }
     

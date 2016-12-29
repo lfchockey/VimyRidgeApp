@@ -20,7 +20,7 @@ class FullBattalionInfo: NSObject {
     var war_diary:String
     var commanded_by: String
     var location: String
-    var candaian_arrival:String
+    var canadian_arrival:String
     var date_created:String
     var embarkation: String
     var battalion_id: String
@@ -37,7 +37,7 @@ class FullBattalionInfo: NSObject {
         self.war_diary = ""
         self.commanded_by = ""
         self.location = ""
-        self.candaian_arrival = ""
+        self.canadian_arrival = ""
         self.date_created = ""
         self.embarkation = ""
         self.battalion_id = ""
@@ -45,17 +45,6 @@ class FullBattalionInfo: NSObject {
         self.interesting_facts = ""
         self.reinforced_by = ""
     }
-//    init (
-//    battalion_name = ""
-//        
-//    
-//    
-//    
-//    )
-    
-    
-    
-    
-    
-    
 }
+
+   
