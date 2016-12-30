@@ -17,7 +17,8 @@
 // Greg Mitchell (only storyboard)
 // Justin Yanosik
 // Jason Little
-
+// Eric Duberville
+// Jordan Maloney
 
 import UIKit
 import AVFoundation

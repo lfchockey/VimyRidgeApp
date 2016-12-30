@@ -5,6 +5,7 @@
 //  Created by Student on 2016-06-22.
 //  Copyright © 2016 StudentQ. All rights reserved.
 //
+//
 
 import UIKit
 import MapKit
@@ -13,14 +14,29 @@ internal var mapq = MKMapView();
 
 class MapViewController: UIViewController, MKMapViewDelegate
 {
+    @IBOutlet weak var mapTypeSeg: UISegmentedControl!
+    
+    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var menuImage: UIImageView!
     @IBOutlet weak var menu: UIView!
     @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var rightButton: UIButton!
-    @IBOutlet weak var slider: UISlider!
+    var thumbImage: UIImage = UIImage(named: "PlaceOfDeath")!
+    
+    
+    @IBOutlet weak var slider: UISlider! {
+        didSet{
+            slider.transform = CGAffineTransform.init(rotationAngle: CGFloat(M_PI_2))
+        }
+    }
+    
+    func shouldAutoRotate() -> Bool {
+        return false
+    }
     
     var menuVC: MenuVC = MenuVC()
+    
     
     // User Swipes left
     @IBAction func closeMenu(_ sender: UISwipeGestureRecognizer) {
@@ -86,7 +102,7 @@ class MapViewController: UIViewController, MKMapViewDelegate
             self.menu.transform = CGAffineTransform(translationX: self.menu.frame.size.width, y: 0)
         }
     }
-
+    
     
     func centerMap(zoomRegion: CLLocationDistance, centerCoordinate: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(centerCoordinate.coordinate, zoomRegion, zoomRegion)
@@ -94,19 +110,19 @@ class MapViewController: UIViewController, MKMapViewDelegate
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
-//************************************************************ Cemeteries Code ********//
+    //************************************************************ Cemeteries Code ********//
     
     var coords = VimyCoordinates(filename: "CoordinatePrime")
     
     func addCemeteryPins(){
         mapView.addAnnotations(coords.allCemeteries!)
-//        for cem in coords.allCemeteries!
-//        {
-//            mapView.addAnnotation(cem)
-//        }
+        //        for cem in coords.allCemeteries!
+        //        {
+        //            mapView.addAnnotation(cem)
+        //        }
     }
     
-//************************************************************ Battalions Code ********//
+    //************************************************************ Battalions Code ********//
     
     func loadBattalionView()
     {
@@ -495,7 +511,7 @@ class MapViewController: UIViewController, MKMapViewDelegate
         return newImage!
     }
     
-//************************************************************* Western Fronts Code ********//
+    //************************************************************* Western Fronts Code ********//
     
     @IBOutlet weak var nameLabel: UILabel!
     
@@ -542,13 +558,13 @@ class MapViewController: UIViewController, MKMapViewDelegate
         Polyine1900 = MKPolyline(coordinates: &newLine.frontLineCoords, count: newLine.coordCount)
         mapView.add(Polyine1900)
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
-//        let newLine = lineArray[0]
-//        
-//        var Polyine1900: MKPolyline = MKPolyline()
-//        Polyine1900 = MKPolyline(coordinates: &newLine.frontLineCoords, count: newLine.coordCount)
-
+        //        let newLine = lineArray[0]
+        //
+        //        var Polyine1900: MKPolyline = MKPolyline()
+        //        Polyine1900 = MKPolyline(coordinates: &newLine.frontLineCoords, count: newLine.coordCount)
+        
         //mapView.add(Polyine1900)
     }
     
@@ -574,7 +590,7 @@ class MapViewController: UIViewController, MKMapViewDelegate
     var Polyine4: MKPolyline = MKPolyline()
     var Polyine5: MKPolyline = MKPolyline()
     
-//************************************************************ Trench Line Progressions Code ********//
+    //************************************************************ Trench Line Progressions Code ********//
     
     
     @IBAction func sliderValueDidChange(_ sender: UISlider) {
@@ -635,7 +651,7 @@ class MapViewController: UIViewController, MKMapViewDelegate
             
         }
     }
-
+    
     var BlackLine = AdvProp(Coor: "BlackLine")
     var RedDashedLine = AdvProp(Coor: "RedDashedLine")
     var SolidBlueGermanLine = AdvProp(Coor: "SolidBlueGermanLine")
@@ -648,10 +664,10 @@ class MapViewController: UIViewController, MKMapViewDelegate
     var ThickRedLine = AdvProp(Coor: "ThickRedLine")
     
     var pointsToUse: [CLLocationCoordinate2D] = []
-//    var regionRadius: CLLocationDistance = 4000
+    //    var regionRadius: CLLocationDistance = 4000
     var myPolyline: MKPolyline = MKPolyline()
     
-//******************************************** mapView functions *************//
+    //******************************************** mapView functions *************//
     
     // Needs an if statement to determine which type of line needs to be displayed (WesternFront, Battalion, Progression)
     // This function is for the Progression
@@ -685,7 +701,7 @@ class MapViewController: UIViewController, MKMapViewDelegate
         let identifier = "CemAnno"
         let identifier1 = "CustomAnnotation"
         let identifier2 = "Annotation"
-
+        
         if annotation.isKind(of: CemAnno.self)        // The CemAnno is for the cemeteries ONLY
         {
             var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
@@ -725,9 +741,9 @@ class MapViewController: UIViewController, MKMapViewDelegate
             annotationView!.image = ca.image
             annotationView!.image = resizeImage(image: annotationView!.image!, newHeight: 75)
             
-//            let btn = UIButton(type: .DetailDisclosure)
-//            btn.addTarget(self, action: "buttonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
-//            annotationView!.rightCalloutAccessoryView = btn
+            //            let btn = UIButton(type: .DetailDisclosure)
+            //            btn.addTarget(self, action: "buttonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+            //            annotationView!.rightCalloutAccessoryView = btn
             
             return annotationView
         }
@@ -740,11 +756,11 @@ class MapViewController: UIViewController, MKMapViewDelegate
                 annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier2)
                 annotationView!.canShowCallout = true
                 // This line adds a default picture, but this can be customized to be any UIView
-//                if #available(iOS 9.0, *) {
-//                    annotationView!.detailCalloutAccessoryView = UIImageView(image: UIImage(named:"redhawk"))
-//                } else {
-//                    // Fallback on earlier versions
-//                }
+                //                if #available(iOS 9.0, *) {
+                //                    annotationView!.detailCalloutAccessoryView = UIImageView(image: UIImage(named:"redhawk"))
+                //                } else {
+                //                    // Fallback on earlier versions
+                //                }
             }
             
             let btn = UIButton(type: .detailDisclosure)
@@ -801,9 +817,45 @@ class MapViewController: UIViewController, MKMapViewDelegate
             menuVC = vc
         }
     }
+    let startRegionRadius: CLLocationDistance = 10000
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, startRegionRadius * 2.0 , startRegionRadius * 2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    @IBAction func mapType(_ sender: AnyObject) {
+        switch mapTypeSeg.selectedSegmentIndex{
+        case 0:
+            mapq.mapType = .standard
+        case 1:
+            mapq.mapType = .hybrid
+        case 2:
+            mapq.mapType = .satellite
+        default:
+            mapq.mapType = .standard
+            break;
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if (self.view.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.compact) {
+            let thumbImage: UIImage = UIImage (named: "PlaceOfDeath")!
+            let reSize = resizeImage(image: thumbImage, newHeight: 55.0)
+            
+            slider.setThumbImage(reSize, for: UIControlState.normal)
+        }
+        else if (self.view.traitCollection.horizontalSizeClass != UIUserInterfaceSizeClass.compact) {
+            slider.setThumbImage(UIImage(named: "PlaceOfDeath")!, for: .normal)
+        }
+        
+        let initialLocation = CLLocation(latitude: 50.3603125, longitude: 2.794017)
+        centerMapOnLocation(location: initialLocation)
+        
+        
+        
         
         mapView.delegate = self
         slider.isHidden = true

@@ -89,6 +89,8 @@
 		F1E7D6491E16BE3900182A9C /* ImageReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D6431E16BE3900182A9C /* ImageReader.swift */; };
 		F1E7D64A1E16BE3900182A9C /* Images.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1E7D6441E16BE3900182A9C /* Images.plist */; };
 		F1E7D64C1E16C0C000182A9C /* Artwork.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1E7D64B1E16C0C000182A9C /* Artwork.xcassets */; };
+		F1E7D64F1E16F2D300182A9C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D64E1E16F2D300182A9C /* AboutViewController.swift */; };
+		F1E7D6511E16F2F800182A9C /* DevelopersTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D6501E16F2F800182A9C /* DevelopersTableVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,6 +199,8 @@
 		F1E7D6431E16BE3900182A9C /* ImageReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageReader.swift; sourceTree = "<group>"; };
 		F1E7D6441E16BE3900182A9C /* Images.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Images.plist; sourceTree = "<group>"; };
 		F1E7D64B1E16C0C000182A9C /* Artwork.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Artwork.xcassets; sourceTree = "<group>"; };
+		F1E7D64E1E16F2D300182A9C /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		F1E7D6501E16F2F800182A9C /* DevelopersTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevelopersTableVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -490,6 +494,7 @@
 				F16B0FE61D4FA578004F2777 /* AppDelegate.swift */,
 				F16B0FEA1D4FA578004F2777 /* Main.storyboard */,
 				F12C10DC1D562EA10071798C /* Home */,
+				F1E7D64D1E16F2AD00182A9C /* About */,
 				3FEB443F1E0C606100620494 /* SoldierOfHour */,
 				F12C11171D6CB6C40071798C /* Battalions */,
 				F12C10F51D6290890071798C /* Facebook */,
@@ -596,6 +601,15 @@
 			children = (
 			);
 			name = SoldiersInfo;
+			sourceTree = "<group>";
+		};
+		F1E7D64D1E16F2AD00182A9C /* About */ = {
+			isa = PBXGroup;
+			children = (
+				F1E7D6501E16F2F800182A9C /* DevelopersTableVC.swift */,
+				F1E7D64E1E16F2D300182A9C /* AboutViewController.swift */,
+			);
+			name = About;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -769,9 +783,11 @@
 				F1E7D6471E16BE3900182A9C /* ImageCollecionViewCell.swift in Sources */,
 				F12C10E71D60CDBC0071798C /* SoldierSearch.swift in Sources */,
 				F12C11201D6CB7810071798C /* BattalionFactsContainer.swift in Sources */,
+				F1E7D64F1E16F2D300182A9C /* AboutViewController.swift in Sources */,
 				F16B101A1D4FA929004F2777 /* SwiftyJSON.swift in Sources */,
 				F16B101B1D4FA929004F2777 /* FullSoldier.swift in Sources */,
 				F1E7D6361E1419B300182A9C /* FacebookNonMilitaryVC.swift in Sources */,
+				F1E7D6511E16F2F800182A9C /* DevelopersTableVC.swift in Sources */,
 				F12C11301D6CFB670071798C /* TimelineView.swift in Sources */,
 				F1993B151D5226E9001F40F0 /* MenuVC.swift in Sources */,
 				F170B8EF1D4FB90C00118440 /* BattalionsCoords.swift in Sources */,
