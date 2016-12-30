@@ -2,6 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Military Medal</key>
+	<dict>
+		<key>imageName</key>
+		<string>British War Medal.png</string>
+		<key>website</key>
+		<string></string>
+		<key>medalDescription</key>
+		<string></string>
+	</dict>
 	<key>British War Medal</key>
 	<dict>
 		<key>imageName</key>
@@ -31,7 +40,7 @@ It had been the practice of some women to present white feathers to apparently a
 The badge was to be worn on the right breast while in civilian dress, it was forbidden to wear on a military uniform.
 The badge bears the royal cipher of GRI (for Georgius Rex Imperator; George, King and Emperor) and around the rim &quot;For King and Empire; Services Rendered&quot;.</string>
 		<key>imageName</key>
-		<string>silver war badge.png</string>
+		<string>silver war badge</string>
 	</dict>
 	<key>1914-15 Star </key>
 	<dict>

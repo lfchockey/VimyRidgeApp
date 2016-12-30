@@ -82,6 +82,13 @@
 		F1E7D6361E1419B300182A9C /* FacebookNonMilitaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D6341E1419B300182A9C /* FacebookNonMilitaryVC.swift */; };
 		F1E7D6391E1469B500182A9C /* Roman Stonecut.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1E7D6381E1469B500182A9C /* Roman Stonecut.ttf */; };
 		F1E7D63B1E146DEA00182A9C /* Custom Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D63A1E146DEA00182A9C /* Custom Segue.swift */; };
+		F1E7D6451E16BE3900182A9C /* ArtworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D63F1E16BE3900182A9C /* ArtworkViewController.swift */; };
+		F1E7D6461E16BE3900182A9C /* FullImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D6401E16BE3900182A9C /* FullImageView.swift */; };
+		F1E7D6471E16BE3900182A9C /* ImageCollecionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D6411E16BE3900182A9C /* ImageCollecionViewCell.swift */; };
+		F1E7D6481E16BE3900182A9C /* ImageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D6421E16BE3900182A9C /* ImageObject.swift */; };
+		F1E7D6491E16BE3900182A9C /* ImageReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D6431E16BE3900182A9C /* ImageReader.swift */; };
+		F1E7D64A1E16BE3900182A9C /* Images.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1E7D6441E16BE3900182A9C /* Images.plist */; };
+		F1E7D64C1E16C0C000182A9C /* Artwork.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1E7D64B1E16C0C000182A9C /* Artwork.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,6 +190,13 @@
 		F1E7D6341E1419B300182A9C /* FacebookNonMilitaryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookNonMilitaryVC.swift; sourceTree = "<group>"; };
 		F1E7D6381E1469B500182A9C /* Roman Stonecut.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roman Stonecut.ttf"; sourceTree = "<group>"; };
 		F1E7D63A1E146DEA00182A9C /* Custom Segue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Custom Segue.swift"; sourceTree = "<group>"; };
+		F1E7D63F1E16BE3900182A9C /* ArtworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtworkViewController.swift; sourceTree = "<group>"; };
+		F1E7D6401E16BE3900182A9C /* FullImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullImageView.swift; sourceTree = "<group>"; };
+		F1E7D6411E16BE3900182A9C /* ImageCollecionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollecionViewCell.swift; sourceTree = "<group>"; };
+		F1E7D6421E16BE3900182A9C /* ImageObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageObject.swift; sourceTree = "<group>"; };
+		F1E7D6431E16BE3900182A9C /* ImageReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageReader.swift; sourceTree = "<group>"; };
+		F1E7D6441E16BE3900182A9C /* Images.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Images.plist; sourceTree = "<group>"; };
+		F1E7D64B1E16C0C000182A9C /* Artwork.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Artwork.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -439,6 +453,13 @@
 		F133F2311D75E1840049B8BB /* Artwork */ = {
 			isa = PBXGroup;
 			children = (
+				F1E7D63F1E16BE3900182A9C /* ArtworkViewController.swift */,
+				F1E7D6401E16BE3900182A9C /* FullImageView.swift */,
+				F1E7D6411E16BE3900182A9C /* ImageCollecionViewCell.swift */,
+				F1E7D6421E16BE3900182A9C /* ImageObject.swift */,
+				F1E7D6431E16BE3900182A9C /* ImageReader.swift */,
+				F1E7D6441E16BE3900182A9C /* Images.plist */,
+				F1E7D64B1E16C0C000182A9C /* Artwork.xcassets */,
 			);
 			name = Artwork;
 			sourceTree = "<group>";
@@ -692,7 +713,9 @@
 				F133F2301D74764C0049B8BB /* Serenata Immortale.mp3 in Resources */,
 				F170B8E71D4FB8D600118440 /* CoordinatePrime.plist in Resources */,
 				F170B8F51D4FB93400118440 /* daysOfBattle.plist in Resources */,
+				F1E7D64C1E16C0C000182A9C /* Artwork.xcassets in Resources */,
 				F170B8EE1D4FB90C00118440 /* BattalionMovement.plist in Resources */,
+				F1E7D64A1E16BE3900182A9C /* Images.plist in Resources */,
 				F12C11801D71E1FB0071798C /* Medals List.plist in Resources */,
 				3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */,
 				F16B10151D4FA6EF004F2777 /* Images.xcassets in Resources */,
@@ -740,8 +763,10 @@
 				3FE011C01E0AE8520067DFD0 /* StatsTableViewController.swift in Sources */,
 				F12C11851D732B360071798C /* VimyVirtualMemorialVC.swift in Sources */,
 				F12C11011D6291810071798C /* VCMapView.swift in Sources */,
+				F1E7D6491E16BE3900182A9C /* ImageReader.swift in Sources */,
 				F12C112C1D6CB7CD0071798C /* Battalions.swift in Sources */,
 				F12C117F1D71E1FB0071798C /* MedalReader.swift in Sources */,
+				F1E7D6471E16BE3900182A9C /* ImageCollecionViewCell.swift in Sources */,
 				F12C10E71D60CDBC0071798C /* SoldierSearch.swift in Sources */,
 				F12C11201D6CB7810071798C /* BattalionFactsContainer.swift in Sources */,
 				F16B101A1D4FA929004F2777 /* SwiftyJSON.swift in Sources */,
@@ -760,6 +785,7 @@
 				F12C10FF1D6291810071798C /* SoldierLocation.swift in Sources */,
 				F12C112B1D6CB7CD0071798C /* BattalionReader.swift in Sources */,
 				F12C11251D6CB7AB0071798C /* FullBattalionInfo.swift in Sources */,
+				F1E7D6451E16BE3900182A9C /* ArtworkViewController.swift in Sources */,
 				F12C11261D6CB7AB0071798C /* SingleBattalionViewController.swift in Sources */,
 				F170B8F01D4FB90C00118440 /* CustomAnnotation.swift in Sources */,
 				F1E7D6351E1419B300182A9C /* FacebookMilitaryVC.swift in Sources */,
@@ -768,12 +794,14 @@
 				F170B8FC1D4FB94D00118440 /* WesternFrontLinesCoords.swift in Sources */,
 				F12C118E1D73AB010071798C /* WeaponDetailsVC.swift in Sources */,
 				3FE011C81E0AE8770067DFD0 /* BensTableViewCell.swift in Sources */,
+				F1E7D6481E16BE3900182A9C /* ImageObject.swift in Sources */,
 				F12C11051D62919A0071798C /* Medals.swift in Sources */,
 				F12C11221D6CB7910071798C /* BattalionInfoContainer.swift in Sources */,
 				3FEB44411E0C60AC00620494 /* SoldierOfHourNavController.swift in Sources */,
 				F133F22E1D7473810049B8BB /* Util.swift in Sources */,
 				F170B8E61D4FB8D600118440 /* CemViewController.swift in Sources */,
 				F12C11091D6291AC0071798C /* BiographyView.swift in Sources */,
+				F1E7D6461E16BE3900182A9C /* FullImageView.swift in Sources */,
 				F12C110B1D6291B80071798C /* FaceBookViewController.swift in Sources */,
 				F12C111E1D6CB7690071798C /* BattalionMoreContainer.swift in Sources */,
 				F12C112D1D6CB7CD0071798C /* BattalionTableViewController.swift in Sources */,
