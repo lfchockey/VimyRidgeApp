@@ -19,6 +19,7 @@
 // Jason Little
 // Eric Duberville
 // Jordan Maloney
+// Joey Tripp
 
 import UIKit
 import AVFoundation

@@ -52,20 +52,20 @@ class MapViewController: UIViewController, MKMapViewDelegate
             zoomRegion = 10000
             loadBattalionView()
         }
-        else if MapVariables.mapSection == 2{
+        else if MapVariables.mapSection == 3{
             // Cemeteries
             zoomRegion = 110000
             centerCoordinate = CLLocation(latitude: 50.3603125, longitude: 2.3)
             addCemeteryPins()
         }
-        else if MapVariables.mapSection == 3{
+        else if MapVariables.mapSection == 4{
             // Battalion Progression
             zoomRegion = 10000
             let dummySlider = UISlider()
             sliderValueDidChange(dummySlider)
             slider.isHidden = false
         }
-        else if MapVariables.mapSection == 4{
+        else if MapVariables.mapSection == 2{
             // Western Front
             indexCounter = 0
             zoomRegion = 100000
@@ -75,7 +75,9 @@ class MapViewController: UIViewController, MKMapViewDelegate
             rightButton.isHidden = false
         }
         else {
-            
+            // Battalions
+            zoomRegion = 10000
+            loadBattalionView()
         }
         
         centerMap(zoomRegion: zoomRegion, centerCoordinate: centerCoordinate)
@@ -782,21 +784,25 @@ class MapViewController: UIViewController, MKMapViewDelegate
             openMenu(UISwipeGestureRecognizer())
             let customAnno = view.annotation as! CemAnno
             let title = customAnno.title
-            //MapVariables.cemeteryTitle = title!
-            
-            let cemVC = menuVC.childViewControllers[2] as! CemViewController
+            let casualties = customAnno.casualties
+            let region = customAnno.region
+            let visitInfo = customAnno.visitInfo
+            let HistInfo = customAnno.histInfo
+            print(menuVC.childViewControllers[0].description)
+            let cemVC = menuVC.childViewControllers[0] as! CemViewController
             cemVC.nameLabel.text = title!
-            //var containerViewController: MenuVC?
-            //let cVC = containerViewController?.childViewControllers[2] as! CemViewController
-            //cVC.nameLabel.text = "yay"
-            //print(menu.parent)
-            //menu.childViewControllers[2].nameLabel.text = "yay"
+            cemVC.region.text = region!
+            cemVC.casualties.text = casualties!
+            cemVC.histInfo.text = HistInfo!
+            cemVC.visitInfo.text = visitInfo!
             
-            let histInfo = customAnno.histInfo
-            
-            let ac = UIAlertController(title: title, message: histInfo, preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            present(ac, animated: true, completion: nil)
+            menu.isHidden = false
+            self.menu.alpha = 1
+            UIView.animate(withDuration: 0.3){
+                self.view.layoutIfNeeded()
+                self.menuImage.transform = CGAffineTransform(translationX: self.menu.frame.size.width, y: 0)
+                self.menu.transform = CGAffineTransform(translationX: self.menu.frame.size.width, y: 0)
+            }
         }
         else
         {

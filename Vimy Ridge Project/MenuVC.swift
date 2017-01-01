@@ -16,7 +16,6 @@ struct MapVariables {
     //static var mapCenter: CLLocationCoordinate2D
     static var zoomRegion: CLLocationDistance = 10000
     static var mapSection: Int = 1
-    
     static var cemeteryTitle: String = ""
     //static var easterFrontID: Int
 
@@ -24,10 +23,11 @@ struct MapVariables {
 
 class MenuVC: UIViewController {
     
-    @IBOutlet weak var first: UIView!
-    @IBOutlet weak var second: UIView!
-    @IBOutlet weak var third: UIView!
-    @IBOutlet weak var fourth: UIView!
+    @IBOutlet weak var battalionView: UIView!
+    @IBOutlet weak var westernFrontView: UIView!
+    @IBOutlet weak var cemeteryView: UIView!
+    @IBOutlet weak var progressionView: UIView!
+    
     
     @IBOutlet weak var maptype: UISegmentedControl!
     
@@ -43,35 +43,35 @@ class MenuVC: UIViewController {
             UIView.animate(withDuration: 0.5, animations: {
                 
                 MapVariables.mapSection = 1
-                self.first.alpha = 1
-                self.second.alpha = 0;
-                self.third.alpha = 0;
-                self.fourth.alpha = 0;
+                self.battalionView.alpha = 1
+                self.westernFrontView.alpha = 0;
+                self.cemeteryView.alpha = 0;
+                self.progressionView.alpha = 0;
             })
         }else if sender.selectedSegmentIndex == 1{
             UIView.animate(withDuration: 0.5, animations: {
                 MapVariables.mapSection = 2
-                self.first.alpha = 0
-                self.second.alpha = 1;
-                self.third.alpha = 0;
-                self.fourth.alpha = 0;
+                self.battalionView.alpha = 0
+                self.westernFrontView.alpha = 1;
+                self.cemeteryView.alpha = 0;
+                self.progressionView.alpha = 0;
             })
 
         }else if sender.selectedSegmentIndex == 2{
             UIView.animate(withDuration: 0.5, animations: {
                 MapVariables.mapSection = 3
-                self.first.alpha = 0
-                self.second.alpha = 0;
-                self.third.alpha = 1;
-                self.fourth.alpha = 0;
+                self.battalionView.alpha = 0
+                self.westernFrontView.alpha = 0;
+                self.cemeteryView.alpha = 1;
+                self.progressionView.alpha = 0;
             })
         }else{
             UIView.animate(withDuration: 0.5, animations: {
                 MapVariables.mapSection = 4
-                self.first.alpha = 0
-                self.second.alpha = 0;
-                self.third.alpha = 0;
-                self.fourth.alpha = 1;
+                self.battalionView.alpha = 0
+                self.westernFrontView.alpha = 0;
+                self.cemeteryView.alpha = 0;
+                self.progressionView.alpha = 1;
             })
         }
         
