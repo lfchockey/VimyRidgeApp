@@ -3490,7 +3490,7 @@
                                 <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please choose a section above" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecD-Gy-KLu">
-                                <rect key="frame" x="65" y="210" width="261" height="15"/>
+                                <rect key="frame" x="65.5" y="210" width="261" height="15"/>
                                 <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -3941,7 +3941,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKL-om-vbQ">
-                                <rect key="frame" x="138" y="194" width="89" height="89"/>
+                                <rect key="frame" x="138" y="194.5" width="89" height="88.5"/>
                                 <fontDescription key="fontDescription" name="Chapter11W00-Regular" family="Chapter11W00-Regular" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -4445,8 +4445,8 @@
                                     <mask key="constraints">
                                         <exclude reference="7Hg-Nb-kgt"/>
                                         <include reference="EDc-L4-vcQ"/>
-                                        <exclude reference="vbX-BI-spU"/>
                                         <include reference="g7j-Hz-RWa"/>
+                                        <exclude reference="vbX-BI-spU"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -4471,9 +4471,9 @@
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
+                                        <exclude reference="hL2-QE-Dmz"/>
                                         <exclude reference="jfM-Zr-h3J"/>
                                         <include reference="jnj-ay-62K"/>
-                                        <exclude reference="hL2-QE-Dmz"/>
                                         <include reference="l5R-fz-7aF"/>
                                     </mask>
                                 </variation>
@@ -4502,10 +4502,10 @@
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
-                                        <exclude reference="IrZ-Kk-4WW"/>
-                                        <include reference="xBa-NW-soA"/>
                                         <exclude reference="6ci-Wp-V8S"/>
                                         <exclude reference="C92-mH-ceN"/>
+                                        <exclude reference="IrZ-Kk-4WW"/>
+                                        <include reference="xBa-NW-soA"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -4533,7 +4533,7 @@
                                 </connections>
                             </slider>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XfG-0f-gt5">
-                                <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                                <rect key="frame" x="7.5" y="522" width="360" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="360" id="H7U-Lt-wV2"/>
                                 </constraints>
@@ -4602,20 +4602,20 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <exclude reference="XfG-0f-gt5"/>
+                                <include reference="XfG-0f-gt5"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="ZIx-yl-aOF"/>
-                                <exclude reference="fLo-Hq-NcB"/>
                                 <exclude reference="V9J-uw-nrh"/>
-                                <exclude reference="XPP-u2-7u2"/>
-                                <exclude reference="oRR-Sg-acM"/>
-                                <exclude reference="egR-VJ-j3r"/>
                                 <exclude reference="W7D-aq-3gA"/>
+                                <exclude reference="XPP-u2-7u2"/>
+                                <exclude reference="egR-VJ-j3r"/>
+                                <exclude reference="fLo-Hq-NcB"/>
+                                <exclude reference="oRR-Sg-acM"/>
                                 <exclude reference="RDb-0O-SvZ"/>
+                                <exclude reference="EPi-8d-iGv"/>
                                 <exclude reference="Pu1-47-KIh"/>
                                 <exclude reference="aGg-Mq-15f"/>
-                                <exclude reference="EPi-8d-iGv"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -4623,19 +4623,19 @@
                                 <include reference="XfG-0f-gt5"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="5V4-D2-4DC"/>
+                                <include reference="Bb5-rL-Z5M"/>
+                                <exclude reference="OCw-gc-nfs"/>
+                                <exclude reference="f21-pu-Rg6"/>
                                 <exclude reference="ana-UP-YXi"/>
                                 <exclude reference="KLl-c4-tGm"/>
                                 <exclude reference="V9J-uw-nrh"/>
-                                <exclude reference="oRR-Sg-acM"/>
-                                <exclude reference="egR-VJ-j3r"/>
                                 <exclude reference="W7D-aq-3gA"/>
-                                <include reference="5V4-D2-4DC"/>
-                                <exclude reference="f21-pu-Rg6"/>
-                                <exclude reference="OCw-gc-nfs"/>
-                                <include reference="Bb5-rL-Z5M"/>
-                                <exclude reference="s9S-sj-OMb"/>
+                                <exclude reference="egR-VJ-j3r"/>
+                                <exclude reference="oRR-Sg-acM"/>
                                 <exclude reference="6Qa-i8-9Sf"/>
                                 <exclude reference="pZd-xP-dVf"/>
+                                <exclude reference="s9S-sj-OMb"/>
                             </mask>
                         </variation>
                     </view>
@@ -4857,10 +4857,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background paper" translatesAutoresizingMaskIntoConstraints="NO" id="7SU-5f-DGr">
-                                <rect key="frame" x="0.0" y="0.0" width="244" height="463.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="244" height="464"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UjT-FK-ctv">
-                                <rect key="frame" x="0.0" y="0.0" width="244" height="463.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="244" height="464"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4Cf-PQ-JQ7">
                                         <rect key="frame" x="20" y="141" width="204" height="29"/>

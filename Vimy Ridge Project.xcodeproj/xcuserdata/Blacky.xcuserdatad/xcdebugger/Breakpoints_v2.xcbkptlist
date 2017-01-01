@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Vimy Ridge Project/MapViewController.swift"
-            timestampString = "505000350.491778"
+            timestampString = "505002197.913844"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "833"
-            endingLineNumber = "833"
+            startingLineNumber = "766"
+            endingLineNumber = "766"
             landmarkName = "mapType(_:)"
             landmarkType = "7">
          </BreakpointContent>

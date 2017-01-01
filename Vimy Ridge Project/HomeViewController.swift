@@ -20,6 +20,7 @@
 // Eric Duberville
 // Jordan Maloney
 // Joey Tripp
+// Daniel Gordon
 
 import UIKit
 import AVFoundation

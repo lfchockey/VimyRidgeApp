@@ -4,6 +4,12 @@
 <dict>
 	<key>Battalions</key>
 	<array>
+        <dict>
+            <key>name</key>
+            <string>73rd Battalion - 12th Infantry Brigade - 4th Division</string>
+            <key>id</key>
+            <integer>74</integer>
+        </dict>
 		<dict>
 			<key>name</key>
 			<string>1st Field Battery - 1st Brigade C.F.A. - 1st Division</string>
@@ -404,37 +410,37 @@
 			<key>name</key>
 			<string>Royal Canadian Regiment - 7th Infantry Brigade - 3rd Division</string>
 			<key>id</key>
-			<integer>0</integer>
+			<integer>200</integer>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Princess Patricia&apos;s Canadian Light Infantry - 7th Infantry Brigade - 3rd Division</string>
 			<key>id</key>
-			<integer>0</integer>
+			<integer>200</integer>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>1st Canadian Mounted Rifles Battalion - 8th Infantry Brigade - 3rd Division</string>
 			<key>id</key>
-			<integer>0</integer>
+			<integer>200</integer>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>2nd Canadian Mounted Rifles Battalion - 8th Infantry Brigade - 3rd Division</string>
 			<key>id</key>
-			<integer>0</integer>
+			<integer>200</integer>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>4th Canadian Mounted Rifles Battalion - 8th Infantry Brigade - 3rd Division</string>
 			<key>id</key>
-			<integer>0</integer>
+			<integer>200</integer>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>5th Canadian Mounted Rifles Battalion - 8th Infantry Brigade - 3rd Division</string>
 			<key>id</key>
-			<integer>0</integer>
+			<integer>200</integer>
 		</dict>
 		<dict>
 			<key>name</key>
