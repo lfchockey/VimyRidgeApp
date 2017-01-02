@@ -21,6 +21,7 @@
 // Jordan Maloney
 // Joey Tripp
 // Daniel Gordon
+// Kaylee Bogora
 
 import UIKit
 import AVFoundation

@@ -15,6 +15,10 @@
 		3FE011CA1E0AE8810067DFD0 /* old paper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FE011C91E0AE8810067DFD0 /* old paper.jpg */; };
 		3FE011CC1E0AF6DD0067DFD0 /* vimyWallBrickupLight1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FE011CB1E0AF6DD0067DFD0 /* vimyWallBrickupLight1.jpg */; };
 		3FEB44411E0C60AC00620494 /* SoldierOfHourNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEB44401E0C60AC00620494 /* SoldierOfHourNavController.swift */; };
+		F123F2DF1E1AAD6E00BD47F6 /* FlagPlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F123F2DD1E1AAD6E00BD47F6 /* FlagPlistReader.swift */; };
+		F123F2E01E1AAD6E00BD47F6 /* Flags.plist in Resources */ = {isa = PBXBuildFile; fileRef = F123F2DE1E1AAD6E00BD47F6 /* Flags.plist */; };
+		F123F2E31E1AAD9000BD47F6 /* FlagOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F123F2E11E1AAD9000BD47F6 /* FlagOverlay.swift */; };
+		F123F2E41E1AAD9000BD47F6 /* FlagOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F123F2E21E1AAD9000BD47F6 /* FlagOverlayView.swift */; };
 		F12C10E61D60CDBC0071798C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E41D60CDBC0071798C /* SearchViewController.swift */; };
 		F12C10E71D60CDBC0071798C /* SoldierSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E51D60CDBC0071798C /* SoldierSearch.swift */; };
 		F12C10E91D60CDDB0071798C /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E81D60CDDB0071798C /* Reachability.swift */; };
@@ -119,6 +123,10 @@
 		3FE011C91E0AE8810067DFD0 /* old paper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "old paper.jpg"; sourceTree = "<group>"; };
 		3FE011CB1E0AF6DD0067DFD0 /* vimyWallBrickupLight1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vimyWallBrickupLight1.jpg; sourceTree = "<group>"; };
 		3FEB44401E0C60AC00620494 /* SoldierOfHourNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierOfHourNavController.swift; sourceTree = "<group>"; };
+		F123F2DD1E1AAD6E00BD47F6 /* FlagPlistReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagPlistReader.swift; sourceTree = "<group>"; };
+		F123F2DE1E1AAD6E00BD47F6 /* Flags.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Flags.plist; sourceTree = "<group>"; };
+		F123F2E11E1AAD9000BD47F6 /* FlagOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagOverlay.swift; sourceTree = "<group>"; };
+		F123F2E21E1AAD9000BD47F6 /* FlagOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagOverlayView.swift; sourceTree = "<group>"; };
 		F12C10E41D60CDBC0071798C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F12C10E51D60CDBC0071798C /* SoldierSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierSearch.swift; sourceTree = "<group>"; };
 		F12C10E81D60CDDB0071798C /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -558,6 +566,10 @@
 		F170B8DE1D4FB7D000118440 /* Western Front */ = {
 			isa = PBXGroup;
 			children = (
+				F123F2E11E1AAD9000BD47F6 /* FlagOverlay.swift */,
+				F123F2E21E1AAD9000BD47F6 /* FlagOverlayView.swift */,
+				F123F2DD1E1AAD6E00BD47F6 /* FlagPlistReader.swift */,
+				F123F2DE1E1AAD6E00BD47F6 /* Flags.plist */,
 				F170B8F71D4FB94D00118440 /* westernFront.plist */,
 				F170B8F81D4FB94D00118440 /* WesternFrontController.swift */,
 				F170B8F91D4FB94D00118440 /* WesternFrontLinesCoords.swift */,
@@ -732,6 +744,7 @@
 				F1E7D64A1E16BE3900182A9C /* Images.plist in Resources */,
 				F12C11801D71E1FB0071798C /* Medals List.plist in Resources */,
 				3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */,
+				F123F2E01E1AAD6E00BD47F6 /* Flags.plist in Resources */,
 				F16B10151D4FA6EF004F2777 /* Images.xcassets in Resources */,
 				F170B8FA1D4FB94D00118440 /* westernFront.plist in Resources */,
 				3FE011CA1E0AE8810067DFD0 /* old paper.jpg in Resources */,
@@ -765,6 +778,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F123F2E31E1AAD9000BD47F6 /* FlagOverlay.swift in Sources */,
 				F170B8FE1D4FBA4300118440 /* MapViewController.swift in Sources */,
 				F170B8F41D4FB93400118440 /* AdvProp.swift in Sources */,
 				F12C10E91D60CDDB0071798C /* Reachability.swift in Sources */,
@@ -774,6 +788,7 @@
 				F170B8E51D4FB8D600118440 /* CemAnno.swift in Sources */,
 				F12C10E61D60CDBC0071798C /* SearchViewController.swift in Sources */,
 				F12C11901D73AB010071798C /* WeaponSelectVC.swift in Sources */,
+				F123F2DF1E1AAD6E00BD47F6 /* FlagPlistReader.swift in Sources */,
 				3FE011C01E0AE8520067DFD0 /* StatsTableViewController.swift in Sources */,
 				F12C11851D732B360071798C /* VimyVirtualMemorialVC.swift in Sources */,
 				F12C11011D6291810071798C /* VCMapView.swift in Sources */,
@@ -802,6 +817,7 @@
 				F12C112B1D6CB7CD0071798C /* BattalionReader.swift in Sources */,
 				F12C11251D6CB7AB0071798C /* FullBattalionInfo.swift in Sources */,
 				F1E7D6451E16BE3900182A9C /* ArtworkViewController.swift in Sources */,
+				F123F2E41E1AAD9000BD47F6 /* FlagOverlayView.swift in Sources */,
 				F12C11261D6CB7AB0071798C /* SingleBattalionViewController.swift in Sources */,
 				F170B8F01D4FB90C00118440 /* CustomAnnotation.swift in Sources */,
 				F1E7D6351E1419B300182A9C /* FacebookMilitaryVC.swift in Sources */,

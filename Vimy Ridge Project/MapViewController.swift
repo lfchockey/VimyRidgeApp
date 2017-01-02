@@ -21,6 +21,7 @@ class MapViewController: UIViewController, MKMapViewDelegate
     @IBOutlet weak var menu: UIView!
     @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var rightButton: UIButton!
+    @IBOutlet weak var nameLabel: UILabel!
     var thumbImage: UIImage = UIImage(named: "PlaceOfDeath")!
     
     
@@ -44,11 +45,22 @@ class MapViewController: UIViewController, MKMapViewDelegate
         leftButton.isHidden = true
         rightButton.isHidden = true
         slider.isHidden = true
+        nameLabel.isHidden = true
         
         if MapVariables.mapSection == 1{
             // Battalions
             zoomRegion = 10000
             loadBattalionView()
+        }
+        else if MapVariables.mapSection == 2{
+            // Western Front
+            indexCounter = 0
+            zoomRegion = 100000
+            let dummyButton = UIButton(type: UIButtonType.custom)
+            LeftPreviousClick(dummyButton)
+            nameLabel.isHidden = false
+            leftButton.isHidden = false
+            rightButton.isHidden = false
         }
         else if MapVariables.mapSection == 3{
             // Cemeteries
@@ -62,15 +74,6 @@ class MapViewController: UIViewController, MKMapViewDelegate
             let dummySlider = UISlider()
             sliderValueDidChange(dummySlider)
             slider.isHidden = false
-        }
-        else if MapVariables.mapSection == 2{
-            // Western Front
-            indexCounter = 0
-            zoomRegion = 100000
-            let dummyButton = UIButton(type: UIButtonType.custom)
-            LeftPreviousClick(dummyButton)
-            leftButton.isHidden = false
-            rightButton.isHidden = false
         }
         else {
             // Battalions
@@ -90,6 +93,7 @@ class MapViewController: UIViewController, MKMapViewDelegate
         
         
     }
+    
     
     // User Swipes right
     @IBAction func openMenu(_ sender: UISwipeGestureRecognizer) {
@@ -416,10 +420,7 @@ class MapViewController: UIViewController, MKMapViewDelegate
     
     //************************************************************* Western Fronts Code ********//
     
-    @IBOutlet weak var nameLabel: UILabel!
     
-    @IBAction func infoClick(_ sender: AnyObject) {
-    }
     
     @IBAction func RightNextClick(_ sender: UIButton) {
         let allOverlays = mapView.overlays
@@ -431,15 +432,36 @@ class MapViewController: UIViewController, MKMapViewDelegate
             indexCounter = 0
         }
         
-        let newLine = lineArray[indexCounter]
-        
         let printName = lineArray[indexCounter].name
         nameLabel.text = printName
         
-        var Polyine1900: MKPolyline = MKPolyline()
-        Polyine1900 = MKPolyline(coordinates: &newLine.frontLineCoords, count: newLine.coordCount)
-        mapView.add(Polyine1900)
+        // Add the polyline to the map
+        let newLine = lineArray[indexCounter]
+        let westernFrontLine: MKPolyline = MKPolyline(coordinates: &newLine.frontLineCoords, count: newLine.coordCount)
+        mapView.add(westernFrontLine)
         
+        
+        // Zoom to the proper location of the map
+        let theCurrentFront = flagsArray[indexCounter]
+        // find the difference between the top left corner and bottom right corner of the map
+        let changeInLatitude = theCurrentFront.mapTopLeftCoord.latitude -
+            theCurrentFront.mapBottomRightCoord.latitude
+        
+        // think of a span as a tv size, measure from one corner to another
+        let span = MKCoordinateSpanMake(fabs(changeInLatitude), 0.0)
+        let region = MKCoordinateRegionMake(theCurrentFront.mapMidCoord, span)
+        
+        // create the region/zoom level of the map
+        mapView.region = region
+        mapView.centerCoordinate = theCurrentFront.mapMidCoord
+        
+        // Add the flags to the map
+        // The following adds the flags for the current Western front to the map
+        for flag in theCurrentFront.flags
+        {
+            let overlay = FlagOverlay(flag: flag)
+            mapView.add(overlay)
+        }
     }
     
     @IBAction func LeftPreviousClick(_ sender: UIButton) {
@@ -451,47 +473,55 @@ class MapViewController: UIViewController, MKMapViewDelegate
         if indexCounter < 0 {
             indexCounter = lineArray.count - 1
         }
-        
-        let newLine = lineArray[indexCounter]
-        
         let printName = lineArray[indexCounter].name
         nameLabel.text = printName
         
-        var Polyine1900: MKPolyline = MKPolyline()
-        Polyine1900 = MKPolyline(coordinates: &newLine.frontLineCoords, count: newLine.coordCount)
-        mapView.add(Polyine1900)
+        // Add the polyline to the map
+        let newLine = lineArray[indexCounter]
+        let westernFrontLine: MKPolyline = MKPolyline(coordinates: &newLine.frontLineCoords, count: newLine.coordCount)
+        mapView.add(westernFrontLine)
+        
+        // Zoom to the proper location of the map
+        let theCurrentFront = flagsArray[indexCounter]
+        // find the difference between the top left corner and bottom right corner of the map
+        let changeInLatitude = theCurrentFront.mapTopLeftCoord.latitude -
+            theCurrentFront.mapBottomRightCoord.latitude
+        
+        // think of a span as a tv size, measure from one corner to another
+        let span = MKCoordinateSpanMake(fabs(changeInLatitude), 0.0)
+        let region = MKCoordinateRegionMake(theCurrentFront.mapMidCoord, span)
+        
+        // create the region/zoom level of the map
+        mapView.region = region
+        mapView.centerCoordinate = theCurrentFront.mapMidCoord
+        
+        // Add the flags to the map
+        // The following adds the flags for the current Western front to the map
+        for flag in theCurrentFront.flags
+        {
+            let overlay = FlagOverlay(flag: flag)
+            mapView.add(overlay)
+        }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        //        let newLine = lineArray[0]
-        //
-        //        var Polyine1900: MKPolyline = MKPolyline()
-        //        Polyine1900 = MKPolyline(coordinates: &newLine.frontLineCoords, count: newLine.coordCount)
-        
-        //mapView.add(Polyine1900)
-    }
     
     var regionRadius: CLLocationDistance = 50000
+    var indexCounter: Int = 0
     
     var line191516 = WesternFrontLinesCoords(lineName: "1915-1916")
     var line1917 = WesternFrontLinesCoords(lineName: "1917")
     var lineHB = WesternFrontLinesCoords(lineName: "Hindenburg Line")
     var lineFGO = WesternFrontLinesCoords(lineName: "Final German Offensives 1918")
     var lineFAO = WesternFrontLinesCoords(lineName: "Final Allied Offensives 1918")
-    
-    var indexCounter: Int = 0
     var lineArray: [WesternFrontLinesCoords] = []
     
-    var pointsToUse1: [CLLocationCoordinate2D] = []
-    var pointsToUse2: [CLLocationCoordinate2D] = []
-    var pointsToUse3: [CLLocationCoordinate2D] = []
-    var pointsToUse4: [CLLocationCoordinate2D] = []
-    var pointsToUse5: [CLLocationCoordinate2D] = []
-    var Polyine1: MKPolyline = MKPolyline()
-    var Polyine2: MKPolyline = MKPolyline()
-    var Polyine3: MKPolyline = MKPolyline()
-    var Polyine4: MKPolyline = MKPolyline()
-    var Polyine5: MKPolyline = MKPolyline()
+    var flags191516 = FlagPlistReader(frontName: "1915-1916")
+    var flags1917 = FlagPlistReader(frontName: "1917")
+    var flagsHB = FlagPlistReader(frontName: "Hindenburg Line")
+    var flagsFGO = FlagPlistReader(frontName: "Final German Offensives 1918")
+    var flagsFAO = FlagPlistReader(frontName: "Final Allied Offensives 1918")
+    var flagsArray: [FlagPlistReader] = []
+    
     
     //************************************************************ Trench Line Progressions Code ********//
     
@@ -594,6 +624,12 @@ class MapViewController: UIViewController, MKMapViewDelegate
             // polylineRenderer.strokeColor = UIColor.init(colorLiteralRed:0.10, green:0.15, blue:0.39, alpha:0.85)
             // polylineRenderer.lineWidth = 2
             return polylineRenderer
+        }
+        else if overlay is FlagOverlay {
+            let ol = overlay as! FlagOverlay
+            print (ol.properties)
+            return FlagOverlayView(overlay: ol, overlayImage: UIImage(named: ol.properties.name)!)
+            
         }
         
         return MKOverlayRenderer()
@@ -804,12 +840,14 @@ class MapViewController: UIViewController, MKMapViewDelegate
         mapq = mapView
         
         lineArray = [line191516,line1917,lineHB,lineFGO,lineFAO]
+        flagsArray = [flags191516, flags1917, flagsHB, flagsFGO, flagsFAO]
         
         //loadBattalionView()
         
         //addCemeteryPins()
         
         mapView.showAnnotations(mapView.annotations, animated: true)
+        loadBattalionView()
     }
     
     override func didReceiveMemoryWarning() {
