@@ -627,7 +627,6 @@ class MapViewController: UIViewController, MKMapViewDelegate
         }
         else if overlay is FlagOverlay {
             let ol = overlay as! FlagOverlay
-            print (ol.properties)
             return FlagOverlayView(overlay: ol, overlayImage: UIImage(named: ol.properties.name)!)
             
         }

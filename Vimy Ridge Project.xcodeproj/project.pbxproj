@@ -19,6 +19,7 @@
 		F123F2E01E1AAD6E00BD47F6 /* Flags.plist in Resources */ = {isa = PBXBuildFile; fileRef = F123F2DE1E1AAD6E00BD47F6 /* Flags.plist */; };
 		F123F2E31E1AAD9000BD47F6 /* FlagOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F123F2E11E1AAD9000BD47F6 /* FlagOverlay.swift */; };
 		F123F2E41E1AAD9000BD47F6 /* FlagOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F123F2E21E1AAD9000BD47F6 /* FlagOverlayView.swift */; };
+		F123F2E71E1BF63E00BD47F6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F123F2E61E1BF63E00BD47F6 /* MapKit.framework */; };
 		F12C10E61D60CDBC0071798C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E41D60CDBC0071798C /* SearchViewController.swift */; };
 		F12C10E71D60CDBC0071798C /* SoldierSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E51D60CDBC0071798C /* SoldierSearch.swift */; };
 		F12C10E91D60CDDB0071798C /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E81D60CDDB0071798C /* Reachability.swift */; };
@@ -127,6 +128,7 @@
 		F123F2DE1E1AAD6E00BD47F6 /* Flags.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Flags.plist; sourceTree = "<group>"; };
 		F123F2E11E1AAD9000BD47F6 /* FlagOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagOverlay.swift; sourceTree = "<group>"; };
 		F123F2E21E1AAD9000BD47F6 /* FlagOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagOverlayView.swift; sourceTree = "<group>"; };
+		F123F2E61E1BF63E00BD47F6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F12C10E41D60CDBC0071798C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F12C10E51D60CDBC0071798C /* SoldierSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierSearch.swift; sourceTree = "<group>"; };
 		F12C10E81D60CDDB0071798C /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F123F2E71E1BF63E00BD47F6 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +245,14 @@
 				3FEB44401E0C60AC00620494 /* SoldierOfHourNavController.swift */,
 			);
 			name = SoldierOfHour;
+			sourceTree = "<group>";
+		};
+		F123F2E51E1BF63E00BD47F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F123F2E61E1BF63E00BD47F6 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F12C10DC1D562EA10071798C /* Home */ = {
@@ -483,6 +494,7 @@
 				F16B0FFA1D4FA578004F2777 /* Vimy Ridge ProjectTests */,
 				F16B10051D4FA578004F2777 /* Vimy Ridge ProjectUITests */,
 				F16B0FE41D4FA578004F2777 /* Products */,
+				F123F2E51E1BF63E00BD47F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -694,6 +706,12 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 6M6MD3ZAQR;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					F16B0FF61D4FA578004F2777 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -990,10 +1008,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6M6MD3ZAQR;
 				INFOPLIST_FILE = "Vimy Ridge Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "UCDSB.Vimy-Ridge-Project";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LWF.Vimy-Ridge-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1004,10 +1023,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6M6MD3ZAQR;
 				INFOPLIST_FILE = "Vimy Ridge Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "UCDSB.Vimy-Ridge-Project";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LWF.Vimy-Ridge-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
