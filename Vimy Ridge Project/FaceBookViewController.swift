@@ -12,6 +12,7 @@ class FaceBookViewController: UIViewController {
 
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var headstoneImage: UIImageView!
     
     @IBAction func SwapViews(_ sender: AnyObject) {
         moveViews(sender: sender.selectedSegmentIndex)
@@ -42,7 +43,7 @@ class FaceBookViewController: UIViewController {
     
     
     func moveViews(sender:Int) {
-        let viewControllerIdentifiers = ["NonMilitaryProfile", "MilitaryProfile", "Friends", "Timeline", "Photos", "Medals", "StudentBio"]
+        let viewControllerIdentifiers = ["NonMilitaryProfile", "MilitaryProfile", "Friends", "Timeline", "Medals", "StudentBio"]
         let newController = (storyboard?.instantiateViewController(withIdentifier: viewControllerIdentifiers[sender]))! as UIViewController
         let oldController = childViewControllers.last! as UIViewController
         
@@ -67,13 +68,39 @@ class FaceBookViewController: UIViewController {
             moveViews(sender: 0)
             indicator.isHidden = false
             grabDataOnSoldier()
+            
+            
+            var data: NSData?
+            
+            let url: NSURL = NSURL(string: "http://lest-we-forget.ca/apis/get_soldier_headstone.php?soldier_id=\(MyVariables.facebookSoldierID)&access_code=\(MyVariables.access_code)")!
+            //let url = NSURL(string:"http://cdn.businessoffashion.com/site/uploads/2014/09/Karl-Lagerfeld-Self-Portrait-Courtesy.jpg")
+            data = NSData(contentsOf:url as URL)
+            if data != nil {
+                // resize image to correct proportions
+                headstoneImage?.image = UIImage(data:data! as Data)
+            }
+            else {
+                // **** load alternate image
+            }
+
         }
         else {
-            // *** come up with error message if no soldier id was passed
+            // Error message stating that you need an internet connection to view this section of the app
+            print("(Facebook Main) No soldier ID set")
+            
+            let alertController = UIAlertController(title: "No soldier indicated", message: "Unfortunately the soldier's ID was not properly passed. Please try again.", preferredStyle: .alert)
+            
+            let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                // When OK is pressed, segue back to the previous ViewController (Main Screen)
+                _ = self.navigationController?.popViewController(animated: true)
+            }
+            alertController.addAction(OKAction)
+            
+            self.present(alertController, animated: true) {
+                // ...
+            }
         }
         
-        
-
         
     }
 

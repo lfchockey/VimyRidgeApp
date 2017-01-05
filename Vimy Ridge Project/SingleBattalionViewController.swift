@@ -86,11 +86,28 @@ class SingleBattalionViewController: UIViewController {
             
         }
         else {
+            
+            
+            print("(SingleBattalionVC) Internet connection FAILED")
+            
+            let alertController = UIAlertController(title: "No Internet Connection", message: "Make sure your device is connected to the internet.", preferredStyle: .alert)
+            
+            let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                // When OK is pressed, segue back to the previous ViewController (Main Screen)
+                _ = self.navigationController?.popViewController(animated: true)
+            }
+            alertController.addAction(OKAction)
+            
+            self.present(alertController, animated: true) {
+                // ...
+            }
+
+            
             // Error message stating that you need an internet connection to view this section of the app
             
-            let alert = UIAlertController(title: "Connection Error", message: "You need an internet connection to view this page.", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+//            let alert = UIAlertController(title: "Connection Error", message: "You need an internet connection to view this page.", preferredStyle: UIAlertControllerStyle.alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            //self.present(alert, animated: true, completion: nil)
         }
         
         self.title = "\(BattVars.singleBattalion.battalion_name)"

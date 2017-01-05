@@ -27,10 +27,15 @@ class TimelineView:UIViewController, UITableViewDataSource, UITableViewDelegate,
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func Polyline(_ sender: AnyObject) {
-        
+        // When "Show All" is clicked
         let polyline = MKPolyline(coordinates: &polyLine, count: polyLine.count)
         
         self.Mapper.add(polyline)
+        
+        if let first = Mapper.overlays.first {
+            let rect = Mapper.overlays.reduce(first.boundingMapRect, {MKMapRectUnion($0, $1.boundingMapRect)})
+            Mapper.setVisibleMapRect(rect, edgePadding: UIEdgeInsets(top: 50.0, left: 50.0, bottom: 50.0, right: 50.0), animated: true)
+        }
     }
     
     override func viewDidLoad() {
@@ -94,7 +99,20 @@ class TimelineView:UIViewController, UITableViewDataSource, UITableViewDelegate,
         }
         else {
             // Error message stating that you need an internet connection to view this section of the app
-            print("Error in Timeline")
+            print("(Timeline) Internet connection FAILED")
+            
+            let alertController = UIAlertController(title: "No Internet Connection", message: "Make sure your device is connected to the internet.", preferredStyle: .alert)
+            
+            let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                // When OK is pressed, segue back to the previous ViewController (Main Screen)
+                _ = self.navigationController?.popViewController(animated: true)
+            }
+            alertController.addAction(OKAction)
+            
+            self.present(alertController, animated: true) {
+                // ...
+            }
+
         }
         
         //----
@@ -171,7 +189,7 @@ class TimelineView:UIViewController, UITableViewDataSource, UITableViewDelegate,
             anView!.image = UIImage(named: "PlaceOfDeath")
         }
         else if (anno.title == "Place of Burial") {
-            anView!.image = UIImage(named: "PlaceOfBurial")
+            anView!.image = UIImage(named: "SoG")
         }
         else {
         anView!.image = UIImage(named: "OtherPin")
@@ -250,29 +268,67 @@ class TimelineView:UIViewController, UITableViewDataSource, UITableViewDelegate,
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath as IndexPath)
         
         // Configure the cell...
+        cell.textLabel?.adjustsFontSizeToFitWidth = true
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 11.0)
         cell.textLabel?.text = signSearch[indexPath.row]
         
+       
+//        if (signSearch[indexPath.row] == "Place of Birth") {
+//
+//            cell.imageView?.image = UIImage(named: "PlaceOfBirth")
+//        }
+//        else if (signSearch[indexPath.row] == "Place of Enlistment") {
+//            cell.imageView?.image = UIImage(named: "PlaceOfEnlist")
+//        }
+//        else if (signSearch[indexPath.row] == "Place of Embarkation") {
+//            cell.imageView?.image = UIImage(named: "PlaceOfEmbark")
+//        }
+//        else if (signSearch[indexPath.row] == "Place of Disembarkation") {
+//            cell.imageView?.image = UIImage(named: "PlaceOfDisembark")
+//        }
+//        else if (signSearch[indexPath.row] == "Place of Death") {
+//            cell.imageView?.image = UIImage(named: "PlaceOfDeath")
+//        }
+//        else if (signSearch[indexPath.row] == "Place of Burial") {
+//            cell.imageView?.image = UIImage(named: "SoG")
+//        }
+//        else  {
+//            cell.imageView?.image = UIImage(named: "OtherPin")
+//        }
+        
+        var cellImage = UIImage()
         if (signSearch[indexPath.row] == "Place of Birth") {
-        cell.imageView?.image = UIImage(named: "PlaceOfBirth")
+            cellImage = UIImage(named: "PlaceOfBirth")!
         }
         else if (signSearch[indexPath.row] == "Place of Enlistment") {
-            cell.imageView?.image = UIImage(named: "PlaceOfEnlist")
+            cellImage = UIImage(named: "PlaceOfEnlist")!
         }
         else if (signSearch[indexPath.row] == "Place of Embarkation") {
-            cell.imageView?.image = UIImage(named: "PlaceOfEmbark")
+            cellImage = UIImage(named: "PlaceOfEmbark")!
         }
         else if (signSearch[indexPath.row] == "Place of Disembarkation") {
-            cell.imageView?.image = UIImage(named: "PlaceOfDisembark")
+            cellImage = UIImage(named: "PlaceOfDisembark")!
         }
         else if (signSearch[indexPath.row] == "Place of Death") {
-            cell.imageView?.image = UIImage(named: "PlaceOfDeath")
+            cellImage = UIImage(named: "PlaceOfDeath")!
         }
         else if (signSearch[indexPath.row] == "Place of Burial") {
-            cell.imageView?.image = UIImage(named: "SoG")
+            cellImage = UIImage(named: "SoG")!
         }
         else  {
-        cell.imageView?.image = UIImage(named: "OtherPin")
+            cellImage = UIImage(named: "OtherPin")!
         }
+
+        
+        
+        let imageWidth = cellImage.size.width
+        let imageHeight = cellImage.size.height
+        let newWidth: CGFloat = 20.0
+        let cellImgView: UIImageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: newWidth, height: imageHeight/imageWidth*newWidth))
+        cellImgView.image = cellImage
+        //frame: CGRect(x: 0, y: 0, width: 10, height: 10)
+        cell.addSubview(cellImgView)
+
         
         return cell
     }

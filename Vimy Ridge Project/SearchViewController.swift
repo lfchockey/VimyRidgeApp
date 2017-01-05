@@ -196,13 +196,13 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
         }
     }
     
-  // MARK: - View Setup
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    searchController.delegate = self
+    // MARK: - View Setup
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-  }
+        searchController.delegate = self
+
+    }
   
     override func viewWillAppear(_ animated: Bool) {
         //clearsSelectionOnViewWillAppear = splitViewController!.collapsed
