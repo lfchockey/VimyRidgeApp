@@ -11,9 +11,10 @@ import UIKit
 class FullImageView: UIViewController {
     
     //Reveive information
-    var selectedName: String = ""
-    var selectedDate: String = ""
-    var selectedArtist: String = ""
+    var selectedImage: imageObject!
+//    var selectedName: String!
+//    var selectedDate: String!
+//    var selectedArtist: String!
     
     //Register GUI components
     @IBOutlet weak var fullImageView: UIImageView!
@@ -25,12 +26,12 @@ class FullImageView: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor(patternImage: UIImage(named: "old paper")!)
-        fullImageView.image = UIImage(named: selectedName) //Grab from indexPath
+        fullImageView.image = UIImage(named: selectedImage.name)
         fullImageView.contentMode = .scaleAspectFit
-        
-        imageTitle.text = selectedName
-        imageDate.text = selectedDate
-        imageArtist.text = selectedArtist
+
+        imageTitle.text = selectedImage.name
+        imageDate.text = selectedImage.date
+        imageArtist.text = selectedImage.author
         
     }
     
