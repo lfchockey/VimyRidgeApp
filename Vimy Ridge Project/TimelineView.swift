@@ -42,6 +42,10 @@ class TimelineView:UIViewController, UITableViewDataSource, UITableViewDelegate,
         
         super.viewDidLoad()
         //----
+        
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.Mapper.delegate = self
         if Reachability.isConnectedToNetwork() == true {
             
             let defaultSession = URLSession(configuration: URLSessionConfiguration.default)
@@ -87,8 +91,11 @@ class TimelineView:UIViewController, UITableViewDataSource, UITableViewDelegate,
                                 let coor = CLLocationCoordinate2D(latitude: lat!, longitude: long!)
                                 self.polyLine.append(coor)
                             }
-                            self.changePin(newPindex: self.pindex)
-                            self.tableView.reloadData()
+                            DispatchQueue.main.async {
+                                self.changePin(newPindex: self.pindex)
+                                self.tableView.reloadData()
+                            }
+                            
                         }
                     }
                 }
@@ -153,12 +160,14 @@ class TimelineView:UIViewController, UITableViewDataSource, UITableViewDelegate,
 //
 //        }
         
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        self.Mapper.delegate = self
+        
       
         
         changePin(newPindex: pindex)
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
 
     }
     //Enables the pin to change image when a new location is selected

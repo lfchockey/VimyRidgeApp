@@ -133,63 +133,38 @@ extension ArtworkViewController: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         if collectionView == warCollectionView {
-            
-            self.performSegue(withIdentifier: "WarImageSegue", sender: nil)
-            
-            //Push information to FullImageView
-            func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                if segue.identifier == "WarImageSegue" {
-                    let newController = segue.destination as! FullImageView
-                    newController.selectedName = images.warImages[indexPath.row].name
-                    newController.selectedDate = images.warImages[indexPath.row].date
-                    newController.selectedArtist = images.warImages[indexPath.row].author
-                    //print(images.warImages[indexPath.row].name)
-                    
-                }
-                
-            }
-            
+            performSegue(withIdentifier: "WarImageSegue", sender: images.warImages[indexPath.row])
         } else if collectionView == postWarCollectionView {
-            
-            self.performSegue(withIdentifier: "PostWarImageSegue", sender: nil)
-            
-            func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                if segue.identifier == "WarImageSegue" {
-                    let newController = segue.destination as! FullImageView
-                    newController.selectedName = images.postWarImages[indexPath.row].name
-                    newController.selectedDate = images.postWarImages[indexPath.row].date
-                    newController.selectedArtist = images.postWarImages[indexPath.row].author
-                
-                }
-                
+            performSegue(withIdentifier: "PostWarImageSegue", sender: images.postWarImages[indexPath.row])
+        } else if collectionView == recentCollectionView {
+            performSegue(withIdentifier: "RecentImageSegue", sender: images.recentImages[indexPath.row])
+        } else {
+            performSegue(withIdentifier: "PropagandaImageSegue", sender: images.propagandaImages[indexPath.row])
+        }
+        
+    }
+    
+    //Send information forward
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "WarImageSegue" {
+            if let destination = segue.destination as? FullImageView {
+                destination.selectedImage = sender as! imageObject
             }
             
-        } else if collectionView == recentCollectionView {
+        } else if segue.identifier == "PostWarImageSegue" {
+            if let destination = segue.destination as? FullImageView {
+                destination.selectedImage = sender as! imageObject
+            }
             
-            self.performSegue(withIdentifier: "RecentImageSegue", sender: nil)
-            
-            func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                if segue.identifier == "WarImageSegue" {
-                    let newController = segue.destination as! FullImageView
-                    newController.selectedName = images.recentImages[indexPath.row].name
-                    newController.selectedDate = images.recentImages[indexPath.row].date
-                    newController.selectedArtist = images.recentImages[indexPath.row].author
-                }
-                
+        } else if segue.identifier == "RecentImageSegue" {
+            if let destination = segue.destination as? FullImageView {
+                destination.selectedImage = sender as! imageObject
             }
             
         } else {
-            
-            self.performSegue(withIdentifier: "PropagandaImageSegue", sender: nil)
-            
-            func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                if segue.identifier == "WarImageSegue" {
-                    let newController = segue.destination as! FullImageView
-                    newController.selectedName = images.propagandaImages[indexPath.row].name
-                    newController.selectedDate = images.propagandaImages[indexPath.row].date
-                    newController.selectedArtist = images.propagandaImages[indexPath.row].author
-                }
-                
+            if let destination = segue.destination as? FullImageView {
+                destination.selectedImage = sender as! imageObject
             }
             
         }
