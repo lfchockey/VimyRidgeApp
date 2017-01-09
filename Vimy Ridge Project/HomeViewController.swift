@@ -14,7 +14,7 @@
 // Kevin Hicks
 // Oksana Johnston
 // Dexter Van Zyll De Jong
-// Greg Mitchell (only storyboard)
+// Greg Mitchell 
 // Justin Yanosik
 // Jason Little
 // Eric Duberville
@@ -22,6 +22,7 @@
 // Joey Tripp
 // Daniel Gordon
 // Kaylee Bogora
+// Jacob Bland
 
 
 import UIKit

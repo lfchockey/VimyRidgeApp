@@ -21,6 +21,17 @@
 		F123F2E31E1AAD9000BD47F6 /* FlagOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F123F2E11E1AAD9000BD47F6 /* FlagOverlay.swift */; };
 		F123F2E41E1AAD9000BD47F6 /* FlagOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F123F2E21E1AAD9000BD47F6 /* FlagOverlayView.swift */; };
 		F123F2E71E1BF63E00BD47F6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F123F2E61E1BF63E00BD47F6 /* MapKit.framework */; };
+		F12BE4601E24535D006412F1 /* VimyMythsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12BE45E1E24535D006412F1 /* VimyMythsScreenViewController.swift */; };
+		F12BE4611E24535D006412F1 /* VimyMythsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12BE45F1E24535D006412F1 /* VimyMythsViewController.swift */; };
+		F12BE46C1E2453EB006412F1 /* texture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F12BE4631E2453EB006412F1 /* texture.jpg */; };
+		F12BE46D1E2453EB006412F1 /* texture_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F12BE4641E2453EB006412F1 /* texture_0.jpg */; };
+		F12BE46E1E2453EB006412F1 /* texture_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F12BE4651E2453EB006412F1 /* texture_1.jpg */; };
+		F12BE46F1E2453EB006412F1 /* texture_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F12BE4661E2453EB006412F1 /* texture_2.jpg */; };
+		F12BE4701E2453EB006412F1 /* texture_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F12BE4671E2453EB006412F1 /* texture_3.jpg */; };
+		F12BE4711E2453EB006412F1 /* texture_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F12BE4681E2453EB006412F1 /* texture_4.jpg */; };
+		F12BE4721E2453EB006412F1 /* texture_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F12BE4691E2453EB006412F1 /* texture_5.jpg */; };
+		F12BE4731E2453EB006412F1 /* texture_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F12BE46A1E2453EB006412F1 /* texture_6.jpg */; };
+		F12BE4741E2453EB006412F1 /* texture_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F12BE46B1E2453EB006412F1 /* texture_7.jpg */; };
 		F12C10E61D60CDBC0071798C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E41D60CDBC0071798C /* SearchViewController.swift */; };
 		F12C10E71D60CDBC0071798C /* SoldierSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E51D60CDBC0071798C /* SoldierSearch.swift */; };
 		F12C10E91D60CDDB0071798C /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10E81D60CDDB0071798C /* Reachability.swift */; };
@@ -131,6 +142,17 @@
 		F123F2E11E1AAD9000BD47F6 /* FlagOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagOverlay.swift; sourceTree = "<group>"; };
 		F123F2E21E1AAD9000BD47F6 /* FlagOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagOverlayView.swift; sourceTree = "<group>"; };
 		F123F2E61E1BF63E00BD47F6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F12BE45E1E24535D006412F1 /* VimyMythsScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VimyMythsScreenViewController.swift; sourceTree = "<group>"; };
+		F12BE45F1E24535D006412F1 /* VimyMythsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VimyMythsViewController.swift; sourceTree = "<group>"; };
+		F12BE4631E2453EB006412F1 /* texture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture.jpg; sourceTree = "<group>"; };
+		F12BE4641E2453EB006412F1 /* texture_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture_0.jpg; sourceTree = "<group>"; };
+		F12BE4651E2453EB006412F1 /* texture_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture_1.jpg; sourceTree = "<group>"; };
+		F12BE4661E2453EB006412F1 /* texture_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture_2.jpg; sourceTree = "<group>"; };
+		F12BE4671E2453EB006412F1 /* texture_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture_3.jpg; sourceTree = "<group>"; };
+		F12BE4681E2453EB006412F1 /* texture_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture_4.jpg; sourceTree = "<group>"; };
+		F12BE4691E2453EB006412F1 /* texture_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture_5.jpg; sourceTree = "<group>"; };
+		F12BE46A1E2453EB006412F1 /* texture_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture_6.jpg; sourceTree = "<group>"; };
+		F12BE46B1E2453EB006412F1 /* texture_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture_7.jpg; sourceTree = "<group>"; };
 		F12C10E41D60CDBC0071798C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F12C10E51D60CDBC0071798C /* SoldierSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierSearch.swift; sourceTree = "<group>"; };
 		F12C10E81D60CDDB0071798C /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -257,6 +279,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F12BE45D1E245340006412F1 /* Vimy Myths */ = {
+			isa = PBXGroup;
+			children = (
+				F12BE45E1E24535D006412F1 /* VimyMythsScreenViewController.swift */,
+				F12BE45F1E24535D006412F1 /* VimyMythsViewController.swift */,
+			);
+			name = "Vimy Myths";
+			sourceTree = "<group>";
+		};
+		F12BE4621E2453EB006412F1 /* untitled */ = {
+			isa = PBXGroup;
+			children = (
+				F12BE4631E2453EB006412F1 /* texture.jpg */,
+				F12BE4641E2453EB006412F1 /* texture_0.jpg */,
+				F12BE4651E2453EB006412F1 /* texture_1.jpg */,
+				F12BE4661E2453EB006412F1 /* texture_2.jpg */,
+				F12BE4671E2453EB006412F1 /* texture_3.jpg */,
+				F12BE4681E2453EB006412F1 /* texture_4.jpg */,
+				F12BE4691E2453EB006412F1 /* texture_5.jpg */,
+				F12BE46A1E2453EB006412F1 /* texture_6.jpg */,
+				F12BE46B1E2453EB006412F1 /* texture_7.jpg */,
+			);
+			name = untitled;
+			path = WeaponAssets.scnassets/untitled;
+			sourceTree = "<group>";
+		};
 		F12C10DC1D562EA10071798C /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +339,7 @@
 				F12C10EC1D61FD640071798C /* HistoryViewController.swift */,
 				F133F2311D75E1840049B8BB /* Artwork */,
 				F12C10EE1D61FEFB0071798C /* Stats */,
+				F12BE45D1E245340006412F1 /* Vimy Myths */,
 			);
 			name = History;
 			sourceTree = "<group>";
@@ -460,6 +509,7 @@
 				F12C118B1D73AB010071798C /* WeaponInfo.plist */,
 				F12C118C1D73AB010071798C /* WeaponSelectVC.swift */,
 				F12C118D1D73AB010071798C /* WeaponsInfo.swift */,
+				F12BE4621E2453EB006412F1 /* untitled */,
 				F12C11931D73ADA20071798C /* WeaponAssets.scnassets */,
 			);
 			name = Weapons;
@@ -757,9 +807,13 @@
 				F16B0FF11D4FA578004F2777 /* LaunchScreen.storyboard in Resources */,
 				F12C112E1D6CB7CD0071798C /* BattalionTest.plist in Resources */,
 				F1E7D6391E1469B500182A9C /* Roman Stonecut.ttf in Resources */,
+				F12BE46C1E2453EB006412F1 /* texture.jpg in Resources */,
 				F133F2301D74764C0049B8BB /* Serenata Immortale.mp3 in Resources */,
+				F12BE4721E2453EB006412F1 /* texture_5.jpg in Resources */,
+				F12BE4741E2453EB006412F1 /* texture_7.jpg in Resources */,
 				F170B8E71D4FB8D600118440 /* CoordinatePrime.plist in Resources */,
 				F170B8F51D4FB93400118440 /* daysOfBattle.plist in Resources */,
+				F12BE46F1E2453EB006412F1 /* texture_2.jpg in Resources */,
 				F1E7D64C1E16C0C000182A9C /* Artwork.xcassets in Resources */,
 				F170B8EE1D4FB90C00118440 /* BattalionMovement.plist in Resources */,
 				F1E7D64A1E16BE3900182A9C /* Images.plist in Resources */,
@@ -768,10 +822,15 @@
 				F123F2E01E1AAD6E00BD47F6 /* Flags.plist in Resources */,
 				F16B10151D4FA6EF004F2777 /* Images.xcassets in Resources */,
 				F170B8FA1D4FB94D00118440 /* westernFront.plist in Resources */,
+				F12BE4701E2453EB006412F1 /* texture_3.jpg in Resources */,
 				3FE011CA1E0AE8810067DFD0 /* old paper.jpg in Resources */,
+				F12BE4731E2453EB006412F1 /* texture_6.jpg in Resources */,
 				F168B6231D860FF000A9719A /* AppIntro.m4a in Resources */,
 				F12C118F1D73AB010071798C /* WeaponInfo.plist in Resources */,
 				F12C10F41D6212CE0071798C /* Stats.plist in Resources */,
+				F12BE46E1E2453EB006412F1 /* texture_1.jpg in Resources */,
+				F12BE46D1E2453EB006412F1 /* texture_0.jpg in Resources */,
+				F12BE4711E2453EB006412F1 /* texture_4.jpg in Resources */,
 				F16B0FEC1D4FA578004F2777 /* Main.storyboard in Resources */,
 				3FE011CC1E0AF6DD0067DFD0 /* vimyWallBrickupLight1.jpg in Resources */,
 				F12C11941D73ADA20071798C /* WeaponAssets.scnassets in Resources */,
@@ -843,6 +902,7 @@
 				F12C11261D6CB7AB0071798C /* SingleBattalionViewController.swift in Sources */,
 				F170B8F01D4FB90C00118440 /* CustomAnnotation.swift in Sources */,
 				F1E7D6351E1419B300182A9C /* FacebookMilitaryVC.swift in Sources */,
+				F12BE4611E24535D006412F1 /* VimyMythsViewController.swift in Sources */,
 				F170B8F61D4FB93400118440 /* TLPViewController.swift in Sources */,
 				3FE011C21E0AE85D0067DFD0 /* CollapsibleTableViewHeader.swift in Sources */,
 				F170B8FC1D4FB94D00118440 /* WesternFrontLinesCoords.swift in Sources */,
@@ -850,6 +910,7 @@
 				3FE011C81E0AE8770067DFD0 /* BensTableViewCell.swift in Sources */,
 				F1E7D6481E16BE3900182A9C /* ImageObject.swift in Sources */,
 				F12C11051D62919A0071798C /* Medals.swift in Sources */,
+				F12BE4601E24535D006412F1 /* VimyMythsScreenViewController.swift in Sources */,
 				F12C11221D6CB7910071798C /* BattalionInfoContainer.swift in Sources */,
 				3FEB44411E0C60AC00620494 /* SoldierOfHourNavController.swift in Sources */,
 				F133F22E1D7473810049B8BB /* Util.swift in Sources */,
