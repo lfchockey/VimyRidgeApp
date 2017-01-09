@@ -95,8 +95,9 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func BattalionsClick(_ sender: AnyObject) {
-        segueName = "BattalionSegue"
-        self.performSegue(withIdentifier: self.segueName, sender: nil)
+        self.navigationController?.pushViewController(BattalionCollapsibleTableVC(), animated: true)
+        //segueName = "BattalionSegue"
+        //self.performSegue(withIdentifier: self.segueName, sender: nil)
     }
     
     @IBAction func HistoryClick(_ sender: AnyObject) {

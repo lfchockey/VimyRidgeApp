@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FA970761E2414C400B5B394 /* BattalionCollapsibleTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA970751E2414C400B5B394 /* BattalionCollapsibleTableVC.swift */; };
 		3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */; };
 		3FE011C01E0AE8520067DFD0 /* StatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE011BF1E0AE8520067DFD0 /* StatsTableViewController.swift */; };
 		3FE011C21E0AE85D0067DFD0 /* CollapsibleTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE011C11E0AE85D0067DFD0 /* CollapsibleTableViewHeader.swift */; };
@@ -116,6 +117,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3FA970751E2414C400B5B394 /* BattalionCollapsibleTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattalionCollapsibleTableVC.swift; sourceTree = "<group>"; };
 		3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chapter 11 W00 Regular.ttf"; sourceTree = "<group>"; };
 		3FE011BF1E0AE8520067DFD0 /* StatsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsTableViewController.swift; sourceTree = "<group>"; };
 		3FE011C11E0AE85D0067DFD0 /* CollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewHeader.swift; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 				F12C11281D6CB7CD0071798C /* Battalions.swift */,
 				F12C11291D6CB7CD0071798C /* BattalionTableViewController.swift */,
 				F12C112A1D6CB7CD0071798C /* BattalionTest.plist */,
+				3FA970751E2414C400B5B394 /* BattalionCollapsibleTableVC.swift */,
 			);
 			name = "Battalion Search";
 			sourceTree = "<group>";
@@ -835,6 +838,7 @@
 				F12C112B1D6CB7CD0071798C /* BattalionReader.swift in Sources */,
 				F12C11251D6CB7AB0071798C /* FullBattalionInfo.swift in Sources */,
 				F1E7D6451E16BE3900182A9C /* ArtworkViewController.swift in Sources */,
+				3FA970761E2414C400B5B394 /* BattalionCollapsibleTableVC.swift in Sources */,
 				F123F2E41E1AAD9000BD47F6 /* FlagOverlayView.swift in Sources */,
 				F12C11261D6CB7AB0071798C /* SingleBattalionViewController.swift in Sources */,
 				F170B8F01D4FB90C00118440 /* CustomAnnotation.swift in Sources */,
