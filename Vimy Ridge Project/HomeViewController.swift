@@ -23,6 +23,7 @@
 // Daniel Gordon
 // Kaylee Bogora
 // Jacob Bland
+// Sherry Wang
 
 
 import UIKit

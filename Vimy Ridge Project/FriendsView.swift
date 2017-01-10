@@ -11,8 +11,8 @@ import UIKit
 
 
 class FriendsView: UITableViewController {
-
-    var totalSoldiers = 0
+    
+    var totalSoldiers = FriendsMatcher.finalSoldiers
     var allSoldiers = [JSON]()
     
     @IBOutlet var soldierTableView: UITableView!
@@ -23,107 +23,57 @@ class FriendsView: UITableViewController {
         // Set the delegate and the dataSource of the TableView (that lists soldiers)
         soldierTableView!.delegate = self
         soldierTableView!.dataSource = self
-        
-        
-        
-        
-        var battalion_name: String = ""
-        
-        if (MyVariables.globalSoldier.battalion != "") {
-            battalion_name = MyVariables.globalSoldier.battalion
-        }
-        else if (MyVariables.globalSoldier.regiment_upon_enlistment != "") {
-            battalion_name = MyVariables.globalSoldier.regiment_upon_enlistment
-        }
-        else if (MyVariables.globalSoldier.regiment_at_death != "") {
-            battalion_name = MyVariables.globalSoldier.regiment_at_death
-        }
-        else // no battalion info stored in soldier
-        {
-            // *** Show message to user
-        }
-        
-        //print(battalion_name)
-        
-        if (battalion_name != "")
-        {
-            // The url webpage that we'll be connecting to.
-            //      *****NOTICE THE ACTION VARIABLE "search_battalion" IN THE URL. THIS IS HOW YOU TELL THE SERVER WHAT TYPE OF SEARCH YOU ARE DOING
-            let url : String = "http://lest-we-forget.ca/apis/search2.php?access_code=\(MyVariables.access_code)&action=search_battalion&battalion=\(battalion_name)"
-            
-            // Build the URL request with the URL above
-            let request : NSMutableURLRequest = NSMutableURLRequest()
-            request.url = NSURL(string: url) as URL?
-            request.httpMethod = "GET"  // This defines how the information will be passed to the API website
-            
-            
-            var response : URLResponse?
-            var err : NSError?
-            
-            var soldierArray = JSON([])
-            let data: NSData?
-            do {
-                data = try NSURLConnection.sendSynchronousRequest(request as URLRequest, returning: &response) as NSData?
-            } catch let error as NSError {
-                err = error
-                data = nil
-            }
-            
-            //let jsn: NSDictionary = data as NSDictionary
-            if data != nil {
-                soldierArray = JSON(data: data! as Data)
-                totalSoldiers = soldierArray.count
-                //println(soldierArray) // print to see the data that was passed back from the server
-            }
-            else {
-                print(err!)
-            }
-            
-            
-            allSoldiers = soldierArray.arrayValue // This creates an array of all the soldiers sent back
-            
-            
-            //println(allSoldiers[0]) // This shows how to select an individual soldier
-            //println(allSoldiers[1]["name"]) // This shows how to select a specific property of a selected soldier
-            
-            
-            soldierTableView!.reloadData()
-        }
+        soldierTableView!.reloadData()
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return totalSoldiers
+        return totalSoldiers.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) 
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath)
         
-        let soldier = allSoldiers[indexPath.row]
-
-        cell.textLabel?.text = soldier["name"].stringValue
-
-
+        let soldier = FriendsMatcher.finalSoldiers[indexPath.row]
+        
+        
+        
+        cell.textLabel?.text = soldier["soldier_id"]!!+"   "+soldier["name"]!!+"     "+soldier["category"]!!+": "+soldier["matching_name"]!!
+        
+        
+        let imageView = UIImageView(frame: CGRect(x: 10, y: 0, width: cell.frame.width - 10, height: cell.frame.height - 1))//(10, 10, cell.frame.width - 10, cell.frame.height - 10))
+        let image = UIImage(named: "brickTexture")
+        imageView.image = image
+        cell.backgroundView = UIView()
+        cell.backgroundView!.addSubview(imageView)
+        cell.backgroundColor = .clear
+        
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let soldier = allSoldiers[indexPath.row]
-        MyVariables.facebookSoldierID = soldier["soldier_id"].stringValue
+        let soldier = FriendsMatcher.finalSoldiers[indexPath.row]
+        MyVariables.facebookSoldierID = soldier["soldier_id"]!!
         
         DispatchQueue.main.async() {
             self.performSegue(withIdentifier: "facebookVCSegue", sender: self)
         }
         
     }
-
-
+    
+    
+    
     var battalionTags = [
         "1st Field Battery - 1st Brigade C.F.A. - 1st Division",
         "3rd Field Battery - 1st Brigade C.F.A. - 1st Division",
