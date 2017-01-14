@@ -31,7 +31,7 @@ class ImageReader {
         for i in 0..<allImages.count {
             let imageValues = allImages[i] as! NSDictionary
             //print(imageValues["author"] as! String)
-            let io = imageObject(name: imageValues["name"] as! String, date: imageValues["date"] as! String, author: imageValues["author"] as! String, type: imageValues["type"] as! String)
+            let io = imageObject(name: imageValues["name"] as! String, date: imageValues["date"] as! String, author: imageValues["author"] as! String, type: imageValues["type"] as! String, text: imageValues["text"] as! String)
             
             if io.type == "war" {
                 warImages.append(io)

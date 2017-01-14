@@ -6,83 +6,859 @@
 	<array>
 		<dict>
 			<key>name</key>
-			<string>enhanced-buzz-wide-29670-1403886325-13</string>
+			<string>Vimy Ridge</string>
 			<key>date</key>
-			<string>Unknown</string>
+			<string>1930&apos;s</string>
 			<key>author</key>
-			<string>Unknown</string>
-			<key>type</key>
-			<string>war</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>FoY8Q</string>
-			<key>date</key>
-			<string>2014</string>
-			<key>author</key>
-			<string>Unknown</string>
+			<string>Captain William Longstaff</string>
 			<key>type</key>
 			<string>recent</string>
+			<key>text</key>
+			<string>This work by Australian Captain William Longstaff was extremely popular and images were reproduced and sold throughout the Empire. Longstaff depicted soldiers&apos; ghosts marching up Vimy Ridge from the Douai Plain, returning to the memorial. The Memorial&apos;s designer, Walter Allward, noted in 1921 that he had been inspired by wartime dream in which dead soldiers &quot;rose in masses, filed silently by and entered the fight to aid the living. So vivid was this impression, that when I awoke it stayed with me for months. Without the dead we were helpless. So I have tried to show this in this monument to Canada&apos;s fallen, what we owed them and we will forever owe them.&quot;</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>3g10128u-49</string>
+			<string>Canadian Artillery in Action</string>
+			<key>date</key>
+			<string>1918</string>
+			<key>author</key>
+			<string>Captain Kenneth Keith Forbes</string>
+			<key>type</key>
+			<string>recent</string>
+			<key>text</key>
+			<string>A Canadian 6-inch howitzer supports British troops in the attack on Thiepval on 16 July 1916 during the Somme offensive. The artist captures the exhaustion of the gunners, who appear to have been firing for hours. Prolonged exposure to the noise and shock artillery fire would rupture ear drums and ruin hearing. Most gunners suffered at least partial deafness as a result of their war service.</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>The Crest of Vimy</string>
+			<key>date</key>
+			<string>February 1918</string>
+			<key>author</key>
+			<string>Gyrth Russell</string>
+			<key>type</key>
+			<string>recent</string>
+			<key>text</key>
+			<string>A solitary soldier approaches the crest of Vimy Ridge in February 1918 in this work by Gyrth Russell, one of many Canadian war artists to depict the symbolic field. After the Canadians captured the ridge in April 1917, the Germans never retook it. The few battered trees indicate the destruction caused by the fighting.</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>A Cemetery on Vimy Ridge</string>
 			<key>date</key>
 			<string>1917</string>
 			<key>author</key>
-			<string>State</string>
+			<string>Lieutenant Frederick Thwaites Bush</string>
+			<key>type</key>
+			<string>recent</string>
+			<key>text</key>
+			<string>This sketch depicts a memorial at the bottom of a shell crater for fallen soldiers of the 2nd Canadian Division during the Battle of Vimy Ridge.
+
+This sketch depicts a memorial at the bottom of a shell crater for fallen soldiers of the 2nd Canadian Division during the Battle of Vimy Ridge.
+
+</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>The Pimple, Evening</string>
+			<key>date</key>
+			<string>March 1918</string>
+			<key>author</key>
+			<string>Alexander Young Jackson</string>
+			<key>type</key>
+			<string>recent</string>
+			<key>text</key>
+			<string>Soldiers advance in line towards the pimple, a position north of Vimy Ridge. Initially outside of the Canadian Corps&apos; objectives for 9 April 1917, the pimple was later added to ensure that the Germans could not counterattack and recapture the ridge. Canadian troops attacked in a snow storm on 12 April, driving the elite German defenders from dug-in positions.</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Taking of Vimy Ridge, Easter Monday 1917</string>
+			<key>date</key>
+			<string>1919</string>
+			<key>author</key>
+			<string>Richard Jack</string>
+			<key>type</key>
+			<string>recent</string>
+			<key>text</key>
+			<string>Richard Jack was the first Canadian official war artist, appointed in 1916. In this painting, he depicts the crew of an 18-pounder field gun firing at German positions on Vimy Ridge. To the left, wounded soldiers move past the gun towards the rear.</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Throwing Grenades</string>
+			<key>date</key>
+			<string>July 1918</string>
+			<key>author</key>
+			<string>Lieutenant Alfred Theodore Joseph Bastien</string>
+			<key>type</key>
+			<string>recent</string>
+			<key>text</key>
+			<string>This painting depicts a Canadian Highlander throwing a grenade from the safety of a trench. The relatively straight-arm throw involved lobbing the grenade rather than throwing it like a baseball from over the shoulder. Grenades were a particularly effective weapon in close quarters trench fighting or in knocking out strong points without exposing the thrower to enemy fire.</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Mustard Gas</string>
+			<key>date</key>
+			<string>Unknown</string>
+			<key>author</key>
+			<string>Sir Eric Henri Kennington</string>
+			<key>type</key>
+			<string>recent</string>
+			<key>text</key>
+			<string>This sketch depicts a blinded soldier recovering from the chemical effects of mustard gas. Most gassed soldiers recovered their sight within four to six weeks, but some were blinded permanently.</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Canadian Sentry</string>
+			<key>date</key>
+			<string>1918</string>
+			<key>author</key>
+			<string>Lieutenant Alfred Theodore Joseph Bastien</string>
+			<key>type</key>
+			<string>recent</string>
+			<key>text</key>
+			<string>A Canadian soldier stands sentry in a trench, watching No Man&apos;s Land for signs of enemy movement. For exhausted soldiers, the two-hour nighttime shifts felt much longer, especially with the ever-present threat of enemy raids.</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Coiffure in the Trenches</string>
+			<key>date</key>
+			<string>Unknown</string>
+			<key>author</key>
+			<string>Captain Charles Bruce Bairnsfather</string>
+			<key>type</key>
+			<string>recent</string>
+			<key>text</key>
+			<string>In this cartoon by famed British soldier and artist Bruce Bairnsfather, one soldier gives another a haircut while a shell flies overhead. The barber tells the anxious soldier to keep his head still or he will cut his ear off. Bairnfather&apos;s cartoons of trench life were published in the British newspaper, The Bystander, and proved extremely popular among Allied soldiers.</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Canadians in Paris</string>
+			<key>date</key>
+			<string>Unknown</string>
+			<key>author</key>
+			<string>Lieutenant Alfred Theodore Joseph Bastien </string>
+			<key>type</key>
+			<string>recent</string>
+			<key>text</key>
+			<string>Canadian troops on parade under the Red Ensign at Paris&apos;s Arc de Triomphe, part of an Allied victory parade on 14 July 1919.</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>For What?</string>
+			<key>date</key>
+			<string>1917-1919</string>
+			<key>author</key>
+			<string>Frederick Horsman Varley</string>
+			<key>type</key>
+			<string>recent</string>
+			<key>text</key>
+			<string>Frederick Varley&apos;s For What? portrays a cart filled with bodies collected from the battlefield. It starkly portrays the horror of war and questions its purpose.</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Vetcraft Poppy</string>
+			<key>date</key>
+			<string>Unknown</string>
+			<key>author</key>
+			<string>Sir Frank Brangwyn</string>
+			<key>type</key>
+			<string>recent</string>
+			<key>text</key>
+			<string>This is the top of a box used during the 1920s or 1930s to sell poppies for Remembrance Day. It was created by Vetcraft, a Department of Soldiers Civil Re-establishment initiative to encourage wounded veterans to produce products for sale. A veteran copied onto the box top a lithograph by Frank Brangwyn showing ruins and a field of red poppies. This print was found in 1994 behind a cabinet at a cottage. The box itself was not found.</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Trench Raid</string>
+			<key>date</key>
+			<string>1919 or earlier</string>
+			<key>author</key>
+			<string>H.J. Mowat</string>
+			<key>type</key>
+			<string>recent</string>
+			<key>text</key>
+			<string>In this charcoal sketch by H.J. Mowat, six Canadians leave the trenches to go on a raid. Given the apparent absence of sand bags, they are possibly exiting from an advanced listening post. Under moonlight, they will thread through their own wire and into No Man&apos;s Land before slipping through the enemy&apos;s wire and launching their attack. Raids could involve only a few soldiers sneaking quietly forward, like the one depicted here, or several hundred attacking with coordinated support from the artillery, mortars, and machine-guns.</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>The Stretcher-bearer Party</string>
+			<key>date</key>
+			<string>Circa 1918</string>
+			<key>author</key>
+			<string>Lieutenant Cyril Henry Barraud</string>
+			<key>type</key>
+			<string>recent</string>
+			<key>text</key>
+			<string>Artist Cyril Barraud depicts Highlanders carrying a wounded man off the battlefield. The shoulder patch, a light blue rectangle and dark blue circle, identify them as members of the 43rd Battalion. One soldier wears a red cross armband identifying him as medical personnel. Those who were hurt but still able to walk were called &quot;walking wounded,&quot; like the two soldiers behind the stretcher party.</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>This is Your Flag</string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
 			<key>type</key>
 			<string>propaganda</string>
+			<key>text</key>
+			<string>This is a recruitment poster for the 207th Battalion of Ottawa-Carleton, the recruiting office for which was in downtown Ottawa. The unit went overseas in 1917, but was later broken up and its soldiers sent to reinforce other front line infantry battalions, including the 2nd, 21st, and 38th Battalions, and the Princess Patricia&apos;s Canadian Light Infantry.</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>vimy_15</string>
+			<string></string>
 			<key>date</key>
-			<string>Unknown</string>
+			<string></string>
 			<key>author</key>
-			<string>Unknown</string>
+			<string></string>
 			<key>type</key>
-			<string>postWar</string>
+			<string></string>
+			<key>text</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>02X063_03BD_9</string>
+			<string></string>
 			<key>date</key>
-			<string>Unknown</string>
+			<string></string>
 			<key>author</key>
-			<string>Unknown</string>
+			<string></string>
 			<key>type</key>
-			<string>war</string>
+			<string></string>
+			<key>text</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>02X065_2440_9</string>
+			<string></string>
 			<key>date</key>
-			<string>Unknown</string>
+			<string></string>
 			<key>author</key>
-			<string>Unknown</string>
+			<string></string>
 			<key>type</key>
-			<string>war</string>
+			<string></string>
+			<key>text</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>02X074_406C_9</string>
+			<string></string>
 			<key>date</key>
-			<string>Unknown</string>
+			<string></string>
 			<key>author</key>
-			<string>Unknown</string>
+			<string></string>
 			<key>type</key>
-			<string>war</string>
+			<string></string>
+			<key>text</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>02X126_758F_9</string>
+			<string></string>
 			<key>date</key>
-			<string>Unknown</string>
+			<string></string>
 			<key>author</key>
-			<string>Unknown</string>
+			<string></string>
 			<key>type</key>
-			<string>war</string>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>date</key>
+			<string></string>
+			<key>author</key>
+			<string></string>
+			<key>type</key>
+			<string></string>
+			<key>text</key>
+			<string></string>
 		</dict>
 	</array>
 </dict>
