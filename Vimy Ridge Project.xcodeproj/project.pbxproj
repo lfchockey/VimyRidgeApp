@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F07E7231E37CBAD00489FEB /* SpencerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07E7221E37CBAD00489FEB /* SpencerTableViewCell.swift */; };
 		3FA970761E2414C400B5B394 /* BattalionCollapsibleTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA970751E2414C400B5B394 /* BattalionCollapsibleTableVC.swift */; };
 		3FA970791E25569800B5B394 /* FriendsMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA970781E25569800B5B394 /* FriendsMatcher.swift */; };
 		3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */; };
@@ -129,6 +130,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F07E7221E37CBAD00489FEB /* SpencerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpencerTableViewCell.swift; sourceTree = "<group>"; };
 		3FA970751E2414C400B5B394 /* BattalionCollapsibleTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattalionCollapsibleTableVC.swift; sourceTree = "<group>"; };
 		3FA970781E25569800B5B394 /* FriendsMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsMatcher.swift; sourceTree = "<group>"; };
 		3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chapter 11 W00 Regular.ttf"; sourceTree = "<group>"; };
@@ -512,6 +514,7 @@
 				F12C118B1D73AB010071798C /* WeaponInfo.plist */,
 				F12C118C1D73AB010071798C /* WeaponSelectVC.swift */,
 				F12C118D1D73AB010071798C /* WeaponsInfo.swift */,
+				3F07E7221E37CBAD00489FEB /* SpencerTableViewCell.swift */,
 				F12BE4621E2453EB006412F1 /* untitled */,
 				F12C11931D73ADA20071798C /* WeaponAssets.scnassets */,
 			);
@@ -898,6 +901,7 @@
 				F12C11911D73AB010071798C /* WeaponsInfo.swift in Sources */,
 				F16B0FE71D4FA578004F2777 /* AppDelegate.swift in Sources */,
 				F12C10FF1D6291810071798C /* SoldierLocation.swift in Sources */,
+				3F07E7231E37CBAD00489FEB /* SpencerTableViewCell.swift in Sources */,
 				F12C112B1D6CB7CD0071798C /* BattalionReader.swift in Sources */,
 				F12C11251D6CB7AB0071798C /* FullBattalionInfo.swift in Sources */,
 				F1E7D6451E16BE3900182A9C /* ArtworkViewController.swift in Sources */,

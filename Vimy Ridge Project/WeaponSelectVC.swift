@@ -23,20 +23,33 @@ struct Section {
     }
 }
 
+struct ImageSection {
+    var name: String!
+    var items: [UIImage]!
+    var collapsed: Bool!
+    
+    init(name: String, items: [UIImage], collapsed: Bool = false) {
+        self.name = name
+        self.items = items
+        self.collapsed = collapsed
+    }
+}
+
 //
 // MARK: - View Controller
 //
 class WeaponSelectVC: UITableViewController {
     
     var sections = [Section]()
-    
+    var imageSections = [ImageSection]()
+    var canPics = [ #imageLiteral(resourceName: "Ross Rifle"), #imageLiteral(resourceName: "Lewis Gun"), #imageLiteral(resourceName: "Webley Revolver"),#imageLiteral(resourceName: "Mills Bomb"),#imageLiteral(resourceName: "Sopwith Camel"),#imageLiteral(resourceName: "Mark V Tank")]
+    var gerPics = [#imageLiteral(resourceName: "Luger"),#imageLiteral(resourceName: "Stick Grenade")]
     //Identifiers
     let textCellIdentifier = "TextCell"
     let weaponDetailsSegueIdentifier = "weaponDetailsSegue"
     
     //array of weapon names
-    let weapons = ["Ross Rifle MK III (Canada)", "Lee Enfield (Canada)", "KAR-98K (German)", "Mauser Gewehr 98 (German)", "Webley revolver (Canadian)", "Luger (German)", "Colt-browning machine gun M1895/14 (Canadian)", "Lewis (Canadian)", "Mills bomb (Canada)", "Stick grenade (German)"]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,12 +57,17 @@ class WeaponSelectVC: UITableViewController {
         
         // Initialize the sections array
         sections = [
-            Section(name: "Canadian Weapons", items: ["Colt-browning machine gun M1895/14","Lee Enfield", "Ross Rifle MK III (Canada)",  "Webley Revolver", "Lewis", "Mills bomb"]),
-            Section(name: "German Weapons", items: ["KAR-98K", "Mauser Gewehr 98", "Luger", "Stick grenade"])]
+            Section(name: "Canadian Weapons", items: ["Ross Rifle MK III",  "Lewis",  "Webley Revolver",   "Mills bomb" , "Sopwith Camel", "Mark V Tank"]),
+            Section(name: "German Weapons", items: ["Luger", "Stick grenade"])]
+       
+        imageSections = [
+            ImageSection(name: "Canadian Weapons", items: canPics),
+            ImageSection(name: "German Weapons", items: gerPics)]
+
     }
+
     
 }
-
 //
 // MARK: - View Controller DataSource and Delegate
 //
@@ -63,13 +81,22 @@ extension WeaponSelectVC {
     }
     
     // Cell
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as UITableViewCell? ?? UITableViewCell(style: .default, reuseIdentifier: "cell")
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> SpencerTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! SpencerTableViewCell? ?? SpencerTableViewCell(style: .default, reuseIdentifier: "cell")
         
         cell.textLabel?.text = sections[indexPath.section].items[indexPath.row]
-        
+        //cell.imageView?.image = imageSections[indexPath.section].items[indexPath.row]
+        let img = imageSections[indexPath.section].items[indexPath.row]
+        let imgW = img.size.width
+        let imgH = img.size.height
+        print ("width : \(imgW) height : \(imgH)")
+        let frameWidth = cell.myImage.frame.width
+        let newheight = frameWidth * imgH / imgW
+        cell.myImage.frame = CGRect (x: cell.bounds.width - 50, y: 0, width: frameWidth, height: newheight)
+        cell.myImage?.image = imageSections[indexPath.section].items[indexPath.row]
         return cell
     }
+    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
