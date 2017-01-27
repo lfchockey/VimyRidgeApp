@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */; };
+		3FD64EEA1E38F2C200A14656 /* FullArtworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD64EE91E38F2C200A14656 /* FullArtworkView.swift */; };
 		3FE493251E0DB8CE000A7A03 /* ImageCollecionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE493201E0DB8CE000A7A03 /* ImageCollecionViewCell.swift */; };
 		3FE493261E0DB8CE000A7A03 /* ImageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE493211E0DB8CE000A7A03 /* ImageObject.swift */; };
 		3FE493271E0DB8CE000A7A03 /* ImageReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE493221E0DB8CE000A7A03 /* ImageReader.swift */; };
@@ -98,6 +99,7 @@
 
 /* Begin PBXFileReference section */
 		3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chapter 11 W00 Regular.ttf"; sourceTree = "<group>"; };
+		3FD64EE91E38F2C200A14656 /* FullArtworkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullArtworkView.swift; sourceTree = "<group>"; };
 		3FE493201E0DB8CE000A7A03 /* ImageCollecionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollecionViewCell.swift; sourceTree = "<group>"; };
 		3FE493211E0DB8CE000A7A03 /* ImageObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageObject.swift; sourceTree = "<group>"; };
 		3FE493221E0DB8CE000A7A03 /* ImageReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageReader.swift; sourceTree = "<group>"; };
@@ -413,6 +415,7 @@
 			isa = PBXGroup;
 			children = (
 				3FE493201E0DB8CE000A7A03 /* ImageCollecionViewCell.swift */,
+				3FD64EE91E38F2C200A14656 /* FullArtworkView.swift */,
 				3FE4932A1E0DEB6A000A7A03 /* FullImageView.swift */,
 				3FE493211E0DB8CE000A7A03 /* ImageObject.swift */,
 				3FE493221E0DB8CE000A7A03 /* ImageReader.swift */,
@@ -723,6 +726,7 @@
 				3FE4932B1E0DEB6A000A7A03 /* FullImageView.swift in Sources */,
 				F12C11261D6CB7AB0071798C /* SingleBattalionViewController.swift in Sources */,
 				F170B8F01D4FB90C00118440 /* CustomAnnotation.swift in Sources */,
+				3FD64EEA1E38F2C200A14656 /* FullArtworkView.swift in Sources */,
 				F170B8F61D4FB93400118440 /* TLPViewController.swift in Sources */,
 				F170B8FC1D4FB94D00118440 /* WesternFrontLinesCoords.swift in Sources */,
 				F12C118E1D73AB010071798C /* WeaponDetailsVC.swift in Sources */,

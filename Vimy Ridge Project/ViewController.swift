@@ -19,6 +19,8 @@ class ArtworkViewController: UIViewController {
     @IBOutlet weak var recentCollectionView: UICollectionView!
     @IBOutlet weak var propagandaCollectionView: UICollectionView!
     
+    @IBOutlet weak var container: UIView!
+    
     @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
@@ -26,6 +28,8 @@ class ArtworkViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         scrollView.backgroundColor = UIColor(patternImage: UIImage(named: "old paper")!)
+        scrollView.isScrollEnabled = true
+        scrollView.bounces = false
         
         warCollectionView.backgroundColor = UIColor.clear
         postWarCollectionView.backgroundColor = UIColor.clear
@@ -65,6 +69,10 @@ class ArtworkViewController: UIViewController {
 }
 
 extension ArtworkViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(collectionview: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -158,11 +166,11 @@ extension ArtworkViewController: UICollectionViewDataSource, UICollectionViewDel
             }
             
         } else if segue.identifier == "RecentImageSegue" {
-            if let destination = segue.destination as? FullImageView {
+            if let destination = segue.destination as? FullArtworkView {
                 destination.selectedImage = sender as! imageObject
             }
             
-        } else {
+        } else if segue.identifier == "PropagandaImageSegue" {
             if let destination = segue.destination as? FullImageView {
                 destination.selectedImage = sender as! imageObject
             }
