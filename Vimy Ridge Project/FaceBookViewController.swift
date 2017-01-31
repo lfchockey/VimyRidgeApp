@@ -68,7 +68,7 @@ class FaceBookViewController: UIViewController {
             moveViews(sender: 0)
             indicator.isHidden = false
             grabDataOnSoldier()
-            
+            FriendsMatcher().matchSoldiers()
             
             var data: NSData?
             

@@ -1,29 +1,29 @@
 /*
-* Copyright (c) 2015 Razeware LLC
-*
-* Permission is hereby granted, free of charge, to any person obtaining a copy
-* of this software and associated documentation files (the "Software"), to deal
-* in the Software without restriction, including without limitation the rights
-* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-* copies of the Software, and to permit persons to whom the Software is
-* furnished to do so, subject to the following conditions:
-*
-* The above copyright notice and this permission notice shall be included in
-* all copies or substantial portions of the Software.
-*
-* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-* THE SOFTWARE.
-*/
+ * Copyright (c) 2015 Razeware LLC
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 import UIKit
 
 extension SearchViewController: UISearchResultsUpdating {
-
+    
     func updateSearchResults(for searchController: UISearchController)
     {
         let searchBar = searchController.searchBar
@@ -39,17 +39,17 @@ extension SearchViewController: UISearchBarDelegate {
 }
 
 class SearchViewController: UITableViewController, UISearchControllerDelegate {
-  
-  // MARK: - Properties
-
-  var finalSoldierArray = [Soldier_Search]()
-  var filteredSoldiers = [Soldier_Search]()
     
-  let searchController = UISearchController(searchResultsController: nil)
-  
+    // MARK: - Properties
+    
+    var finalSoldierArray = [Soldier_Search]()
+    var filteredSoldiers = [Soldier_Search]()
+    
+    let searchController = UISearchController(searchResultsController: nil)
+    
     
     func filterContentForSearchText(searchText: String, scope: String = "Soldier Name") {
-
+        
         filteredSoldiers = finalSoldierArray.filter { soldier in
             let categoryMatch = (scope == "Soldier Name") || (soldier.category == scope)
             return  categoryMatch && soldier.name.lowercased().contains(searchText.lowercased())
@@ -114,35 +114,36 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
                 totalSoldiersAtTime = MyVariables.allVimySoldiers.count
                 
                 for soldier in MyVariables.allVimySoldiers {
-                    
-                    // Variables used to build a Soldier_Search object
-                    let soldier_id = soldier.soldier_id
-                    let name = soldier.christian_names + " " + soldier.surname
-                    let locations = soldier.location_array
-                    
- 
-                    // Set up the searchable battalions
-                    var battalion_array: [[String:String]] = []
-                    
-                    if soldier.unit_at_discharge != "" {
-                        battalion_array.append(["unit_at_discharge":soldier.unit_at_discharge])
+                    if soldier.soldier_id != "" && soldier.officer_id != "" {
+                        // Variables used to build a Soldier_Search object
+                        let soldier_id = soldier.soldier_id
+                        let name = soldier.christian_names + " " + soldier.surname
+                        let locations = soldier.location_array
+                        
+                        
+                        // Set up the searchable battalions
+                        var battalion_array: [[String:String]] = []
+                        
+                        if soldier.unit_at_discharge != "" {
+                            battalion_array.append(["unit_at_discharge":soldier.unit_at_discharge])
+                        }
+                        
+                        if soldier.battalion != "" {
+                            battalion_array.append(["battalion":soldier.battalion])
+                        }
+                        
+                        if soldier.regiment_upon_enlistment != "" {
+                            battalion_array.append(["regiment_upon_enlistment":soldier.regiment_upon_enlistment])
+                        }
+                        
+                        if soldier.regiment_at_death != "" {
+                            battalion_array.append(["regiment_at_death":soldier.regiment_at_death])
+                        }
+                        
+                        let newSoldier = Soldier_Search(id: soldier_id, name: name, locations: locations, battalions: battalion_array)
+                        
+                        finalSoldierArray.append(newSoldier)
                     }
-                    
-                    if soldier.battalion != "" {
-                        battalion_array.append(["battalion":soldier.battalion])
-                    }
-                    
-                    if soldier.regiment_upon_enlistment != "" {
-                        battalion_array.append(["regiment_upon_enlistment":soldier.regiment_upon_enlistment])
-                    }
-                    
-                    if soldier.regiment_at_death != "" {
-                        battalion_array.append(["regiment_at_death":soldier.regiment_at_death])
-                    }
-                    
-                    let newSoldier = Soldier_Search(id: soldier_id, name: name, locations: locations, battalions: battalion_array)
-                    
-                    finalSoldierArray.append(newSoldier)
                 }
             }
             else {
@@ -154,7 +155,7 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
                     // download again
                 }
             }
-                
+            
             // Setup the Search Controller
             searchController.searchResultsUpdater = self
             searchController.searchBar.delegate = self
@@ -162,11 +163,10 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
             searchController.dimsBackgroundDuringPresentation = false
             
             // Setup the Scope Bar
-            //searchController.searchBar.scopeButtonTitles = ["All", "Chocolate", "Hard", "Other"]
             searchController.searchBar.scopeButtonTitles = ["Soldier Name", "Location", "Battalion"]
             tableView.tableHeaderView = searchController.searchBar
             
-            searchController.searchBar.text = "Please choose a category to search for soldiers"
+            //searchController.searchBar.text = "Please choose a category to search for soldiers"
             
             
             searchController.isActive = true
@@ -174,7 +174,7 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
             DispatchQueue.main.async(execute: {
                 self.searchController.searchBar.becomeFirstResponder()
             });
-                
+            
             
             
         }
@@ -192,39 +192,39 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
             self.present(alertController, animated: true) {
                 // ...
             }
-
+            
         }
     }
     
     // MARK: - View Setup
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         searchController.delegate = self
-
+        
     }
-  
+    
     override func viewWillAppear(_ animated: Bool) {
         //clearsSelectionOnViewWillAppear = splitViewController!.collapsed
         super.viewWillAppear(animated)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
     // MARK: - Table View
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-  
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searchController.isActive && searchController.searchBar.text != "" {
             return filteredSoldiers.count
         }
         return finalSoldierArray.count
     }
-  
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath)
         
@@ -246,7 +246,7 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let soldier: Soldier_Search
         
         // The following code segues to the Facebook View Controller once a soldier has been selected
@@ -262,15 +262,15 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
         }
         
     }
-  
     
     
     
-  // MARK: - Segues
-  func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     
-
-  }
-  
+    // MARK: - Segues
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        
+    }
+    
 }
 
