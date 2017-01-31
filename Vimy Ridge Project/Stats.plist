@@ -6,40 +6,36 @@
 	<dict>
 		<key>Intervals between &quot;Creeping Barrage&quot;</key>
 		<string>100 yards</string>
-		<key>Couter battery shell amount</key>
-		<string>126 900 shells</string>
+		<key>Counter battery shell amount</key>
+		<string>126 900</string>
 		<key>Length of telephone cabling </key>
 		<string>1400 kilometers</string>
 		<key>Depth of cables</key>
 		<string>2.1 meters</string>
-		<key>Underground subways used</key>
+		<key>Underground subways</key>
 		<string>13</string>
-		<key>Tunelling groups used</key>
+		<key>Tunneling groups</key>
 		<string>20</string>
 		<key>Air squadrons deployed </key>
 		<string>26 (2-1 ratio)</string>
 		<key>Time attack began</key>
 		<string>6:30 AM</string>
-		<key>Time alloted to reach &quot;The Black Line&quot;</key>
+		<key>Deadline to reach &quot;The Black Line&quot;</key>
 		<string>36 minutes</string>
-		<key>Time alloted to reach &quot;The Red Line&quot;</key>
+		<key>Deadline to reach &quot;The Red Line&quot;</key>
 		<string>21 minutes</string>
-		<key>Memorial cost</key>
-		<string>1.5 million (20.9 million  today)</string>
-		<key>Date memorial was unvield</key>
-		<string>July 26th 1937</string>
 	</dict>
 	<key>Geography</key>
 	<dict>
 		<key>Length of Vimy Ridge</key>
 		<string>8 kilometers</string>
-		<key>Elevation of Vimy Ridge (Hill 145)</key>
-		<string>145 meters above sea level</string>
+		<key>Elevation of Vimy Ridge</key>
+		<string>145 meters (ASL)</string>
 		<key>Elevation of Hill 135</key>
-		<string>135 meters above sea level</string>
+		<string>135 meters (ASL)</string>
 		<key>Width of Vimy Ridge</key>
 		<string>700 meters</string>
-		<key>Lenth of the Canadian Front</key>
+		<key>Length of the Canadian Front</key>
 		<string>6.4 kilometers</string>
 		<key>Length of tunnles (app.)</key>
 		<string>1.2 kilometers</string>
@@ -58,31 +54,31 @@
 	<dict>
 		<key>Shell alloment </key>
 		<string>1.6 milion shells</string>
-		<key>Weight of shells in ammunition dumps</key>
+		<key>Weight of all ammunition dump</key>
 		<string>43 000 tons</string>
 		<key>Total weight of shells fired</key>
 		<string>53 500 tons</string>
 		<key>Daily shell alloment weight</key>
 		<string>2501 tons</string>
-		<key>Shells used is Counter Battery </key>
+		<key>Shells used in Counter Battery </key>
 		<string>126 900 shells</string>
 		<key>German guns taken out</key>
-		<string>213 (83 percent)</string>
-		<key>18 pounder field guns used</key>
+		<string>213 (83%)</string>
+		<key>18 pounder field guns</key>
 		<string>481</string>
-		<key>4.5 inch howitzers used</key>
+		<key>4.5 inch howitzers</key>
 		<string>181</string>
-		<key>2 inch trench mortors used</key>
+		<key>2 inch trench mortors</key>
 		<string>97</string>
-		<key>9.45 inch trench mortors used</key>
+		<key>9.45 inch trench mortors</key>
 		<string>25</string>
-		<key>Heavy artillery groups used</key>
+		<key>Heavy artillery groups</key>
 		<string>5</string>
-		<key>Artillery field brigades used</key>
+		<key>Artillery field brigades</key>
 		<string>10</string>
-		<key>Divisional artillery groups used</key>
+		<key>Divisional artillery groups</key>
 		<string>4</string>
-		<key>Heavy artillery support groups used</key>
+		<key>Heavy artillery support groups</key>
 		<string>11</string>
 		<key>Offensive mines laid</key>
 		<string>14</string>
@@ -113,6 +109,10 @@
 		<string>10 570</string>
 		<key>French Casualties (Vimy Efforts)</key>
 		<string>150 000</string>
+		<key>Memorial cost</key>
+		<string>1.5 million (20.9 million today)</string>
+		<key>Date memorial was unvield</key>
+		<string>July 26th 1937</string>
 	</dict>
 </dict>
 </plist>

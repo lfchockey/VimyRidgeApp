@@ -20,10 +20,11 @@ class BattalionCollapsibleTableVC: UITableViewController {
     let searchController = UISearchController(searchResultsController: nil)
     
     let allBattalions = BattalionReader()
-    //
+    
     var battalions = [Battalions]()
     
     func filterContentForSearchText(searchText: String, scope: String = "All") {
+        
         
         filteredSections = [Section]()
         
@@ -59,29 +60,46 @@ class BattalionCollapsibleTableVC: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         self.title = "Battalions"
-        
+        battalions = allBattalions.battalions
         // Initialize the sections array
-        // Jacob, right here you are going to have to create 4 different arrays for each one of your divisions.
-        // How do you do that:
-            // Create four different division arrays that will hold all of the battalions from that specific division
-            // Loop (for loop) through every single battalion that is stored inside the "battalions" array
-                // the "battalions" array is an array filled with "Battalion" objects from Battalions.swift
-                // that means they get the following properties: id, name, brigade, division
-                // you only need to look at the division
+                var Div1Array = [String]()
+        var Div2Array = [String]()
+        var Div3Array = [String]()
+        var Div4Array = [String]()
+        // Loop (for loop) through every single battalion that is stored inside the "battalions" array
+        for bat in battalions {
+            
+            if bat.id != 0{
+                
+                if bat.division == " 1st Division" {
+                    let batName = bat.name + bat.brigade
+                    Div1Array.append(batName)
+                    
+                } else if bat.division == " 2nd Division" {
+                    
+                    let batName = bat.name + bat.brigade
+                    Div2Array.append(batName)
+                    
+                } else if bat.division == " 3rd Division" {
+                    
+                    let batName = bat.name + bat.brigade
+                    Div3Array.append(batName)
+                    
+                } else if bat.division == " 4th Division" {
+                    
+                    let batName = bat.name + bat.brigade
+                    Div4Array.append(batName)
+                }
+            }
+        }
         
-                // use a big if... else if... else if statement to determine which divison the specific battalion belongs to
-                    // i.e. if the battalion is a part of the "2nd Division" then we should append the "battalions.name" to the 2nd division array
-                    // this way you'll have all of the battalions in their proper division
-        
-            // After the loop is completed, all you have to do is add the array name to the items below
-        
-        //you also may want to add a piece of code that filters out any of the divisions that we don't have information on in the database (if we don't have information on them, we probably don't want to be able to select them)
+
         
         sections = [
-            Section(name: "Division 1", items: ["\(battalions)"]),
-            //Section(name: "Division 2", items: ["\(battalions.name) \(battalions.brigade)"]),
-            //Section(name: "Division 3", items: ["\(battalions.name) \(battalions.brigade)"]),
-            //Section(name: "Division 4", items: ["\(battalions.name) \(battalions.brigade)"]),
+            Section(name: "Division 1", items: Div1Array),
+            Section(name: "Division 2", items: Div2Array),
+            Section(name: "Division 3", items: Div3Array),
+            Section(name: "Division 4", items: Div4Array),
         ]
     }
     
@@ -139,6 +157,14 @@ extension BattalionCollapsibleTableVC {
             cell.textLabel?.text = sections[indexPath.section].items[indexPath.row]
             //sec = sections[indexPath.section].items[indexPath.row]
         }
+        
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: cell.frame.width + 1000, height: cell.frame.height - 1))
+        
+        let image = UIImage(named: "cellBackground")
+        imageView.image = image
+        cell.backgroundView = UIView()
+        cell.backgroundView!.addSubview(imageView)
+        cell.backgroundColor = .clear
         
         //cell.textLabel?.text = sec
         //cell.detailTextLabel?.text = battalion.brigade

@@ -21,7 +21,7 @@ class VimyMythsViewController: UIViewController {
     @IBAction func mythOne(_ sender: Any) {
         mythVariables.infoShown = 1
     }
-   
+    
     @IBAction func mythTwo(_ sender: Any) {
         mythVariables.infoShown = 2
     }
@@ -32,6 +32,14 @@ class VimyMythsViewController: UIViewController {
     
     @IBAction func mythFour(_ sender: Any) {
         mythVariables.infoShown = 4
+    }
+    
+    @IBAction func mythFive(_ sender: Any) {
+        mythVariables.infoShown = 5
+    }
+    
+    @IBAction func mythSix(_ sender: Any) {
+        mythVariables.infoShown = 6
     }
     
     /*func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {

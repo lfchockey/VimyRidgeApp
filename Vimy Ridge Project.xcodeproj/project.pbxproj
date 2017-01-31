@@ -11,6 +11,8 @@
 		3FA970761E2414C400B5B394 /* BattalionCollapsibleTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA970751E2414C400B5B394 /* BattalionCollapsibleTableVC.swift */; };
 		3FA970791E25569800B5B394 /* FriendsMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA970781E25569800B5B394 /* FriendsMatcher.swift */; };
 		3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */; };
+		3FDA16431E40DA310030306D /* DeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA16421E40DA310030306D /* DeviceExtension.swift */; };
+		3FDA16451E40DC5D0030306D /* Stats.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FDA16441E40DC5D0030306D /* Stats.plist */; };
 		3FE011C01E0AE8520067DFD0 /* StatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE011BF1E0AE8520067DFD0 /* StatsTableViewController.swift */; };
 		3FE011C21E0AE85D0067DFD0 /* CollapsibleTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE011C11E0AE85D0067DFD0 /* CollapsibleTableViewHeader.swift */; };
 		3FE011C41E0AE8630067DFD0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE011C31E0AE8630067DFD0 /* Extensions.swift */; };
@@ -40,7 +42,6 @@
 		F12C10ED1D61FD640071798C /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10EC1D61FD640071798C /* HistoryViewController.swift */; };
 		F12C10F01D620FB40071798C /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10EF1D620FB40071798C /* StatsViewController.swift */; };
 		F12C10F21D6210650071798C /* StatsReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10F11D6210650071798C /* StatsReader.swift */; };
-		F12C10F41D6212CE0071798C /* Stats.plist in Resources */ = {isa = PBXBuildFile; fileRef = F12C10F31D6212CE0071798C /* Stats.plist */; };
 		F12C10FF1D6291810071798C /* SoldierLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10FC1D6291810071798C /* SoldierLocation.swift */; };
 		F12C11011D6291810071798C /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C10FE1D6291810071798C /* VCMapView.swift */; };
 		F12C11031D62918E0071798C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C11021D62918E0071798C /* ProfileView.swift */; };
@@ -134,6 +135,8 @@
 		3FA970751E2414C400B5B394 /* BattalionCollapsibleTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattalionCollapsibleTableVC.swift; sourceTree = "<group>"; };
 		3FA970781E25569800B5B394 /* FriendsMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsMatcher.swift; sourceTree = "<group>"; };
 		3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chapter 11 W00 Regular.ttf"; sourceTree = "<group>"; };
+		3FDA16421E40DA310030306D /* DeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceExtension.swift; sourceTree = "<group>"; };
+		3FDA16441E40DC5D0030306D /* Stats.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Stats.plist; sourceTree = "<group>"; };
 		3FE011BF1E0AE8520067DFD0 /* StatsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsTableViewController.swift; sourceTree = "<group>"; };
 		3FE011C11E0AE85D0067DFD0 /* CollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewHeader.swift; sourceTree = "<group>"; };
 		3FE011C31E0AE8630067DFD0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -163,7 +166,6 @@
 		F12C10EC1D61FD640071798C /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		F12C10EF1D620FB40071798C /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		F12C10F11D6210650071798C /* StatsReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsReader.swift; sourceTree = "<group>"; };
-		F12C10F31D6212CE0071798C /* Stats.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Stats.plist; sourceTree = "<group>"; };
 		F12C10FC1D6291810071798C /* SoldierLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierLocation.swift; sourceTree = "<group>"; };
 		F12C10FE1D6291810071798C /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
 		F12C11021D62918E0071798C /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 		F12C10EA1D60CDE80071798C /* Helper Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3FDA16421E40DA310030306D /* DeviceExtension.swift */,
 				F16B10181D4FA929004F2777 /* SwiftyJSON.swift */,
 				F12C10E81D60CDDB0071798C /* Reachability.swift */,
 				F16B10191D4FA929004F2777 /* FullSoldier.swift */,
@@ -351,6 +354,7 @@
 		F12C10EE1D61FEFB0071798C /* Stats */ = {
 			isa = PBXGroup;
 			children = (
+				3FDA16441E40DC5D0030306D /* Stats.plist */,
 				F12C10F11D6210650071798C /* StatsReader.swift */,
 				F12C10EF1D620FB40071798C /* StatsViewController.swift */,
 				3FE011BF1E0AE8520067DFD0 /* StatsTableViewController.swift */,
@@ -359,7 +363,6 @@
 				3FE011C71E0AE8770067DFD0 /* BensTableViewCell.swift */,
 				3FE011C91E0AE8810067DFD0 /* old paper.jpg */,
 				3FE011CB1E0AF6DD0067DFD0 /* vimyWallBrickupLight1.jpg */,
-				F12C10F31D6212CE0071798C /* Stats.plist */,
 			);
 			name = Stats;
 			sourceTree = "<group>";
@@ -811,6 +814,7 @@
 			files = (
 				F133F22D1D7473810049B8BB /* bg.mp3 in Resources */,
 				F16B0FF11D4FA578004F2777 /* LaunchScreen.storyboard in Resources */,
+				3FDA16451E40DC5D0030306D /* Stats.plist in Resources */,
 				F12C112E1D6CB7CD0071798C /* BattalionTest.plist in Resources */,
 				F1E7D6391E1469B500182A9C /* Roman Stonecut.ttf in Resources */,
 				F12BE46C1E2453EB006412F1 /* texture.jpg in Resources */,
@@ -833,7 +837,6 @@
 				F12BE4731E2453EB006412F1 /* texture_6.jpg in Resources */,
 				F168B6231D860FF000A9719A /* AppIntro.m4a in Resources */,
 				F12C118F1D73AB010071798C /* WeaponInfo.plist in Resources */,
-				F12C10F41D6212CE0071798C /* Stats.plist in Resources */,
 				F12BE46E1E2453EB006412F1 /* texture_1.jpg in Resources */,
 				F12BE46D1E2453EB006412F1 /* texture_0.jpg in Resources */,
 				F12BE4711E2453EB006412F1 /* texture_4.jpg in Resources */,
@@ -933,6 +936,7 @@
 				F16B10171D4FA735004F2777 /* HomeViewController.swift in Sources */,
 				3FE011C41E0AE8630067DFD0 /* Extensions.swift in Sources */,
 				F1E7D63B1E146DEA00182A9C /* Custom Segue.swift in Sources */,
+				3FDA16431E40DA310030306D /* DeviceExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

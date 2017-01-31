@@ -21,13 +21,6 @@ class StatsTableViewController: UITableViewController {
     let geography = StatsReader(categories: "Geography")
     let afterActionReport = StatsReader(categories: "After Action Report")
     let theBoys = StatsReader(categories: "The Boys")
-
-//    let keyName = Array(allStats.info.keys)[indexPath.row]
-//    let valueName = Array(allStats.info.values)[indexPath.row]
-//    let hypen = " - "
-//    
-//    cell.textLabel!.text = keyName + hypen + valueName
-
     
     var sections = [Section]()
     
@@ -36,15 +29,8 @@ class StatsTableViewController: UITableViewController {
         
         self.title = "Stats"
         
-//        let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: 32, height: 44))
-//        self.view.addSubview(navBar);
-//        let navItem = UINavigationItem(title: "Back");
-//        let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: nil, action: Selector("Stats"));
-//        navItem.rightBarButtonItem = doneItem;
-//        navBar.setItems([navItem], animated: false);
-        
         let btn1 = UIButton(type: .custom)
-        btn1.setImage(UIImage(named: "old paper.jpg"), for: .normal)
+        btn1.setImage(UIImage(named: "cellBackground"), for: .normal)
         btn1.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         btn1.addTarget(self, action: #selector(backButtonClick), for: .touchUpInside)
         let item1 = UIBarButtonItem(customView: btn1)
@@ -60,38 +46,34 @@ class StatsTableViewController: UITableViewController {
             
         }
         
-       
+        
         //Geography
         var geoArray = [String]()
-            
+        
         for ben in geography.info {
-                
+            
             geoArray.append(ben.key + " - " + ben.value)
             
         }
-            
+        
         //After Action Report
         var afterActionReportArray = [String]()
-            
+        
         for ben in afterActionReport.info {
-                
+            
             afterActionReportArray.append(ben.key + " - " + ben.value)
             
         }
         
         //The Boys
         var theBoysArray = [String]()
-            
+        
         for ben in theBoys.info {
-                
+            
             theBoysArray.append(ben.key + " - " + ben.value)
-    
-       }
+            
+        }
         
-        //print (wmArray)
-        
-        // Initialize the sections array
-        // Here we have three sections: Mac, iPad, iPhone
         sections = [
             Section(name: "War Machines", items: wmArray),
             Section(name: "Geography", items: geoArray),
@@ -110,11 +92,11 @@ class StatsTableViewController: UITableViewController {
         
         
         
-    
+        
     }
     
     
-
+    
     
 }
 
@@ -122,7 +104,7 @@ class StatsTableViewController: UITableViewController {
 // MARK: - View Controller DataSource and Delegate
 //
 extension StatsTableViewController {
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
@@ -136,13 +118,51 @@ extension StatsTableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! BensTableViewCell? ?? BensTableViewCell(style: .default, reuseIdentifier: "cell")
         
         cell.textLabel?.text = sections[(indexPath as NSIndexPath).section].items[(indexPath as NSIndexPath).row]
-        cell.textLabel?.font = UIFont.systemFont(ofSize: 13.0 )
-//        cell.myLabel1?.text = "Ben"
-//        cell.myLabel2?.text = "Seward"
-        cell.myImage?.image = UIImage(named: "old paper.jpg")
-        //var  imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height)
-        //cell.imageView?.image =
-        //cell.imageView?.frame = CGRect (x: 25, y: 25, width: 25, height: 25)
+        
+        //cell.textLabel?.adjustsFontSizeToFitWidth = true
+        let modelName = UIDevice.current.modelName
+        
+        if modelName == "iPhone 5" || modelName == "iPhone 5s"  {
+            cell.textLabel?.font = UIFont(name:"Chapter11W00-Regular", size: 9.5)
+        }
+        
+        if modelName == "iPhone 6" || modelName == "iPhone 6s" || modelName == "iPhone 7"   {
+            cell.textLabel?.font = UIFont(name:"Chapter11W00-Regular", size: 11.5)
+        }
+        
+        if modelName == "iPhone 6 Plus" || modelName == "iPhone 7 Plus"   {
+            cell.textLabel?.font = UIFont(name:"Chapter11W00-Regular", size: 12.5)
+            
+        }
+        
+        if modelName == "iPad Pro" {
+            cell.textLabel?.font = UIFont(name:"Chapter11W00-Regular", size: 20.5)
+            
+        }
+        
+        if modelName == "iPad Air" || modelName == "iPad Air 2"   {
+            cell.textLabel?.font = UIFont(name:"Chapter11W00-Regular", size: 20.5)
+            
+        }
+        
+        if modelName == "iPad Mini" || modelName == "iPad Mini 2" || modelName == "iPad Mini 2" || modelName == "iPad Mini 3" || modelName == "iPad Mini 4" {
+            cell.textLabel?.font = UIFont(name:"Chapter11W00-Regular", size: 12.5)
+            
+        }
+        
+        if modelName == "Simulator"  {
+            cell.textLabel?.font = UIFont(name:"Chapter11W00-Regular", size: 12.5)
+            
+        }
+        
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: cell.frame.width + 1000, height: cell.frame.height - 1))
+        
+        let image = UIImage(named: "cellBackground")
+        imageView.image = image
+        cell.backgroundView = UIView()
+        cell.backgroundView!.addSubview(imageView)
+        cell.backgroundColor = .clear
+        
         return cell
     }
     
@@ -171,7 +191,7 @@ extension StatsTableViewController {
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 1.0
     }
-
+    
 }
 
 //

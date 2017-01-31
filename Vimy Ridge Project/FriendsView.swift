@@ -41,17 +41,22 @@ class FriendsView: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath)
         
         let soldier = FriendsMatcher.finalSoldiers[indexPath.row]
         
         
+        cell.textLabel?.font = UIFont(name:"Chapter11W00-Regular", size:18)
+        cell.textLabel?.text = soldier["name"]!
         
-        cell.textLabel?.text = soldier["soldier_id"]!!+"   "+soldier["name"]!!+"     "+soldier["category"]!!+": "+soldier["matching_name"]!!
+        cell.detailTextLabel?.font = UIFont(name:"Chapter11W00-Regular", size:14)
+        cell.detailTextLabel?.text = soldier["soldier_id"]!!+"  "+soldier["category"]!!+": "+soldier["matching_name"]!!
         
         
-        let imageView = UIImageView(frame: CGRect(x: 10, y: 0, width: cell.frame.width - 10, height: cell.frame.height - 1))//(10, 10, cell.frame.width - 10, cell.frame.height - 10))
-        let image = UIImage(named: "brickTexture")
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: cell.frame.width - 0, height: cell.frame.height - 1))//(10, 10, cell.frame.width - 10, cell.frame.height - 10))
+        
+        let image = UIImage(named: "cellBackground")
         imageView.image = image
         cell.backgroundView = UIView()
         cell.backgroundView!.addSubview(imageView)
@@ -67,7 +72,7 @@ class FriendsView: UITableViewController {
         MyVariables.facebookSoldierID = soldier["soldier_id"]!!
         
         DispatchQueue.main.async() {
-            self.performSegue(withIdentifier: "facebookVCSegue", sender: self)
+            self.performSegue(withIdentifier: "FacebookVCSegue", sender: self)
         }
         
     }
