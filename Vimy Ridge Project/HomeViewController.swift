@@ -6,24 +6,7 @@
 //  Copyright (c) 2015 Mason Black. All rights reserved.
 //
 // Culminating Assignment Student Branches
-// Mr Black
-// Owen Nichols
-// Spencer Wright
-// Ben Seward
-// B Elizabeth Allan
-// Kevin Hicks
-// Oksana Johnston
-// Dexter Van Zyll De Jong
-// Greg Mitchell 
-// Justin Yanosik
-// Jason Little
-// Eric Duberville
-// Jordan Maloney
-// Joey Tripp
-// Daniel Gordon
-// Kaylee Bogora
-// Jacob Bland
-// Sherry Wang
+// Test Commit
 
 
 import UIKit
