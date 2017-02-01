@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3F07E7231E37CBAD00489FEB /* SpencerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07E7221E37CBAD00489FEB /* SpencerTableViewCell.swift */; };
+		3F2605EA1E423F2E004BC9D5 /* FullArtworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2605E91E423F2E004BC9D5 /* FullArtworkView.swift */; };
+		3F2605EC1E424200004BC9D5 /* Images.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F2605EB1E424200004BC9D5 /* Images.plist */; };
 		3FA970761E2414C400B5B394 /* BattalionCollapsibleTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA970751E2414C400B5B394 /* BattalionCollapsibleTableVC.swift */; };
 		3FA970791E25569800B5B394 /* FriendsMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA970781E25569800B5B394 /* FriendsMatcher.swift */; };
 		3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */; };
@@ -107,7 +109,6 @@
 		F1E7D6471E16BE3900182A9C /* ImageCollecionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D6411E16BE3900182A9C /* ImageCollecionViewCell.swift */; };
 		F1E7D6481E16BE3900182A9C /* ImageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D6421E16BE3900182A9C /* ImageObject.swift */; };
 		F1E7D6491E16BE3900182A9C /* ImageReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D6431E16BE3900182A9C /* ImageReader.swift */; };
-		F1E7D64A1E16BE3900182A9C /* Images.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1E7D6441E16BE3900182A9C /* Images.plist */; };
 		F1E7D64C1E16C0C000182A9C /* Artwork.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1E7D64B1E16C0C000182A9C /* Artwork.xcassets */; };
 		F1E7D64F1E16F2D300182A9C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D64E1E16F2D300182A9C /* AboutViewController.swift */; };
 		F1E7D6511E16F2F800182A9C /* DevelopersTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D6501E16F2F800182A9C /* DevelopersTableVC.swift */; };
@@ -132,6 +133,8 @@
 
 /* Begin PBXFileReference section */
 		3F07E7221E37CBAD00489FEB /* SpencerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpencerTableViewCell.swift; sourceTree = "<group>"; };
+		3F2605E91E423F2E004BC9D5 /* FullArtworkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullArtworkView.swift; sourceTree = "<group>"; };
+		3F2605EB1E424200004BC9D5 /* Images.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Images.plist; sourceTree = "<group>"; };
 		3FA970751E2414C400B5B394 /* BattalionCollapsibleTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattalionCollapsibleTableVC.swift; sourceTree = "<group>"; };
 		3FA970781E25569800B5B394 /* FriendsMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsMatcher.swift; sourceTree = "<group>"; };
 		3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chapter 11 W00 Regular.ttf"; sourceTree = "<group>"; };
@@ -237,7 +240,6 @@
 		F1E7D6411E16BE3900182A9C /* ImageCollecionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollecionViewCell.swift; sourceTree = "<group>"; };
 		F1E7D6421E16BE3900182A9C /* ImageObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageObject.swift; sourceTree = "<group>"; };
 		F1E7D6431E16BE3900182A9C /* ImageReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageReader.swift; sourceTree = "<group>"; };
-		F1E7D6441E16BE3900182A9C /* Images.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Images.plist; sourceTree = "<group>"; };
 		F1E7D64B1E16C0C000182A9C /* Artwork.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Artwork.xcassets; sourceTree = "<group>"; };
 		F1E7D64E1E16F2D300182A9C /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		F1E7D6501E16F2F800182A9C /* DevelopersTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevelopersTableVC.swift; sourceTree = "<group>"; };
@@ -538,12 +540,13 @@
 		F133F2311D75E1840049B8BB /* Artwork */ = {
 			isa = PBXGroup;
 			children = (
+				3F2605EB1E424200004BC9D5 /* Images.plist */,
+				3F2605E91E423F2E004BC9D5 /* FullArtworkView.swift */,
 				F1E7D63F1E16BE3900182A9C /* ArtworkViewController.swift */,
 				F1E7D6401E16BE3900182A9C /* FullImageView.swift */,
 				F1E7D6411E16BE3900182A9C /* ImageCollecionViewCell.swift */,
 				F1E7D6421E16BE3900182A9C /* ImageObject.swift */,
 				F1E7D6431E16BE3900182A9C /* ImageReader.swift */,
-				F1E7D6441E16BE3900182A9C /* Images.plist */,
 				F1E7D64B1E16C0C000182A9C /* Artwork.xcassets */,
 			);
 			name = Artwork;
@@ -823,10 +826,10 @@
 				F12BE4741E2453EB006412F1 /* texture_7.jpg in Resources */,
 				F170B8E71D4FB8D600118440 /* CoordinatePrime.plist in Resources */,
 				F170B8F51D4FB93400118440 /* daysOfBattle.plist in Resources */,
+				3F2605EC1E424200004BC9D5 /* Images.plist in Resources */,
 				F12BE46F1E2453EB006412F1 /* texture_2.jpg in Resources */,
 				F1E7D64C1E16C0C000182A9C /* Artwork.xcassets in Resources */,
 				F170B8EE1D4FB90C00118440 /* BattalionMovement.plist in Resources */,
-				F1E7D64A1E16BE3900182A9C /* Images.plist in Resources */,
 				F12C11801D71E1FB0071798C /* Medals List.plist in Resources */,
 				3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */,
 				F123F2E01E1AAD6E00BD47F6 /* Flags.plist in Resources */,
@@ -895,6 +898,7 @@
 				F12C11301D6CFB670071798C /* TimelineView.swift in Sources */,
 				F1993B151D5226E9001F40F0 /* MenuVC.swift in Sources */,
 				F170B8EF1D4FB90C00118440 /* BattalionsCoords.swift in Sources */,
+				3F2605EA1E423F2E004BC9D5 /* FullArtworkView.swift in Sources */,
 				F12C11071D6291A40071798C /* FriendsView.swift in Sources */,
 				F12C11031D62918E0071798C /* ProfileView.swift in Sources */,
 				3FA970791E25569800B5B394 /* FriendsMatcher.swift in Sources */,

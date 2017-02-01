@@ -6,7 +6,8 @@
 //  Copyright (c) 2015 Mason Black. All rights reserved.
 //
 // Culminating Assignment Student Branches
-// Test Commit
+// Seward
+// 
 
 
 import UIKit

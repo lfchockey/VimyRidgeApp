@@ -17,6 +17,9 @@ class ImageCollectionViewCell: UICollectionViewCell {
         collectionImageView = UIImageView(frame: contentView.frame)
         collectionImageView.contentMode = .scaleAspectFit
         contentView.addSubview(collectionImageView)
+        
+        collectionImageView.backgroundColor = UIColor(red: 220, green: 191, blue: 154)
+        
     }
     
 }
