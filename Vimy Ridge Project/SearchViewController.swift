@@ -202,6 +202,23 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
         
         searchController.delegate = self
         
+        if !MyVariables.allSoldiersDownloaded {
+            
+            
+            let alertController = UIAlertController(title: "No soldier indicated", message: "Unfortunately the soldier's ID was not properly passed. Please try again.", preferredStyle: .alert)
+            
+            let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                // When OK is pressed, segue back to the previous ViewController (Main Screen)
+                _ = self.navigationController?.popViewController(animated: true)
+            }
+            alertController.addAction(OKAction)
+            
+            self.present(alertController, animated: true) {
+                
+            }
+        }
+
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

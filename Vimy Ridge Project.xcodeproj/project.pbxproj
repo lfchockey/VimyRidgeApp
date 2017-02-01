@@ -11,6 +11,7 @@
 		3F2605EA1E423F2E004BC9D5 /* FullArtworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2605E91E423F2E004BC9D5 /* FullArtworkView.swift */; };
 		3F2605EC1E424200004BC9D5 /* Images.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F2605EB1E424200004BC9D5 /* Images.plist */; };
 		3F2605EE1E4255B3004BC9D5 /* WeaponInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F2605ED1E4255B3004BC9D5 /* WeaponInfo.plist */; };
+		3F2605F01E42700E004BC9D5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2605EF1E42700E004BC9D5 /* TabBarController.swift */; };
 		3FA970761E2414C400B5B394 /* BattalionCollapsibleTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA970751E2414C400B5B394 /* BattalionCollapsibleTableVC.swift */; };
 		3FA970791E25569800B5B394 /* FriendsMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA970781E25569800B5B394 /* FriendsMatcher.swift */; };
 		3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */; };
@@ -136,6 +137,7 @@
 		3F2605E91E423F2E004BC9D5 /* FullArtworkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullArtworkView.swift; sourceTree = "<group>"; };
 		3F2605EB1E424200004BC9D5 /* Images.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Images.plist; sourceTree = "<group>"; };
 		3F2605ED1E4255B3004BC9D5 /* WeaponInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WeaponInfo.plist; sourceTree = "<group>"; };
+		3F2605EF1E42700E004BC9D5 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3FA970751E2414C400B5B394 /* BattalionCollapsibleTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattalionCollapsibleTableVC.swift; sourceTree = "<group>"; };
 		3FA970781E25569800B5B394 /* FriendsMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsMatcher.swift; sourceTree = "<group>"; };
 		3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chapter 11 W00 Regular.ttf"; sourceTree = "<group>"; };
@@ -576,6 +578,7 @@
 		F16B0FE51D4FA578004F2777 /* Vimy Ridge Project */ = {
 			isa = PBXGroup;
 			children = (
+				3F2605EF1E42700E004BC9D5 /* TabBarController.swift */,
 				F16B0FE61D4FA578004F2777 /* AppDelegate.swift */,
 				F16B0FEA1D4FA578004F2777 /* Main.storyboard */,
 				F12C10DC1D562EA10071798C /* Home */,
@@ -927,6 +930,7 @@
 				F12C11051D62919A0071798C /* Medals.swift in Sources */,
 				F12BE4601E24535D006412F1 /* VimyMythsScreenViewController.swift in Sources */,
 				F12C11221D6CB7910071798C /* BattalionInfoContainer.swift in Sources */,
+				3F2605F01E42700E004BC9D5 /* TabBarController.swift in Sources */,
 				3FEB44411E0C60AC00620494 /* SoldierOfHourNavController.swift in Sources */,
 				F133F22E1D7473810049B8BB /* Util.swift in Sources */,
 				F170B8E61D4FB8D600118440 /* CemViewController.swift in Sources */,
