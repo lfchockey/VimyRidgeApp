@@ -7,7 +7,13 @@
 //
 // Culminating Assignment Student Branches
 // Seward
-// 
+// Wright
+// Wang
+// Bland
+// Mitchell
+// Hogan
+// Allan
+
 
 
 import UIKit

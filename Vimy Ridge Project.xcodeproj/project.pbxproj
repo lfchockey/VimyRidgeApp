@@ -10,6 +10,7 @@
 		3F07E7231E37CBAD00489FEB /* SpencerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07E7221E37CBAD00489FEB /* SpencerTableViewCell.swift */; };
 		3F2605EA1E423F2E004BC9D5 /* FullArtworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2605E91E423F2E004BC9D5 /* FullArtworkView.swift */; };
 		3F2605EC1E424200004BC9D5 /* Images.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F2605EB1E424200004BC9D5 /* Images.plist */; };
+		3F2605EE1E4255B3004BC9D5 /* WeaponInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F2605ED1E4255B3004BC9D5 /* WeaponInfo.plist */; };
 		3FA970761E2414C400B5B394 /* BattalionCollapsibleTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA970751E2414C400B5B394 /* BattalionCollapsibleTableVC.swift */; };
 		3FA970791E25569800B5B394 /* FriendsMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA970781E25569800B5B394 /* FriendsMatcher.swift */; };
 		3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */; };
@@ -67,7 +68,6 @@
 		F12C11851D732B360071798C /* VimyVirtualMemorialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C11841D732B360071798C /* VimyVirtualMemorialVC.swift */; };
 		F12C11881D738ACB0071798C /* StudentBiographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C11871D738ACB0071798C /* StudentBiographyViewController.swift */; };
 		F12C118E1D73AB010071798C /* WeaponDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C118A1D73AB010071798C /* WeaponDetailsVC.swift */; };
-		F12C118F1D73AB010071798C /* WeaponInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = F12C118B1D73AB010071798C /* WeaponInfo.plist */; };
 		F12C11901D73AB010071798C /* WeaponSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C118C1D73AB010071798C /* WeaponSelectVC.swift */; };
 		F12C11911D73AB010071798C /* WeaponsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C118D1D73AB010071798C /* WeaponsInfo.swift */; };
 		F12C11941D73ADA20071798C /* WeaponAssets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F12C11931D73ADA20071798C /* WeaponAssets.scnassets */; };
@@ -135,6 +135,7 @@
 		3F07E7221E37CBAD00489FEB /* SpencerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpencerTableViewCell.swift; sourceTree = "<group>"; };
 		3F2605E91E423F2E004BC9D5 /* FullArtworkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullArtworkView.swift; sourceTree = "<group>"; };
 		3F2605EB1E424200004BC9D5 /* Images.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Images.plist; sourceTree = "<group>"; };
+		3F2605ED1E4255B3004BC9D5 /* WeaponInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WeaponInfo.plist; sourceTree = "<group>"; };
 		3FA970751E2414C400B5B394 /* BattalionCollapsibleTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattalionCollapsibleTableVC.swift; sourceTree = "<group>"; };
 		3FA970781E25569800B5B394 /* FriendsMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsMatcher.swift; sourceTree = "<group>"; };
 		3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chapter 11 W00 Regular.ttf"; sourceTree = "<group>"; };
@@ -192,7 +193,6 @@
 		F12C11841D732B360071798C /* VimyVirtualMemorialVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VimyVirtualMemorialVC.swift; sourceTree = "<group>"; };
 		F12C11871D738ACB0071798C /* StudentBiographyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentBiographyViewController.swift; sourceTree = "<group>"; };
 		F12C118A1D73AB010071798C /* WeaponDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponDetailsVC.swift; sourceTree = "<group>"; };
-		F12C118B1D73AB010071798C /* WeaponInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WeaponInfo.plist; sourceTree = "<group>"; };
 		F12C118C1D73AB010071798C /* WeaponSelectVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponSelectVC.swift; sourceTree = "<group>"; };
 		F12C118D1D73AB010071798C /* WeaponsInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponsInfo.swift; sourceTree = "<group>"; };
 		F12C11931D73ADA20071798C /* WeaponAssets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = WeaponAssets.scnassets; sourceTree = "<group>"; };
@@ -515,13 +515,13 @@
 		F12C11891D73AAD70071798C /* Weapons */ = {
 			isa = PBXGroup;
 			children = (
+				3F2605ED1E4255B3004BC9D5 /* WeaponInfo.plist */,
+				F12C11931D73ADA20071798C /* WeaponAssets.scnassets */,
 				F12C118A1D73AB010071798C /* WeaponDetailsVC.swift */,
-				F12C118B1D73AB010071798C /* WeaponInfo.plist */,
 				F12C118C1D73AB010071798C /* WeaponSelectVC.swift */,
 				F12C118D1D73AB010071798C /* WeaponsInfo.swift */,
 				3F07E7221E37CBAD00489FEB /* SpencerTableViewCell.swift */,
 				F12BE4621E2453EB006412F1 /* untitled */,
-				F12C11931D73ADA20071798C /* WeaponAssets.scnassets */,
 			);
 			name = Weapons;
 			sourceTree = "<group>";
@@ -835,11 +835,11 @@
 				F123F2E01E1AAD6E00BD47F6 /* Flags.plist in Resources */,
 				F16B10151D4FA6EF004F2777 /* Images.xcassets in Resources */,
 				F170B8FA1D4FB94D00118440 /* westernFront.plist in Resources */,
+				3F2605EE1E4255B3004BC9D5 /* WeaponInfo.plist in Resources */,
 				F12BE4701E2453EB006412F1 /* texture_3.jpg in Resources */,
 				3FE011CA1E0AE8810067DFD0 /* old paper.jpg in Resources */,
 				F12BE4731E2453EB006412F1 /* texture_6.jpg in Resources */,
 				F168B6231D860FF000A9719A /* AppIntro.m4a in Resources */,
-				F12C118F1D73AB010071798C /* WeaponInfo.plist in Resources */,
 				F12BE46E1E2453EB006412F1 /* texture_1.jpg in Resources */,
 				F12BE46D1E2453EB006412F1 /* texture_0.jpg in Resources */,
 				F12BE4711E2453EB006412F1 /* texture_4.jpg in Resources */,
