@@ -70,7 +70,10 @@ class FacebookNonMilitaryVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        var labelArray: [UILabel] = [UILabel]()
+        
+        labelArray = [christianNameLabel, surnameLabel] // dateOfBirthLabel, dateOfEnlistmentLabel, maritalStatusLabel, nextOfKinLabel, dependantsLabel, birthCountryLabel, birthProvinceLabel, birthTownLabel, enlistmentPlaceLabel, presentCountryLabel, presentTownLabel, presentProvinceLabel, presentStreetLabel, relationToKinLabel, religionLabel, tradeCallingLabel, medicalAgeLabel, attestedAgeLabel, attestedComplexionLabel, dateExaminedLabel, ethnicOriginLabel, eyeColourLabel, genderLabel, attestedHairLabel, heightFeetLabel, heightInchesLabel, marksLabel, physicalDevelopmentLabel, marksOfDiseaseLabel, slightDefectsLabel, tradeOccupationLabel, vaccinationMarksLabel, weightLabel, activeMilitiaLabel]
+        
         christianNameLabel.text = MyVariables.globalSoldier.christian_names
         surnameLabel.text = MyVariables.globalSoldier.surname
         dateOfBirthLabel.text = MyVariables.globalSoldier.date_of_birth
@@ -107,6 +110,103 @@ class FacebookNonMilitaryVC: UIViewController {
         vaccinationMarksLabel.text = MyVariables.globalSoldier.vaccination_marks_number
         weightLabel.text = MyVariables.globalSoldier.weight
         activeMilitiaLabel.text = MyVariables.globalSoldier.active_militia
+        
+        
+        let modelName = UIDevice.current.modelName
+        if modelName == "Simulator" {
+            for nextLabel in labelArray {
+                nextLabel.font = UIFont(name: "Chapter11W00-Regular", size:24)
+            }
+        }
+            
+        else if modelName == "iPhone SE" || modelName == "iPhone SE" {
+            for nextLabel in labelArray {
+                nextLabel.font = UIFont(name: "Chapter11W00-Regular", size:16)
+            }
+        }
+        else if modelName == "iPhone 2G" || modelName == "iPhone 2G" {
+            for nextLabel in labelArray {
+                nextLabel.font = UIFont(name: "Chapter11W00-Regular", size:12)
+            }
+        }
+        else if modelName == "iPhone 3G" || modelName == "iPhone 3G" {
+            for nextLabel in labelArray {
+                nextLabel.font = UIFont(name: "Chapter11W00-Regular", size:12)
+            }
+        }
+        else if modelName == "iPhone 3GS" || modelName == "iPhone 3GS" {
+            for nextLabel in labelArray {
+                nextLabel.font = UIFont(name: "Chapter11W00-Regular", size:12)
+            }
+        }
+        else if modelName == "iPhone 4" || modelName == "iPhone 4" {
+            for nextLabel in labelArray {
+                nextLabel.font = UIFont(name: "Chapter11W00-Regular", size:16)
+            }
+        }
+        else if modelName == "iPhone 4s" || modelName == "iPhone 4s" {
+            for nextLabel in labelArray {
+                nextLabel.font = UIFont(name: "Chapter11W00-Regular", size:16)
+            }
+        }
+        else if modelName == "iPhone 5s" || modelName == "iPhone 5s" {
+            for nextLabel in labelArray {
+                nextLabel.font = UIFont(name: "Chapter11W00-Regular", size:16)
+            }
+        }
+            
+        else if modelName == "iPhone 5" || modelName == "iPhone 5" {
+            for nextLabel in labelArray {
+                nextLabel.font = UIFont(name: "Chapter11W00-Regular", size:16)
+            }
+        }
+            
+        else if modelName == "iPhone 7 Plus" || modelName == "iPhone 7 Plus" {
+            for nextLabel in labelArray {
+                nextLabel.font = UIFont(name: "Chapter11W00-Regular", size:32)
+            }
+        }
+        else if modelName == "iPhone 6 Plus" || modelName == "iPhone 6 Plus" {
+            for nextLabel in labelArray {
+                nextLabel.font = UIFont(name: "Chapter11W00-Regular", size:32)
+            }
+        }
+        else if modelName == "iPhone 6s Plus" || modelName == "iPhone 6s Plus" {
+            for nextLabel in labelArray {
+                nextLabel.font = UIFont(name: "Chapter11W00-Regular", size:32)
+            }
+        }
+            
+        else if modelName == "iPhone 7" || modelName == "iPhone 7" {
+            for nextLabel in labelArray {
+                nextLabel.font = UIFont(name: "Chapter11W00-Regular", size:18)
+            }
+        }
+        else if modelName == "iPhone 6" || modelName == "iPhone 6" {
+            for nextLabel in labelArray {
+                nextLabel.font = UIFont(name: "Chapter11W00-Regular", size:18)
+            }
+        }
+        else if modelName == "iPhone 6s" || modelName == "iPhone 6s" {
+            for nextLabel in labelArray {
+                nextLabel.font = UIFont(name: "Chapter11W00-Regular", size:18)
+            }
+        }
+        else if modelName == "iPad Mini" || modelName == "iPad Mini" {
+            for nextLabel in labelArray {
+                nextLabel.font = UIFont(name: "Chapter11W00-Regular", size:24)
+            }
+        }
+        else if modelName == "iPad Air" || modelName == "iPad Air" {
+            for nextLabel in labelArray {
+                nextLabel.font = UIFont(name: "Chapter11W00-Regular", size:24)
+            }
+        }
+        else if modelName == "iPad Pro" || modelName == "iPad Pro" {
+            for nextLabel in labelArray {
+                nextLabel.font = UIFont(name: "Chapter11W00-Regular", size:30)
+            }
+        }
     }
     
     

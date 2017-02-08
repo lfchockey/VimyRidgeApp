@@ -17,6 +17,7 @@ class Medals: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var awardTableView: UITableView!
     @IBOutlet weak var medalImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var MedalName: UILabel!
     
     @IBOutlet weak var MainLabel: UILabel!
     @IBOutlet weak var webView: UIWebView!
@@ -57,6 +58,8 @@ class Medals: UIViewController, UITableViewDataSource, UITableViewDelegate {
         // 8
         dataTask?.resume()
         
+        
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -95,12 +98,13 @@ class Medals: UIViewController, UITableViewDataSource, UITableViewDelegate {
             let medal = MedalReader(medalName: "British War Medal")
             let image : UIImage = UIImage(named: medal.medal.imageName)!
             cell.imageView?.image = image
-            // /Users/student/Downloads/VimyRidgeApp-master 3/Vimy Ridge Project/Medals List.plist
-            //        case "Silver War Badge":
-            //            let medal = MedalReader(medalName: "Silver War Badge")
-            //            let image : UIImage = UIImage(named: medal.medal.imageName)!
-            //            cell.imageView?.image = image
-        //
+            
+        //            /Users/student/Downloads/VimyRidgeApp-master 3/Vimy Ridge Project/Medals List.plist
+        case "Silver War Badge":
+            let medal = MedalReader(medalName: "Silver War Badge")
+            let image : UIImage = UIImage(named: medal.medal.imageName)!
+            cell.imageView?.image = image
+            
         case "Victoria Cross Medal":
             let medal = MedalReader(medalName: "Victoria Cross Medal")
             let image : UIImage = UIImage(named: medal.medal.imageName)!
@@ -119,8 +123,9 @@ class Medals: UIViewController, UITableViewDataSource, UITableViewDelegate {
             //                            cell.imageView?.image = image
             
         default:
-            let image : UIImage = UIImage(named: "1914 Star")! // get another image for an award that is unknown
+            let image : UIImage = UIImage(named: "BasicMedal")! // get another image for an award that is unknown
             cell.imageView?.image = image
+            
         }
         
         
@@ -132,12 +137,25 @@ class Medals: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let theAwardIClickedOn = allAwards[indexPath.row]
         print(theAwardIClickedOn)
         
-        //        let medal = MedalReader(medalName: theAwardIClickedOn.rawString)
-        //        print(medal.medal.medalDescription)
-        //
-        //        descriptionLabel.text = allAwards.rawString
-        //        MainLabel.text = medal.medal.medalDescription
-        //        medalImageView.image = UIImage(contentsOfFile: medal.medal.imageName)
+        let medal = MedalReader(medalName: theAwardIClickedOn.rawString()!)
+        let NameofMedal = theAwardIClickedOn.rawString()!
+        let description = medal.medal.medalDescription
+        descriptionLabel.text = description
+        medalImageView.image = UIImage(named: medal.medal.imageName)// UIImage(named: medal.medal.imageName)
+        MedalName.text = NameofMedal
+        
+        let url = NSURL(string: medal.medal.website)
+        let requestObj = NSURLRequest(url: url! as URL);
+        webView.loadRequest(requestObj as URLRequest)
+        
+        
+        
+        //        else {
+        //            print("jason")
+        //        }
+        //print(medal.medal.medalDescription)
+        
+        //descriptionLabel.text = allAwards.rawString()
         
     }
     
@@ -164,7 +182,31 @@ class Medals: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
         else {
             print ("(MedalsVC) Data came back from server as nil")
+            
+            let alert = UIAlertController(title: "[Your Message Here]", message: "[DescHere]", preferredStyle: UIAlertControllerStyle.alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
         }
+        
+        if totalAwards == 0 {
+            let alert = UIAlertController(title: "Sorry,", message: "This Soldier Has No Medals", preferredStyle: UIAlertControllerStyle.alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        if totalAwards == 0 {
+            let alert = UIAlertController(title: "Sorry,", message: "This Soldier Has No Medals", preferredStyle: UIAlertControllerStyle.alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        
         //            }
         //            else {
         //                print("(MedalsVC) Problem with NSJSONSerialization")

@@ -7,18 +7,18 @@
 		<key>imageName</key>
 		<string>British War Medal.png</string>
 		<key>website</key>
-		<string></string>
+		<string>http://www.veterans.gc.ca/eng/remembrance/medals-decorations/orders-decorations/mm</string>
 		<key>medalDescription</key>
-		<string></string>
+		<string>The Military medal is awarded to warrent/non-commissioned  officers and men who who individually or accosiated with an act of bravery, if recommended from a commanderin-chief.</string>
 	</dict>
 	<key>British War Medal</key>
 	<dict>
 		<key>imageName</key>
 		<string>British War Medal.png</string>
 		<key>website</key>
-		<string></string>
+		<string>http://www.veterans.gc.ca/eng/remembrance/medals-decorations/campaign-stars-medals-1866-1918/bwm</string>
 		<key>medalDescription</key>
-		<string></string>
+		<string>The British War Medal was awarded to any rank of canadian over seas military men who cam from canada and served in a theatre war between august 5, 1914 and november 11, 1918</string>
 	</dict>
 	<key>The Territorial Force War Medal, 1914-1919</key>
 	<dict>
@@ -29,7 +29,7 @@
 		<key>imageName</key>
 		<string>The Territorial Force War Medal, 1914-1919.png</string>
 	</dict>
-	<key>silver war badge</key>
+	<key>Silver War Badge</key>
 	<dict>
 		<key>website</key>
 		<string>https://www.forces-war-records.co.uk/collections/86/silver-war-badge-list-1914-1918/</string>
@@ -40,7 +40,7 @@ It had been the practice of some women to present white feathers to apparently a
 The badge was to be worn on the right breast while in civilian dress, it was forbidden to wear on a military uniform.
 The badge bears the royal cipher of GRI (for Georgius Rex Imperator; George, King and Emperor) and around the rim &quot;For King and Empire; Services Rendered&quot;.</string>
 		<key>imageName</key>
-		<string>silver war badge</string>
+		<string>Silver War Badge</string>
 	</dict>
 	<key>1914-15 Star </key>
 	<dict>
@@ -57,7 +57,7 @@ The 1914-14 Star (not to be confused with the 1914 Star) comprised a medal award
 
 </string>
 		<key>imageName</key>
-		<string>1914-15 Star.png</string>
+		<string>1914-15 Star</string>
 	</dict>
 	<key>1914 Star</key>
 	<dict>

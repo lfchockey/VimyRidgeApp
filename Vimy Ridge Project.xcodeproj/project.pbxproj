@@ -65,7 +65,6 @@
 		F12C11301D6CFB670071798C /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C112F1D6CFB670071798C /* TimelineView.swift */; };
 		F12C11701D7095FA0071798C /* MyVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C116F1D7095FA0071798C /* MyVariables.swift */; };
 		F12C117F1D71E1FB0071798C /* MedalReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C117D1D71E1FB0071798C /* MedalReader.swift */; };
-		F12C11801D71E1FB0071798C /* Medals List.plist in Resources */ = {isa = PBXBuildFile; fileRef = F12C117E1D71E1FB0071798C /* Medals List.plist */; };
 		F12C11851D732B360071798C /* VimyVirtualMemorialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C11841D732B360071798C /* VimyVirtualMemorialVC.swift */; };
 		F12C11881D738ACB0071798C /* StudentBiographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C11871D738ACB0071798C /* StudentBiographyViewController.swift */; };
 		F12C118E1D73AB010071798C /* WeaponDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C118A1D73AB010071798C /* WeaponDetailsVC.swift */; };
@@ -75,6 +74,7 @@
 		F133F22D1D7473810049B8BB /* bg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F133F22B1D7473810049B8BB /* bg.mp3 */; };
 		F133F22E1D7473810049B8BB /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F133F22C1D7473810049B8BB /* Util.swift */; };
 		F133F2301D74764C0049B8BB /* Serenata Immortale.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F133F22F1D74764C0049B8BB /* Serenata Immortale.mp3 */; };
+		F14D1DBD1E4B72F400B354D0 /* Medals List.plist in Resources */ = {isa = PBXBuildFile; fileRef = F14D1DBC1E4B72F400B354D0 /* Medals List.plist */; };
 		F168B6231D860FF000A9719A /* AppIntro.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F168B6221D860FF000A9719A /* AppIntro.m4a */; };
 		F16B0FE71D4FA578004F2777 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16B0FE61D4FA578004F2777 /* AppDelegate.swift */; };
 		F16B0FEC1D4FA578004F2777 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F16B0FEA1D4FA578004F2777 /* Main.storyboard */; };
@@ -191,7 +191,6 @@
 		F12C112F1D6CFB670071798C /* TimelineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 		F12C116F1D7095FA0071798C /* MyVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyVariables.swift; sourceTree = "<group>"; };
 		F12C117D1D71E1FB0071798C /* MedalReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedalReader.swift; sourceTree = "<group>"; };
-		F12C117E1D71E1FB0071798C /* Medals List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Medals List.plist"; sourceTree = "<group>"; };
 		F12C11841D732B360071798C /* VimyVirtualMemorialVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VimyVirtualMemorialVC.swift; sourceTree = "<group>"; };
 		F12C11871D738ACB0071798C /* StudentBiographyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentBiographyViewController.swift; sourceTree = "<group>"; };
 		F12C118A1D73AB010071798C /* WeaponDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponDetailsVC.swift; sourceTree = "<group>"; };
@@ -201,6 +200,7 @@
 		F133F22B1D7473810049B8BB /* bg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bg.mp3; sourceTree = "<group>"; };
 		F133F22C1D7473810049B8BB /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		F133F22F1D74764C0049B8BB /* Serenata Immortale.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Serenata Immortale.mp3"; sourceTree = "<group>"; };
+		F14D1DBC1E4B72F400B354D0 /* Medals List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Medals List.plist"; sourceTree = "<group>"; };
 		F168B6221D860FF000A9719A /* AppIntro.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppIntro.m4a; sourceTree = "<group>"; };
 		F16B0FE31D4FA578004F2777 /* Vimy Ridge Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vimy Ridge Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16B0FE61D4FA578004F2777 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -407,8 +407,8 @@
 		F12C10F81D6290A60071798C /* Medals */ = {
 			isa = PBXGroup;
 			children = (
+				F14D1DBC1E4B72F400B354D0 /* Medals List.plist */,
 				F12C117D1D71E1FB0071798C /* MedalReader.swift */,
-				F12C117E1D71E1FB0071798C /* Medals List.plist */,
 				F12C11041D62919A0071798C /* Medals.swift */,
 			);
 			name = Medals;
@@ -824,6 +824,7 @@
 				F12C112E1D6CB7CD0071798C /* BattalionTest.plist in Resources */,
 				F1E7D6391E1469B500182A9C /* Roman Stonecut.ttf in Resources */,
 				F12BE46C1E2453EB006412F1 /* texture.jpg in Resources */,
+				F14D1DBD1E4B72F400B354D0 /* Medals List.plist in Resources */,
 				F133F2301D74764C0049B8BB /* Serenata Immortale.mp3 in Resources */,
 				F12BE4721E2453EB006412F1 /* texture_5.jpg in Resources */,
 				F12BE4741E2453EB006412F1 /* texture_7.jpg in Resources */,
@@ -833,7 +834,6 @@
 				F12BE46F1E2453EB006412F1 /* texture_2.jpg in Resources */,
 				F1E7D64C1E16C0C000182A9C /* Artwork.xcassets in Resources */,
 				F170B8EE1D4FB90C00118440 /* BattalionMovement.plist in Resources */,
-				F12C11801D71E1FB0071798C /* Medals List.plist in Resources */,
 				3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */,
 				F123F2E01E1AAD6E00BD47F6 /* Flags.plist in Resources */,
 				F16B10151D4FA6EF004F2777 /* Images.xcassets in Resources */,

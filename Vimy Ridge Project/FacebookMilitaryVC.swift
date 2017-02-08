@@ -52,6 +52,10 @@ class FaceBookMilitaryVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let labelArray = [ageAtDeathLabel] //, examinedDischargedLabel, battalionLabel, causeOfDeathLabel, commemoratedLabel, companyLabel, conscriptionLabel, dateOfDeathLabel, dateOfDischargeLabel, enlistmentDateLabel, diedAtLabel, killedInActionLabel, locationOfDeathLabel, militaryForceLabel, forceParticularsLabel, nameOnGraveLabel, officerRank, pOWLabel, qualificationLabel, highestRankLabel, regimentAtDeathLabel, initialRankLabel, regimentAtDeathLabel, initialRegimentLabel, remainsCemetaryLabel, remainsSettlementLabel, remainsCountryLabel, remainsGrave, remainsPlotLabel, remainsRowLabel, sawServiceInLabel, servedInForce, reburiedLabel, unitAtDischargeLabel, unitShipSquadronLabel]
+        
         ageAtDeathLabel.text = MyVariables.globalSoldier.age_at_death
         examinedDischargedLabel.text = MyVariables.globalSoldier.examined_or_discharged
         battalionLabel.text = MyVariables.globalSoldier.battalion
@@ -86,14 +90,21 @@ class FaceBookMilitaryVC: UIViewController {
         reburiedLabel.text = MyVariables.globalSoldier.soldier_reburied
         unitAtDischargeLabel.text = MyVariables.globalSoldier.unit_at_discharge
         unitShipSquadronLabel.text = MyVariables.globalSoldier.unit_ship_squadron
+        
+        let modelName = UIDevice.current.modelName
+        if modelName == "Simulator" {
+            for nextLabel in labelArray {
+                nextLabel?.font = UIFont(name: "Chapter11W00-Regular", size:24)
+            }
+        }
     }
-
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
