@@ -54,7 +54,7 @@ class BattalionFactsContainer: UIViewController {
         }
         
     }
-
+    
     
     
     override func didReceiveMemoryWarning() {

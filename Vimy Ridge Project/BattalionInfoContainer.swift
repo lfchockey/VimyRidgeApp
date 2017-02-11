@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 class BattalionInfoContainer: UIViewController {
-
-        
+    
+    
     @IBOutlet var Lbl_1: UILabel!   //Constant label
     @IBOutlet var Lbl_2: UILabel!   //Constant label
     @IBOutlet var Lbl_3: UILabel!   //Constant label
@@ -38,6 +38,8 @@ class BattalionInfoContainer: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         Lbl_1.text = "Created in:"
         Info_1.text =  "\(BattVars.singleBattalion.date_created)"
         

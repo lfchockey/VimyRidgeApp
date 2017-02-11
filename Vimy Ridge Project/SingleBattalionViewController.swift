@@ -12,15 +12,16 @@ struct BattVars {
     static var battalion_id: String = ""
     static var singleBattalion: FullBattalionInfo = FullBattalionInfo()
     static var battalionFound = false
+    static var BattalionsArrayFound = false
+    static var BattsArray = [FullBattalionInfo]()
 }
 
 
 class SingleBattalionViewController: UIViewController {
-
-    @IBOutlet weak var ActivityIndicator: UIActivityIndicatorView!
+    
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-
+    
     @IBAction func SwapViews(_ sender: AnyObject) {
         moveViews(sender: sender.selectedSegmentIndex)
         
@@ -35,9 +36,9 @@ class SingleBattalionViewController: UIViewController {
         addChildViewController(newController)
         newController.view.frame = oldController.view.frame
         transition(from: oldController, to: newController, duration: 0.25, options: .transitionCrossDissolve, animations:{ () -> Void in
-            }, completion: { (finished) -> Void in
-                oldController.removeFromParentViewController()
-                newController.didMove(toParentViewController: self)
+        }, completion: { (finished) -> Void in
+            oldController.removeFromParentViewController()
+            newController.didMove(toParentViewController: self)
         })
         
         
@@ -48,6 +49,9 @@ class SingleBattalionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        //self.segmentedControl.selectedSegmentIndex = 0 //Select the default case
+
         if Reachability.isConnectedToNetwork() == true {
             
             let defaultSession = URLSession(configuration: URLSessionConfiguration.default)
@@ -75,9 +79,7 @@ class SingleBattalionViewController: UIViewController {
                 } else if let httpResponse = response as? HTTPURLResponse {
                     if httpResponse.statusCode == 200 {
                         self.buildBattalions(data: data as NSData?)
-                        
-                        //                        var BattArray = JSON([])
-                        //                        BattArray = JSON(data: data!)
+    
                     }
                 }
             }
@@ -93,7 +95,7 @@ class SingleBattalionViewController: UIViewController {
             let alertController = UIAlertController(title: "No Internet Connection", message: "Make sure your device is connected to the internet.", preferredStyle: .alert)
             
             let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
-                // When OK is pressed, segue back to the previous ViewController (Main Screen)
+                //When OK is pressed, segue back to the previous ViewController (Main Screen)
                 _ = self.navigationController?.popViewController(animated: true)
             }
             alertController.addAction(OKAction)
@@ -101,17 +103,17 @@ class SingleBattalionViewController: UIViewController {
             self.present(alertController, animated: true) {
                 // ...
             }
-
+            
             
             // Error message stating that you need an internet connection to view this section of the app
             
-//            let alert = UIAlertController(title: "Connection Error", message: "You need an internet connection to view this page.", preferredStyle: UIAlertControllerStyle.alert)
-//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            //            let alert = UIAlertController(title: "Connection Error", message: "You need an internet connection to view this page.", preferredStyle: UIAlertControllerStyle.alert)
+            //            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             //self.present(alert, animated: true, completion: nil)
         }
         
         self.title = "\(BattVars.singleBattalion.battalion_name)"
-        //moveViews(sender: 0)
+        
     }
     
     
@@ -126,40 +128,47 @@ class SingleBattalionViewController: UIViewController {
         var allBatts = JSON([])
         //do {
         //    if let _: NSDictionary? = try JSONSerialization.jsonObject(with: data! as Data, options:JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
-                
+        
         if data != nil {
             allBatts = JSON(data: data! as Data)
             
             // Search through the allBatts array(read from lwf.ca database) and find the proper id
             BattVars.battalionFound = false
             for jsonBattalion in allBatts {
-                
+                //print(allBatts)   //test
                 let bat = jsonBattalion.1.dictionary
-                if BattVars.battalionFound {
-                    break
-                }
                 
                 // Set all individual variables and build a singleBattalion global object
+                
+                let properBattalion = FullBattalionInfo()
+                //                if BattVars.BattalionsArrayFound == true {
+                //                    BattVars.BattsArray = [properBattalion]
+                //                }
+                
+                properBattalion.battalion_id = (bat!["battalion_id"]?.stringValue)!
+                properBattalion.france_arrival = (bat!["france_arrival"]?.stringValue)!
+                properBattalion.strength = (bat!["strength"]?.stringValue)!
+                properBattalion.war_diary = (bat!["war_diary"]?.stringValue)!
+                properBattalion.perpetuated_by = (bat!["perpetuated_by"]?.stringValue)!
+                properBattalion.canadian_arrival = (bat!["canadian_arrival"]?.stringValue)!
+                properBattalion.location = (bat!["location"]?.stringValue)!
+                properBattalion.embarkation = (bat!["embarkation"]?.stringValue)!
+                properBattalion.interesting_facts = (bat!["interesting_facts"]?.stringValue)!
+                properBattalion.date_created = (bat!["date_created"]?.stringValue)!
+                properBattalion.disembarkation = (bat!["disembarkation"]?.stringValue)!
+                properBattalion.battalion_name = (bat!["battalion_name"]?.stringValue)!
+                properBattalion.commanded_by = (bat!["commanded_by"]?.stringValue)!
+                properBattalion.reinforced_by = (bat!["reinforced_by"]?.stringValue)!
+                // ***Add the proper batt to our global batt array
                 if BattVars.battalion_id == (bat!["battalion_id"]?.stringValue)! {
-                    let properBattalion = FullBattalionInfo()
-                    properBattalion.battalion_id = (bat!["battalion_id"]?.stringValue)!
-                    properBattalion.france_arrival = (bat!["france_arrival"]?.stringValue)!
-                    properBattalion.strength = (bat!["strength"]?.stringValue)!
-                    properBattalion.war_diary = (bat!["war_diary"]?.stringValue)!
-                    properBattalion.perpetuated_by = (bat!["perpetuated_by"]?.stringValue)!
-                    properBattalion.canadian_arrival = (bat!["canadian_arrival"]?.stringValue)!
-                    properBattalion.location = (bat!["location"]?.stringValue)!
-                    properBattalion.embarkation = (bat!["embarkation"]?.stringValue)!
-                    properBattalion.interesting_facts = (bat!["interesting_facts"]?.stringValue)!
-                    properBattalion.date_created = (bat!["date_created"]?.stringValue)!
-                    properBattalion.disembarkation = (bat!["disembarkation"]?.stringValue)!
-                    properBattalion.battalion_name = (bat!["battalion_name"]?.stringValue)!
-                    properBattalion.commanded_by = (bat!["commanded_by"]?.stringValue)!
-                    properBattalion.reinforced_by = (bat!["reinforced_by"]?.stringValue)!
                     
                     BattVars.singleBattalion = properBattalion
                     BattVars.battalionFound = true
-                    break
+                    BattVars.BattsArray.append(properBattalion)
+                    BattVars.BattalionsArrayFound = true
+                    //print (properBattalion)
+                    //print (BattVars.BattsArray)
+                    //break
                 }
                 
             }
@@ -167,10 +176,15 @@ class SingleBattalionViewController: UIViewController {
             if !BattVars.battalionFound {
                 // *** print error message indicating that the selected battalion could not be retrieved from the database
                 //      then segue back to BattalionTableViewController
+                let alert = UIAlertController(title: "Missing Information", message: "We can't seem to find this battalion.", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+            else {
+                DispatchQueue.main.async{
+                    self.moveViews(sender: 0)
+                }
             }
         }
-
-        
     }
-    
 }

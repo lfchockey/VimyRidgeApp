@@ -8,14 +8,26 @@
 
 import UIKit
 
+struct BattalionSection {
+    var name: String!
+    var items: [[String:String]]!
+    var collapsed: Bool!
+    
+    init(name: String, items: [[String:String]], collapsed: Bool = false) {
+        self.name = name
+        self.items = items
+        self.collapsed = collapsed
+    }
+}
+
 //
 // MARK: - View Controller
 //
 class BattalionCollapsibleTableVC: UITableViewController {
     
-    var sections = [Section]()
+    var sections = [BattalionSection]()
     
-    var filteredSections = [Section]()
+    var filteredSections = [BattalionSection]()
     
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -26,19 +38,22 @@ class BattalionCollapsibleTableVC: UITableViewController {
     func filterContentForSearchText(searchText: String, scope: String = "All") {
         
         
-        filteredSections = [Section]()
+        filteredSections = [BattalionSection]()
         
         for sec in sections {
-            var tempSection = Section(name: sec.name, items: [])
+            var tempSection = BattalionSection(name: sec.name, items: [])
             for item in sec.items {
-                if item.lowercased().contains(searchText.lowercased()) {
-                    tempSection.items.append(item)
+                for (key, value) in item {
+                    print(key)
+                    if value.lowercased().contains(searchText.lowercased()) {
+                        tempSection.items.append(item)
+                    }
                 }
             }
             filteredSections.append(tempSection)
         }
         
-        print(filteredSections)
+        //print(filteredSections)
         
         DispatchQueue.main.async{
             
@@ -62,32 +77,32 @@ class BattalionCollapsibleTableVC: UITableViewController {
         self.title = "Battalions"
         battalions = allBattalions.battalions
         // Initialize the sections array
-                var Div1Array = [String]()
-        var Div2Array = [String]()
-        var Div3Array = [String]()
-        var Div4Array = [String]()
+        var Div1Array = [[String: String]]()
+        var Div2Array = [[String: String]]()
+        var Div3Array = [[String: String]]()
+        var Div4Array = [[String: String]]()
         // Loop (for loop) through every single battalion that is stored inside the "battalions" array
         for bat in battalions {
             
             if bat.id != 0{
                 
                 if bat.division == " 1st Division" {
-                    let batName = bat.name + bat.brigade
+                    let batName = [String(bat.id) : bat.name + bat.brigade]
                     Div1Array.append(batName)
                     
                 } else if bat.division == " 2nd Division" {
                     
-                    let batName = bat.name + bat.brigade
+                    let batName = [String(bat.id) : bat.name + bat.brigade]
                     Div2Array.append(batName)
                     
                 } else if bat.division == " 3rd Division" {
                     
-                    let batName = bat.name + bat.brigade
+                    let batName = [String(bat.id) : bat.name + bat.brigade]
                     Div3Array.append(batName)
                     
                 } else if bat.division == " 4th Division" {
                     
-                    let batName = bat.name + bat.brigade
+                    let batName = [String(bat.id) : bat.name + bat.brigade]
                     Div4Array.append(batName)
                 }
             }
@@ -96,10 +111,10 @@ class BattalionCollapsibleTableVC: UITableViewController {
 
         
         sections = [
-            Section(name: "Division 1", items: Div1Array),
-            Section(name: "Division 2", items: Div2Array),
-            Section(name: "Division 3", items: Div3Array),
-            Section(name: "Division 4", items: Div4Array),
+            BattalionSection(name: "Division 1", items: Div1Array),
+            BattalionSection(name: "Division 2", items: Div2Array),
+            BattalionSection(name: "Division 3", items: Div3Array),
+            BattalionSection(name: "Division 4", items: Div4Array),
         ]
     }
     
@@ -138,6 +153,43 @@ extension BattalionCollapsibleTableVC {
         //return sections.count
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+        
+        //print( sections[indexPath.section].items[indexPath.row])
+
+        
+        //let battalion: Battalions
+        
+        // The following code segues to the Single Battalion View Controller once a battalion has been selected
+        if searchController.isActive && searchController.searchBar.text != "" && battalions.count != 0 {
+            //battalion = filteredSections[indexPath.section].items[indexPath.row]//battalions[indexPath.row]
+           // BattVars.battalion_id = String(battalion.id)
+            //var battalionName: String
+            for (key, value) in filteredSections[indexPath.section].items[indexPath.row] {
+                //battalionName = value
+                BattVars.battalion_id = key
+            }
+        } else {
+            //var battalionName: String
+            for (key, value) in sections[indexPath.section].items[indexPath.row] {
+                //battalionName = value
+                BattVars.battalion_id = key
+            }
+        }
+        
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let singleBattalionController = storyboard.instantiateViewController(withIdentifier: "SingleBattalion") as! SingleBattalionViewController
+        //singleBattalionController.weaponName = sections[indexPath.section].items[indexPath.row]
+        self.navigationController?.pushViewController(singleBattalionController, animated: true)
+
+//        // Segue to the SingleBattalionViewController once a row has been selected
+//        DispatchQueue.main.async {
+//            self.performSegue(withIdentifier: "SingleBattalionSegue", sender: self)
+//        }
+        
+    }
     
     // Cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -147,14 +199,23 @@ extension BattalionCollapsibleTableVC {
         
         //return cell
         
-        print("Is Active: \(searchController.isActive) - Text: \(searchController.searchBar.text)")
+        //print("Is Active: \(searchController.isActive) - Text: \(searchController.searchBar.text)")
         //let sec: Section
-        
+        //print(sections[indexPath.section].items[indexPath.row])
         if searchController.isActive && searchController.searchBar.text != "" {
-            cell.textLabel?.text = filteredSections[indexPath.section].items[indexPath.row]
+            var battalionName: String
+            for (key, value) in filteredSections[indexPath.section].items[indexPath.row] {
+                battalionName = value
+                cell.textLabel?.text = battalionName//filteredSections[indexPath.section].items[indexPath.row]
+            }
+            //cell.textLabel?.text = filteredSections[indexPath.section].items[indexPath.row]
         } else {
-            
-            cell.textLabel?.text = sections[indexPath.section].items[indexPath.row]
+            var battalionName: String
+            for (key, value) in sections[indexPath.section].items[indexPath.row] {
+                battalionName = value
+                cell.textLabel?.text = battalionName//filteredSections[indexPath.section].items[indexPath.row]
+            }
+            //cell.textLabel?.text = sections[indexPath.section].items[indexPath.row]
             //sec = sections[indexPath.section].items[indexPath.row]
         }
         
