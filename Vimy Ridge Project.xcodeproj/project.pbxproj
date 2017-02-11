@@ -25,7 +25,6 @@
 		3FE011CC1E0AF6DD0067DFD0 /* vimyWallBrickupLight1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FE011CB1E0AF6DD0067DFD0 /* vimyWallBrickupLight1.jpg */; };
 		3FEB44411E0C60AC00620494 /* SoldierOfHourNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEB44401E0C60AC00620494 /* SoldierOfHourNavController.swift */; };
 		F123F2DF1E1AAD6E00BD47F6 /* FlagPlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F123F2DD1E1AAD6E00BD47F6 /* FlagPlistReader.swift */; };
-		F123F2E01E1AAD6E00BD47F6 /* Flags.plist in Resources */ = {isa = PBXBuildFile; fileRef = F123F2DE1E1AAD6E00BD47F6 /* Flags.plist */; };
 		F123F2E31E1AAD9000BD47F6 /* FlagOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F123F2E11E1AAD9000BD47F6 /* FlagOverlay.swift */; };
 		F123F2E41E1AAD9000BD47F6 /* FlagOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F123F2E21E1AAD9000BD47F6 /* FlagOverlayView.swift */; };
 		F123F2E71E1BF63E00BD47F6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F123F2E61E1BF63E00BD47F6 /* MapKit.framework */; };
@@ -74,6 +73,7 @@
 		F133F22D1D7473810049B8BB /* bg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F133F22B1D7473810049B8BB /* bg.mp3 */; };
 		F133F22E1D7473810049B8BB /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F133F22C1D7473810049B8BB /* Util.swift */; };
 		F133F2301D74764C0049B8BB /* Serenata Immortale.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F133F22F1D74764C0049B8BB /* Serenata Immortale.mp3 */; };
+		F135ED191E4F6F7600392560 /* Flags.plist in Resources */ = {isa = PBXBuildFile; fileRef = F135ED181E4F6F7600392560 /* Flags.plist */; };
 		F14D1DBD1E4B72F400B354D0 /* Medals List.plist in Resources */ = {isa = PBXBuildFile; fileRef = F14D1DBC1E4B72F400B354D0 /* Medals List.plist */; };
 		F14D1DBF1E4B940200B354D0 /* SoldierInfoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14D1DBE1E4B940200B354D0 /* SoldierInfoContainer.swift */; };
 		F14D1DC21E4BEECF00B354D0 /* SoldierKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14D1DC11E4BEECF00B354D0 /* SoldierKit.swift */; };
@@ -90,7 +90,6 @@
 		F16B101B1D4FA929004F2777 /* FullSoldier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16B10191D4FA929004F2777 /* FullSoldier.swift */; };
 		F170B8E51D4FB8D600118440 /* CemAnno.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170B8E11D4FB8D600118440 /* CemAnno.swift */; };
 		F170B8E61D4FB8D600118440 /* CemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170B8E21D4FB8D600118440 /* CemViewController.swift */; };
-		F170B8E71D4FB8D600118440 /* CoordinatePrime.plist in Resources */ = {isa = PBXBuildFile; fileRef = F170B8E31D4FB8D600118440 /* CoordinatePrime.plist */; };
 		F170B8E81D4FB8D600118440 /* VimyCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170B8E41D4FB8D600118440 /* VimyCoordinates.swift */; };
 		F170B8ED1D4FB90C00118440 /* BattalionMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170B8E91D4FB90C00118440 /* BattalionMapVC.swift */; };
 		F170B8EE1D4FB90C00118440 /* BattalionMovement.plist in Resources */ = {isa = PBXBuildFile; fileRef = F170B8EA1D4FB90C00118440 /* BattalionMovement.plist */; };
@@ -103,6 +102,7 @@
 		F170B8FB1D4FB94D00118440 /* WesternFrontController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170B8F81D4FB94D00118440 /* WesternFrontController.swift */; };
 		F170B8FC1D4FB94D00118440 /* WesternFrontLinesCoords.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170B8F91D4FB94D00118440 /* WesternFrontLinesCoords.swift */; };
 		F170B8FE1D4FBA4300118440 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170B8FD1D4FBA4300118440 /* MapViewController.swift */; };
+		F183E72D1E4FC6BF00436A21 /* CoordinatePrime.plist in Resources */ = {isa = PBXBuildFile; fileRef = F183E72C1E4FC6BF00436A21 /* CoordinatePrime.plist */; };
 		F1993B151D5226E9001F40F0 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1993B141D5226E9001F40F0 /* MenuVC.swift */; };
 		F1E7D6351E1419B300182A9C /* FacebookMilitaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D6331E1419B300182A9C /* FacebookMilitaryVC.swift */; };
 		F1E7D6361E1419B300182A9C /* FacebookNonMilitaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D6341E1419B300182A9C /* FacebookNonMilitaryVC.swift */; };
@@ -154,7 +154,6 @@
 		3FE011CB1E0AF6DD0067DFD0 /* vimyWallBrickupLight1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vimyWallBrickupLight1.jpg; sourceTree = "<group>"; };
 		3FEB44401E0C60AC00620494 /* SoldierOfHourNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierOfHourNavController.swift; sourceTree = "<group>"; };
 		F123F2DD1E1AAD6E00BD47F6 /* FlagPlistReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagPlistReader.swift; sourceTree = "<group>"; };
-		F123F2DE1E1AAD6E00BD47F6 /* Flags.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Flags.plist; sourceTree = "<group>"; };
 		F123F2E11E1AAD9000BD47F6 /* FlagOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagOverlay.swift; sourceTree = "<group>"; };
 		F123F2E21E1AAD9000BD47F6 /* FlagOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagOverlayView.swift; sourceTree = "<group>"; };
 		F123F2E61E1BF63E00BD47F6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -203,6 +202,7 @@
 		F133F22B1D7473810049B8BB /* bg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bg.mp3; sourceTree = "<group>"; };
 		F133F22C1D7473810049B8BB /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		F133F22F1D74764C0049B8BB /* Serenata Immortale.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Serenata Immortale.mp3"; sourceTree = "<group>"; };
+		F135ED181E4F6F7600392560 /* Flags.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Flags.plist; sourceTree = "<group>"; };
 		F14D1DBC1E4B72F400B354D0 /* Medals List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Medals List.plist"; sourceTree = "<group>"; };
 		F14D1DBE1E4B940200B354D0 /* SoldierInfoContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierInfoContainer.swift; sourceTree = "<group>"; };
 		F14D1DC11E4BEECF00B354D0 /* SoldierKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierKit.swift; sourceTree = "<group>"; };
@@ -225,7 +225,6 @@
 		F16B10191D4FA929004F2777 /* FullSoldier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullSoldier.swift; sourceTree = "<group>"; };
 		F170B8E11D4FB8D600118440 /* CemAnno.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CemAnno.swift; sourceTree = "<group>"; };
 		F170B8E21D4FB8D600118440 /* CemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CemViewController.swift; sourceTree = "<group>"; };
-		F170B8E31D4FB8D600118440 /* CoordinatePrime.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CoordinatePrime.plist; sourceTree = "<group>"; };
 		F170B8E41D4FB8D600118440 /* VimyCoordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VimyCoordinates.swift; sourceTree = "<group>"; };
 		F170B8E91D4FB90C00118440 /* BattalionMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattalionMapVC.swift; sourceTree = "<group>"; };
 		F170B8EA1D4FB90C00118440 /* BattalionMovement.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BattalionMovement.plist; sourceTree = "<group>"; };
@@ -238,6 +237,7 @@
 		F170B8F81D4FB94D00118440 /* WesternFrontController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WesternFrontController.swift; sourceTree = "<group>"; };
 		F170B8F91D4FB94D00118440 /* WesternFrontLinesCoords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WesternFrontLinesCoords.swift; sourceTree = "<group>"; };
 		F170B8FD1D4FBA4300118440 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F183E72C1E4FC6BF00436A21 /* CoordinatePrime.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CoordinatePrime.plist; sourceTree = "<group>"; };
 		F1993B141D5226E9001F40F0 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		F1E7D6331E1419B300182A9C /* FacebookMilitaryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookMilitaryVC.swift; sourceTree = "<group>"; };
 		F1E7D6341E1419B300182A9C /* FacebookNonMilitaryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookNonMilitaryVC.swift; sourceTree = "<group>"; };
@@ -665,7 +665,7 @@
 				F123F2E11E1AAD9000BD47F6 /* FlagOverlay.swift */,
 				F123F2E21E1AAD9000BD47F6 /* FlagOverlayView.swift */,
 				F123F2DD1E1AAD6E00BD47F6 /* FlagPlistReader.swift */,
-				F123F2DE1E1AAD6E00BD47F6 /* Flags.plist */,
+				F135ED181E4F6F7600392560 /* Flags.plist */,
 				F170B8F71D4FB94D00118440 /* westernFront.plist */,
 				F170B8F81D4FB94D00118440 /* WesternFrontController.swift */,
 				F170B8F91D4FB94D00118440 /* WesternFrontLinesCoords.swift */,
@@ -687,9 +687,9 @@
 		F170B8E01D4FB7D400118440 /* Cemeteries */ = {
 			isa = PBXGroup;
 			children = (
+				F183E72C1E4FC6BF00436A21 /* CoordinatePrime.plist */,
 				F170B8E11D4FB8D600118440 /* CemAnno.swift */,
 				F170B8E21D4FB8D600118440 /* CemViewController.swift */,
-				F170B8E31D4FB8D600118440 /* CoordinatePrime.plist */,
 				F170B8E41D4FB8D600118440 /* VimyCoordinates.swift */,
 			);
 			name = Cemeteries;
@@ -845,17 +845,17 @@
 				F133F2301D74764C0049B8BB /* Serenata Immortale.mp3 in Resources */,
 				F12BE4721E2453EB006412F1 /* texture_5.jpg in Resources */,
 				F12BE4741E2453EB006412F1 /* texture_7.jpg in Resources */,
-				F170B8E71D4FB8D600118440 /* CoordinatePrime.plist in Resources */,
 				F170B8F51D4FB93400118440 /* daysOfBattle.plist in Resources */,
 				3F2605EC1E424200004BC9D5 /* Images.plist in Resources */,
 				F12BE46F1E2453EB006412F1 /* texture_2.jpg in Resources */,
 				F1E7D64C1E16C0C000182A9C /* Artwork.xcassets in Resources */,
 				F170B8EE1D4FB90C00118440 /* BattalionMovement.plist in Resources */,
 				3FB55EEE1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf in Resources */,
-				F123F2E01E1AAD6E00BD47F6 /* Flags.plist in Resources */,
 				F16B10151D4FA6EF004F2777 /* Images.xcassets in Resources */,
+				F135ED191E4F6F7600392560 /* Flags.plist in Resources */,
 				F170B8FA1D4FB94D00118440 /* westernFront.plist in Resources */,
 				3F2605EE1E4255B3004BC9D5 /* WeaponInfo.plist in Resources */,
+				F183E72D1E4FC6BF00436A21 /* CoordinatePrime.plist in Resources */,
 				F12BE4701E2453EB006412F1 /* texture_3.jpg in Resources */,
 				3FE011CA1E0AE8810067DFD0 /* old paper.jpg in Resources */,
 				F12BE4731E2453EB006412F1 /* texture_6.jpg in Resources */,

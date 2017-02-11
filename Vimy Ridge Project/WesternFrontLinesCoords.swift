@@ -24,6 +24,8 @@ class WesternFrontLinesCoords
 
         let linePoints = properties![lineName] as! NSArray
         
+        self.name = lineName
+        
         coordCount = linePoints.count
         
         frontLineCoords = []

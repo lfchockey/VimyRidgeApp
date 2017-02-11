@@ -15,6 +15,7 @@ class MapViewController: UIViewController, MKMapViewDelegate
 {
     @IBOutlet weak var mapTypeSeg: UISegmentedControl!
     
+    var zoomRegion: CLLocationDistance = 10000
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var menuImage: UIImageView!
@@ -35,12 +36,15 @@ class MapViewController: UIViewController, MKMapViewDelegate
         return false
     }
     
+    let attr = NSDictionary(object: UIFont(name: "Times New Roman", size: 43.0)!, forKey: NSFontAttributeName as NSCopying)
+    let attr2 = NSDictionary(object: UIFont(name: "Times New Roman", size: 15.0)!, forKey: NSFontAttributeName as NSCopying)
+    
     var menuVC: MenuVC = MenuVC()
     
     // User Swipes left
     @IBAction func closeMenu(_ sender: UISwipeGestureRecognizer) {
         
-        var zoomRegion: CLLocationDistance = 10000
+        
         var centerCoordinate = CLLocation(latitude: 50.3603125, longitude: 2.794017)
         leftButton.isHidden = true
         rightButton.isHidden = true
@@ -54,19 +58,24 @@ class MapViewController: UIViewController, MKMapViewDelegate
         }
         else if MapVariables.mapSection == 2{
             // Western Front
-            indexCounter = 0
-            zoomRegion = 100000
+            zoomRegion = 550000
+			centerCoordinate = CLLocation(latitude: 48.980558, longitude: 4.459582)
             let dummyButton = UIButton(type: UIButtonType.custom)
             LeftPreviousClick(dummyButton)
+			RightNextClick(dummyButton)
             nameLabel.isHidden = false
             leftButton.isHidden = false
             rightButton.isHidden = false
         }
         else if MapVariables.mapSection == 3{
             // Cemeteries
-            zoomRegion = 110000
-            centerCoordinate = CLLocation(latitude: 50.3603125, longitude: 2.3)
+            
+            let allAnnotations = mapq.annotations
+            mapq.removeAnnotations(allAnnotations)
+            zoomRegion = 15000
+            centerCoordinate = CLLocation(latitude: 50.378802, longitude: 2.772395)
             addCemeteryPins()
+            
         }
         else if MapVariables.mapSection == 4{
             // Battalion Progression
@@ -448,7 +457,7 @@ class MapViewController: UIViewController, MKMapViewDelegate
             theCurrentFront.mapBottomRightCoord.latitude
         
         // think of a span as a tv size, measure from one corner to another
-        let span = MKCoordinateSpanMake(fabs(changeInLatitude), 0.0)
+        let span = MKCoordinateSpanMake(fabs(changeInLatitude), 7.5)
         let region = MKCoordinateRegionMake(theCurrentFront.mapMidCoord, span)
         
         // create the region/zoom level of the map
@@ -462,6 +471,10 @@ class MapViewController: UIViewController, MKMapViewDelegate
             let overlay = FlagOverlay(flag: flag)
             mapView.add(overlay)
         }
+		let frontVC = menuVC.childViewControllers[1] as! WesternFrontVC
+		
+		frontVC.TitleLabel.text = labelArray[indexCounter]
+		frontVC.DescriptionLabel.text = descriptionArray[indexCounter]
     }
     
     @IBAction func LeftPreviousClick(_ sender: UIButton) {
@@ -488,7 +501,7 @@ class MapViewController: UIViewController, MKMapViewDelegate
             theCurrentFront.mapBottomRightCoord.latitude
         
         // think of a span as a tv size, measure from one corner to another
-        let span = MKCoordinateSpanMake(fabs(changeInLatitude), 0.0)
+        let span = MKCoordinateSpanMake(fabs(changeInLatitude), 7.5)
         let region = MKCoordinateRegionMake(theCurrentFront.mapMidCoord, span)
         
         // create the region/zoom level of the map
@@ -502,10 +515,21 @@ class MapViewController: UIViewController, MKMapViewDelegate
             let overlay = FlagOverlay(flag: flag)
             mapView.add(overlay)
         }
+		
+		let frontVC = menuVC.childViewControllers[1] as! WesternFrontVC
+		
+		frontVC.TitleLabel.text = labelArray[indexCounter]
+		frontVC.DescriptionLabel.text = descriptionArray[indexCounter]
+
     }
-    
-    
-    var regionRadius: CLLocationDistance = 50000
+	
+	let labelArray = ["1915-1916", "1917", "Hindenburg Line", "Final German Offensives 1918", "Final Allied Offensives 1918"]
+	
+	
+	
+	let descriptionArray = ["The allied forces had a fierce defense. They had strategic landmarks that resulted in a grand protection. The trenches of a distance of approximately 450 miles ran along this line, which went to great lengths. Both sides of the Western Front attempted to break through during these years. Battles that have occurred during this time include the Battle of Neuve Chapelle (March 10-13, 1915), Battle of Hill 60 (April 17-22, 1915), Second Battle of Ypres (April 22-May 25, 1915), Second Battle of Artois (May 9-June 18, 1915), Battle of Le Linge, Second Champagne Offensive, Artois-Loos Offensive or the Third Battle of Artois, and the Battle of Loos.", "The locations during this time were focused in Flanders, Artois, Aisne, Champagne, and Cambrai. December 1916, General Nivelle proposed a major Artois and Chanmpagne for the spring of the following year. This offensive was called the Second Battle of the Aisne or can be known as the Nivelle Offensive (April 16-May 9, 1917). The Battle of the Hills or the Third Battle of Champagne (April 17-20, 1917) was carried out during the Second Battle of the Aisne. British attacks began a week before the French offensive. The battle was the Battle of Arras (April 9-May 4, 1917) with 8 battle phases.There was also a battlefield area, Ypres Salient (West-Flanders), where the British Flanders Offensive had set foot (June 7-November 10, 1917). There were many phases within this battle. From November 20 to December, 1917, there was the First Allied Mass Tank Attack.", "This was a line of defense placed by the Germans. It was named with several sections including Wotan Stellung, Siegfried Stellung, Aberich Stellung, Brunhilde Stellung, and Kriemhilde Stellung. From February 21, 1917, the German Army began a planned withdrawal that leads to the Hindenburg Line from Artois to the Aisne (Soissons). It was a maneuver which was named Operation Alberich. It took about five weeks to finish. The Germans deliberately destroyed buildings, damaged property and watercourses. As well as roads, and railway tracks to slow and prevent the pursuing Allies from taking over the abandoned ground in a good state.", "During the spring and summer of 1918, the German Supreme Command exploited thousands of troop, great amount of equipment and guns. This was part of a plan to make large-scale surprises on the offensives and diversions against the Allied lines that were being held by French, British, Belgian, and Portuguese troops. This was their attempt to break the deadlock before the U.S. Army was ready to take the French battle fields in full force. Planning and secret unknown preparations were set out between January and March 21, 1918, for attacks to take place on almost every sector of the allied Front Line. The German offensives gained some ground and a few initial successes but ran into many difficulties one by one were not only the allied but up a strong stubborn defense but that the Germans came to the problem of inability to resupply their troops with sufficient food, equipment, and reinforcements. There were five main sequential phases of these German Offensives.", "From July 1918, the Allies launched offensives against a weakening German defensive line which this push succeeded in creating another war of movement. The Allied Amiens Offensive of Third Battle of Picardy (August 8-Septmember 3, 1918) was an attack that had been launched in fog against the Germans by the British Fourth Army. Canadian forces attacked in the center sector, and the left wing of the French First Army on Britain’s right flank. An attack with 435 allied tanks pushed the Germans back 10 miles east f their position that morning. The swift advance surprised the Germans. The second phase of the offensive began on August 21st and was called the Second Battle of Somme. The French Tenth and Third Armies and the British Third and First Armies attacked. Canadian forces captured ground near Quéant. By September 4, the Germans had withdrawn to the Hindenburg Line."]
+	
+    var regionRadius: CLLocationDistance = 120000
     var indexCounter: Int = 0
     
     var line191516 = WesternFrontLinesCoords(lineName: "1915-1916")
@@ -657,7 +681,15 @@ class MapViewController: UIViewController, MKMapViewDelegate
                 annotationView!.image = UIImage(named: cpa.imageName!)
                 
             } else {
-                annotationView!.annotation = annotation
+                let cpa = annotation as! CemAnno
+                annotationView!.image = UIImage(named: cpa.imageName!)
+                annotationView!.annotation = cpa
+                
+//                if ((annotationView!.annotation?.title)! == "Vimy Memorial"){
+//                    
+//                    print(annotation)
+//                    print("hello")
+//                }
             }
             return annotationView
         }
@@ -733,6 +765,36 @@ class MapViewController: UIViewController, MKMapViewDelegate
         return nil
     }
     
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        
+        if view.annotation!.isKind(of: CemAnno.self)
+        {
+            
+            let customAnno = view.annotation as! CemAnno
+
+            zoomRegion = 3000
+            let centerCoordinate = customAnno.coordinate
+            let center = CLLocation(latitude: centerCoordinate.latitude, longitude: centerCoordinate.longitude)
+            centerMap(zoomRegion: zoomRegion, centerCoordinate: center)
+            
+            
+            
+            
+        }
+//        // get the particular pin that was tapped
+//        let pinToZoomOn = view.annotation
+//        
+//        // optionally you can set your own boundaries of the zoom
+//        let span = MKCoordinateSpanMake(0.5, 0.5)
+//        
+//        // or use the current map zoom and just center the map
+//        // let span = mapView.region.span
+//        
+//        // now move the map
+//        let region = MKCoordinateRegion(center: pinToZoomOn!.coordinate, span: span)
+//        mapView.setRegion(region, animated: true)
+    }
+
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)
     {
         
@@ -747,6 +809,12 @@ class MapViewController: UIViewController, MKMapViewDelegate
             let HistInfo = customAnno.histInfo
             print(menuVC.childViewControllers[0].description)
             let cemVC = menuVC.childViewControllers[0] as! CemViewController
+            
+            zoomRegion = 10000
+            let centerCoordinate = customAnno.coordinate
+            let center = CLLocation(latitude: centerCoordinate.latitude, longitude: centerCoordinate.longitude)
+            centerMap(zoomRegion: zoomRegion, centerCoordinate: center)
+            
             cemVC.nameLabel.text = title!
             cemVC.region.text = region!
             cemVC.casualties.text = casualties!
@@ -819,10 +887,14 @@ class MapViewController: UIViewController, MKMapViewDelegate
             let thumbImage: UIImage = UIImage (named: "PlaceOfDeath")!
             let reSize = resizeImage(image: thumbImage, newHeight: 55.0)
             
+            mapTypeSeg.setTitleTextAttributes(attr2 as [NSObject: AnyObject], for: .normal)
+            
             slider.setThumbImage(reSize, for: UIControlState.normal)
         }
         else if (self.view.traitCollection.horizontalSizeClass != UIUserInterfaceSizeClass.compact) {
             slider.setThumbImage(UIImage(named: "PlaceOfDeath")!, for: .normal)
+            
+            mapTypeSeg.setTitleTextAttributes(attr as [NSObject: AnyObject], for: .normal)
         }
         
         let initialLocation = CLLocation(latitude: 50.3603125, longitude: 2.794017)

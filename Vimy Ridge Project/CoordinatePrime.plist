@@ -12,7 +12,7 @@
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{1093}</string>
+			<string>1093</string>
 			<key>HistInfo</key>
 			<string>The extension was begun by French troops in October 1914 and when they moved south in March 1916 to be replaced by Commonwealth forces, it was used for burials by the 6th Casualty Clearing Station. </string>
 			<key>VisitorInfo</key>
@@ -26,7 +26,7 @@
 			<key>Region</key>
 			<string>Nord</string>
 			<key>Casualties</key>
-			<string>{4236}</string>
+			<string>4236</string>
 			<key>HistInfo</key>
 			<string>Bailleul is a large town in France, near the Belgian border, 14.5 Kms south-west of Ieper and on the main road from St. Omer to Lille.</string>
 			<key>VisitorInfo</key>
@@ -40,7 +40,7 @@
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{2778}</string>
+			<string>2778</string>
 			<key>HistInfo</key>
 			<string>Aubigny-en-Artois is a village approximately 15 Kms north-west of Arras on the road (N39) to St. Pol.</string>
 			<key>VisitorInfo</key>
@@ -54,7 +54,7 @@
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{263}</string>
+			<string>263</string>
 			<key>HistInfo</key>
 			<string>Roclincourt was just within the British lines before the Battles of Arras, 1917; the 51st (Highland) and 34th Divisions advanced from the village on the 9th April, 1917, and the 1st Canadian Division attacked on their left, across the Lens road.</string>
 			<key>VisitorInfo</key>
@@ -68,7 +68,7 @@
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{688}</string>
+			<string>688</string>
 			<key>HistInfo</key>
 			<string>The Cemetery Extension was begun by French troops early in 1915, and the two French plots are next to the Communal Cemetery. </string>
 			<key>VisitorInfo</key>
@@ -83,7 +83,7 @@
 			<key>Region</key>
 			<string>Somme</string>
 			<key>Casualties</key>
-			<string>{1992}</string>
+			<string>1992</string>
 			<key>HistInfo</key>
 			<string>For much of the First World War, Abbeville was headquarters of the Commonwealth lines of communication and No.3 BRCS, No.5 and No.2 Stationary Hospitals were stationed there variously from October 1914 to January 1920.</string>
 			<key>VisitorInfo</key>
@@ -98,7 +98,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{11162}</string>
+			<string>11162</string>
 			<key>HistInfo</key>
 			<string>On the opening day of the Battle of Arras, 9 April 1917, the four divisions of the Canadian Corps, fighting side by side for the first time, scored a huge tactical victory in the capture of the 60 metre high Vimy Ridge.</string>
 			<key>VisitorInfo</key>
@@ -112,7 +112,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calis</string>
 			<key>Casualties</key>
-			<string>{989}</string>
+			<string>989</string>
 			<key>HistInfo</key>
 			<string>The French handed over Arras to Commonwealth forces in the spring of 1916 and the system of tunnels upon which the town is built were used and developed in preparation for the major offensive planned for April 1917.
  </string>
@@ -125,9 +125,9 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Title</key>
 			<string>Arleux-En-Gohelle Communal Cemetery</string>
 			<key>Region</key>
-			<string>{Pas de Calais}</string>
+			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{449}</string>
+			<string>449</string>
 			<key>HistInfo</key>
 			<string>Arleux-en-Gohelle is a village and commune 7 miles (12 kilometres) north-east of Arras on the N.319 road to Henin-Lietard.</string>
 			<key>VisitorInfo</key>
@@ -141,9 +141,9 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Somme</string>
 			<key>Casualties</key>
-			<string>{809}</string>
+			<string>809</string>
 			<key>HistInfo</key>
-			<string>Beaumont-Hamel was attacked by the 29th Division on 1 July 1916 and although some units reached it, the village was not taken. It was finally captured by the 51st (Highland) and 63rd (Royal Naval) Divisions on the following 13 November</string>
+			<string>Beaumont-Hamel was attacked by the 29th Division on 1 July 1916 and although some units reached it, the village was not taken. It was finally captured by the 51st (Highland) and 63rd (Royal Naval) Divisions on the following 13 November.</string>
 			<key>VisitorInfo</key>
 			<string>N/A</string>
 		</dict>
@@ -155,7 +155,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{449}</string>
+			<string>449</string>
 			<key>HistInfo</key>
 			<string>Thelus village, which stands on the Vimy Ridge, was captured by the Canadian Corps on the 9th April, 1917, and it remained in British hands until the end of the War. </string>
 			<key>VisitorInfo</key>
@@ -169,11 +169,11 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{5732}</string>
+			<string>5732</string>
 			<key>HistInfo</key>
 			<string>oulogne, was one of the three base ports most extensively used by the Commonwealth armies on the Western Front throughout the First World War.</string>
 			<key>VisitorInfo</key>
-			<string>This Cemetery is open 7 days a week, all year round. From 1 October to 15 March: 08.00 - 18.00 and from 16 March to 30 September: 08.00 - 19.00</string>
+			<string>This Cemetery is open 7 days a week, all year round. From 1 October to 15 March: 08.00 - 18.00 and from 16 March to 30 September: 08.00 - 19.00.</string>
 		</dict>
 		<dict>
 			<key>Coordinate</key>
@@ -183,7 +183,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{412}</string>
+			<string>412</string>
 			<key>HistInfo</key>
 			<string>The extension to the communal cemetery was begun by French troops in October 1914, on land belonging to the Compagnie des Mines de Bruay. </string>
 			<key>VisitorInfo</key>
@@ -197,7 +197,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{3185}</string>
+			<string>3185</string>
 			<key>HistInfo</key>
 			<string>Caberet Rouge was a small, red-bricked, red-tiled café that stood close to this site in the early days of the First World War. </string>
 			<key>VisitorInfo</key>
@@ -211,7 +211,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{103}</string>
+			<string>103</string>
 			<key>HistInfo</key>
 			<string>Cagnicourt was captured by British troops on the 2nd September, 1918, in the Battle of the Drocourt-Queant Line; and this cemetery was begun after the battle, alongside a German cemetery (now removed).</string>
 			<key>VisitorInfo</key>
@@ -225,11 +225,11 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{890}</string>
+			<string>890</string>
 			<key>HistInfo</key>
 			<string>In April 1915, No 6 Base Supply Depot was started at Calais to help relieve the pressure on Boulogne and to provide a base nearer to the front than Le Havre or Rouen. </string>
 			<key>VisitorInfo</key>
-			<string>open at 8 h to 19 h from du 1st May to 3rd November and open 8 h to 17 h 30 from 4th November to 30 April</string>
+			<string>open at 8 h to 19 h from du 1st May to 3rd November and open 8 h to 17 h 30 from 4th November to 30 April.</string>
 		</dict>
 		<dict>
 			<key>Coordinate</key>
@@ -239,7 +239,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{820}</string>
+			<string>820</string>
 			<key>HistInfo</key>
 			<string>The cemetery was established by the Canadian Corps after the successful storming of Vimy Ridge on 9th April, 1917. </string>
 			<key>VisitorInfo</key>
@@ -253,11 +253,11 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Nord</string>
 			<key>Casualties</key>
-			<string>{249}</string>
+			<string>249</string>
 			<key>HistInfo</key>
 			<string>Douai was occupied by French troops and the Royal Naval Air Service on the 22nd September, 1914, and captured by the Germans on the 1st October; it remained in enemy hands until the 17th October, 1918.</string>
 			<key>VisitorInfo</key>
-			<string>November, December and January : from 08.00 hrs to 17.30 hrs, February, March and October : from 08.00 hrs to 18.00 hrs, April, May and September : from 07.30 hrs to 19.00 hrs and June, July and August : from 07.30 hrs to 19.30 hrs</string>
+			<string>November, December and January : from 08.00 hrs to 17.30 hrs, February, March and October : from 08.00 hrs to 18.00 hrs, April, May and September : from 07.30 hrs to 19.00 hrs and June, July and August : from 07.30 to 19.30.</string>
 		</dict>
 		<dict>
 			<key>Coordinate</key>
@@ -267,7 +267,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{3201}</string>
+			<string>3201</string>
 			<key>HistInfo</key>
 			<string>The area around Duisans was occupied by Commonwealth forces from March 1916, but it was not until February 1917 that the site of this cemetery was selected for the 8th Casualty Clearing Station. </string>
 			<key>VisitorInfo</key>
@@ -281,7 +281,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{292}</string>
+			<string>292</string>
 			<key>HistInfo</key>
 			<string>The cemetery was begun by Canadian units (mainly the 46th and 47th Battalions) immediately after the capture of the village.</string>
 			<key>VisitorInfo</key>
@@ -295,7 +295,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{1715}</string>
+			<string>1715</string>
 			<key>HistInfo</key>
 			<string>This cemetery is really the extension of the communal cemetery, were the French army had buried over 1,000 men.</string>
 			<key>VisitorInfo</key>
@@ -309,7 +309,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{10816}</string>
+			<string>10816</string>
 			<key>HistInfo</key>
 			<string>During the First World War, the area around Etaples was the scene of immense concentrations of Commonwealth reinforcement camps and hospitals.</string>
 			<key>VisitorInfo</key>
@@ -323,7 +323,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{2647}</string>
+			<string>2647</string>
 			<key>HistInfo</key>
 			<string>The French handed over Arras to Commonwealth forces in the spring of 1916 and the system of tunnels upon which the town is built were used and developed in preparation for the major offensive planned for April 1917.</string>
 			<key>VisitorInfo</key>
@@ -337,7 +337,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{109}</string>
+			<string>109</string>
 			<key>HistInfo</key>
 			<string>The cemetery, originally called CD 1, contains the graves of soldiers all of whom fell on the 9th April 1917, or on one of the four following days.</string>
 			<key>VisitorInfo</key>
@@ -351,7 +351,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{126}</string>
+			<string>126</string>
 			<key>HistInfo</key>
 			<string>Givenchy-en-Gohelle was taken by the 2nd Canadian Division on the 13th April 1917 and remained in British hands during the rest of the War.</string>
 			<key>VisitorInfo</key>
@@ -365,7 +365,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{1924}</string>
+			<string>1924</string>
 			<key>HistInfo</key>
 			<string>The village of Grevillers was occupied by Commonwealth troops on 14 March 1917 and in April and May, the 3rd, 29th and 3rd Australian Casualty Clearing Stations were posted nearby.</string>
 			<key>VisitorInfo</key>
@@ -379,7 +379,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{278}</string>
+			<string>278</string>
 			<key>HistInfo</key>
 			<string>Roclincourt was just within the British lines before the Battles of Arras 1917; and it was from the village that the 51st (Highland) and 34th divisions advanced on the 9th April 1917.</string>
 			<key>VisitorInfo</key>
@@ -393,7 +393,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Aisne</string>
 			<key>Casualties</key>
-			<string>{5}</string>
+			<string>5</string>
 			<key>HistInfo</key>
 			<string>Joncourt Communal Cemetery contains five Commonwealth burials of the First World War.</string>
 			<key>VisitorInfo</key>
@@ -407,7 +407,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{594}</string>
+			<string>594</string>
 			<key>HistInfo</key>
 			<string>Vimy Ridge was taken by the Canadian Corps in April 1917 in the Battle of Vimy Ridge, although the 25th and 47th (London) Divisions had also been involved in heavy fighting there in May 1916.</string>
 			<key>VisitorInfo</key>
@@ -421,7 +421,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{1332}</string>
+			<string>1332</string>
 			<key>HistInfo</key>
 			<string>The first burials were made in Plot I of the cemetery in September 1915, but it was most heavily used during the Battle of Arras, which began in April 1917.</string>
 			<key>VisitorInfo</key>
@@ -435,7 +435,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{598}</string>
+			<string>598</string>
 			<key>HistInfo</key>
 			<string>La Targette British Cemetery, formerly known as Aux-Rietz Military Cemetery, was begun at the end of April 1917 and used by field ambulances and fighting units until September 1918.</string>
 			<key>VisitorInfo</key>
@@ -449,7 +449,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{42}</string>
+			<string>42</string>
 			<key>HistInfo</key>
 			<string>Lichfield Crater was one of two mine craters (the other being Zivy Crater) which were used by the Canadian Corps Burial Officer in 1917 for the burial of bodies found on the Vimy battlefield.</string>
 			<key>VisitorInfo</key>
@@ -463,7 +463,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{300}</string>
+			<string>300</string>
 			<key>HistInfo</key>
 			<string>Lievin was captured by the Canadian Corps on the 14th April 1917, and remained in British hands until the end of the War.</string>
 			<key>VisitorInfo</key>
@@ -477,7 +477,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{429}</string>
+			<string>429</string>
 			<key>HistInfo</key>
 			<string>Neuville-Vitasse was attacked by the 56th (London) Division on 7 April 1917 and captured by the same Division on 9 April.</string>
 			<key>VisitorInfo</key>
@@ -491,7 +491,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{3177}</string>
+			<string>3177</string>
 			<key>HistInfo</key>
 			<string>St. Omer was the General Headquarters of the British Expeditionary Force from October 1914 to March 1916.</string>
 			<key>VisitorInfo</key>
@@ -505,7 +505,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Seine-Maritime</string>
 			<key>Casualties</key>
-			<string>{2134}</string>
+			<string>2134</string>
 			<key>HistInfo</key>
 			<string>During the First World War, Le Treport was an important hospital centre.</string>
 			<key>VisitorInfo</key>
@@ -519,7 +519,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{535}</string>
+			<string>535</string>
 			<key>HistInfo</key>
 			<string>&quot;NINE ELMS&quot; was the name given by the Army to a group of trees 460 metres East of the Arras-Lens main road, between Thelus and Roclincourt.</string>
 			<key>VisitorInfo</key>
@@ -533,7 +533,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{756}</string>
+			<string>756</string>
 			<key>HistInfo</key>
 			<string>The cemetery was begun in April 1917, on the new front resulting from the Battles of Arras, and it was used by the units holding that front until the following November.</string>
 			<key>VisitorInfo</key>
@@ -547,7 +547,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>pas de Calais</string>
 			<key>Casualties</key>
-			<string>{71}</string>
+			<string>71</string>
 			<key>HistInfo</key>
 			<string>The cemetery was made and used by units in the front line from the beginning of May to October 1917.</string>
 			<key>VisitorInfo</key>
@@ -561,7 +561,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{137}</string>
+			<string>137</string>
 			<key>HistInfo</key>
 			<string>Estree-Cauchy is a village 16 kilometres north-west of Arras on the main road from Arras to Boulogne.</string>
 			<key>VisitorInfo</key>
@@ -575,7 +575,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{884}</string>
+			<string>884</string>
 			<key>HistInfo</key>
 			<string>The French troops who held this front before March 1916 made a military cemetery (now removed), on the south-west side of which the present Commonwealth cemetery was made.</string>
 			<key>VisitorInfo</key>
@@ -589,7 +589,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>pas de Calais</string>
 			<key>Casualties</key>
-			<string>{881}</string>
+			<string>881</string>
 			<key>HistInfo</key>
 			<string>British soldiers began burying their fallen comrades at Rue Pétillon in December 1914 and the cemetery was used by fighting units until it fell into German hands during the Spring Offensive of 1918.</string>
 			<key>VisitorInfo</key>
@@ -603,7 +603,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{225}</string>
+			<string>225</string>
 			<key>HistInfo</key>
 			<string>St. Pol-sur-Ternoise was an administrative centre during the whole of the war, taken over by British troops from the French in March 1916.</string>
 			<key>VisitorInfo</key>
@@ -617,7 +617,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{380}</string>
+			<string>380</string>
 			<key>HistInfo</key>
 			<string>From January 1915 to October 1917, British and Indian Casualty Clearing Stations were posted at St. Venant.</string>
 			<key>VisitorInfo</key>
@@ -631,7 +631,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{334}</string>
+			<string>334</string>
 			<key>HistInfo</key>
 			<string>From March 1916 to the Armistice, Ste. Catherine was occupied by Commonwealth forces and for much of that time it was within the range of German artillery fire.</string>
 			<key>VisitorInfo</key>
@@ -645,7 +645,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Seine-Maritime</string>
 			<key>Casualties</key>
-			<string>{1987}</string>
+			<string>1987</string>
 			<key>HistInfo</key>
 			<string>During the First World War, Le Havre was one of the ports at which the British Expeditionary Force disembarked in August 1914.</string>
 			<key>VisitorInfo</key>
@@ -659,7 +659,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{194}</string>
+			<string>194</string>
 			<key>HistInfo</key>
 			<string>Guemappe was captured by Commonwealth troops on 23 and 24 April 1917, twelve days after Wancourt.</string>
 			<key>VisitorInfo</key>
@@ -673,7 +673,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{3677}</string>
+			<string>3677</string>
 			<key>HistInfo</key>
 			<string>The first rest camps for Commonwealth forces were established near Terlincthun in August 1914 and during the whole of the First World War, Boulogne and Wimereux housed numerous hospitals and other medical establishments.</string>
 			<key>VisitorInfo</key>
@@ -687,7 +687,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{262}</string>
+			<string>262</string>
 			<key>HistInfo</key>
 			<string>The village, which stands on the Vimy Ridge, was captured by the Canadian Corps on the 9th April 1917, and it remained in British hands until the end of the War.</string>
 			<key>VisitorInfo</key>
@@ -701,7 +701,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{1031}</string>
+			<string>1031</string>
 			<key>HistInfo</key>
 			<string>Tilloy-Les-Mofflaines was taken by Commonwealth troops on 9 April 1917, but it was partly in German hands again from March to August 1918.</string>
 			<key>VisitorInfo</key>
@@ -715,7 +715,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{1194}</string>
+			<string>1194</string>
 			<key>HistInfo</key>
 			<string>This cemetery was begun by the French but was used by Commonwealth divisions and field ambulances from the time they took over this part of the front in July 1916 until September 1918.</string>
 			<key>VisitorInfo</key>
@@ -729,7 +729,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{34}</string>
+			<string>34</string>
 			<key>HistInfo</key>
 			<string>The cemetery was used by fighting units on both sides during the War, and over 60 German graves have been removed to another cemetery.</string>
 			<key>VisitorInfo</key>
@@ -743,7 +743,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{884}</string>
+			<string>884</string>
 			<key>HistInfo</key>
 			<string>Vis-En-Artois and Haucourt were taken by the Canadian Corps on 27 August 1918.</string>
 			<key>VisitorInfo</key>
@@ -757,7 +757,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{1258}</string>
+			<string>1258</string>
 			<key>HistInfo</key>
 			<string>The site of the cemetery was chosen in May 1916.</string>
 			<key>VisitorInfo</key>
@@ -771,7 +771,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{2835}</string>
+			<string>2835</string>
 			<key>HistInfo</key>
 			<string>Wimereux was the headquarters of the Queen Mary&apos;s Army Auxilliary Corps during the First World War and in 1919 it became the General Headquarters of the British Army.</string>
 			<key>VisitorInfo</key>
@@ -785,7 +785,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{48}</string>
+			<string>48</string>
 			<key>HistInfo</key>
 			<string>Zivy Crater was one of two mine craters (the other being Lichfield Crater) which were used by the Canadian Corps Burial Officer in 1917 for the burial of bodies found on the Vimy battlefield.</string>
 			<key>VisitorInfo</key>
@@ -799,7 +799,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{367}</string>
+			<string>367</string>
 			<key>HistInfo</key>
 			<string>On 23 April 1917, in the Second Battle of the Scarpe, Infantry Hill (east of Monchy) and Guemappe (due south of Monchy) were captured by Commonwealth troops.</string>
 			<key>VisitorInfo</key>
@@ -813,7 +813,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{178}</string>
+			<string>178</string>
 			<key>HistInfo</key>
 			<string>The cemetery takes its name from French Regiments which fought in the vicinity of Souchez 1914-15.</string>
 			<key>VisitorInfo</key>
@@ -827,7 +827,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Pas de Calais</string>
 			<key>Casualties</key>
-			<string>{312}</string>
+			<string>312</string>
 			<key>HistInfo</key>
 			<string>Sailly Church was burnt during the open fighting of October 1914, when French cavalry and British and German infantry fought on the Lys, but from the winter of 1914-1915 to the spring of 1918 the village was comparatively untouched.</string>
 			<key>VisitorInfo</key>
@@ -841,7 +841,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>pas de calais</string>
 			<key>Casualties</key>
-			<string>{48}</string>
+			<string>48</string>
 			<key>HistInfo</key>
 			<string>Sailly Church was burnt during the open fighting of October 1914, when French cavalry and British and German infantry fought on the Lys, but from the winter of 1914-1915 to the spring of 1918 the village was comparatively untouched.</string>
 			<key>VisitorInfo</key>
@@ -855,7 +855,7 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Region</key>
 			<string>Nord</string>
 			<key>Casualties</key>
-			<string>{551}</string>
+			<string>551</string>
 			<key>HistInfo</key>
 			<string>The village of Erquinghem-Lys was occupied by German forces early in October 1914, and taken by the 1st Somerset Light Infantry on 16 October.</string>
 			<key>VisitorInfo</key>
@@ -865,11 +865,11 @@ Opening hours from 1st October to 31st March / Monday to Sunday : 8.30 to 17.00<
 			<key>Coordinate</key>
 			<string>{50.673347, 2.910461}</string>
 			<key>Title</key>
-			<string>La Chapelle D'Armentieres Communal Cemetery</string>
+			<string>La Chapelle D&apos;Armentieres Communal Cemetery</string>
 			<key>Region</key>
 			<string>Nord</string>
 			<key>Casualties</key>
-			<string>{61}</string>
+			<string>61</string>
 			<key>HistInfo</key>
 			<string>La Chapelle-d&apos;Armentieres village was in British hands from October 1914 until the fall of Armentieres on the 10th April 1918, and it was retaken in the following October.</string>
 			<key>VisitorInfo</key>

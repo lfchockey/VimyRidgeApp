@@ -13,15 +13,17 @@ import MapKit
 class WesternFrontVC: UIViewController, MKMapViewDelegate
 {
     
-    @IBOutlet weak var MapView: MKMapView!
-    
-    
+    @IBOutlet weak var DescriptionLabel: UILabel!
+    @IBOutlet weak var TitleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-   
+        //TitleLabel.text = "hi""
+        let Title = TitleLabel
+        Title?.text = ""
+        let Description = DescriptionLabel
+        Description?.text = ""
     }
-    
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         if overlay is MKPolyline {
