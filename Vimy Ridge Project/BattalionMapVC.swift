@@ -13,7 +13,7 @@ class BattalionMapVC: UIViewController, MKMapViewDelegate
 {
     var mapView: MKMapView = MKMapView()
     
-    
+    @IBOutlet weak var batTitle: UILabel!
     
 //    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer
 //    {

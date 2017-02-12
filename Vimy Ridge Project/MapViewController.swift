@@ -40,6 +40,7 @@ class MapViewController: UIViewController, MKMapViewDelegate
     let attr2 = NSDictionary(object: UIFont(name: "Times New Roman", size: 15.0)!, forKey: NSFontAttributeName as NSCopying)
     
     var menuVC: MenuVC = MenuVC()
+    var menuOpen = false
     
     // User Swipes left
     @IBAction func closeMenu(_ sender: UISwipeGestureRecognizer) {
@@ -99,13 +100,88 @@ class MapViewController: UIViewController, MKMapViewDelegate
             self.menu.transform = CGAffineTransform( translationX: 0, y: 0)
         }
         UIView.animate(withDuration: 0.3, delay:0.3, options:UIViewAnimationOptions.transitionFlipFromTop,animations: {self.menu.alpha = 0}, completion: { finished in self.menu.isHidden = true})
-        
-        
+        menuOpen = false
     }
     
+    @IBAction func tapCloseMenu(_ sender: UITapGestureRecognizer) {
+        if menuOpen
+        {
+            var zoomRegion: CLLocationDistance = 10000
+            var centerCoordinate = CLLocation(latitude: 50.3603125, longitude: 2.794017)
+            leftButton.isHidden = true
+            rightButton.isHidden = true
+            slider.isHidden = true
+            nameLabel.isHidden = true
+            
+            if MapVariables.mapSection == 1{
+                // Battalions
+                zoomRegion = 10000
+                loadBattalionView()
+            }
+            else if MapVariables.mapSection == 2{
+                // Western Front
+                indexCounter = 0
+                zoomRegion = 550000
+                let dummyButton = UIButton(type: UIButtonType.custom)
+                LeftPreviousClick(dummyButton)
+                nameLabel.isHidden = false
+                leftButton.isHidden = false
+                rightButton.isHidden = false
+            }
+            else if MapVariables.mapSection == 3{
+                
+                // Cemeteries
+                
+                let allAnnotations = mapq.annotations
+                mapq.removeAnnotations(allAnnotations)
+                zoomRegion = 15000
+                centerCoordinate = CLLocation(latitude: 50.378802, longitude: 2.772395)
+                addCemeteryPins()
+                
+            }
+            else if MapVariables.mapSection == 4{
+                // Battalion Progression
+                zoomRegion = 10000
+                let dummySlider = UISlider()
+                sliderValueDidChange(dummySlider)
+                slider.isHidden = false
+            }
+            else {
+                // Battalions
+                zoomRegion = 10000
+                loadBattalionView()
+            }
+            
+            centerMap(zoomRegion: zoomRegion, centerCoordinate: centerCoordinate)
+            //NSLog(String(self.menu.frame.size.width)+"1")
+            //NSLog(String(self.ribbon.frame.size.width))
+            UIView.animate(withDuration: 0.5){
+                // self.view.layoutIfNeeded()
+                self.menuImage.transform = CGAffineTransform(translationX: 0, y: 0)
+                self.menu.transform = CGAffineTransform( translationX: 0, y: 0)
+            }
+            UIView.animate(withDuration: 0.3, delay:0.3, options:UIViewAnimationOptions.transitionFlipFromTop,animations: {self.menu.alpha = 0}, completion: { finished in self.menu.isHidden = true})
+            menuOpen = false
+        }
+        else
+        {
+            UIView.animate(withDuration: 0, animations: {self.menuVC.view.alpha = 1})
+            
+            menu.isHidden = false
+            self.menu.alpha = 1
+            UIView.animate(withDuration: 0.3){
+                self.view.layoutIfNeeded()
+                self.menuImage.transform = CGAffineTransform(translationX: self.menu.frame.size.width, y: 0)
+                self.menu.transform = CGAffineTransform(translationX: self.menu.frame.size.width, y: 0)
+            }
+            menuOpen = true
+        }
+    }
     
     // User Swipes right
     @IBAction func openMenu(_ sender: UISwipeGestureRecognizer) {
+        
+        UIView.animate(withDuration: 0, animations: {self.menuVC.view.alpha = 1})
         
         menu.isHidden = false
         self.menu.alpha = 1
@@ -114,6 +190,7 @@ class MapViewController: UIViewController, MKMapViewDelegate
             self.menuImage.transform = CGAffineTransform(translationX: self.menu.frame.size.width, y: 0)
             self.menu.transform = CGAffineTransform(translationX: self.menu.frame.size.width, y: 0)
         }
+        menuOpen = true
     }
     
     
@@ -129,10 +206,7 @@ class MapViewController: UIViewController, MKMapViewDelegate
     
     func addCemeteryPins(){
         mapView.addAnnotations(coords.allCemeteries!)
-        //        for cem in coords.allCemeteries!
-        //        {
-        //            mapView.addAnnotation(cem)
-        //        }
+
     }
     
     //************************************************************ Battalions Code ********//
@@ -158,56 +232,53 @@ class MapViewController: UIViewController, MKMapViewDelegate
         mapView.addAnnotations([RCDAnno, BCDAnno, TCDAnno, GCDAnno])
         
         //CANADIAN LIGHT HORSE BATTALION
-        let CLHBtln = MKPointAnnotation()
-        CLHBtln.coordinate = CLLocationCoordinate2D(latitude: 50.35618098, longitude: 2.828108226)
-        CLHBtln.title = "Canadian Light Horse"
-        CLHBtln.subtitle = "ADD LINK TO BATTALION WEBSITE HERE"
+        let CLHBtln = CustomAnnotation(title: "Canadian Light Horse", coordinate: CLLocationCoordinate2D(latitude: 50.35618098, longitude: 2.828108226), info: "", imageName: "redpin", battalionID: 200)
         
         mapView.addAnnotation(CLHBtln)
         
         //THESE ARE THE BATTALIONS FOR THE FIRST CANADIAN BATTALION
         //THEY ARE REPRESENTED IN THE RED COLORED PINS
-        let firstBtln = CustomAnnotation(title: "First Infantry Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.34348275, longitude: 2.795996613), info: "", imageName: "redpin", battalionID: 2)
+        let firstBtln = CustomAnnotation(title: "First Infantry Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.34348275, longitude: 2.795996613), info: "", imageName: "redpin", battalionID: 2)
         
-        let thirdBtln = CustomAnnotation(title: "Third Infantry Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.34784179 , longitude: 2.802417669), info: "", imageName: "redpin", battalionID: 4)
+        let thirdBtln = CustomAnnotation(title: "Third Infantry Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.34784179 , longitude: 2.802417669), info: "", imageName: "redpin", battalionID: 4)
         
-        let fourthBtln = CustomAnnotation(title: "Fourth Infantry Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.35104023, longitude: 2.801177693), info: "", imageName: "redpin", battalionID: 5)
+        let fourthBtln = CustomAnnotation(title: "Fourth Infantry Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.35104023, longitude: 2.801177693), info: "", imageName: "redpin", battalionID: 5)
         
-        let fifthBtln = CustomAnnotation(title: "Fifth Infantry Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.3394157, longitude: 2.778975022), info: "", imageName: "redpin", battalionID: 6)
+        let fifthBtln = CustomAnnotation(title: "Fifth Infantry Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.3394157, longitude: 2.778975022), info: "", imageName: "redpin", battalionID: 6)
         
-        let seventhBtln = CustomAnnotation(title: "Seventh Infantry Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.3409035, longitude: 2.776169928), info: "", imageName: "redpin", battalionID: 8)
+        let seventhBtln = CustomAnnotation(title: "Seventh Infantry Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.3409035, longitude: 2.776169928), info: "", imageName: "redpin", battalionID: 8)
         
-        let tenthBtln = CustomAnnotation(title: "Tenth Infantry Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.34316676 , longitude: 2.776272507), info: "", imageName: "redpin", battalionID: 11)
+        let tenthBtln = CustomAnnotation(title: "Tenth Infantry Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.34316676 , longitude: 2.776272507), info: "", imageName: "redpin", battalionID: 11)
         
-        let fifteenthBtln = CustomAnnotation(title: "Fifteenth Infantry battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.34671669, longitude: 2.7782153), info: "", imageName: "redpin", battalionID: 16)
+        let fifteenthBtln = CustomAnnotation(title: "Fifteenth Infantry battalion", coordinate: CLLocationCoordinate2D(latitude: 50.34671669, longitude: 2.7782153), info: "", imageName: "redpin", battalionID: 16)
         
-        let sixteenthBtln = CustomAnnotation(title: "Sixteenth Infantry Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.35080195, longitude: 2.777740588), info: "", imageName: "redpin", battalionID: 17)
+        let sixteenthBtln = CustomAnnotation(title: "Sixteenth Infantry Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.35080195, longitude: 2.777740588), info: "", imageName: "redpin", battalionID: 17)
         
-        let fourteenthBtln = CustomAnnotation(title: "Fourteenth Infantry Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.34923897, longitude: 2.777667547), info: "", imageName: "redpin", battalionID: 15)
+        let fourteenthBtln = CustomAnnotation(title: "Fourteenth Infantry Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.34923897, longitude: 2.777667547), info: "", imageName: "redpin", battalionID: 15)
         
         mapView.addAnnotations([firstBtln, thirdBtln, fourthBtln, fifthBtln, seventhBtln, tenthBtln, fifteenthBtln, sixteenthBtln, fourteenthBtln])
         
         //THESE ARE THE BATTALIONS FOR THE SECOND CANADIAN DIVISION
         //THEY WILL BE REPRESENTED BY THE BLUE COLORED PINS
-        let eighteenthBtln = CustomAnnotation(title: "Eighteenth Infantry Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.35473195, longitude: 2.779731165), info: "", imageName: "bluepin", battalionID: 19)
+        let eighteenthBtln = CustomAnnotation(title: "Eighteenth Infantry Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.35473195, longitude: 2.779731165), info: "", imageName: "bluepin", battalionID: 19)
         
-        let nineteenthBtln = CustomAnnotation(title: "Ninteenth Infantry Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.35682645, longitude: 2.779599529), info: "", imageName: "bluepin", battalionID: 20)
+        let nineteenthBtln = CustomAnnotation(title: "Ninteenth Infantry Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.35682645, longitude: 2.779599529), info: "", imageName: "bluepin", battalionID: 20)
         
-        let twentyFirstBtln = CustomAnnotation(title: "Twenty First Infantry Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.35690015, longitude: 2.788733997), info: "", imageName: "bluepin", battalionID: 22)
+        let twentyFirstBtln = CustomAnnotation(title: "Twenty First Infantry Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.35690015, longitude: 2.788733997), info: "", imageName: "bluepin", battalionID: 22)
         
-        let twentyFourthBtln = CustomAnnotation(title: "Twenty Fourth Infantry Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude:  50.36014951, longitude: 2.777689765), info: "", imageName: "bluepin", battalionID: 25)
+        let twentyFourthBtln = CustomAnnotation(title: "Twenty Fourth Infantry Battalion", coordinate: CLLocationCoordinate2D(latitude:  50.36014951, longitude: 2.777689765), info: "", imageName: "bluepin", battalionID: 25)
         
-        let twentyFifthBtln = CustomAnnotation(title: "Twenty Fifth Infantry Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.36226467, longitude: 2.788116412), info: "", imageName: "bluepin", battalionID: 26)
+        let twentyFifthBtln = CustomAnnotation(title: "Twenty Fifth Infantry Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.36226467, longitude: 2.788116412), info: "", imageName: "bluepin", battalionID: 26)
         
-        let twentySixthBtln = CustomAnnotation(title: "Twenty Sixth Infantry Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.3621372, longitude: 2.776310446), info: "", imageName: "bluepin", battalionID: 27)
+        let twentySixthBtln = CustomAnnotation(title: "Twenty Sixth Infantry Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.3621372, longitude: 2.776310446), info: "", imageName: "bluepin", battalionID: 27)
         
-        let twentySeventhBtln = CustomAnnotation(title: "Twenty Seventh Infantry Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.35565268, longitude: 2.812303409), info: "", imageName: "bluepin", battalionID: 28)
+        let twentySeventhBtln = CustomAnnotation(title: "Twenty Seventh Infantry Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.35565268, longitude: 2.812303409), info: "", imageName: "bluepin", battalionID: 28)
         
-        let twentyEighthBtln = CustomAnnotation(title: "Twenty Eighth Infantry Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.3571143, longitude: 2.79977458), info: "", imageName: "bluepin", battalionID: 29)
+        let twentyEighthBtln = CustomAnnotation(title: "Twenty Eighth Infantry Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.3571143, longitude: 2.79977458), info: "", imageName: "bluepin", battalionID: 29)
         
-        let twentyNinthBtln = CustomAnnotation(title: "Twenty Ninth Infantry Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.35870853, longitude: 2.799682779), info: "", imageName: "bluepin", battalionID: 30)
+        let twentyNinthBtln = CustomAnnotation(title: "Twenty Ninth Infantry Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.35870853, longitude: 2.799682779), info: "", imageName: "bluepin", battalionID: 30)
         
-        let thirtyFirstBtln = CustomAnnotation(title: "Thirty First Infantry Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.35499403, longitude: 2.800049098), info: "", imageName: "bluepin", battalionID: 32)
+        let thirtyFirstBtln = CustomAnnotation(title: "Thirty First Infantry Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.35499403, longitude: 2.800049098), info: "", imageName: "bluepin", battalionID: 32)
         
         //IF NEEDED ADD KOSB AND RWK, as they are apart of Vimy but British Battalions
         
@@ -216,42 +287,42 @@ class MapViewController: UIViewController, MKMapViewDelegate
         
         //THESE ARE THE BATTALIONS FOR THE THIRD CANADIAN DIVISION
         //THEY WILL BE REPRESENTED BY TEAL COLORED PINS
-        let firstCMRBtln = CustomAnnotation(title: "First Canadian Mounted Rifles", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.36463325, longitude: 2.775284673), info: "", imageName: "greypin", battalionID: 200)
+        let firstCMRBtln = CustomAnnotation(title: "First Canadian Mounted Rifles", coordinate: CLLocationCoordinate2D(latitude: 50.36463325, longitude: 2.775284673), info: "", imageName: "greypin", battalionID: 200)
         
-        let secondCMRBtln = CustomAnnotation(title: "Second Canadian Mounted Rifles", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.36588241, longitude: 2.774601799), info: "", imageName: "greypin", battalionID: 200)
+        let secondCMRBtln = CustomAnnotation(title: "Second Canadian Mounted Rifles", coordinate: CLLocationCoordinate2D(latitude: 50.36588241, longitude: 2.774601799), info: "", imageName: "greypin", battalionID: 200)
         
-        let fourthCMRBtln = CustomAnnotation(title: "Fourth Canadian Mounted Rifles", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.36749979, longitude: 2.774809122), info: "", imageName: "greypin", battalionID: 200)
+        let fourthCMRBtln = CustomAnnotation(title: "Fourth Canadian Mounted Rifles", coordinate: CLLocationCoordinate2D(latitude: 50.36749979, longitude: 2.774809122), info: "", imageName: "greypin", battalionID: 200)
         
-        let RCRBtln = CustomAnnotation(title: "Royal Canadian Regiment", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.36994368, longitude: 2.773580659), info: "", imageName: "greypin", battalionID: 200)
+        let RCRBtln = CustomAnnotation(title: "Royal Canadian Regiment", coordinate: CLLocationCoordinate2D(latitude: 50.36994368, longitude: 2.773580659), info: "", imageName: "greypin", battalionID: 200)
         
-        let PPCLBtln = CustomAnnotation(title: "Princess Patricia's Canadian Light Infantry", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.37109738, longitude: 2.773026878), info: "", imageName: "greypin", battalionID: 200)
+        let PPCLBtln = CustomAnnotation(title: "Princess Patricia's Canadian Light Infantry", coordinate: CLLocationCoordinate2D(latitude: 50.37109738, longitude: 2.773026878), info: "", imageName: "greypin", battalionID: 200)
         
-        let fourtySecondBtln = CustomAnnotation(title: "Fourty Second Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.37249977, longitude: 2.772518971), info: "", imageName: "greypin", battalionID: 43)
+        let fourtySecondBtln = CustomAnnotation(title: "Fourty Second Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.37249977, longitude: 2.772518971), info: "", imageName: "greypin", battalionID: 43)
         
         mapView.addAnnotations([firstCMRBtln, secondCMRBtln, fourthCMRBtln, RCRBtln, PPCLBtln, fourtySecondBtln])
         
         //THESE ARE THE BATTALIONS FOR THE FOURTH CANADIAN DIVISION
         //THEY WILL BE REPRESENTED BY GREEN PINS
-        let Bn38 = CustomAnnotation(title: "Thirty Eighth Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.381244765, longitude: 2.757600297), info: "", imageName: "greenpin", battalionID: 39)
+        let Bn38 = CustomAnnotation(title: "Thirty Eighth Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.381244765, longitude: 2.757600297), info: "", imageName: "greenpin", battalionID: 39)
         
-        let Bn44 = CustomAnnotation(title: "Fourty Fourth Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.39012826, longitude: 2.757368657), info: "", imageName: "greenpin", battalionID: 45)
+        let Bn44 = CustomAnnotation(title: "Fourty Fourth Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.39012826, longitude: 2.757368657), info: "", imageName: "greenpin", battalionID: 45)
         
-        let Bn46 = CustomAnnotation(title: "Fourty Sixth Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.39394918, longitude: 2.755998408), info: "", imageName: "greenpin", battalionID: 47)
+        let Bn46 = CustomAnnotation(title: "Fourty Sixth Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.39394918, longitude: 2.755998408), info: "", imageName: "greenpin", battalionID: 47)
         
-        let Bn50 = CustomAnnotation(title: "Fiftieth Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.3921456, longitude: 2.75685735), info: "", imageName: "greenpin", battalionID: 51)
+        let Bn50 = CustomAnnotation(title: "Fiftieth Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.3921456, longitude: 2.75685735), info: "", imageName: "greenpin", battalionID: 51)
         
-        let Bn54 = CustomAnnotation(title: "Fifty Fourth Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.37399391, longitude: 2.766712696), info: "", imageName: "greenpin", battalionID: 55)
+        let Bn54 = CustomAnnotation(title: "Fifty Fourth Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.37399391, longitude: 2.766712696), info: "", imageName: "greenpin", battalionID: 55)
         
-        let Bn72 = CustomAnnotation(title: "Seventy Second Battalion", subtitle: "ADD LIMK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.38554766, longitude: 2.757600297), info: "", imageName: "greenpin", battalionID: 73)
+        let Bn72 = CustomAnnotation(title: "Seventy Second Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.38554766, longitude: 2.757600297), info: "", imageName: "greenpin", battalionID: 73)
         
-        let Bn73 = CustomAnnotation(title: "Seventy Third Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.3882427, longitude: 2.758001418), info: "", imageName: "greenpin", battalionID: 74)
+        let Bn73 = CustomAnnotation(title: "Seventy Third Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.3882427, longitude: 2.758001418), info: "", imageName: "greenpin", battalionID: 74)
         
-        let Bn78 = CustomAnnotation(title: "Seventy Eighth Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.38443809, longitude: 2.768904849), info: "", imageName: "greenpin", battalionID: 79)
+        let Bn78 = CustomAnnotation(title: "Seventy Eighth Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.38443809, longitude: 2.768904849), info: "", imageName: "greenpin", battalionID: 79)
         
-        let Bn87 = CustomAnnotation(title: "Eighty Seventh Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.37694187, longitude: 2.763486207), info: "", imageName: "greenpin", battalionID: 88)
+        let Bn87 = CustomAnnotation(title: "Eighty Seventh Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.37694187, longitude: 2.763486207), info: "", imageName: "greenpin", battalionID: 88)
         //^My Great Great Grandfather and Great Great Uncle were part of this Battalion --- Daniel//
         
-        let Bn102 = CustomAnnotation(title: "One Hundred and Second Battalion", subtitle: "ADD LINK TO BATTALION WEBSITE HERE", coordinate: CLLocationCoordinate2D(latitude: 50.375318, longitude: 2.765923169), info: "", imageName: "greenpin", battalionID: 104)
+        let Bn102 = CustomAnnotation(title: "One Hundred and Second Battalion", coordinate: CLLocationCoordinate2D(latitude: 50.375318, longitude: 2.765923169), info: "", imageName: "greenpin", battalionID: 104)
         
         mapView.addAnnotations([Bn38, Bn44, Bn46, Bn50, Bn54, Bn72, Bn73, Bn78, Bn87, Bn102])
         mapView.showAnnotations(mapView.annotations, animated: true)
@@ -693,7 +764,7 @@ class MapViewController: UIViewController, MKMapViewDelegate
             }
             return annotationView
         }
-        else if annotation.isKind(of: CustomAnnotation.self)         // The CustomAnnotation is for the division squares ONLY
+        else if annotation.isKind(of: CustomAnnotation.self)         // The CustomAnnotation is for the battalion images
         {
             var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier1)
             
@@ -701,10 +772,17 @@ class MapViewController: UIViewController, MKMapViewDelegate
             {
                 annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier1)
                 annotationView!.canShowCallout = true
+                
+                let btn = UIButton(type: .detailDisclosure)
+                
+                annotationView!.rightCalloutAccessoryView = btn
             }
             else
             {
                 annotationView!.annotation = annotation
+                let btn = UIButton(type: .detailDisclosure)
+                
+                annotationView!.rightCalloutAccessoryView = btn
             }
             
             let ca = annotation as! CustomAnnotation
@@ -728,8 +806,16 @@ class MapViewController: UIViewController, MKMapViewDelegate
             {
                 annotationView!.centerOffset = CGPoint(x: 0, y: -35)
             }
+            if ca.battalionID == 0
+            {
+                annotationView!.image = ca.image
+                annotationView!.image = resizeImage(image: annotationView!.image!, newHeight: 50)
+            }
+            else
+            {
             annotationView!.image = ca.image
-            annotationView!.image = resizeImage(image: annotationView!.image!, newHeight: 75)
+            annotationView!.image = resizeImage(image: annotationView!.image!, newHeight: 40)
+            }
             
             
             //            let btn = UIButton(type: .DetailDisclosure)
@@ -829,15 +915,21 @@ class MapViewController: UIViewController, MKMapViewDelegate
                 self.menu.transform = CGAffineTransform(translationX: self.menu.frame.size.width, y: 0)
             }
         }
-        else if view.annotation!.isKind(of: CustomAnnotation.self)
+        else if view.annotation!.isKind(of: CustomAnnotation.self) // Battalion pop up
         {
+            openMenu(UISwipeGestureRecognizer())
             let customAnno = view.annotation as! CustomAnnotation
-            let subtitle = customAnno.subtitle
-            print(customAnno.battalionID)
+            let batVC = menuVC.childViewControllers[3] as! BattalionMapVC
             
-            let ac = UIAlertController(title: title, message: subtitle, preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            present(ac, animated: true, completion: nil)
+            let title = customAnno.title
+            
+            batVC.batTitle.text = title
+            
+//            let ac = UIAlertController(title: title, message: subtitle, preferredStyle: .alert)
+//            ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//            present(ac, animated: true, completion: nil)
+            
+            menu.isHidden = false
         }
         else
         {
@@ -915,12 +1007,141 @@ class MapViewController: UIViewController, MKMapViewDelegate
         
         //loadBattalionView()
         
+        if Reachability.isConnectedToNetwork() == true {
+            
+            let defaultSession = URLSession(configuration: URLSessionConfiguration.default)
+            var dataTask: URLSessionDataTask?
+            
+            if dataTask != nil {
+                dataTask?.cancel()
+            }
+            
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+            
+            let url = NSURL(string: "http://lest-we-forget.ca/apis/get_ww1_battalion_info.php")
+            
+            // 5
+            dataTask = defaultSession.dataTask(with: url! as URL) {
+                data, response, error in
+                
+                // 6
+                DispatchQueue.main.async{
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                }
+                // 7
+                if let error = error {
+                    print("(Battalion \(error.localizedDescription)")
+                } else if let httpResponse = response as? HTTPURLResponse {
+                    if httpResponse.statusCode == 200 {
+                        self.buildBattalions(data: data as NSData?)
+                        
+                        //var BattArray = JSON([])
+                        //BattArray = JSON(data: data!)
+                        //print(BattArray)
+                    }
+                }
+            }
+            // 8
+            dataTask?.resume()
+            
+        }
+        else {
+            
+            
+            print("(SingleBattalionVC) Internet connection FAILED")
+            
+            let alertController = UIAlertController(title: "No Internet Connection", message: "Make sure your device is connected to the internet.", preferredStyle: .alert)
+            
+            let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                //When OK is pressed, segue back to the previous ViewController (Main Screen)
+                _ = self.navigationController?.popViewController(animated: true)
+            }
+            alertController.addAction(OKAction)
+            
+            self.present(alertController, animated: true) {
+                // ...
+            }
+            
+            print("(SingleBattalionVC) Internet connection FAILED")
+            
+            let alertController2 = UIAlertController(title: "No Internet Connection", message: "Make sure your device is connected to the internet.", preferredStyle: .alert)
+            
+            let OKAction2 = UIAlertAction(title: "OK", style: .default) { (action) in
+                //When OK is pressed, segue back to the previous ViewController (Main Screen)
+                _ = self.navigationController?.popViewController(animated: true)
+            }
+            alertController2.addAction(OKAction2)
+            
+            self.present(alertController2, animated: true) {
+                // ...
+            }
+        }
         //addCemeteryPins()
         
         mapView.showAnnotations(mapView.annotations, animated: true)
         loadBattalionView()
+        
+        UIView.animate(withDuration: 0, animations: {self.menuVC.view.alpha = 0})
+
     }
     
+    override func viewWillDisappear(_ animated: Bool)
+    {
+        super.viewWillDisappear(true)
+        
+        UIView.animate(withDuration: 0, animations: {self.menuVC.view.alpha = 0})
+    }
+    
+    
+    
+    
+    
+    
+    func buildBattalions(data: NSData?) {
+        //var soldierArray = JSON([])
+        var allBatts = JSON([])
+        //do {
+        //    if let _: NSDictionary? = try JSONSerialization.jsonObject(with: data! as Data, options:JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
+        
+        if data != nil {
+            allBatts = JSON(data: data! as Data)
+            
+            // Search through the allBatts array(read from lwf.ca database) and find the proper id
+            BattVars.battalionFound = false
+            for jsonBattalion in allBatts {
+                //print(allBatts)   //test
+                let bat = jsonBattalion.1.dictionary
+                if BattVars.battalionFound {
+                    break
+                }
+                
+                // Set all individual variables and build a singleBattalion global object
+                if BattVars.battalion_id == (bat!["battalion_id"]?.stringValue)! {
+                    let properBattalion = FullBattalionInfo()
+                    properBattalion.battalion_id = (bat!["battalion_id"]?.stringValue)!
+                    properBattalion.france_arrival = (bat!["france_arrival"]?.stringValue)!
+                    properBattalion.strength = (bat!["strength"]?.stringValue)!
+                    properBattalion.war_diary = (bat!["war_diary"]?.stringValue)!
+                    properBattalion.perpetuated_by = (bat!["perpetuated_by"]?.stringValue)!
+                    properBattalion.canadian_arrival = (bat!["canadian_arrival"]?.stringValue)!
+                    properBattalion.location = (bat!["location"]?.stringValue)!
+                    properBattalion.embarkation = (bat!["embarkation"]?.stringValue)!
+                    properBattalion.interesting_facts = (bat!["interesting_facts"]?.stringValue)!
+                    properBattalion.date_created = (bat!["date_created"]?.stringValue)!
+                    properBattalion.disembarkation = (bat!["disembarkation"]?.stringValue)!
+                    properBattalion.battalion_name = (bat!["battalion_name"]?.stringValue)!
+                    properBattalion.commanded_by = (bat!["commanded_by"]?.stringValue)!
+                    properBattalion.reinforced_by = (bat!["reinforced_by"]?.stringValue)!
+                    
+                    BattVars.singleBattalion = properBattalion
+                    BattVars.battalionFound = true
+                    break
+                    print(properBattalion)
+                }
+            }
+        }
+    }
+        
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         

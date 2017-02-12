@@ -18,7 +18,6 @@ struct MapVariables {
     static var mapSection: Int = 1
     static var cemeteryTitle: String = ""
     //static var easterFrontID: Int
-
 }
 
 class MenuVC: UIViewController {
@@ -27,7 +26,6 @@ class MenuVC: UIViewController {
     @IBOutlet weak var westernFrontView: UIView!
     @IBOutlet weak var cemeteryView: UIView!
     @IBOutlet weak var progressionView: UIView!
-    
     
     @IBOutlet weak var maptype: UISegmentedControl!
     
@@ -56,7 +54,7 @@ class MenuVC: UIViewController {
                 self.cemeteryView.alpha = 0;
                 self.progressionView.alpha = 0;
             })
-
+            
         }else if sender.selectedSegmentIndex == 2{
             UIView.animate(withDuration: 0.5, animations: {
                 MapVariables.mapSection = 3
@@ -75,7 +73,16 @@ class MenuVC: UIViewController {
             })
         }
         
-        moveViews(sender: sender.selectedSegmentIndex)
+        removeAnnotationsAndOverlays()
+        
+        if let parentVC = self.parent {
+            if let parentVC = parentVC as? MapViewController {
+                parentVC.closeMenu(UISwipeGestureRecognizer())
+                // parentVC is someViewController
+            }
+        }
+        
+        //menuVC.childViewControllers[0].description
     }
     
     // This changes the display type of the map
@@ -93,48 +100,8 @@ class MenuVC: UIViewController {
         }
     }
     
-    
-    func moveViews(sender:Int) {
-        
-        removeAnnotationsAndOverlays() 
-        // This function handles which button on the Segmented Control was clicked
-        // Two things should be done for each 
-        //      1. re-centre the map
-        //      2. load the appropriate information
-        
-        
-        // Each View Controller gets passed the 'mapView' as a parameter so that it can load the proper map into the mapView
-        if sender == 0 {
-            
-//            // Battalions Map was selected
-//            let battalionsMapVC = BattalionMapVC()
-//            battalionsMapVC.loadBattalionView(mapq)
-//            battalionsMapVC.centerMapOnLocation()
-        }
-        else if sender == 1 {
-//            // Cemeteries/Memorials Map was selected
-//            let cemeteriesMapVC = CemeteriesMapVC()
-//            cemeteriesMapVC.loadCemeteriesView(mapq)
-        }
-        else if sender == 2 {
-//            // Trenchline Progression Map was selected
-//            let advMapVC = AdvMapViewController()
-//            advMapVC.loadAdvMapVC(mapq)
-        }
-        else if sender == 3 {
-//            // Western Front Map was selected
-//            let westernFrontVC = WesternFrontVC()
-//            westernFrontVC.loadWesternFrontVC(mapq)
-       }
-       else {
-//            // Default to Battalions Map
-//            let battalionsMapVC = BattalionMapVC()
-//            battalionsMapVC.loadBattalionView(mapq)
-//            battalionsMapVC.centerMapOnLocation()
-       }
-        //mapView.showAnnotations(mapView.annotations, animated: true)
-    }
 
+    
     // Function to remove all items from the map
     func removeAnnotationsAndOverlays()
     {

@@ -600,8 +600,8 @@ class VimyVirtualMemorialVC: UIViewController {
         
         //this is just making sure the user swipes
         
-        if let swipeGesture = gesture as? UISwipeGestureRecognizer
-        {
+        let swipeGesture = gesture //as? UISwipeGestureRecognizer
+        //{
             
             //dependent on the direction of the swipe the soldiers names will change
             
@@ -1276,7 +1276,7 @@ class VimyVirtualMemorialVC: UIViewController {
                 
             }
             
-        } //if buttton is clicked it finds the soldier ID of the soldier's name that was presses and then changes the facebookSoldierID to the ID while moving to the facebook view controler witch will then show the soldiers info
+        //} //if buttton is clicked it finds the soldier ID of the soldier's name that was presses and then changes the facebookSoldierID to the ID while moving to the facebook view controler witch will then show the soldiers info
         
         // the if statment just says if there is no string value of the button if it is clicked do not move view controlers. if the if statment was not there end the empty button was pressed it would crash the program
         

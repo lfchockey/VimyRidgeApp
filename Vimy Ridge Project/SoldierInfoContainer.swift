@@ -23,7 +23,7 @@ class SoldierInfoContainer: UITableViewController {
 
         
         var battalionMatchArray = [String]()
-        var battalion_name: String = BattVars.singleBattalion.battalion_name
+        let battalion_name: String = BattVars.singleBattalion.battalion_name
         //battalion_name = "87th"
         print(battalion_name)
         

@@ -165,15 +165,15 @@ extension BattalionCollapsibleTableVC {
         if searchController.isActive && searchController.searchBar.text != "" && battalions.count != 0 {
             //battalion = filteredSections[indexPath.section].items[indexPath.row]//battalions[indexPath.row]
            // BattVars.battalion_id = String(battalion.id)
-            //var battalionName: String
+            var battalionName: String
             for (key, value) in filteredSections[indexPath.section].items[indexPath.row] {
-                //battalionName = value
+                battalionName = value
                 BattVars.battalion_id = key
             }
         } else {
-            //var battalionName: String
+            var battalionName: String
             for (key, value) in sections[indexPath.section].items[indexPath.row] {
-                //battalionName = value
+                battalionName = value
                 BattVars.battalion_id = key
             }
         }
@@ -202,16 +202,20 @@ extension BattalionCollapsibleTableVC {
         //print("Is Active: \(searchController.isActive) - Text: \(searchController.searchBar.text)")
         //let sec: Section
         //print(sections[indexPath.section].items[indexPath.row])
+        var battalionName: String
+        var battalionId: String
         if searchController.isActive && searchController.searchBar.text != "" {
-            var battalionName: String
+            
             for (key, value) in filteredSections[indexPath.section].items[indexPath.row] {
+                battalionId = key
                 battalionName = value
                 cell.textLabel?.text = battalionName//filteredSections[indexPath.section].items[indexPath.row]
             }
             //cell.textLabel?.text = filteredSections[indexPath.section].items[indexPath.row]
         } else {
-            var battalionName: String
+            
             for (key, value) in sections[indexPath.section].items[indexPath.row] {
+                battalionId = key
                 battalionName = value
                 cell.textLabel?.text = battalionName//filteredSections[indexPath.section].items[indexPath.row]
             }
