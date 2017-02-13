@@ -14,6 +14,7 @@ class FaceBookViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var headstoneImage: UIImageView!
     
+    @IBOutlet weak var facebookSegControl: UISegmentedControl!
     @IBAction func SwapViews(_ sender: AnyObject) {
         moveViews(sender: sender.selectedSegmentIndex)
     }
@@ -60,7 +61,7 @@ class FaceBookViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("(FBVC) Current soldier's ID is: \(MyVariables.facebookSoldierID)")
+
         grabDataOnSoldier()
         
         if !MyVariables.allSoldiersDownloaded {
@@ -81,6 +82,9 @@ class FaceBookViewController: UIViewController {
 
         
         if MyVariables.facebookSoldierID != "" {
+            let subViewOfSegment: UIView = facebookSegControl.subviews[0] as UIView
+            subViewOfSegment.tintColor = UIColor.red
+            
             MyVariables().setGlobalSoldier(id: MyVariables.facebookSoldierID)
             moveViews(sender: 0)
             indicator.isHidden = false
@@ -91,7 +95,7 @@ class FaceBookViewController: UIViewController {
             var data: NSData?
             
             let url: NSURL = NSURL(string: "http://lest-we-forget.ca/apis/get_soldier_headstone.php?soldier_id=\(MyVariables.facebookSoldierID)&access_code=\(MyVariables.access_code)")!
-            //let url = NSURL(string:"http://cdn.businessoffashion.com/site/uploads/2014/09/Karl-Lagerfeld-Self-Portrait-Courtesy.jpg")
+
             data = NSData(contentsOf:url as URL)
             if data != nil {
                 // resize image to correct proportions

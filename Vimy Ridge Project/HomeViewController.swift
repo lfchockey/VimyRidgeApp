@@ -36,6 +36,7 @@ class HomeViewController: UIViewController {
     var timer = Timer()
     var segueName: String = ""
 
+    @IBOutlet weak var soldierOfHourButton: UIButton!
     @IBOutlet weak var SearchOutlet: UIButton!
     @IBOutlet weak var loadingImageView: UIImageView!
     
@@ -56,6 +57,11 @@ class HomeViewController: UIViewController {
 //            self.performSegue(withIdentifier: self.segueName, sender: nil)
 //        }
 //    }
+    
+    @IBAction func About_Click(_ sender: Any) {
+        segueName = "AboutSegue"
+        self.performSegue(withIdentifier: self.segueName, sender: nil)
+    }
     
     @IBAction func soldierOfHourClick(_ sender: AnyObject) {
         MyVariables.facebookSoldierID = MyVariables.soldierOfTheHour
@@ -87,20 +93,14 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func WeaponsClick(_ sender: AnyObject) {
-        //segueName = "WeaponsSegue"
-        //self.performSegue(withIdentifier: self.segueName, sender: nil)
-        //self.view.window!.rootViewController = exampleViewController
+
         self.navigationController?.pushViewController(WeaponSelectVC(), animated: true)
-        //popToViewController(WeaponSelectVC(), animated: true)
-        
-        //let navController = UINavigationController(rootViewController: WeaponSelectVC())
-        //self.present(navController, animated: true, completion: nil)
+
     }
     
     @IBAction func BattalionsClick(_ sender: AnyObject) {
         self.navigationController?.pushViewController(BattalionCollapsibleTableVC(), animated: true)
-        //segueName = "BattalionSegue"
-        //self.performSegue(withIdentifier: self.segueName, sender: nil)
+
     }
     
     @IBAction func HistoryClick(_ sender: AnyObject) {
@@ -108,8 +108,8 @@ class HomeViewController: UIViewController {
         self.performSegue(withIdentifier: self.segueName, sender: nil)
     }
     
-    @IBAction func AboutClick(_ sender: AnyObject) {
-        segueName = "AboutSegue"
+    @IBAction func KitClick(_ sender: AnyObject) {
+        segueName = "KitSegue"
         self.performSegue(withIdentifier: self.segueName, sender: nil)
     }
     
@@ -145,6 +145,7 @@ class HomeViewController: UIViewController {
         //Change mute button color to blue to show that the music is on
         musicButton.tintColor = UIColor.blue
         toggleMute(button: musicButton)
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -164,6 +165,11 @@ class HomeViewController: UIViewController {
             loadingImageView.isHidden = true
             self.performSegue(withIdentifier: self.segueName, sender: nil)
             timer.invalidate()
+            MyVariables().setGlobalSoldier(id: MyVariables.facebookSoldierID)
+            //soldierOfHourButton.titleLabel?.text = "Soldier of the Hour: \(MyVariables.globalSoldier.christian_names) \(MyVariables.globalSoldier.surname)"
+            soldierOfHourButton.setTitle("Soldier of the Hour: \(MyVariables.globalSoldier.christian_names) \(MyVariables.globalSoldier.surname)", for: UIControlState.normal)
+            soldierOfHourButton.sizeToFit()
+            
         }
         else {
             //print("Not downloaded yet")

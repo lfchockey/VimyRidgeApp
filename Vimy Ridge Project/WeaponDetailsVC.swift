@@ -119,7 +119,7 @@ class WeaponDetailsVC: UIViewController {
             weaponBarrelLength.text = Explode(weaponString: weapon.barrelLength)
             weaponActionReload.text = Explode(weaponString: weapon.action)
             
-        case "Mills bomb":
+        case "Mills Bomb":
             
             let weapon = WeaponsInfo(weaponName: weaponName)
             let scene = SCNScene(named: "WeaponAssets.scnassets/Mills bomb (Canadian).dae")!
@@ -138,7 +138,7 @@ class WeaponDetailsVC: UIViewController {
             weaponBarrelLength.text = Explode(weaponString: weapon.barrelLength)
             weaponActionReload.text = Explode(weaponString: weapon.action)
             
-        case "Stick grenade":
+        case "Stick Grenade":
             
             let weapon = WeaponsInfo(weaponName: weaponName)
             let scene = SCNScene(named: "WeaponAssets.scnassets/WWI Potato Masher (Complete).dae")!
@@ -181,7 +181,7 @@ class WeaponDetailsVC: UIViewController {
         case "Mark V Tank":
             
             let weapon = WeaponsInfo(weaponName: weaponName)
-            let scene = SCNScene(named: "WeaponAssets.scnassets/WW1 Canadian Lewis (Complete).dae")!
+            let scene = SCNScene(named: "WeaponAssets.scnassets/WW1 Male Tank (Complete).dae")!
             weaponView.scene = scene
             
             
@@ -224,7 +224,7 @@ class WeaponDetailsVC: UIViewController {
         case "Sopwith Camel":
             
             let weapon = WeaponsInfo(weaponName: weaponName)
-            let scene = SCNScene(named: "WeaponAssets.scnassets/Sopwith Camel.dae")!
+            let scene = SCNScene(named: "WeaponAssets.scnassets/Sopwith Camel .dae")!
             weaponView.scene = scene
             
             
@@ -243,10 +243,10 @@ class WeaponDetailsVC: UIViewController {
             weaponActionReload.text = Explode(weaponString: weapon.action)
             
             
-        case "Ross Rifle MK III (Canada)":
+        case "Ross Rifle MK III":
             
             let weapon = WeaponsInfo(weaponName: weaponName)
-            let scene = SCNScene(named: "WeaponAssets.scnassets/WW1 Ross Rifle MKIII (Complete).dae")!
+            let scene = SCNScene(named: "WeaponAssets.scnassets/WW1 Ross Rifle MKIII (Complete)")!
             weaponView.scene = scene
             
             
@@ -286,6 +286,25 @@ class WeaponDetailsVC: UIViewController {
             weaponActionReload.text = Explode(weaponString: weapon.action)
             
             
+        case "6 Inch Howitzer":
+            let weapon = WeaponsInfo(weaponName: weaponName)
+            let scene = SCNScene(named: "WeaponAssets.scnassets/WWI 6 inch Artillery (Complete)")!
+            weaponView.scene = scene
+            
+            
+            CoOAnswer.text = Explode(weaponString: weapon.country)
+            YearAnswer.text = Explode(weaponString: weapon.year)
+            
+            weaponTitle.text = Explode(weaponString: weaponName)
+            weaponLength.text = Explode(weaponString: weapon.overallLength)
+            weaponWeight.text = Explode(weaponString: weapon.weight)
+            weaponCalibre.text = Explode(weaponString: weapon.calibre)
+            weaponrateofFire.text = Explode(weaponString: weapon.rateOfFire)
+            weaponSight.text = Explode(weaponString: weapon.sight)
+            weaponMagazineSize.text = Explode(weaponString: weapon.magazineSize)
+            weaponMuzzleVelocity.text = Explode(weaponString: weapon.muzzleVelocity)
+            weaponBarrelLength.text = Explode(weaponString: weapon.barrelLength)
+            weaponActionReload.text = Explode(weaponString: weapon.action)
             
             
             

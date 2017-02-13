@@ -4,20 +4,20 @@
 <dict>
 	<key>Livens Projector</key>
 	<array>
-		<string>Country of Origin:</string>
-		<string>First Year of Service:</string>
+		<string>Country of Origin: United Kingdom</string>
+		<string>First Year of Service: 1916</string>
 		<string>Overall Length:</string>
 		<string>Barrel Length:</string>
 		<string>Weight:</string>
-		<string>Calibre:</string>
+		<string>Calibre: 8 inches</string>
 		<string>Actions (reload): </string>
-		<string>Magazine Size: N/A</string>
+		<string>Magazine Size: </string>
 		<string>Muzzle Velocity: </string>
 		<string>Rate of Fire: N/A</string>
-		<string>Range: </string>
+		<string>Range: 1500 metres</string>
 		<string>Sight:</string>
 	</array>
-	<key>Mark V Tank </key>
+	<key>Mark V Tank</key>
 	<array>
 		<string>Country of Origin: United Kingdom</string>
 		<string>First Year of Service: 1916</string>
@@ -47,7 +47,7 @@
 		<string>Range: 485 km (301 miles)</string>
 		<string>Sight : N/A</string>
 	</array>
-	<key>Ross Rifle MK III (Canada)</key>
+	<key>Ross Rifle MK III</key>
 	<array>
 		<string>Country of origin: Canada</string>
 		<string>First year of service: 1905</string>
@@ -92,7 +92,7 @@
 		<string>Range: 164 ft, 55yds (50m)</string>
 		<string>Sight: iron front and rear </string>
 	</array>
-	<key>Lewis </key>
+	<key>Lewis</key>
 	<array>
 		<string>Country of origin: United States</string>
 		<string>First year of service: 1914</string>
@@ -107,7 +107,7 @@
 		<string>Range: 2,624 ft (800m)</string>
 		<string>Sight: iron blade and tangent leaf</string>
 	</array>
-	<key>Mills bomb</key>
+	<key>Mills Bomb</key>
 	<array>
 		<string>Country of origin: United Kingdom</string>
 		<string>First year of service: 1915</string>
@@ -130,6 +130,21 @@
 		<string>Weight:1.31lb (0.6kg)</string>
 		<string>Action: manually actuated, time fuse explosive; thrown</string>
 		<string>Range: 105 ft, 35 yds (32m)</string>
+		<string>N/A</string>
+		<string>N/A</string>
+		<string>N/A</string>
+		<string>N/A</string>
+		<string>N/A</string>
+		<string>N/A</string>
+	</array>
+	<key>6 Inch Howitzer</key>
+	<array>
+		<string>Country of origin: United Kingdom</string>
+		<string>First year of service: 1915</string>
+		<string>Overall length: 21 ft 7 in</string>
+		<string>Weight: 8142 lbs</string>
+		<string>Action: </string>
+		<string>Range: 8700 metres</string>
 		<string>N/A</string>
 		<string>N/A</string>
 		<string>N/A</string>

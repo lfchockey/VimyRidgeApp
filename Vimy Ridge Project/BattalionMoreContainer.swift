@@ -20,21 +20,36 @@ class BattalionMoreContainer: UIViewController {
         super.viewDidLoad()
         
 
-
-        
-        // Do any additional setup after loading the view, typically from a nib.
-        let url = NSURL (string: "http://www.bac-lac.gc.ca/eng/discover/military-heritage/first-world-war/Documents/infantry%20battalions.pdf");
-        //This section generates a website to displayed in the WebViewMore.
-        let requestObj = NSURLRequest(url: url! as URL);
-        WebViewMore.loadRequest(requestObj as URLRequest);
-        
-
-        // *** Attempting to store pdf for use later on
-//        if let pdfData = NSData(contentsOfURL: url) {
-//            let resourceDocPath = NSHomeDirectory().stringByAppendingString("/Documents/yourPDF.pdf")
-//            unlink(resourceDocPath)
-//            pdfData.writeToFile(resourceDocPath, atomically: true)
+        let resourceDocPath = NSHomeDirectory().appending("/Documents/AllBattalions.pdf")
+//        
+//        let data: NSData? = NSData(contentsOfFile: resourceDocPath)
+//        
+//        if let fileData = data {
+//            let content = NSString(data: fileData as Data, encoding:String.Encoding.utf8.rawValue) as! String
+//            
+//            print (content)
 //        }
+        
+        
+        if let pdf = Bundle.main.url(forResource: "AllBattalions", withExtension: "pdf", subdirectory: "Documents", localization: nil)  {
+            let req = NSURLRequest(url: pdf)
+            WebViewMore.loadRequest(req as URLRequest)
+        }
+        else {
+            // Download the battalions pdf
+            let url = NSURL (string: "http://www.bac-lac.gc.ca/eng/discover/military-heritage/first-world-war/Documents/infantry%20battalions.pdf");
+            //This section generates a website to displayed in the WebViewMore.
+            let requestObj = NSURLRequest(url: url! as URL);
+            WebViewMore.loadRequest(requestObj as URLRequest);
+            
+
+            // Store pdf for use later on
+            if let pdfData = NSData(contentsOf: url as! URL) {
+                //let resourceDocPath = NSHomeDirectory().appending("/Documents/AllBattalions.pdf")//.stringByAppendingString("/Documents/yourPDF.pdf")
+                unlink(resourceDocPath)
+                pdfData.write(toFile: resourceDocPath, atomically: true)
+            }
+        }
     }
     
     func webViewDidStartLoad(_ :UIWebView){

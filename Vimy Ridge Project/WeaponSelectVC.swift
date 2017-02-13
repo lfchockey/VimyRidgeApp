@@ -42,7 +42,7 @@ class WeaponSelectVC: UITableViewController {
     
     var sections = [Section]()
     var imageSections = [ImageSection]()
-    var canPics = [ #imageLiteral(resourceName: "Ross Rifle"), #imageLiteral(resourceName: "Lewis Gun"), #imageLiteral(resourceName: "Webley Revolver"),#imageLiteral(resourceName: "Mills Bomb"),#imageLiteral(resourceName: "Sopwith Camel"),#imageLiteral(resourceName: "Mark V Tank")]
+    var canPics = [ #imageLiteral(resourceName: "Ross Rifle"), #imageLiteral(resourceName: "Lewis Gun"), #imageLiteral(resourceName: "Webley Revolver"),#imageLiteral(resourceName: "Mills Bomb"),#imageLiteral(resourceName: "Sopwith Camel"),#imageLiteral(resourceName: "Mark V Tank"), #imageLiteral(resourceName: "Mark V Tank"), #imageLiteral(resourceName: "Mark V Tank")]
     var gerPics = [#imageLiteral(resourceName: "Luger"),#imageLiteral(resourceName: "Stick Grenade")]
     //Identifiers
     let textCellIdentifier = "TextCell"
@@ -57,8 +57,8 @@ class WeaponSelectVC: UITableViewController {
         
         // Initialize the sections array
         sections = [
-            Section(name: "Canadian Weapons", items: ["Ross Rifle MK III",  "Lewis",  "Webley Revolver",   "Mills bomb" , "Sopwith Camel", "Mark V Tank"]),
-            Section(name: "German Weapons", items: ["Luger", "Stick grenade"])]
+            Section(name: "Canadian Weapons", items: ["Ross Rifle MK III",  "Lewis",  "Webley Revolver",   "Mills Bomb" , "Sopwith Camel", "Mark V Tank", "Livens Projector", "6 Inch Howitzer"]),
+            Section(name: "German Weapons", items: ["Luger", "Stick Grenade"])]
        
         imageSections = [
             ImageSection(name: "Canadian Weapons", items: canPics),
@@ -101,37 +101,12 @@ extension WeaponSelectVC {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
-        //print( sections[indexPath.section].items[indexPath.row])
-        //let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        //let exampleViewController: WeaponDetailsVC = mainStoryboard.instantiateViewController(withIdentifier: "WDVC") as!WeaponDetailsVC
-        //if let exampleViewController: HistoryViewController = self.storyboard?.instantiateViewController(withIdentifier: "History") as? HistoryViewController
-        //self.navigationController?.pushViewController(WeaponDetailsVC(), animated: true)
-        //print(self.storyboard?.description)
         
-        
-        //self.navigationController?.pushViewController(WeaponDetailsVC(), animated: true)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let weaponDetailController = storyboard.instantiateViewController(withIdentifier: "WDVC") as! WeaponDetailsVC
         weaponDetailController.weaponName = sections[indexPath.section].items[indexPath.row]
         self.navigationController?.pushViewController(weaponDetailController, animated: true)
         
-        
-        //self.storyboard = storyboard
-        //self.present(controller, animated: true, completion: nil)
-        
-//        if let exampleViewController: WeaponDetailsVC = self.storyboard?.instantiateViewController(withIdentifier: "WDVC") as? WeaponDetailsVC
-//        {
-//            exampleViewController.weaponName = sections[indexPath.section].items[indexPath.row]
-//            //self.view.window!.rootViewController = exampleViewController
-//            self.navigationController?.pushViewController(exampleViewController, animated: true)
-//        }
-        
-        //            if let destination = segue.destination as? WeaponDetailsVC {
-        //                if let weaponIndex = tableView.indexPathForSelectedRow?.row {
-        //                   // destination.weaponName = CanWeapons[weaponIndex]
-        //                }
-        //            }
-
     }
     
     

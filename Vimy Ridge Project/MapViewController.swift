@@ -1136,7 +1136,6 @@ class MapViewController: UIViewController, MKMapViewDelegate
                     BattVars.singleBattalion = properBattalion
                     BattVars.battalionFound = true
                     break
-                    print(properBattalion)
                 }
             }
         }

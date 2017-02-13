@@ -168,12 +168,14 @@ extension BattalionCollapsibleTableVC {
             var battalionName: String
             for (key, value) in filteredSections[indexPath.section].items[indexPath.row] {
                 battalionName = value
+                print("Search: \(battalionName)")
                 BattVars.battalion_id = key
             }
         } else {
             var battalionName: String
             for (key, value) in sections[indexPath.section].items[indexPath.row] {
                 battalionName = value
+                print("No search: \(battalionName)")
                 BattVars.battalion_id = key
             }
         }

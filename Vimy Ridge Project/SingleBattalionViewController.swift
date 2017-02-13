@@ -14,6 +14,7 @@ struct BattVars {
     static var battalionFound = false
     static var BattalionsArrayFound = false
     static var BattsArray = [FullBattalionInfo]()
+    static var allBattalionsDownloaded = false
 }
 
 
@@ -49,71 +50,77 @@ class SingleBattalionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        BattVars.battalionFound = false
         
-        //self.segmentedControl.selectedSegmentIndex = 0 //Select the default case
-
-        if Reachability.isConnectedToNetwork() == true {
-            
-            let defaultSession = URLSession(configuration: URLSessionConfiguration.default)
-            var dataTask: URLSessionDataTask?
-            
-            if dataTask != nil {
-                dataTask?.cancel()
-            }
-            
-            UIApplication.shared.isNetworkActivityIndicatorVisible = true
-            
-            let url = NSURL(string: "http://lest-we-forget.ca/apis/get_ww1_battalion_info.php")
-            
-            // 5
-            dataTask = defaultSession.dataTask(with: url! as URL) {
-                data, response, error in
-                
-                // 6
-                DispatchQueue.main.async{
-                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                }
-                // 7
-                if let error = error {
-                    print("(Battalion \(error.localizedDescription)")
-                } else if let httpResponse = response as? HTTPURLResponse {
-                    if httpResponse.statusCode == 200 {
-                        self.buildBattalions(data: data as NSData?)
-    
-                    }
+        if BattVars.allBattalionsDownloaded {
+            //loop through each battalion until the proper one is found
+            for bat in BattVars.BattsArray {
+                if BattVars.battalion_id == bat.battalion_id {
+                    BattVars.singleBattalion = bat
+                    BattVars.battalionFound = true
+                    self.moveViews(sender: 0)
+                    break
                 }
             }
-            // 8
-            dataTask?.resume()
-            
         }
         else {
-            
-            
-            print("(SingleBattalionVC) Internet connection FAILED")
-            
-            let alertController = UIAlertController(title: "No Internet Connection", message: "Make sure your device is connected to the internet.", preferredStyle: .alert)
-            
-            let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
-                //When OK is pressed, segue back to the previous ViewController (Main Screen)
-                _ = self.navigationController?.popViewController(animated: true)
+            if Reachability.isConnectedToNetwork() == true {
+                
+                let defaultSession = URLSession(configuration: URLSessionConfiguration.default)
+                var dataTask: URLSessionDataTask?
+                
+                if dataTask != nil {
+                    dataTask?.cancel()
+                }
+                
+                UIApplication.shared.isNetworkActivityIndicatorVisible = true
+                
+                let url = NSURL(string: "http://lest-we-forget.ca/apis/get_ww1_battalion_info.php")
+                
+                // 5
+                dataTask = defaultSession.dataTask(with: url! as URL) {
+                    data, response, error in
+                    
+                    // 6
+                    DispatchQueue.main.async{
+                        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                    }
+                    // 7
+                    if let error = error {
+                        print("(Battalion \(error.localizedDescription)")
+                    } else if let httpResponse = response as? HTTPURLResponse {
+                        if httpResponse.statusCode == 200 {
+                            self.buildBattalions(data: data as NSData?)
+        
+                        }
+                    }
+                }
+                // 8
+                dataTask?.resume()
+                
             }
-            alertController.addAction(OKAction)
-            
-            self.present(alertController, animated: true) {
-                // ...
+            else {
+                
+                
+                print("(SingleBattalionVC) Internet connection FAILED")
+                
+                let alertController = UIAlertController(title: "No Internet Connection", message: "Make sure your device is connected to the internet.", preferredStyle: .alert)
+                
+                let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                    //When OK is pressed, segue back to the previous ViewController (Main Screen)
+                    _ = self.navigationController?.popViewController(animated: true)
+                }
+                alertController.addAction(OKAction)
+                
+                self.present(alertController, animated: true) {
+                    // ...
+                }
+                
             }
-            
-            
-            // Error message stating that you need an internet connection to view this section of the app
-            
-            //            let alert = UIAlertController(title: "Connection Error", message: "You need an internet connection to view this page.", preferredStyle: UIAlertControllerStyle.alert)
-            //            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            //self.present(alert, animated: true, completion: nil)
         }
         
         self.title = "\(BattVars.singleBattalion.battalion_name)"
-        
+        print(BattVars.singleBattalion.battalion_name)
     }
     
     
@@ -139,11 +146,7 @@ class SingleBattalionViewController: UIViewController {
                 let bat = jsonBattalion.1.dictionary
                 
                 // Set all individual variables and build a singleBattalion global object
-                
                 let properBattalion = FullBattalionInfo()
-                //                if BattVars.BattalionsArrayFound == true {
-                //                    BattVars.BattsArray = [properBattalion]
-                //                }
                 
                 properBattalion.battalion_id = (bat!["battalion_id"]?.stringValue)!
                 properBattalion.france_arrival = (bat!["france_arrival"]?.stringValue)!
@@ -159,26 +162,39 @@ class SingleBattalionViewController: UIViewController {
                 properBattalion.battalion_name = (bat!["battalion_name"]?.stringValue)!
                 properBattalion.commanded_by = (bat!["commanded_by"]?.stringValue)!
                 properBattalion.reinforced_by = (bat!["reinforced_by"]?.stringValue)!
-                // ***Add the proper batt to our global batt array
+                
+                // Add the proper batt to our global batt array
+                BattVars.BattsArray.append(properBattalion)
                 if BattVars.battalion_id == (bat!["battalion_id"]?.stringValue)! {
                     
                     BattVars.singleBattalion = properBattalion
                     BattVars.battalionFound = true
-                    BattVars.BattsArray.append(properBattalion)
                     BattVars.BattalionsArrayFound = true
-                    //print (properBattalion)
-                    //print (BattVars.BattsArray)
-                    //break
+
                 }
                 
             }
             
+            BattVars.allBattalionsDownloaded = true
             if !BattVars.battalionFound {
                 // *** print error message indicating that the selected battalion could not be retrieved from the database
                 //      then segue back to BattalionTableViewController
-                let alert = UIAlertController(title: "Missing Information", message: "We can't seem to find this battalion.", preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: "No soldier indicated", message: "Unfortunately the soldier's ID was not properly passed. Please try again.", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
+                
+
+                
+                let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                    // When OK is pressed, segue back to the previous ViewController (Main Screen)
+                    _ = self.navigationController?.popViewController(animated: true)
+                }
+                alert.addAction(OKAction)
+                
+                self.present(alert, animated: true) {
+                    
+                }
+
             }
             else {
                 DispatchQueue.main.async{
