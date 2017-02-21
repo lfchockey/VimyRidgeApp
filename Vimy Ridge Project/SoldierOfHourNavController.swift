@@ -14,8 +14,13 @@ class SoldierOfHourNavController: UINavigationController
     var segueName: String = "SoldierOfHourSegue"
     override func viewDidLoad()
     {
-        MyVariables.facebookSoldierID = MyVariables.soldierOfTheHour
-        self.performSegue(withIdentifier: self.segueName, sender: nil)
+        if MyVariables.allSoldiersDownloaded {
+            MyVariables.facebookSoldierID = MyVariables.soldierOfTheHour
+            self.performSegue(withIdentifier: self.segueName, sender: nil)
+        }
+        else {
+            //***need to do show the activity indicator (running soldier) 
+        }
     }
     
 }

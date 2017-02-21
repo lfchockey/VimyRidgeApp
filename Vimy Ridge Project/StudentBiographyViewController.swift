@@ -12,6 +12,7 @@ import WebKit
 class StudentBiographyViewController: UIViewController {
 
     @IBOutlet weak var containerView: UIView! //The UIView in which the webView will be loaded
+    @IBOutlet weak var loadingImageView: UIImageView!
     
     //Objects needed for the studentBio portion
     //These are created programmatically rather than within the storyboard due to formatting problems
@@ -21,6 +22,7 @@ class StudentBiographyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadAnimation()
 
         //Setup the webView so it can be loaded in the containerView object
         self.webView = WKWebView()
@@ -64,6 +66,7 @@ class StudentBiographyViewController: UIViewController {
         
         //Display the containerView containing the webView and toolbar
         self.containerView!.isHidden = false
+        containerView.bringSubview(toFront: loadingImageView)
         
         //Create the URL
         let url: NSURL = NSURL(string: "http://lest-we-forget.ca/apis/get_soldier_bio.php?soldier_id=\(MyVariables.facebookSoldierID)&access_code=\(MyVariables.access_code)")!
@@ -72,7 +75,22 @@ class StudentBiographyViewController: UIViewController {
         if let _: NSURL = self.webView?.url as NSURL? {
             //The webpage was already loaded, so it doesn't need to be loaded again.
         } else {
-            self.webView!.load(NSURLRequest(url: url as URL) as URLRequest)
+            let fileData = NSData(contentsOf: url as URL)
+            if let dataString = String(data: fileData as! Data, encoding: String.Encoding.utf8)
+            {
+                if dataString == "{\"result\":\"No Soldier Bio Found\"}" {
+                    let alert = UIAlertController(title: "Sorry!", message: "No soldier biography has been submitted for this soldier yet.", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+                else {
+                    self.webView!.load(NSURLRequest(url: url as URL) as URLRequest)
+                }
+            }
+            else {
+                self.webView!.load(NSURLRequest(url: url as URL) as URLRequest)
+            }
+            loadingImageView.stopAnimating()
         }
     }
 
@@ -122,12 +140,42 @@ class StudentBiographyViewController: UIViewController {
         //Try to create the file with the data and test to see if it exists
         fileManager.createFile(atPath: filePath, contents: fileData as Data?, attributes: nil)
         if(fileManager.fileExists(atPath: filePath)) {
-            print("Biography download succeeded! Saved to \(filePath)")
+            let alert = UIAlertController(title: "Success", message: "Biography successfully downloaded to \(filePath)", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         } else {
-            print("Biography download failed")
+            let alert = UIAlertController(title: "Oops!", message: "There was an error in downloading the biography. Please try again later.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
 
 
+    func loadAnimation() {
+        //creates and stores all the names for the images used in an array
+        var imagesNames = ["run1-1.jpg", "run2-1.jpg", "run3-1.jpg", "run4-1.jpg", "run5-1.jpg", "run6-1.jpg", "run7-1.jpg", "run8-1.jpg", "run9-1.jpg", "run10-1.jpg", "run11-1.jpg"]
+        
+        //create new uiimage array
+        var images = [UIImage]()
+        
+        //loop through all the photos in the imagesNames array and add them to the images array
+        for i in 0..<imagesNames.count{
+            images.append(UIImage(named: imagesNames[i])!)
+        }
+        
+        //tell testview what images to use for the animation
+        loadingImageView.animationImages = images
+        
+        //tell testview how long to show a single image for
+        loadingImageView.animationDuration = 0.9
+        
+        
+        //start the animation in the image view called test view
+        loadingImageView.startAnimating()
+        loadingImageView.isHidden = false
+        
+
+        
+    }
 
 }

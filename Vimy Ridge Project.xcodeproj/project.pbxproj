@@ -104,6 +104,8 @@
 		F170B8FE1D4FBA4300118440 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170B8FD1D4FBA4300118440 /* MapViewController.swift */; };
 		F183E72D1E4FC6BF00436A21 /* CoordinatePrime.plist in Resources */ = {isa = PBXBuildFile; fileRef = F183E72C1E4FC6BF00436A21 /* CoordinatePrime.plist */; };
 		F1993B151D5226E9001F40F0 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1993B141D5226E9001F40F0 /* MenuVC.swift */; };
+		F1B9CE6C1E58B325001A90B4 /* InfantryBattalions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F1B9CE6B1E58B325001A90B4 /* InfantryBattalions.pdf */; };
+		F1B9CE6F1E5BC259001A90B4 /* BattalionSearchNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B9CE6E1E5BC259001A90B4 /* BattalionSearchNavController.swift */; };
 		F1E7D6351E1419B300182A9C /* FacebookMilitaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D6331E1419B300182A9C /* FacebookMilitaryVC.swift */; };
 		F1E7D6361E1419B300182A9C /* FacebookNonMilitaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D6341E1419B300182A9C /* FacebookNonMilitaryVC.swift */; };
 		F1E7D6391E1469B500182A9C /* Roman Stonecut.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1E7D6381E1469B500182A9C /* Roman Stonecut.ttf */; };
@@ -239,6 +241,8 @@
 		F170B8FD1D4FBA4300118440 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F183E72C1E4FC6BF00436A21 /* CoordinatePrime.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CoordinatePrime.plist; sourceTree = "<group>"; };
 		F1993B141D5226E9001F40F0 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		F1B9CE6B1E58B325001A90B4 /* InfantryBattalions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = InfantryBattalions.pdf; sourceTree = "<group>"; };
+		F1B9CE6E1E5BC259001A90B4 /* BattalionSearchNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattalionSearchNavController.swift; sourceTree = "<group>"; };
 		F1E7D6331E1419B300182A9C /* FacebookMilitaryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookMilitaryVC.swift; sourceTree = "<group>"; };
 		F1E7D6341E1419B300182A9C /* FacebookNonMilitaryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookNonMilitaryVC.swift; sourceTree = "<group>"; };
 		F1E7D6381E1469B500182A9C /* Roman Stonecut.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roman Stonecut.ttf"; sourceTree = "<group>"; };
@@ -449,6 +453,7 @@
 			isa = PBXGroup;
 			children = (
 				F12C11191D6CB6E00071798C /* Single Battalion */,
+				F12C111C1D6CB7410071798C /* BattalionMore */,
 				F12C11181D6CB6CF0071798C /* Battalion Search */,
 			);
 			name = Battalions;
@@ -472,7 +477,6 @@
 				F12C11231D6CB7AB0071798C /* FullBattalionInfo.swift */,
 				F12C11241D6CB7AB0071798C /* SingleBattalionViewController.swift */,
 				F12C111A1D6CB71B0071798C /* BattalionInfo */,
-				F12C111C1D6CB7410071798C /* BattalionMore */,
 				F12C111B1D6CB7380071798C /* BattalionFacts */,
 				F1E7D63E1E15545D00182A9C /* SoldiersInfo */,
 			);
@@ -593,11 +597,11 @@
 		F16B0FE51D4FA578004F2777 /* Vimy Ridge Project */ = {
 			isa = PBXGroup;
 			children = (
-				3F2605EF1E42700E004BC9D5 /* TabBarController.swift */,
 				F16B0FE61D4FA578004F2777 /* AppDelegate.swift */,
 				F16B0FEA1D4FA578004F2777 /* Main.storyboard */,
 				F12C10DC1D562EA10071798C /* Home */,
 				F1E7D64D1E16F2AD00182A9C /* About */,
+				F1B9CE6D1E5BC214001A90B4 /* Tab Bar */,
 				3FEB443F1E0C606100620494 /* SoldierOfHour */,
 				F12C11171D6CB6C40071798C /* Battalions */,
 				F12C10F51D6290890071798C /* Facebook */,
@@ -613,6 +617,7 @@
 				F1E7D6381E1469B500182A9C /* Roman Stonecut.ttf */,
 				3FB55EED1DCFB0FE00652653 /* Chapter 11 W00 Regular.ttf */,
 				F12C10EA1D60CDE80071798C /* Helper Classes */,
+				F1B9CE6A1E58B312001A90B4 /* Resources */,
 				F16B0FF21D4FA578004F2777 /* Info.plist */,
 			);
 			path = "Vimy Ridge Project";
@@ -693,6 +698,23 @@
 				F170B8E41D4FB8D600118440 /* VimyCoordinates.swift */,
 			);
 			name = Cemeteries;
+			sourceTree = "<group>";
+		};
+		F1B9CE6A1E58B312001A90B4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F1B9CE6B1E58B325001A90B4 /* InfantryBattalions.pdf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F1B9CE6D1E5BC214001A90B4 /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				3F2605EF1E42700E004BC9D5 /* TabBarController.swift */,
+				F1B9CE6E1E5BC259001A90B4 /* BattalionSearchNavController.swift */,
+			);
+			name = "Tab Bar";
 			sourceTree = "<group>";
 		};
 		F1E7D6371E141BDC00182A9C /* Military and Non Military */ = {
@@ -858,6 +880,7 @@
 				F183E72D1E4FC6BF00436A21 /* CoordinatePrime.plist in Resources */,
 				F12BE4701E2453EB006412F1 /* texture_3.jpg in Resources */,
 				3FE011CA1E0AE8810067DFD0 /* old paper.jpg in Resources */,
+				F1B9CE6C1E58B325001A90B4 /* InfantryBattalions.pdf in Resources */,
 				F12BE4731E2453EB006412F1 /* texture_6.jpg in Resources */,
 				F168B6231D860FF000A9719A /* AppIntro.m4a in Resources */,
 				F14D1DC41E4BEF0000B354D0 /* models.scnassets in Resources */,
@@ -932,6 +955,7 @@
 				3F07E7231E37CBAD00489FEB /* SpencerTableViewCell.swift in Sources */,
 				F12C112B1D6CB7CD0071798C /* BattalionReader.swift in Sources */,
 				F12C11251D6CB7AB0071798C /* FullBattalionInfo.swift in Sources */,
+				F1B9CE6F1E5BC259001A90B4 /* BattalionSearchNavController.swift in Sources */,
 				F1E7D6451E16BE3900182A9C /* ArtworkViewController.swift in Sources */,
 				3FA970761E2414C400B5B394 /* BattalionCollapsibleTableVC.swift in Sources */,
 				F123F2E41E1AAD9000BD47F6 /* FlagOverlayView.swift in Sources */,

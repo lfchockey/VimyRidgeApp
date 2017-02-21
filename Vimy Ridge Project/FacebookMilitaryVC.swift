@@ -20,7 +20,7 @@ class FaceBookMilitaryVC: UIViewController {
     @IBOutlet weak var conscriptionLabel: UILabel!
     @IBOutlet weak var dateOfDeathLabel: UILabel!
     @IBOutlet weak var dateOfDischargeLabel: UILabel!
-    @IBOutlet weak var enlistmentDateLabel: UILabel!
+    //@IBOutlet weak var enlistmentDateLabel: UILabel!
     @IBOutlet weak var diedAtLabel: UILabel!
     @IBOutlet weak var killedInActionLabel: UILabel!
     @IBOutlet weak var locationOfDeathLabel: UILabel!
@@ -62,10 +62,15 @@ class FaceBookMilitaryVC: UIViewController {
         causeOfDeathLabel.text = MyVariables.globalSoldier.cause_of_death
         commemoratedLabel.text = MyVariables.globalSoldier.commemorated
         companyLabel.text = MyVariables.globalSoldier.company
-        conscriptionLabel.text = MyVariables.globalSoldier.date_of_enlistment_conscription
+        if MyVariables.globalSoldier.date_of_enlistment_conscription == "" {
+            conscriptionLabel.text = MyVariables.globalSoldier.date_of_enlistment
+        }
+        else {
+            conscriptionLabel.text = MyVariables.globalSoldier.date_of_enlistment_conscription
+        }
         dateOfDeathLabel.text = MyVariables.globalSoldier.date_of_death
         dateOfDischargeLabel.text = MyVariables.globalSoldier.date_of_discharge
-        enlistmentDateLabel.text = MyVariables.globalSoldier.date_of_enlistment
+        //enlistmentDateLabel.text = MyVariables.globalSoldier.date_of_enlistment
         diedAtLabel.text = MyVariables.globalSoldier.died_at
         killedInActionLabel.text = MyVariables.globalSoldier.kia
         locationOfDeathLabel.text = MyVariables.globalSoldier.location_of_death

@@ -29,7 +29,9 @@ class SingleBattalionViewController: UIViewController {
     }
     
     func moveViews(sender:Int) {
+
         let viewControllerIdentifiers = ["Info", "Facts", "More"] //"Soldiers", "More"] *** re-add the Soldiers Matching section once the database is cleaned up
+        
         let newController = (storyboard?.instantiateViewController(withIdentifier: viewControllerIdentifiers[sender]))! as UIViewController
         let oldController = childViewControllers.last! as UIViewController
         
@@ -49,7 +51,6 @@ class SingleBattalionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         BattVars.battalionFound = false
         
         if BattVars.allBattalionsDownloaded {
@@ -203,4 +204,5 @@ class SingleBattalionViewController: UIViewController {
             }
         }
     }
+    
 }

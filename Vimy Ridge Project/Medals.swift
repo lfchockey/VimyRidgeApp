@@ -180,31 +180,26 @@ class Medals: UIViewController, UITableViewDataSource, UITableViewDelegate {
             }
             
         }
+        else if totalAwards == 0 {
+            let alert = UIAlertController(title: "Sorry,", message: "This Soldier Has No Medals", preferredStyle: UIAlertControllerStyle.alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
         else {
             print ("(MedalsVC) Data came back from server as nil")
             
-            let alert = UIAlertController(title: "[Your Message Here]", message: "[DescHere]", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Sorry,", message: "We could not find any medals for this soldier", preferredStyle: UIAlertControllerStyle.alert)
             
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             
             self.present(alert, animated: true, completion: nil)
         }
         
-        if totalAwards == 0 {
-            let alert = UIAlertController(title: "Sorry,", message: "This Soldier Has No Medals", preferredStyle: UIAlertControllerStyle.alert)
-            
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            
-            self.present(alert, animated: true, completion: nil)
-        }
         
-        if totalAwards == 0 {
-            let alert = UIAlertController(title: "Sorry,", message: "This Soldier Has No Medals", preferredStyle: UIAlertControllerStyle.alert)
-            
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            
-            self.present(alert, animated: true, completion: nil)
-        }
+        
+
         
         
         //            }

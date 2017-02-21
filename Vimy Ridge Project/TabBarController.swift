@@ -13,6 +13,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate
 {
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.customizableViewControllers = nil // this line needed in order to take the edit option out of the View Controllers
         self.delegate = self
         // Do any additional setup after loading the view.
     }
@@ -28,6 +29,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate
     
     // UITabBarControllerDelegate
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        print(tabBarController.selectedIndex)
         if (tabBarController.selectedIndex == 0) {
             print("first one")
         } else if (tabBarController.selectedIndex == 1) {
